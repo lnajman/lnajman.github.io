@@ -6,7 +6,7 @@ import { publications } from "@/lib/publications";
 export const metadata: Metadata = {
   title: "Research",
   description:
-    "Research themes of Laurent Najman: discrete mathematical morphology, graphs and simplicial complexes, hierarchies, discrete topology, optimization, and interpretable computer vision.",
+    "Research themes of Laurent Najman: discrete mathematical morphology, graphs and simplicial complexes, hierarchies, discrete topology, optimization, deep learning, and interpretable computer vision.",
 };
 
 const themes = [
@@ -41,10 +41,10 @@ const themes = [
     keywords: ["PET/CT", "MRI", "medical segmentation"],
   },
   {
-    title: "Interpretable vision and data science",
+    title: "Deep learning and interpretable vision",
     description:
-      "Recent work uses hierarchies and trees to make learned visual models more interpretable and to structure complex data such as single-cell measurements.",
-    keywords: ["explainable AI", "CNNs", "data science"],
+      "Recent work connects deep learning with graph neural networks, self-supervised learning, few-shot classification, and interpretable visual models built from hierarchies and trees.",
+    keywords: ["deep learning", "graph neural networks", "explainable AI"],
   },
 ];
 
@@ -111,7 +111,8 @@ export default function ResearchPage() {
             and data represented by graphs, simplicial complexes, hierarchies,
             trees, and topological structures. The common thread is to make
             discrete geometry useful: for segmentation, filtering, optimization,
-            biomedical imaging, computer vision, and interpretable models.
+            biomedical imaging, computer vision, deep learning, and
+            interpretable models.
           </p>
           <div className="hero-actions">
             <Link className="primary-link" href="/publications">
@@ -131,7 +132,7 @@ export default function ResearchPage() {
           <span>topology</span>
           <span>morphology</span>
           <span>optimization</span>
-          <span>vision</span>
+          <span>deep learning</span>
         </div>
       </section>
 

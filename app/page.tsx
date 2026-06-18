@@ -13,7 +13,7 @@ const researchAreas = [
   "Hierarchies and trees",
   "Topology of discrete structures",
   "Discrete optimization",
-  "Explainable computer vision",
+  "Deep learning and interpretable AI",
 ];
 
 const teachingItems = [
@@ -54,7 +54,7 @@ export default function Home() {
             University, on leave from ESIEE Paris and Université Gustave Eiffel.
             My work focuses on the topology of discrete structures,
             mathematical morphology, graph-based image analysis, and
-            optimization.
+            deep learning.
           </p>
           <div className="hero-actions" aria-label="Key links">
             <Link className="primary-link" href="/publications">
@@ -109,7 +109,7 @@ export default function Home() {
         <p className="section-intro">
           The site should make the research spine easier to scan: graph
           representations, hierarchies, simplicial complexes, segmentation,
-          shape analysis, and modern links to explainable AI.
+          shape analysis, deep learning, and explainable AI.
         </p>
         <ul className="topic-grid">
           {researchAreas.map((area) => (

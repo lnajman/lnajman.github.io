@@ -8,11 +8,11 @@ export const metadata: Metadata = {
     template: "%s | Laurent Najman",
   },
   description:
-    "Laurent Najman, professor in the Mathematics Department at Khalifa University, on leave from ESIEE Paris and Université Gustave Eiffel. Research in discrete mathematical morphology, graph-based image analysis, topology, and optimization.",
+    "Laurent Najman, professor in the Mathematics Department at Khalifa University, on leave from ESIEE Paris and Université Gustave Eiffel. Research in discrete mathematical morphology, graph-based image analysis, topology, optimization, and deep learning.",
   openGraph: {
     title: "Laurent Najman",
     description:
-      "Professor in the Mathematics Department at Khalifa University, on leave from ESIEE Paris and Université Gustave Eiffel. Research in discrete mathematical morphology, graph-based image analysis, topology, and optimization.",
+      "Professor in the Mathematics Department at Khalifa University, on leave from ESIEE Paris and Université Gustave Eiffel. Research in discrete mathematical morphology, graph-based image analysis, topology, optimization, and deep learning.",
     url: "https://laurentnajman.org",
     siteName: "Laurent Najman",
     images: [
