@@ -854,6 +854,68 @@ h3 {
   box-shadow: var(--shadow);
 }
 
+.aikido-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.62fr);
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: center;
+}
+
+.aikido-panel {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--soft-green);
+  padding: clamp(1rem, 3vw, 1.5rem);
+}
+
+.aikido-panel p {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.aikido-panel blockquote {
+  margin: 1.4rem 0 0;
+  border-left: 4px solid var(--teal);
+  padding-left: 1rem;
+  color: var(--teal-dark);
+  font-size: clamp(1.2rem, 2vw, 1.55rem);
+  font-weight: 760;
+  line-height: 1.35;
+}
+
+.aikido-summary {
+  border-top: 1px solid var(--line);
+  padding: clamp(3rem, 7vw, 5rem) 0;
+}
+
+.story-beats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin: 2rem 0 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: story;
+}
+
+.story-beats li {
+  counter-increment: story;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+  padding: 1rem;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.story-beats li::before {
+  content: counter(story, decimal-leading-zero);
+  display: block;
+  margin-bottom: 0.7rem;
+  color: var(--rust);
+  font-weight: 800;
+}
+
 .bio-summary,
 .cv-section {
   border-top: 1px solid var(--line);
@@ -958,6 +1020,7 @@ h3 {
   .hero,
   .split-section,
   .bio-hero,
+  .aikido-hero,
   .research-hero,
   .teaching-hero {
     grid-template-columns: 1fr;
@@ -972,6 +1035,7 @@ h3 {
   .teaching-list,
   .theme-grid,
   .archive-grid,
+  .story-beats,
   .highlight-grid,
   .book-list,
   .type-summary ul,
@@ -1007,6 +1071,7 @@ h3 {
   .teaching-list,
   .theme-grid,
   .archive-grid,
+  .story-beats,
   .highlight-grid,
   .book-list,
   .type-summary ul,

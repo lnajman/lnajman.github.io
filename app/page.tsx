@@ -196,6 +196,7 @@ export default function Home() {
           <a href="https://www.esiee.fr/">ESIEE Paris</a>
           <a href="https://siteigm.univ-mlv.fr/">LIGM</a>
           <Link href="/bio">Bio / CV</Link>
+          <Link href="/aikido-story">Aikido story</Link>
           <a href="https://www.linkedin.com/in/laurentnajman/">LinkedIn</a>
           <a href="https://hal.science/search/index/q/*/authIdHal_s/laurent-najman">
             HAL

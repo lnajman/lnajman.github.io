@@ -13,7 +13,8 @@ const legacyRedirectScript = `
     "tutorial-2": "/teaching/",
     morphomathmaster: "/teaching/",
     "ISBS-projet": "/teaching/",
-    "higra-tutorial": "/teaching/"
+    "higra-tutorial": "/teaching/",
+    "aikido-story": "/aikido-story/"
   };
   const params = new URLSearchParams(window.location.search);
   const page = params.get("page");

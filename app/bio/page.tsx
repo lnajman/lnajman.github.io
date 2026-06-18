@@ -124,6 +124,9 @@ export default function BioPage() {
             <Link className="secondary-link" href="/publications">
               Publications
             </Link>
+            <Link className="secondary-link" href="/aikido-story">
+              Aikido story
+            </Link>
           </div>
         </div>
         <img
@@ -150,6 +153,24 @@ export default function BioPage() {
             <li key={highlight}>{highlight}</li>
           ))}
         </ul>
+      </section>
+
+      <section className="section-shell cv-section">
+        <div className="section-heading">
+          <p className="eyebrow">Personal note</p>
+          <h2>Aikido story</h2>
+        </div>
+        <p className="section-intro">
+          The old website included a Terry Dobson story about Aikido and
+          conflict resolution. I keep it here as a personal note because it says
+          something simple and important about attention, force, and
+          reconciliation.
+        </p>
+        <p className="section-action">
+          <Link className="text-link" href="/aikido-story">
+            Read the Aikido story note
+          </Link>
+        </p>
       </section>
 
       <section className="section-shell cv-section">
