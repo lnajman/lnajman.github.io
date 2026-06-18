@@ -1,5 +1,5 @@
 import { execFileSync } from "node:child_process";
-import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -47,13 +47,20 @@ function buildHalUrl() {
 
 async function fetchText(url) {
   try {
-    const response = await fetch(url);
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 30000);
+    let response;
+    try {
+      response = await fetch(url, { signal: controller.signal });
+    } finally {
+      clearTimeout(timeout);
+    }
     if (!response.ok) {
       throw new Error(`HAL responded with ${response.status}`);
     }
     return await response.text();
   } catch (error) {
-    const fallback = execFileSync("curl", ["-sL", url], {
+    const fallback = execFileSync("curl", ["-sL", "--max-time", "30", url], {
       encoding: "utf8",
       maxBuffer: 20 * 1024 * 1024,
     });
@@ -224,7 +231,18 @@ function makeDuplicateCandidates(publications, mergedIds) {
 }
 
 const url = buildHalUrl();
-const rawText = await fetchText(url);
+let rawText;
+try {
+  rawText = await fetchText(url);
+} catch (error) {
+  if (existsSync(outputPath)) {
+    console.warn(
+      `Could not fetch HAL (${error.message}). Keeping existing generated publication data.`,
+    );
+    process.exit(0);
+  }
+  throw error;
+}
 const data = JSON.parse(rawText);
 const docs = data.response.docs;
 const overrides = JSON.parse(readFileSync(overridesPath, "utf8"));
