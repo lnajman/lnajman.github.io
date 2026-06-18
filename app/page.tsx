@@ -1,0 +1,207 @@
+import Link from "next/link";
+import {
+  formatAuthors,
+  formatGeneratedDate,
+  latestPublications,
+  publicationsData,
+} from "@/lib/publications";
+import { PublicationList } from "@/components/PublicationList";
+
+const researchAreas = [
+  "Discrete mathematical morphology",
+  "Graph-based image analysis",
+  "Hierarchies and trees",
+  "Topology of discrete structures",
+  "Discrete optimization",
+  "Explainable computer vision",
+];
+
+const teachingItems = [
+  "Artificial intelligence and deep learning",
+  "Mathematical morphology",
+  "Graph algorithms for image analysis",
+  "Project supervision and research tutorials",
+];
+
+export default function Home() {
+  const latest = latestPublications(7);
+  const counts = publicationsData.counts;
+  const firstPublication = latest[0];
+
+  return (
+    <main>
+      <header className="site-header">
+        <Link className="site-name" href="/">
+          Laurent Najman
+        </Link>
+        <nav className="site-nav" aria-label="Primary navigation">
+          <Link href="/research">Research</Link>
+          <Link href="/publications">Publications</Link>
+          <Link href="/bio">Bio / CV</Link>
+          <Link href="/teaching">Teaching</Link>
+          <a href="#contact">Contact</a>
+        </nav>
+      </header>
+
+      <section className="hero section-shell">
+        <div className="hero-copy">
+          <p className="eyebrow">
+            Professor · Khalifa University · on leave from ESIEE Paris
+          </p>
+          <h1>Laurent Najman</h1>
+          <p className="hero-lede">
+            I am currently a professor in the Mathematics Department at Khalifa
+            University, on leave from ESIEE Paris and Université Gustave Eiffel.
+            My work focuses on the topology of discrete structures,
+            mathematical morphology, graph-based image analysis, and
+            optimization.
+          </p>
+          <div className="hero-actions" aria-label="Key links">
+            <Link className="primary-link" href="/publications">
+              Publications from HAL
+            </Link>
+            <Link className="secondary-link" href="/bio">
+              Bio and CV
+            </Link>
+            <a
+              className="secondary-link"
+              href="https://hal.science/search/index/q/*/authIdHal_s/laurent-najman"
+            >
+              HAL profile
+            </a>
+          </div>
+          <dl className="quick-facts" aria-label="Current affiliations">
+            <div>
+              <dt>Current position</dt>
+              <dd>Khalifa University</dd>
+            </div>
+            <div>
+              <dt>Department</dt>
+              <dd>Mathematics</dd>
+            </div>
+            <div>
+              <dt>On leave from</dt>
+              <dd>ESIEE Paris / UGE</dd>
+            </div>
+          </dl>
+        </div>
+        <div className="hero-visual" aria-label="Portrait of Laurent Najman">
+          <img
+            src="/laurent-najman-portrait.jpeg"
+            alt="Laurent Najman"
+            width="1423"
+            height="1600"
+          />
+          {firstPublication ? (
+            <p>
+              Latest HAL record: <strong>{firstPublication.year}</strong>,{" "}
+              {formatAuthors(firstPublication.authors)}
+            </p>
+          ) : null}
+        </div>
+      </section>
+
+      <section className="section-shell research-band" id="research">
+        <div className="section-heading">
+          <p className="eyebrow">Research</p>
+          <h2>Discrete structures for visual data</h2>
+        </div>
+        <p className="section-intro">
+          The site should make the research spine easier to scan: graph
+          representations, hierarchies, simplicial complexes, segmentation,
+          shape analysis, and modern links to explainable AI.
+        </p>
+        <ul className="topic-grid">
+          {researchAreas.map((area) => (
+            <li key={area}>{area}</li>
+          ))}
+        </ul>
+        <p className="section-action">
+          <Link className="text-link" href="/research">
+            Explore the research page
+          </Link>
+        </p>
+      </section>
+
+      <section className="section-shell split-section">
+        <div>
+          <div className="section-heading">
+            <p className="eyebrow">Publications</p>
+            <h2>Generated from HAL</h2>
+          </div>
+          <p className="section-intro">
+            Publications are fetched from HAL, merged with a small manual
+            duplicate override file, then rendered statically for reliability.
+          </p>
+        </div>
+        <div className="stats-grid" aria-label="Publication data summary">
+          <div>
+            <strong>{counts.rawHalRecords}</strong>
+            <span>HAL records</span>
+          </div>
+          <div>
+            <strong>{counts.displayedPublications}</strong>
+            <span>displayed</span>
+          </div>
+          <div>
+            <strong>{counts.manualDuplicateGroups}</strong>
+            <span>merged duplicate</span>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-shell publication-preview">
+        <div className="section-heading row-heading">
+          <div>
+            <p className="eyebrow">Recent work</p>
+            <h2>Latest publications</h2>
+          </div>
+          <Link className="text-link" href="/publications">
+            View all publications
+          </Link>
+        </div>
+        <PublicationList publications={latest} compact />
+        <p className="data-note">
+          HAL data generated {formatGeneratedDate(publicationsData.generatedAt)}.
+        </p>
+      </section>
+
+      <section className="section-shell teaching-band" id="teaching">
+        <div className="section-heading">
+          <p className="eyebrow">Teaching</p>
+          <h2>Courses and tutorials</h2>
+        </div>
+        <ul className="teaching-list">
+          {teachingItems.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
+        <p className="section-action">
+          <Link className="text-link" href="/teaching">
+            Open the teaching page
+          </Link>
+        </p>
+      </section>
+
+      <footer className="site-footer" id="contact">
+        <div>
+          <h2>Contact</h2>
+          <p>
+            Professor in the Mathematics Department at Khalifa University, on
+            leave from ESIEE Paris and Université Gustave Eiffel.
+          </p>
+        </div>
+        <nav aria-label="Contact links">
+          <a href="https://www.ku.ac.ae/">Khalifa University</a>
+          <a href="https://www.esiee.fr/">ESIEE Paris</a>
+          <a href="https://siteigm.univ-mlv.fr/">LIGM</a>
+          <Link href="/bio">Bio / CV</Link>
+          <a href="https://www.linkedin.com/in/laurentnajman/">LinkedIn</a>
+          <a href="https://hal.science/search/index/q/*/authIdHal_s/laurent-najman">
+            HAL
+          </a>
+        </nav>
+      </footer>
+    </main>
+  );
+}

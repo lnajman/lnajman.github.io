@@ -1,0 +1,34 @@
+{
+  "duplicateGroups": [
+    {
+      "id": "systemes-exploitation-2006",
+      "primaryHalId": "hal-00622092",
+      "halIds": ["inria-00113457", "hal-00622092"],
+      "title": "Systèmes d'exploitation - Synthèse de cours & exercices corrigés",
+      "publisher": "Pearson Education France",
+      "series": "Synthex informatique",
+      "pages": "254 pp.",
+      "isbn": "2-7440-7193-5",
+      "year": 2006,
+      "note": "Merged duplicate HAL records for the operating-system book."
+    },
+    {
+      "id": "tubular-structure-filtering-2014",
+      "primaryHalId": "hal-00990014",
+      "halIds": ["hal-00990014", "hal-01694899"],
+      "note": "Merged duplicate HAL records for the tubular-structure filtering conference paper."
+    },
+    {
+      "id": "reusable-digital-geometry-algorithms-2010",
+      "primaryHalId": "hal-00733264",
+      "halIds": ["hal-00733264", "hal-00622481"],
+      "note": "Merged duplicate HAL records for the reusable digital-geometry algorithms conference paper."
+    },
+    {
+      "id": "scan-to-xml-vector-graphics-2001",
+      "primaryHalId": "hal-00622091",
+      "halIds": ["hal-00622091", "inria-00100445"],
+      "note": "Merged duplicate HAL records for the Scan-to-XML conference paper."
+    }
+  ]
+}
