@@ -7,6 +7,11 @@ export const metadata: Metadata = {
     "HDR and PhD supervision by Laurent Najman, including former and current doctoral students.",
 };
 
+type SupervisionLink = {
+  label: string;
+  href: string;
+};
+
 type SupervisionEntry = {
   name: string;
   title: string;
@@ -16,6 +21,7 @@ type SupervisionEntry = {
   with?: string;
   note?: string;
   awards?: string[];
+  awardLinks?: SupervisionLink[];
 };
 
 const hdrStudents: SupervisionEntry[] = [
@@ -57,6 +63,12 @@ const formerPhdStudents: SupervisionEntry[] = [
     with: "Gilles Bertrand and Michel Couprie",
     note: "In French.",
     awards: ["Special Mention, AFRIF Prize 2008."],
+    awardLinks: [
+      {
+        label: "Award: AFRIF Prize 2008",
+        href: "http://www.afrif.asso.fr/node/12",
+      },
+    ],
   },
   {
     name: "David Menotti Gomes",
@@ -96,6 +108,20 @@ const formerPhdStudents: SupervisionEntry[] = [
       "Best interdisciplinary PhD, Fondation EADS, 2012.",
       "Accessit, Prix Gilles Kahn 2012.",
       "Best 2013 PhD Prize from the Délégation générale de l'armement.",
+    ],
+    awardLinks: [
+      {
+        label: "Award: Fondation EADS 2012",
+        href: "http://www.fondation.eads.com/content/fr/Recherche-fondamentale/Prix/Prix-de-la-meilleure-these/",
+      },
+      {
+        label: "Award: Prix Gilles Kahn 2012",
+        href: "https://prix-specif.inria.fr/",
+      },
+      {
+        label: "Award: DGA PhD Prize 2013",
+        href: "http://www.defense.gouv.fr/dga/actualite/prix-de-these-dga-2013-3-chercheurs-recompenses",
+      },
     ],
   },
   {
@@ -288,6 +314,24 @@ const currentPhdStudents: SupervisionEntry[] = [
       "Outstanding Paper Honorable Mention at ICLR 2023.",
       "Ian Lawson Van Toch Memorial Award for Outstanding Student Paper at ISMB 2022.",
     ],
+    awardLinks: [
+      {
+        label: "Award: ICLR 2023 honorable mention",
+        href: "https://blog.iclr.cc/2023/03/21/announcing-the-iclr-2023-outstanding-paper-award-recipients/",
+      },
+      {
+        label: "Paper: ICLR 2023",
+        href: "https://openreview.net/forum?id=kDEL91Dufpa",
+      },
+      {
+        label: "Award: ISMB 2022 Ian Lawson Van Toch",
+        href: "https://www.iscb.org/ismb2022-general-info/awards#ian",
+      },
+      {
+        label: "Paper: Bioinformatics 2022",
+        href: "https://academic.oup.com/bioinformatics/article/38/Supplement_1/i316/6617527",
+      },
+    ],
   },
   {
     name: "Raoul Sallé de Chou",
@@ -311,37 +355,62 @@ const currentPhdStudents: SupervisionEntry[] = [
   },
 ];
 
-function EntryList({ entries }: { entries: SupervisionEntry[] }) {
+function EntryList({
+  documentLabel,
+  entries,
+}: {
+  documentLabel: string;
+  entries: SupervisionEntry[];
+}) {
   return (
     <ol className="supervision-list">
-      {entries.map((entry) => (
-        <li key={`${entry.name}-${entry.title}`} className="supervision-item">
-          <div>
-            <h3>
-              {entry.profileUrl ? (
-                <a href={entry.profileUrl}>{entry.name}</a>
-              ) : (
-                entry.name
-              )}
-            </h3>
-            <p>
-              {entry.link ? (
-                <a href={entry.link}>{entry.title}</a>
-              ) : (
-                entry.title
-              )}
-            </p>
-          </div>
-          <div className="supervision-detail">
-            {entry.year ? <span>{entry.year}</span> : null}
-            {entry.with ? <span>With {entry.with}</span> : null}
-            {entry.note ? <span>{entry.note}</span> : null}
-            {entry.awards?.map((award) => (
-              <span key={award}>{award}</span>
-            ))}
-          </div>
-        </li>
-      ))}
+      {entries.map((entry) => {
+        const explicitLinks = [
+          entry.profileUrl
+            ? { label: "Profile", href: entry.profileUrl }
+            : undefined,
+          entry.link ? { label: documentLabel, href: entry.link } : undefined,
+          ...(entry.awardLinks || []),
+        ].filter((link): link is SupervisionLink => link !== undefined);
+
+        return (
+          <li key={`${entry.name}-${entry.title}`} className="supervision-item">
+            <div>
+              <h3>
+                {entry.profileUrl ? (
+                  <a href={entry.profileUrl}>{entry.name}</a>
+                ) : (
+                  entry.name
+                )}
+              </h3>
+              <p>
+                {entry.link ? (
+                  <a href={entry.link}>{entry.title}</a>
+                ) : (
+                  entry.title
+                )}
+              </p>
+              {explicitLinks.length ? (
+                <div className="supervision-links">
+                  {explicitLinks.map((link) => (
+                    <a href={link.href} key={`${entry.name}-${link.label}`}>
+                      {link.label}
+                    </a>
+                  ))}
+                </div>
+              ) : null}
+            </div>
+            <div className="supervision-detail">
+              {entry.year ? <span>{entry.year}</span> : null}
+              {entry.with ? <span>With {entry.with}</span> : null}
+              {entry.note ? <span>{entry.note}</span> : null}
+              {entry.awards?.map((award) => (
+                <span key={award}>{award}</span>
+              ))}
+            </div>
+          </li>
+        );
+      })}
     </ol>
   );
 }
@@ -405,7 +474,7 @@ export default function SupervisionPage() {
             Bio and CV
           </Link>
         </div>
-        <EntryList entries={hdrStudents} />
+        <EntryList documentLabel="HDR manuscript" entries={hdrStudents} />
       </section>
 
       <section className="section-shell cv-section">
@@ -413,7 +482,7 @@ export default function SupervisionPage() {
           <p className="eyebrow">Doctoral supervision</p>
           <h2>Former PhD students</h2>
         </div>
-        <EntryList entries={formerPhdStudents} />
+        <EntryList documentLabel="PhD thesis" entries={formerPhdStudents} />
       </section>
 
       <section className="section-shell cv-section">
@@ -421,7 +490,7 @@ export default function SupervisionPage() {
           <p className="eyebrow">In progress</p>
           <h2>Current and recent PhD students</h2>
         </div>
-        <EntryList entries={currentPhdStudents} />
+        <EntryList documentLabel="PhD thesis" entries={currentPhdStudents} />
       </section>
     </main>
   );

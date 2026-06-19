@@ -1034,6 +1034,28 @@ h3 {
   line-height: 1.5;
 }
 
+.supervision-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.85rem;
+}
+
+.supervision-links a {
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: #ffffff;
+  color: var(--teal-dark);
+  padding: 0.38rem 0.58rem;
+  font-size: 0.82rem;
+  font-weight: 760;
+  text-decoration: none;
+}
+
+.supervision-links a:hover {
+  border-color: var(--teal);
+}
+
 .supervision-detail {
   display: grid;
   gap: 0.35rem;
