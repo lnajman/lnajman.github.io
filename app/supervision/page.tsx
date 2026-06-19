@@ -11,6 +11,7 @@ type SupervisionEntry = {
   name: string;
   title: string;
   year?: string;
+  profileUrl?: string;
   link?: string;
   with?: string;
   note?: string;
@@ -23,6 +24,7 @@ const hdrStudents: SupervisionEntry[] = [
     title:
       "Outil logiciel pour le traitement d'images: bibliothèque, paradigmes, types et algorithmes",
     year: "2012",
+    profileUrl: "http://www.lrde.epita.fr/cgi-bin/twiki/view/Main/ThierryGeraud",
     link: "http://www.lrde.epita.fr/cgi-bin/twiki/view/Main/ThierryGeraudPublications#AnchorReports",
     note: "Université Paris-Est, 248 pages, in French.",
   },
@@ -30,7 +32,7 @@ const hdrStudents: SupervisionEntry[] = [
     name: "Evangelia Zacharaki",
     title: "Computational methods towards image-based biomarkers and beyond",
     year: "2017",
-    link: "https://scholar.google.gr/citations?user=g8tXMigAAAAJ&hl=en",
+    profileUrl: "https://scholar.google.gr/citations?user=g8tXMigAAAAJ&hl=en",
     note: "Université Paris-Est.",
   },
 ];
@@ -40,6 +42,7 @@ const formerPhdStudents: SupervisionEntry[] = [
     name: "Eric Bouvier",
     title: "Crowd Simulation by Particle Systems",
     year: "1997",
+    profileUrl: "https://sites.google.com/site/ericbouvier/",
     link: "https://sites.google.com/site/ericbouvier/fichiers",
     with: "Eyal Cohen",
     note: "In French.",
@@ -49,6 +52,7 @@ const formerPhdStudents: SupervisionEntry[] = [
     title:
       "Discrete watersheds: theory and applications to cardiac image segmentation",
     year: "2007",
+    profileUrl: "http://www.esiee.fr/~coustyj/",
     link: "http://tel.archives-ouvertes.fr/tel-00321885/fr/",
     with: "Gilles Bertrand and Michel Couprie",
     note: "In French.",
@@ -58,6 +62,7 @@ const formerPhdStudents: SupervisionEntry[] = [
     name: "David Menotti Gomes",
     title: "Contrast Enhancement in Digital Imaging using Histogram Equalization",
     year: "2008",
+    profileUrl: "http://www.decom.ufop.br/menotti",
     link: "http://tel.archives-ouvertes.fr/tel-00470545",
     with: "Arnaldo de Albuquerque Araujo",
   },
@@ -66,6 +71,7 @@ const formerPhdStudents: SupervisionEntry[] = [
     title:
       "Towards a Software Architecture for Generic Image Processing (Vers une architecture logicielle pour le traitement d'images générique)",
     year: "2011",
+    profileUrl: "http://www.lrde.epita.fr/cgi-bin/twiki/view/Main/RolandLevillain",
     link: "http://www.lrde.epita.fr/cgi-bin/twiki/view/Publications/201111-PhD",
     with: "Thierry Géraud",
   },
@@ -74,6 +80,7 @@ const formerPhdStudents: SupervisionEntry[] = [
     title:
       "Multispectral imaging assessment of sources and materials for photosimulation",
     year: "2010",
+    profileUrl: "http://igm.univ-mlv.fr/~boulengu/",
     link: "http://tel.archives-ouvertes.fr/tel-00587367",
     note: "In French.",
   },
@@ -82,6 +89,7 @@ const formerPhdStudents: SupervisionEntry[] = [
     title:
       "Graph-based variational optimization and applications in computer vision",
     year: "2011",
+    profileUrl: "http://cs.nyu.edu/~ccouprie/",
     link: "http://tel.archives-ouvertes.fr/tel-00666878/",
     with: "Hugues Talbot and Leo Grady",
     awards: [
@@ -95,6 +103,7 @@ const formerPhdStudents: SupervisionEntry[] = [
     title:
       "Image Processing Algorithms for the Visualization of Interventional Devices in X-Ray Fluoroscopy",
     year: "2012",
+    profileUrl: "http://www.esiee.fr/~bismuthv/",
     link: "http://tel.archives-ouvertes.fr/tel-00747682",
     with: "Régis Vaillant",
   },
@@ -102,6 +111,7 @@ const formerPhdStudents: SupervisionEntry[] = [
     name: "Laszlo Marak",
     title: "Image Segmentation by Continuous Max-Flow",
     year: "2012",
+    profileUrl: "http://www.ujoimro.com/",
     link: "https://tel.archives-ouvertes.fr/tel-00786914",
     with: "Hugues Talbot",
   },
@@ -110,6 +120,7 @@ const formerPhdStudents: SupervisionEntry[] = [
     title:
       "A study of some morphological operators in simplicial complex spaces",
     year: "2012",
+    profileUrl: "https://sites.google.com/site/fabiodias/",
     link: "http://tel.archives-ouvertes.fr/tel-00965583",
     with: "Jean Cousty",
   },
@@ -118,6 +129,7 @@ const formerPhdStudents: SupervisionEntry[] = [
     title:
       "Segmentation of Heterogeneous Document Images: an approach based on machine learning, connected components and texture analysis",
     year: "2012",
+    profileUrl: "http://www.linkedin.com/in/omidsakhi",
     link: "http://tel.archives-ouvertes.fr/tel-00912566",
     with: "Xavier Hilaire",
   },
@@ -126,6 +138,7 @@ const formerPhdStudents: SupervisionEntry[] = [
     title:
       "Tree-based shape spaces: definition and applications in image processing and computer vision",
     year: "2013",
+    profileUrl: "http://www.lrde.epita.fr/cgi-bin/twiki/view/Main/YongchaoXu",
     link: "http://tel.archives-ouvertes.fr/tel-00965890",
     with: "Thierry Géraud",
   },
@@ -133,6 +146,7 @@ const formerPhdStudents: SupervisionEntry[] = [
     name: "Clément Farabet",
     title: "Towards Real-Time Image Understanding with Convolutional Networks",
     year: "2013",
+    profileUrl: "http://www.clement.farabet.net/",
     link: "http://tel.archives-ouvertes.fr/tel-00965622",
     with: "Yann LeCun",
   },
@@ -148,6 +162,7 @@ const formerPhdStudents: SupervisionEntry[] = [
     name: "Elodye Puybareau",
     title: "Movement analysis for biomedical purposes",
     year: "2016",
+    profileUrl: "http://ciliola.fr/",
     link: "http://www.theses.fr/2016PESC1063",
     with: "André Costes and Hugues Talbot",
   },
@@ -155,6 +170,7 @@ const formerPhdStudents: SupervisionEntry[] = [
     name: "Nicolas Boutry",
     title: "A study of well-composedness in dimension n",
     year: "2016",
+    profileUrl: "https://www.lrde.epita.fr/wiki/User:Nboutry",
     link: "http://www.theses.fr/2016PESC1025",
     with: "Thierry Géraud",
   },
@@ -171,6 +187,7 @@ const formerPhdStudents: SupervisionEntry[] = [
     name: "Tsubasa Hirakawa",
     title: "Stabilization and Image Labeling for NBI Endoscopic Image Recognition",
     year: "2017",
+    profileUrl: "https://thirakawa.github.io/",
     link: "https://thirakawa.github.io/papers/phd_thesis_hirakawa.pdf",
     with: "Toru Tamaki, Takio Kurita, and Kazufumi Kaneda",
     note: "PhD registered at Hiroshima University, Japan.",
@@ -180,6 +197,7 @@ const formerPhdStudents: SupervisionEntry[] = [
     title:
       "Image processing for semantic analysis of the coronary interventions in cardiology",
     year: "2018",
+    profileUrl: "http://scholar.google.co.in/citations?user=XXclzqsAAAAJ&hl=en",
     link: "http://www.theses.fr/2018PESC1074",
     with: "Jean Cousty and Régis Vaillant",
   },
@@ -188,6 +206,7 @@ const formerPhdStudents: SupervisionEntry[] = [
     title:
       "Vers la simulation de perfusion du myocarde à partir d'image tomographique scanner",
     year: "2018",
+    profileUrl: "https://scholar.google.fr/citations?hl=fr&user=zrHGFO8AAAAJ",
     link: "http://www.theses.fr/2018PESC1117",
     with: "Hugues Talbot and Leo Grady",
   },
@@ -196,6 +215,7 @@ const formerPhdStudents: SupervisionEntry[] = [
     title:
       "Some Applications of the Power Watershed Framework to Image Segmentation and Image Filtering",
     year: "2019",
+    profileUrl: "https://in.linkedin.com/pub/sravan-danda/3a/58b/159",
     link: "https://drive.google.com/drive/folders/1BH3zkfLKJu7t2R5d7WHGesKjcSu5xWWp",
     with: "Daya Sagar",
     note: "PhD registered at the Indian Statistical Institute, Bangalore.",
@@ -205,6 +225,7 @@ const formerPhdStudents: SupervisionEntry[] = [
     title:
       "Some Studies on Mathematical Morphology for Unsupervised and Semi-Supervised Learning",
     year: "2019",
+    profileUrl: "http://www.isibang.ac.in/~chaditya_rs/personal_website/index.php",
     link: "https://drive.google.com/file/d/1F29CvzV6X71Kx3uvW_cVZkq-wHrF0JsX/view?usp=sharing",
     with: "Daya Sagar",
     note: "PhD registered at the Indian Statistical Institute, Bangalore.",
@@ -214,6 +235,7 @@ const formerPhdStudents: SupervisionEntry[] = [
     title:
       "A study of hierarchical watersheds on graphs with applications to image segmentation",
     year: "2019",
+    profileUrl: "https://scholar.google.fr/citations?user=vEFwxHUAAAAJ&hl=fr&oi=ao",
     link: "http://www.theses.fr/2019PESC2069",
     with: "Jean Cousty and Benjamin Perret",
   },
@@ -222,6 +244,7 @@ const formerPhdStudents: SupervisionEntry[] = [
     title:
       "Object Detection using Component-Graphs and ConvNets with Applications to Astronomical Images",
     year: "2021",
+    profileUrl: "https://scholar.google.fr/citations?hl=en&user=-sqYIDYAAAAJ",
     with: "Hugues Talbot and Giovanni Chierchia",
   },
   {
@@ -229,14 +252,14 @@ const formerPhdStudents: SupervisionEntry[] = [
     title:
       "Developing and Implementing Watershed Classification Algorithms for Imbalanced Datasets: an Application to the Detection of Acute Chest Syndrome in patients with Sickle Cell Disease",
     year: "2023",
-    link: "https://fr.linkedin.com/in/yamna-ouchtar",
+    profileUrl: "https://fr.linkedin.com/in/yamna-ouchtar",
     with: "Pablo Bartolucci and Benjamin Perret",
   },
   {
     name: "Mariia Zameshina",
     title: "Advancing ethical AI: fairness, diversity, and privacy in generative modeling",
     year: "2024",
-    link: "https://sites.google.com/view/mzameshina",
+    profileUrl: "https://sites.google.com/view/mzameshina",
     with: "Olivier Teytaud",
   },
 ];
@@ -259,7 +282,7 @@ const currentPhdStudents: SupervisionEntry[] = [
     name: "Quentin Garrido",
     title: "Self-supervised learning",
     year: "started in 2022",
-    link: "https://garridoq.com/",
+    profileUrl: "https://garridoq.com/",
     with: "Yann LeCun",
     awards: [
       "Outstanding Paper Honorable Mention at ICLR 2023.",
@@ -295,9 +318,19 @@ function EntryList({ entries }: { entries: SupervisionEntry[] }) {
         <li key={`${entry.name}-${entry.title}`} className="supervision-item">
           <div>
             <h3>
-              {entry.link ? <a href={entry.link}>{entry.name}</a> : entry.name}
+              {entry.profileUrl ? (
+                <a href={entry.profileUrl}>{entry.name}</a>
+              ) : (
+                entry.name
+              )}
             </h3>
-            <p>{entry.title}</p>
+            <p>
+              {entry.link ? (
+                <a href={entry.link}>{entry.title}</a>
+              ) : (
+                entry.title
+              )}
+            </p>
           </div>
           <div className="supervision-detail">
             {entry.year ? <span>{entry.year}</span> : null}
@@ -366,7 +399,7 @@ export default function SupervisionPage() {
         <div className="section-heading row-heading">
           <div>
             <p className="eyebrow">HDR</p>
-          <h2>Habilitation à diriger les recherches</h2>
+            <h2>Habilitation à diriger les recherches</h2>
           </div>
           <Link className="text-link" href="/bio">
             Bio and CV
