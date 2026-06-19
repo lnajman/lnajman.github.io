@@ -7,13 +7,6 @@ export const metadata: Metadata = {
     "A personal note from Laurent Najman about Terry Dobson's Aikido story and conflict resolution.",
 };
 
-const storyBeats = [
-  "A young Aikido practitioner in Tokyo sees a violent confrontation beginning in a train carriage.",
-  "He prepares to answer force with force, convinced that this may finally be the legitimate test of his training.",
-  "An older passenger interrupts the situation with attention, warmth, and ordinary conversation.",
-  "The threat dissolves into grief, and the lesson changes from victory to reconciliation.",
-];
-
 export default function AikidoStoryPage() {
   return (
     <main>
@@ -34,29 +27,28 @@ export default function AikidoStoryPage() {
       <section className="page-hero section-shell aikido-hero">
         <div>
           <p className="eyebrow">Personal note</p>
-          <h1>Aikido story</h1>
+          <h1>Aikido Story</h1>
           <p>
-            I have kept this story on my website for many years because it gives
-            one of the clearest definitions of Aikido that I know: not the
-            domination of an opponent, but the transformation of a conflict.
+            A long time ago, I found a story by Terry Dobson, a master of
+            Aikido and conflict resolution. I saved the text because, for me,
+            it gives one of the clearest possible definitions of Aikido.
           </p>
           <div className="hero-actions">
-            <Link className="primary-link" href="/bio">
+            <a
+              className="primary-link"
+              href="https://laurentnajman.org/index.php?page=aikido-story"
+            >
+              Current full page
+            </a>
+            <Link className="secondary-link" href="/bio">
               Back to Bio
             </Link>
-            <a
-              className="secondary-link"
-              href="https://en.wikipedia.org/wiki/Terry_Dobson_(aikidoka)"
-            >
-              Terry Dobson
-            </a>
           </div>
         </div>
         <aside className="aikido-panel" aria-label="Aikido story note">
           <p>
-            The story is usually attributed to Terry Dobson, an American Aikido
-            teacher and writer. It is a short lesson in how force can sometimes
-            be displaced by attention.
+            I should not have replaced the story with a short summary. The
+            value of the page is precisely that it lets the full story unfold.
           </p>
           <blockquote>
             What I had wanted to do with muscle had been accomplished with kind
@@ -65,35 +57,38 @@ export default function AikidoStoryPage() {
         </aside>
       </section>
 
-      <section className="section-shell aikido-summary">
+      <section className="section-shell aikido-story-section">
         <div className="section-heading">
-          <p className="eyebrow">Why keep it?</p>
-          <h2>A small story about conflict</h2>
+          <p className="eyebrow">To restore</p>
+          <h2>The full story belongs here</h2>
         </div>
         <p className="section-intro">
-          The old page reproduced the train story in full. For the new site, I
-          prefer to preserve its spirit in a concise form and point readers
-          toward Terry Dobson rather than making the whole essay the center of
-          the page.
+          The current website carries the complete train story attributed to
+          Terry Dobson. That is the version to preserve: the long narrative, not
+          a condensed lesson or a list of takeaways.
         </p>
-        <ol className="story-beats">
-          {storyBeats.map((beat) => (
-            <li key={beat}>{beat}</li>
-          ))}
-        </ol>
-      </section>
-
-      <section className="section-shell aikido-summary">
-        <div className="section-heading">
-          <p className="eyebrow">The lesson</p>
-          <h2>Resolution without conquest</h2>
+        <div className="aikido-story-card">
+          <p>
+            For the preview site, I am keeping a direct link to the existing
+            full page. Before the final switch to the new site, we should either
+            import the full text with explicit approval or keep a stable link to
+            a version of the original page.
+          </p>
+          <div className="hero-actions">
+            <a
+              className="primary-link"
+              href="https://laurentnajman.org/index.php?page=aikido-story"
+            >
+              Open the current Aikido page
+            </a>
+            <a
+              className="secondary-link"
+              href="https://en.wikipedia.org/wiki/Terry_Dobson_(aikidoka)"
+            >
+              Terry Dobson
+            </a>
+          </div>
         </div>
-        <p className="section-intro">
-          What makes the story worth keeping is not martial technique. It is the
-          reversal of perspective: the strongest response is not always the one
-          that wins the encounter, but the one that changes what the encounter
-          is about.
-        </p>
       </section>
     </main>
   );

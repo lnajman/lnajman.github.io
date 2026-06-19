@@ -883,37 +883,23 @@ h3 {
   line-height: 1.35;
 }
 
-.aikido-summary {
+.aikido-story-section {
   border-top: 1px solid var(--line);
   padding: clamp(3rem, 7vw, 5rem) 0;
 }
 
-.story-beats {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 0.75rem;
-  margin: 2rem 0 0;
-  padding: 0;
-  list-style: none;
-  counter-reset: story;
-}
-
-.story-beats li {
-  counter-increment: story;
+.aikido-story-card {
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--panel);
-  padding: 1rem;
-  color: var(--muted);
-  line-height: 1.55;
+  margin-top: 2rem;
+  padding: clamp(1rem, 3vw, 1.5rem);
 }
 
-.story-beats li::before {
-  content: counter(story, decimal-leading-zero);
-  display: block;
-  margin-bottom: 0.7rem;
-  color: var(--rust);
-  font-weight: 800;
+.aikido-story-card p {
+  max-width: 760px;
+  color: var(--muted);
+  line-height: 1.65;
 }
 
 .bio-summary,
@@ -1035,7 +1021,6 @@ h3 {
   .teaching-list,
   .theme-grid,
   .archive-grid,
-  .story-beats,
   .highlight-grid,
   .book-list,
   .type-summary ul,
@@ -1071,7 +1056,6 @@ h3 {
   .teaching-list,
   .theme-grid,
   .archive-grid,
-  .story-beats,
   .highlight-grid,
   .book-list,
   .type-summary ul,

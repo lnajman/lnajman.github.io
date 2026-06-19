@@ -161,10 +161,9 @@ export default function BioPage() {
           <h2>Aikido story</h2>
         </div>
         <p className="section-intro">
-          The old website included a Terry Dobson story about Aikido and
-          conflict resolution. I keep it here as a personal note because it says
-          something simple and important about attention, force, and
-          reconciliation.
+          The old website includes a Terry Dobson story about Aikido and
+          conflict resolution. It should remain a real personal page on the new
+          site, not just a compressed summary.
         </p>
         <p className="section-action">
           <Link className="text-link" href="/aikido-story">
