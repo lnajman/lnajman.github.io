@@ -48,8 +48,9 @@ const formerPhdStudents: SupervisionEntry[] = [
     name: "Eric Bouvier",
     title: "Crowd Simulation by Particle Systems",
     year: "1997",
-    profileUrl: "https://sites.google.com/site/ericbouvier/",
-    link: "https://sites.google.com/site/ericbouvier/fichiers",
+    profileUrl:
+      "https://web.archive.org/web/20201017150459/https://sites.google.com/site/ericbouvier/",
+    link: "https://web.archive.org/web/20201017150500/https://sites.google.com/site/ericbouvier/fichiers/these_EBR.pdf?attredirects=0&d=1",
     with: "Eyal Cohen",
     note: "In French.",
   },
@@ -66,7 +67,7 @@ const formerPhdStudents: SupervisionEntry[] = [
     awardLinks: [
       {
         label: "Award: AFRIF Prize 2008",
-        href: "http://www.afrif.asso.fr/node/12",
+        href: "http://www.afrif.asso.fr/?page_id=54",
       },
     ],
   },
@@ -101,8 +102,7 @@ const formerPhdStudents: SupervisionEntry[] = [
     title:
       "Graph-based variational optimization and applications in computer vision",
     year: "2011",
-    profileUrl: "http://cs.nyu.edu/~ccouprie/",
-    link: "http://tel.archives-ouvertes.fr/tel-00666878/",
+    link: "https://theses.hal.science/tel-00666878",
     with: "Hugues Talbot and Leo Grady",
     awards: [
       "Best interdisciplinary PhD, Fondation EADS, 2012.",
@@ -112,11 +112,11 @@ const formerPhdStudents: SupervisionEntry[] = [
     awardLinks: [
       {
         label: "Award: Fondation EADS 2012",
-        href: "http://www.fondation.eads.com/content/fr/Recherche-fondamentale/Prix/Prix-de-la-meilleure-these/",
+        href: "https://web.archive.org/web/20121113080418id_/http://www.fondation.eads.com/content/fr/Recherche-fondamentale/Prix/Prix-de-la-meilleure-these/",
       },
       {
         label: "Award: Prix Gilles Kahn 2012",
-        href: "https://prix-specif.inria.fr/",
+        href: "https://fr.wikipedia.org/wiki/Prix_Gilles-Kahn",
       },
       {
         label: "Award: DGA PhD Prize 2013",
@@ -188,7 +188,6 @@ const formerPhdStudents: SupervisionEntry[] = [
     name: "Elodye Puybareau",
     title: "Movement analysis for biomedical purposes",
     year: "2016",
-    profileUrl: "http://ciliola.fr/",
     link: "http://www.theses.fr/2016PESC1063",
     with: "André Costes and Hugues Talbot",
   },
@@ -214,7 +213,7 @@ const formerPhdStudents: SupervisionEntry[] = [
     title: "Stabilization and Image Labeling for NBI Endoscopic Image Recognition",
     year: "2017",
     profileUrl: "https://thirakawa.github.io/",
-    link: "https://thirakawa.github.io/papers/phd_thesis_hirakawa.pdf",
+    link: "https://raw.githubusercontent.com/thirakawa/thirakawa.github.io/fae492ac95d74392c37b0af9e22bc1daab261c7e/papers/phd_thesis_hirakawa.pdf",
     with: "Toru Tamaki, Takio Kurita, and Kazufumi Kaneda",
     note: "PhD registered at Hiroshima University, Japan.",
   },
@@ -232,7 +231,6 @@ const formerPhdStudents: SupervisionEntry[] = [
     title:
       "Vers la simulation de perfusion du myocarde à partir d'image tomographique scanner",
     year: "2018",
-    profileUrl: "https://scholar.google.fr/citations?hl=fr&user=zrHGFO8AAAAJ",
     link: "http://www.theses.fr/2018PESC1117",
     with: "Hugues Talbot and Leo Grady",
   },
@@ -241,7 +239,6 @@ const formerPhdStudents: SupervisionEntry[] = [
     title:
       "Some Applications of the Power Watershed Framework to Image Segmentation and Image Filtering",
     year: "2019",
-    profileUrl: "https://in.linkedin.com/pub/sravan-danda/3a/58b/159",
     link: "https://drive.google.com/drive/folders/1BH3zkfLKJu7t2R5d7WHGesKjcSu5xWWp",
     with: "Daya Sagar",
     note: "PhD registered at the Indian Statistical Institute, Bangalore.",
@@ -251,7 +248,6 @@ const formerPhdStudents: SupervisionEntry[] = [
     title:
       "Some Studies on Mathematical Morphology for Unsupervised and Semi-Supervised Learning",
     year: "2019",
-    profileUrl: "http://www.isibang.ac.in/~chaditya_rs/personal_website/index.php",
     link: "https://drive.google.com/file/d/1F29CvzV6X71Kx3uvW_cVZkq-wHrF0JsX/view?usp=sharing",
     with: "Daya Sagar",
     note: "PhD registered at the Indian Statistical Institute, Bangalore.",
@@ -278,7 +274,7 @@ const formerPhdStudents: SupervisionEntry[] = [
     title:
       "Developing and Implementing Watershed Classification Algorithms for Imbalanced Datasets: an Application to the Detection of Acute Chest Syndrome in patients with Sickle Cell Disease",
     year: "2023",
-    profileUrl: "https://fr.linkedin.com/in/yamna-ouchtar",
+    link: "https://theses.fr/2023UEFL2055",
     with: "Pablo Bartolucci and Benjamin Perret",
   },
   {
@@ -325,11 +321,11 @@ const formerPhdStudents: SupervisionEntry[] = [
       },
       {
         label: "Award: ISMB 2022 Ian Lawson Van Toch",
-        href: "https://www.iscb.org/ismb2022-general-info/awards#ian",
+        href: "https://web.archive.org/web/20230326020147/https://www.iscb.org/ismb2022-general-info/awards#ian",
       },
       {
         label: "Paper: Bioinformatics 2022",
-        href: "https://academic.oup.com/bioinformatics/article/38/Supplement_1/i316/6617527",
+        href: "https://hal.science/hal-03136103",
       },
     ],
   },
