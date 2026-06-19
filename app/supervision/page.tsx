@@ -288,27 +288,27 @@ const formerPhdStudents: SupervisionEntry[] = [
     profileUrl: "https://sites.google.com/view/mzameshina",
     with: "Olivier Teytaud",
   },
-];
-
-const currentPhdStudents: SupervisionEntry[] = [
   {
     name: "Sarah Almeida Carneiro",
     title:
-      "Prediction of mobility data with prior on the topography and infrastructure of the road network",
-    year: "started in 2020",
-    with: "Aurélie Pirayre-Chataignon",
+      "Prediction of mobility data with prior on the topography of an infrastructure of a road network",
+    year: "2024",
+    link: "https://theses.fr/2024UEFL2052",
+    with: "Aurélie Chataignon and Giovanni Chierchia",
   },
   {
     name: "Caroline Mazini Rodrigues",
-    title: "Explainable Artificial Intelligence",
-    year: "started in 2020",
+    title: "Enhancing interpretability in explanations of Convolutional Neural Networks",
+    year: "2024",
+    link: "https://theses.fr/2024UEFL2056",
     with: "Nicolas Boutry",
   },
   {
     name: "Quentin Garrido",
-    title: "Self-supervised learning",
-    year: "started in 2022",
+    title: "Self-supervised learning beyond invariant image representations",
+    year: "2025",
     profileUrl: "https://garridoq.com/",
+    link: "https://theses.fr/2025UEFL2031",
     with: "Yann LeCun",
     awards: [
       "Outstanding Paper Honorable Mention at ICLR 2023.",
@@ -335,10 +335,15 @@ const currentPhdStudents: SupervisionEntry[] = [
   },
   {
     name: "Raoul Sallé de Chou",
-    title: "Prédiction de cartes de perfusion du cœur par apprentissage automatique",
-    year: "started in 2021",
+    title:
+      "A myocardial perfusion simulation pipeline based on machine-learning computational methods",
+    year: "2025",
+    link: "https://theses.fr/2025UPASG040",
     with: "Hugues Talbot and Irène Vignon-Clementel",
   },
+];
+
+const currentPhdStudents: SupervisionEntry[] = [
   {
     name: "Matheus Barros Pereira",
     title:
@@ -450,7 +455,7 @@ export default function SupervisionPage() {
             <span>HDRs supervised</span>
           </div>
           <div>
-            <strong>29</strong>
+            <strong>33</strong>
             <span>PhD students in France</span>
           </div>
           <div>
@@ -458,8 +463,8 @@ export default function SupervisionPage() {
             <span>PhD students abroad</span>
           </div>
           <div>
-            <strong>5+</strong>
-            <span>Current or recent PhD projects</span>
+            <strong>2</strong>
+            <span>Current PhD projects</span>
           </div>
         </div>
       </section>
