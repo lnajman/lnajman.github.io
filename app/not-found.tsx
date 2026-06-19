@@ -14,6 +14,17 @@ const legacyRedirectScript = `
     morphomathmaster: "/teaching/",
     "ISBS-projet": "/teaching/",
     "higra-tutorial": "/teaching/",
+    students: "/bio/",
+    "shape-filters": "/research/",
+    ppi: "/research/",
+    "saliency-maps": "/research/",
+    dctv: "/research/",
+    "power-watershed": "/research/",
+    trees: "/research/",
+    tbmr: "/research/",
+    "ICPR2016-tutorial": "/research/",
+    resume: "/bio/",
+    links: "/",
     "aikido-story": "/aikido-story/"
   };
   const params = new URLSearchParams(window.location.search);
