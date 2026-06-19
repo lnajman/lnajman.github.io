@@ -267,6 +267,7 @@ const formerPhdStudents: SupervisionEntry[] = [
       "Object Detection using Component-Graphs and ConvNets with Applications to Astronomical Images",
     year: "2021",
     profileUrl: "https://scholar.google.fr/citations?hl=en&user=-sqYIDYAAAAJ",
+    link: "https://theses.fr/2021UEFL2020",
     with: "Hugues Talbot and Giovanni Chierchia",
   },
   {
@@ -282,6 +283,7 @@ const formerPhdStudents: SupervisionEntry[] = [
     title: "Advancing ethical AI: fairness, diversity, and privacy in generative modeling",
     year: "2024",
     profileUrl: "https://sites.google.com/view/mzameshina",
+    link: "https://theses.fr/2024UEFL2013",
     with: "Olivier Teytaud",
   },
   {
