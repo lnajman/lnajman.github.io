@@ -98,6 +98,7 @@ export default function BioPage() {
         <nav className="site-nav" aria-label="Primary navigation">
           <Link href="/">Home</Link>
           <Link href="/research">Research</Link>
+          <Link href="/supervision">Supervision</Link>
           <Link href="/publications">Publications</Link>
           <Link href="/teaching">Teaching</Link>
           <Link href="/bio" aria-current="page">
@@ -123,6 +124,9 @@ export default function BioPage() {
             </a>
             <Link className="secondary-link" href="/publications">
               Publications
+            </Link>
+            <Link className="secondary-link" href="/supervision">
+              Supervision
             </Link>
             <Link className="secondary-link" href="/aikido-story">
               Aikido story
@@ -153,6 +157,23 @@ export default function BioPage() {
             <li key={highlight}>{highlight}</li>
           ))}
         </ul>
+      </section>
+
+      <section className="section-shell cv-section">
+        <div className="section-heading">
+          <p className="eyebrow">Supervision</p>
+          <h2>Thesis supervision</h2>
+        </div>
+        <p className="section-intro">
+          The supervision page records HDRs, former PhD students, current and
+          recent doctoral projects, co-supervisors, links to theses, and prizes
+          where relevant.
+        </p>
+        <p className="section-action">
+          <Link className="text-link" href="/supervision">
+            Open the supervision page
+          </Link>
+        </p>
       </section>
 
       <section className="section-shell cv-section">

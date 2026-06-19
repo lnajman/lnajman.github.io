@@ -36,6 +36,7 @@ export default function Home() {
         </Link>
         <nav className="site-nav" aria-label="Primary navigation">
           <Link href="/research">Research</Link>
+          <Link href="/supervision">Supervision</Link>
           <Link href="/publications">Publications</Link>
           <Link href="/bio">Bio / CV</Link>
           <Link href="/teaching">Teaching</Link>
@@ -62,6 +63,9 @@ export default function Home() {
             </Link>
             <Link className="secondary-link" href="/bio">
               Bio and CV
+            </Link>
+            <Link className="secondary-link" href="/supervision">
+              Supervision
             </Link>
             <a
               className="secondary-link"
@@ -98,6 +102,47 @@ export default function Home() {
               {formatAuthors(firstPublication.authors)}
             </p>
           ) : null}
+        </div>
+      </section>
+
+      <section className="section-shell supervision-band" id="supervision">
+        <div>
+          <div className="section-heading">
+            <p className="eyebrow">Supervision</p>
+            <h2>HDR and PhD thesis supervision</h2>
+          </div>
+          <p className="section-intro">
+            Supervision is one of the visible threads of the site: HDRs, PhD
+            theses, co-supervised projects in France and abroad, and current
+            doctoral work in imaging, morphology, topology, graphs, deep
+            learning, and ethical AI.
+          </p>
+          <p className="section-action">
+            <Link className="text-link" href="/supervision">
+              Open the supervision page
+            </Link>
+          </p>
+        </div>
+        <div
+          className="supervision-stats compact"
+          aria-label="Supervision summary"
+        >
+          <div>
+            <strong>2</strong>
+            <span>HDRs supervised</span>
+          </div>
+          <div>
+            <strong>29</strong>
+            <span>PhD students in France</span>
+          </div>
+          <div>
+            <strong>4</strong>
+            <span>PhD students abroad</span>
+          </div>
+          <div>
+            <strong>5+</strong>
+            <span>Current or recent PhD projects</span>
+          </div>
         </div>
       </section>
 
@@ -195,6 +240,7 @@ export default function Home() {
           <a href="https://www.ku.ac.ae/">Khalifa University</a>
           <a href="https://www.esiee.fr/">ESIEE Paris</a>
           <a href="https://siteigm.univ-mlv.fr/">LIGM</a>
+          <Link href="/supervision">Supervision</Link>
           <Link href="/bio">Bio / CV</Link>
           <Link href="/aikido-story">Aikido story</Link>
           <a href="https://www.linkedin.com/in/laurentnajman/">LinkedIn</a>

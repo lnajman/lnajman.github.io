@@ -190,7 +190,8 @@ h3 {
 }
 
 .quick-facts div,
-.stats-grid div {
+.stats-grid div,
+.supervision-stats div {
   border: 1px solid var(--line);
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.72);
@@ -198,7 +199,8 @@ h3 {
 }
 
 .quick-facts dt,
-.stats-grid span {
+.stats-grid span,
+.supervision-stats span {
   display: block;
   color: var(--muted);
   font-size: 0.82rem;
@@ -305,13 +307,35 @@ h3 {
   padding: clamp(2.5rem, 6vw, 4.5rem) 0;
 }
 
+.supervision-band {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.9fr);
+  gap: 2rem;
+  align-items: center;
+  border-top: 1px solid var(--line);
+  padding: clamp(2.5rem, 6vw, 4.5rem) 0;
+}
+
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0.75rem;
 }
 
-.stats-grid strong {
+.supervision-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.supervision-stats.compact {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 0;
+}
+
+.stats-grid strong,
+.supervision-stats strong {
   display: block;
   color: var(--teal-dark);
   font-size: clamp(2rem, 4vw, 3.4rem);
@@ -972,6 +996,57 @@ h3 {
   line-height: 1.5;
 }
 
+.supervision-list {
+  display: grid;
+  gap: 0.75rem;
+  margin: 2rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.supervision-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(240px, 0.78fr);
+  gap: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+  padding: 1rem;
+}
+
+.supervision-item h3 {
+  margin-bottom: 0.45rem;
+  font-size: 1.08rem;
+}
+
+.supervision-item h3 a {
+  color: var(--teal-dark);
+}
+
+.supervision-item p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.supervision-detail {
+  display: grid;
+  gap: 0.35rem;
+  align-content: start;
+}
+
+.supervision-detail span {
+  display: block;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.supervision-detail span:first-child {
+  color: var(--rust);
+  font-weight: 800;
+}
+
 .site-footer {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
@@ -1005,6 +1080,7 @@ h3 {
 @media (max-width: 920px) {
   .hero,
   .split-section,
+  .supervision-band,
   .bio-hero,
   .aikido-hero,
   .research-hero,
@@ -1023,6 +1099,7 @@ h3 {
   .archive-grid,
   .highlight-grid,
   .book-list,
+  .supervision-stats,
   .type-summary ul,
   .type-shortcuts,
   .filter-panel {
@@ -1051,6 +1128,7 @@ h3 {
 
   .quick-facts,
   .stats-grid,
+  .supervision-stats,
   .publication-list.compact,
   .topic-grid,
   .teaching-list,
@@ -1067,12 +1145,17 @@ h3 {
   .row-heading,
   .publication-item,
   .audit-panel li,
-  .timeline li {
+  .timeline li,
+  .supervision-item {
     grid-template-columns: 1fr;
   }
 
   .publication-links {
     justify-content: flex-start;
     max-width: none;
+  }
+
+  .supervision-stats.compact {
+    grid-template-columns: 1fr;
   }
 }

@@ -1,0 +1,395 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Supervision",
+  description:
+    "HDR and PhD supervision by Laurent Najman, including former and current doctoral students.",
+};
+
+type SupervisionEntry = {
+  name: string;
+  title: string;
+  year?: string;
+  link?: string;
+  with?: string;
+  note?: string;
+  awards?: string[];
+};
+
+const hdrStudents: SupervisionEntry[] = [
+  {
+    name: "Thierry Géraud",
+    title:
+      "Outil logiciel pour le traitement d'images: bibliothèque, paradigmes, types et algorithmes",
+    year: "2012",
+    link: "http://www.lrde.epita.fr/cgi-bin/twiki/view/Main/ThierryGeraudPublications#AnchorReports",
+    note: "Université Paris-Est, 248 pages, in French.",
+  },
+  {
+    name: "Evangelia Zacharaki",
+    title: "Computational methods towards image-based biomarkers and beyond",
+    year: "2017",
+    link: "https://scholar.google.gr/citations?user=g8tXMigAAAAJ&hl=en",
+    note: "Université Paris-Est.",
+  },
+];
+
+const formerPhdStudents: SupervisionEntry[] = [
+  {
+    name: "Eric Bouvier",
+    title: "Crowd Simulation by Particle Systems",
+    year: "1997",
+    link: "https://sites.google.com/site/ericbouvier/fichiers",
+    with: "Eyal Cohen",
+    note: "In French.",
+  },
+  {
+    name: "Jean Cousty",
+    title:
+      "Discrete watersheds: theory and applications to cardiac image segmentation",
+    year: "2007",
+    link: "http://tel.archives-ouvertes.fr/tel-00321885/fr/",
+    with: "Gilles Bertrand and Michel Couprie",
+    note: "In French.",
+    awards: ["Special Mention, AFRIF Prize 2008."],
+  },
+  {
+    name: "David Menotti Gomes",
+    title: "Contrast Enhancement in Digital Imaging using Histogram Equalization",
+    year: "2008",
+    link: "http://tel.archives-ouvertes.fr/tel-00470545",
+    with: "Arnaldo de Albuquerque Araujo",
+  },
+  {
+    name: "Roland Levillain",
+    title:
+      "Towards a Software Architecture for Generic Image Processing (Vers une architecture logicielle pour le traitement d'images générique)",
+    year: "2011",
+    link: "http://www.lrde.epita.fr/cgi-bin/twiki/view/Publications/201111-PhD",
+    with: "Thierry Géraud",
+  },
+  {
+    name: "Pierre Boulenguez",
+    title:
+      "Multispectral imaging assessment of sources and materials for photosimulation",
+    year: "2010",
+    link: "http://tel.archives-ouvertes.fr/tel-00587367",
+    note: "In French.",
+  },
+  {
+    name: "Camille Couprie",
+    title:
+      "Graph-based variational optimization and applications in computer vision",
+    year: "2011",
+    link: "http://tel.archives-ouvertes.fr/tel-00666878/",
+    with: "Hugues Talbot and Leo Grady",
+    awards: [
+      "Best interdisciplinary PhD, Fondation EADS, 2012.",
+      "Accessit, Prix Gilles Kahn 2012.",
+      "Best 2013 PhD Prize from the Délégation générale de l'armement.",
+    ],
+  },
+  {
+    name: "Vincent Bismuth",
+    title:
+      "Image Processing Algorithms for the Visualization of Interventional Devices in X-Ray Fluoroscopy",
+    year: "2012",
+    link: "http://tel.archives-ouvertes.fr/tel-00747682",
+    with: "Régis Vaillant",
+  },
+  {
+    name: "Laszlo Marak",
+    title: "Image Segmentation by Continuous Max-Flow",
+    year: "2012",
+    link: "https://tel.archives-ouvertes.fr/tel-00786914",
+    with: "Hugues Talbot",
+  },
+  {
+    name: "Fabio Augusto Salve Dias",
+    title:
+      "A study of some morphological operators in simplicial complex spaces",
+    year: "2012",
+    link: "http://tel.archives-ouvertes.fr/tel-00965583",
+    with: "Jean Cousty",
+  },
+  {
+    name: "Omid B. Sakhi",
+    title:
+      "Segmentation of Heterogeneous Document Images: an approach based on machine learning, connected components and texture analysis",
+    year: "2012",
+    link: "http://tel.archives-ouvertes.fr/tel-00912566",
+    with: "Xavier Hilaire",
+  },
+  {
+    name: "Yongchao Xu",
+    title:
+      "Tree-based shape spaces: definition and applications in image processing and computer vision",
+    year: "2013",
+    link: "http://tel.archives-ouvertes.fr/tel-00965890",
+    with: "Thierry Géraud",
+  },
+  {
+    name: "Clément Farabet",
+    title: "Towards Real-Time Image Understanding with Convolutional Networks",
+    year: "2013",
+    link: "http://tel.archives-ouvertes.fr/tel-00965622",
+    with: "Yann LeCun",
+  },
+  {
+    name: "Imen Melki",
+    title:
+      "Towards an automated framework for coronary lesions detection and quantification in cardiac CT angiography",
+    year: "2015",
+    link: "https://tel.archives-ouvertes.fr/view/index/docid/1273806",
+    with: "Hugues Talbot and Laurent Launay",
+  },
+  {
+    name: "Elodye Puybareau",
+    title: "Movement analysis for biomedical purposes",
+    year: "2016",
+    link: "http://www.theses.fr/2016PESC1063",
+    with: "André Costes and Hugues Talbot",
+  },
+  {
+    name: "Nicolas Boutry",
+    title: "A study of well-composedness in dimension n",
+    year: "2016",
+    link: "http://www.theses.fr/2016PESC1025",
+    with: "Thierry Géraud",
+  },
+  {
+    name: "Éloïse Grossiord",
+    title:
+      "Approches hiérarchiques pour l'analyse d'images multivaluées. Application à la segmentation des images TEP/TDM pour la quantification du volume des lésions, particulièrement pour le lymphome",
+    year: "2017",
+    link: "http://www.theses.fr/s92014",
+    with: "Michel Meignan",
+    note: "CIFRE funded by Keosys.",
+  },
+  {
+    name: "Tsubasa Hirakawa",
+    title: "Stabilization and Image Labeling for NBI Endoscopic Image Recognition",
+    year: "2017",
+    link: "https://thirakawa.github.io/papers/phd_thesis_hirakawa.pdf",
+    with: "Toru Tamaki, Takio Kurita, and Kazufumi Kaneda",
+    note: "PhD registered at Hiroshima University, Japan.",
+  },
+  {
+    name: "Ketan Bacchuwar",
+    title:
+      "Image processing for semantic analysis of the coronary interventions in cardiology",
+    year: "2018",
+    link: "http://www.theses.fr/2018PESC1074",
+    with: "Jean Cousty and Régis Vaillant",
+  },
+  {
+    name: "Clara Jaquet",
+    title:
+      "Vers la simulation de perfusion du myocarde à partir d'image tomographique scanner",
+    year: "2018",
+    link: "http://www.theses.fr/2018PESC1117",
+    with: "Hugues Talbot and Leo Grady",
+  },
+  {
+    name: "Sravan Danda",
+    title:
+      "Some Applications of the Power Watershed Framework to Image Segmentation and Image Filtering",
+    year: "2019",
+    link: "https://drive.google.com/drive/folders/1BH3zkfLKJu7t2R5d7WHGesKjcSu5xWWp",
+    with: "Daya Sagar",
+    note: "PhD registered at the Indian Statistical Institute, Bangalore.",
+  },
+  {
+    name: "Aditya Challa",
+    title:
+      "Some Studies on Mathematical Morphology for Unsupervised and Semi-Supervised Learning",
+    year: "2019",
+    link: "https://drive.google.com/file/d/1F29CvzV6X71Kx3uvW_cVZkq-wHrF0JsX/view?usp=sharing",
+    with: "Daya Sagar",
+    note: "PhD registered at the Indian Statistical Institute, Bangalore.",
+  },
+  {
+    name: "Deise Santana Maia",
+    title:
+      "A study of hierarchical watersheds on graphs with applications to image segmentation",
+    year: "2019",
+    link: "http://www.theses.fr/2019PESC2069",
+    with: "Jean Cousty and Benjamin Perret",
+  },
+  {
+    name: "Thanh Nguyen",
+    title:
+      "Object Detection using Component-Graphs and ConvNets with Applications to Astronomical Images",
+    year: "2021",
+    with: "Hugues Talbot and Giovanni Chierchia",
+  },
+  {
+    name: "Yamna Ouchtar",
+    title:
+      "Developing and Implementing Watershed Classification Algorithms for Imbalanced Datasets: an Application to the Detection of Acute Chest Syndrome in patients with Sickle Cell Disease",
+    year: "2023",
+    link: "https://fr.linkedin.com/in/yamna-ouchtar",
+    with: "Pablo Bartolucci and Benjamin Perret",
+  },
+  {
+    name: "Mariia Zameshina",
+    title: "Advancing ethical AI: fairness, diversity, and privacy in generative modeling",
+    year: "2024",
+    link: "https://sites.google.com/view/mzameshina",
+    with: "Olivier Teytaud",
+  },
+];
+
+const currentPhdStudents: SupervisionEntry[] = [
+  {
+    name: "Sarah Almeida Carneiro",
+    title:
+      "Prediction of mobility data with prior on the topography and infrastructure of the road network",
+    year: "started in 2020",
+    with: "Aurélie Pirayre-Chataignon",
+  },
+  {
+    name: "Caroline Mazini Rodrigues",
+    title: "Explainable Artificial Intelligence",
+    year: "started in 2020",
+    with: "Nicolas Boutry",
+  },
+  {
+    name: "Quentin Garrido",
+    title: "Self-supervised learning",
+    year: "started in 2022",
+    link: "https://garridoq.com/",
+    with: "Yann LeCun",
+    awards: [
+      "Outstanding Paper Honorable Mention at ICLR 2023.",
+      "Ian Lawson Van Toch Memorial Award for Outstanding Student Paper at ISMB 2022.",
+    ],
+  },
+  {
+    name: "Raoul Sallé de Chou",
+    title: "Prédiction de cartes de perfusion du cœur par apprentissage automatique",
+    year: "started in 2021",
+    with: "Hugues Talbot and Irène Vignon-Clementel",
+  },
+  {
+    name: "Matheus Barros Pereira",
+    title:
+      "Towards Spatial Hierarchical Learning for Semantic Segmentation in an Open World",
+    year: "started in 2021",
+    with: "Jefersson Alex dos Santos",
+  },
+  {
+    name: "Léo Hein",
+    title:
+      "Apprentissage profond sur graphes pour la prédiction des flux de mobilité et de la qualité de l'air en milieu urbain",
+    year: "started in 2023",
+    with: "Giovanni Chierchia, Aurélie Chataignon, and Giovanni De Nunzio",
+  },
+];
+
+function EntryList({ entries }: { entries: SupervisionEntry[] }) {
+  return (
+    <ol className="supervision-list">
+      {entries.map((entry) => (
+        <li key={`${entry.name}-${entry.title}`} className="supervision-item">
+          <div>
+            <h3>
+              {entry.link ? <a href={entry.link}>{entry.name}</a> : entry.name}
+            </h3>
+            <p>{entry.title}</p>
+          </div>
+          <div className="supervision-detail">
+            {entry.year ? <span>{entry.year}</span> : null}
+            {entry.with ? <span>With {entry.with}</span> : null}
+            {entry.note ? <span>{entry.note}</span> : null}
+            {entry.awards?.map((award) => (
+              <span key={award}>{award}</span>
+            ))}
+          </div>
+        </li>
+      ))}
+    </ol>
+  );
+}
+
+export default function SupervisionPage() {
+  return (
+    <main>
+      <header className="site-header">
+        <Link className="site-name" href="/">
+          Laurent Najman
+        </Link>
+        <nav className="site-nav" aria-label="Primary navigation">
+          <Link href="/">Home</Link>
+          <Link href="/research">Research</Link>
+          <Link href="/supervision" aria-current="page">
+            Supervision
+          </Link>
+          <Link href="/publications">Publications</Link>
+          <Link href="/teaching">Teaching</Link>
+          <Link href="/bio">Bio / CV</Link>
+          <Link href="/#contact">Contact</Link>
+        </nav>
+      </header>
+
+      <section className="page-hero section-shell">
+        <p className="eyebrow">Supervision</p>
+        <h1>HDR and PhD supervision</h1>
+        <p>
+          Supervision is a central part of research activity: HDRs, PhD theses,
+          collaborations with co-supervisors, and the trajectories of students
+          trained across mathematical morphology, imaging, topology, computer
+          vision, biomedical applications, and deep learning.
+        </p>
+        <div className="supervision-stats" aria-label="Supervision summary">
+          <div>
+            <strong>2</strong>
+            <span>HDRs supervised</span>
+          </div>
+          <div>
+            <strong>29</strong>
+            <span>PhD students in France</span>
+          </div>
+          <div>
+            <strong>4</strong>
+            <span>PhD students abroad</span>
+          </div>
+          <div>
+            <strong>5+</strong>
+            <span>Current or recent PhD projects</span>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-shell cv-section">
+        <div className="section-heading row-heading">
+          <div>
+            <p className="eyebrow">HDR</p>
+          <h2>Habilitation à diriger les recherches</h2>
+          </div>
+          <Link className="text-link" href="/bio">
+            Bio and CV
+          </Link>
+        </div>
+        <EntryList entries={hdrStudents} />
+      </section>
+
+      <section className="section-shell cv-section">
+        <div className="section-heading">
+          <p className="eyebrow">Doctoral supervision</p>
+          <h2>Former PhD students</h2>
+        </div>
+        <EntryList entries={formerPhdStudents} />
+      </section>
+
+      <section className="section-shell cv-section">
+        <div className="section-heading">
+          <p className="eyebrow">In progress</p>
+          <h2>Current and recent PhD students</h2>
+        </div>
+        <EntryList entries={currentPhdStudents} />
+      </section>
+    </main>
+  );
+}

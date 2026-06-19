@@ -95,6 +95,7 @@ export default function ResearchPage() {
           <Link href="/research" aria-current="page">
             Research
           </Link>
+          <Link href="/supervision">Supervision</Link>
           <Link href="/publications">Publications</Link>
           <Link href="/teaching">Teaching</Link>
           <Link href="/bio">Bio / CV</Link>
@@ -117,6 +118,9 @@ export default function ResearchPage() {
           <div className="hero-actions">
             <Link className="primary-link" href="/publications">
               Browse publications
+            </Link>
+            <Link className="secondary-link" href="/supervision">
+              Supervision
             </Link>
             <a
               className="secondary-link"

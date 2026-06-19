@@ -14,7 +14,7 @@ const legacyRedirectScript = `
     morphomathmaster: "/teaching/",
     "ISBS-projet": "/teaching/",
     "higra-tutorial": "/teaching/",
-    students: "/bio/",
+    students: "/supervision/",
     "shape-filters": "/research/",
     ppi: "/research/",
     "saliency-maps": "/research/",
@@ -45,6 +45,7 @@ export default function NotFound() {
         </Link>
         <nav className="site-nav" aria-label="Primary navigation">
           <Link href="/research">Research</Link>
+          <Link href="/supervision">Supervision</Link>
           <Link href="/publications">Publications</Link>
           <Link href="/bio">Bio / CV</Link>
           <Link href="/teaching">Teaching</Link>
@@ -56,7 +57,7 @@ export default function NotFound() {
         <h1>Page not found</h1>
         <p>
           This page is not available on the new site. The main sections are
-          research, publications, bio, and teaching.
+          research, supervision, publications, bio, and teaching.
         </p>
         <div className="hero-actions" aria-label="Main links">
           <Link className="primary-link" href="/">
@@ -64,6 +65,9 @@ export default function NotFound() {
           </Link>
           <Link className="secondary-link" href="/publications">
             Publications
+          </Link>
+          <Link className="secondary-link" href="/supervision">
+            Supervision
           </Link>
           <Link className="secondary-link" href="/teaching">
             Teaching
