@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 const aikidoLinks = [
   {
-    title: "ACNA / Michel Bécart",
+    title: "ACNA / Michel Bécart Shihan",
     href: "https://www.michelbecart.com/",
     description:
       "Association Culturelle Nationale d'Aïkido, founded by Michel Bécart Shihan.",
@@ -60,7 +60,7 @@ export default function AikidoStoryPage() {
               className="primary-link"
               href="https://www.michelbecart.com/"
             >
-              ACNA / Michel Bécart
+              ACNA / Michel Bécart Shihan
             </a>
             <a className="secondary-link" href="https://aikiwaydojo.com/">
               Aikiway Dojo
@@ -72,7 +72,8 @@ export default function AikidoStoryPage() {
         </div>
         <aside className="aikido-panel" aria-label="Aikido practice note">
           <p>
-            5th Dan and Shidoin with ACNA, under Michel Bécart Shihan, I
+            5th Dan and Shidoin (certified instructor) with ACNA, under Michel
+            Bécart Shihan, I
             continue to understand Aikido as a dialogue between breath, balance,
             and time.
           </p>
@@ -89,8 +90,9 @@ export default function AikidoStoryPage() {
         </div>
         <div className="aikido-practice-card">
           <p>
-            I began my practice with Michel Bécart Shihan and the ACNA, a
-            French organization recognized by the Aikikai Hombu Dojo in Japan.
+            I began my practice in 1986 with Michel Bécart Shihan and the
+            ACNA, a French organization recognized by the Aikikai Hombu Dojo in
+            Japan.
             Over the past twenty years, I have also explored Daito-ryu, Sagawa
             style, Noh theatre, Shinkage-ryu, and Ni-ten-ryu. Each has become
             another mirror of the same spirit, and of the internal bodywork that
