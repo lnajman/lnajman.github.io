@@ -44,3 +44,11 @@ pnpm run build:github
 
 The GitHub Actions workflow rebuilds the site from HAL on pushes, manual
 dispatches, and a weekly schedule.
+
+## Open Notes
+
+Remaining non-domain discussion points are tracked in:
+
+```bash
+docs/open-discussion-notes.md
+```
