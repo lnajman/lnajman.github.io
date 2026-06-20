@@ -465,6 +465,8 @@ h3 {
 }
 
 .publication-item {
+  --pub-accent: var(--teal);
+  position: relative;
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
   gap: 1rem;
@@ -473,6 +475,59 @@ h3 {
   border-radius: 8px;
   background: var(--panel);
   padding: 1rem;
+  overflow: hidden;
+}
+
+.publication-item::before {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 4px;
+  background: var(--pub-accent);
+  content: "";
+  opacity: 0.74;
+}
+
+.publication-item[data-publication-type="Conference paper"],
+.type-summary li[data-publication-type="Conference paper"] {
+  --pub-accent: var(--teal-dark);
+}
+
+.publication-item[data-publication-type="Journal article"],
+.type-summary li[data-publication-type="Journal article"] {
+  --pub-accent: var(--rust);
+}
+
+.publication-item[data-publication-type="Book"],
+.type-summary li[data-publication-type="Book"] {
+  --pub-accent: var(--violet);
+}
+
+.publication-item[data-publication-type="Book chapter"],
+.type-summary li[data-publication-type="Book chapter"] {
+  --pub-accent: var(--ochre);
+}
+
+.publication-item[data-publication-type="Proceedings"],
+.publication-item[data-publication-type="Special issue"],
+.type-summary li[data-publication-type="Proceedings"],
+.type-summary li[data-publication-type="Special issue"] {
+  --pub-accent: #496a54;
+}
+
+.publication-item[data-publication-type="Thesis"],
+.publication-item[data-publication-type="HDR thesis"],
+.type-summary li[data-publication-type="Thesis"],
+.type-summary li[data-publication-type="HDR thesis"] {
+  --pub-accent: #52668c;
+}
+
+.publication-item[data-publication-type="Patent"],
+.publication-item[data-publication-type="Poster"],
+.publication-item[data-publication-type="Other"],
+.type-summary li[data-publication-type="Patent"],
+.type-summary li[data-publication-type="Poster"],
+.type-summary li[data-publication-type="Other"] {
+  --pub-accent: #6e6158;
 }
 
 .publication-meta {
@@ -490,6 +545,12 @@ h3 {
   color: var(--teal-dark);
   font-size: 0.78rem;
   font-weight: 760;
+}
+
+.publication-meta span:nth-child(2) {
+  border-color: color-mix(in srgb, var(--pub-accent) 38%, var(--line));
+  background: color-mix(in srgb, var(--pub-accent) 10%, #ffffff);
+  color: var(--pub-accent);
 }
 
 .publication-meta span:nth-child(3) {
@@ -539,6 +600,7 @@ h3 {
 
 .publication-links a:hover {
   border-color: var(--teal);
+  background: var(--soft-green);
 }
 
 .data-note {
@@ -551,6 +613,137 @@ h3 {
 
 .page-hero h1 {
   margin-bottom: 1rem;
+}
+
+.publications-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.62fr);
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: center;
+}
+
+.publication-source-panel {
+  display: grid;
+  gap: 1rem;
+}
+
+.publications-visual {
+  width: 100%;
+  min-height: 250px;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fffefb;
+  box-shadow: var(--shadow);
+  aspect-ratio: 32 / 21;
+}
+
+.publications-visual svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: inherit;
+}
+
+.publication-grid {
+  fill: none;
+  stroke: rgba(23, 100, 93, 0.1);
+  stroke-width: 1;
+}
+
+.publication-pages rect {
+  fill: rgba(255, 254, 251, 0.84);
+  stroke: rgba(23, 100, 93, 0.34);
+  stroke-width: 2;
+}
+
+.publication-pages rect:nth-child(2) {
+  stroke: rgba(139, 70, 56, 0.38);
+}
+
+.publication-pages rect:nth-child(3) {
+  stroke: rgba(92, 82, 127, 0.38);
+}
+
+.publication-lines path {
+  fill: none;
+  stroke: rgba(15, 71, 66, 0.58);
+  stroke-linecap: round;
+  stroke-width: 4;
+}
+
+.publication-flow {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.publication-flow.primary {
+  stroke: rgba(15, 71, 66, 0.68);
+  stroke-width: 4;
+}
+
+.publication-flow.secondary {
+  stroke: rgba(139, 70, 56, 0.54);
+  stroke-width: 3;
+}
+
+.publication-nodes circle {
+  fill: #fffefb;
+  stroke: var(--teal-dark);
+  stroke-width: 3;
+}
+
+.publication-tags rect {
+  fill: var(--soft-rust);
+  stroke: rgba(139, 70, 56, 0.36);
+  stroke-width: 2;
+}
+
+.publication-tags rect:last-child {
+  fill: var(--soft-green);
+  stroke: rgba(23, 100, 93, 0.34);
+}
+
+.source-facts {
+  display: grid;
+  gap: 0.65rem;
+  margin: 0;
+}
+
+.source-facts div {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.78);
+  padding: 0.8rem 0.9rem;
+}
+
+.source-facts dt {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 760;
+}
+
+.source-facts dd {
+  margin: 0.2rem 0 0;
+  color: var(--teal-dark);
+  font-weight: 760;
+  line-height: 1.35;
+}
+
+.publication-metrics-section {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.62fr);
+  gap: 2rem;
+  align-items: center;
+  border-top: 1px solid var(--line);
+  padding: clamp(2.5rem, 6vw, 4.5rem) 0;
+}
+
+.publication-process-note {
+  border-left: 3px solid var(--rust);
+  padding-left: 1rem;
 }
 
 .supervision-hero {
@@ -658,7 +851,10 @@ h3 {
 }
 
 .type-summary li {
+  --pub-accent: var(--teal);
+  position: relative;
   display: flex;
+  align-items: center;
   justify-content: space-between;
   gap: 1rem;
   border: 1px solid var(--line);
@@ -667,8 +863,21 @@ h3 {
   padding: 0.85rem 1rem;
 }
 
+.type-marker {
+  flex: 0 0 auto;
+  width: 0.72rem;
+  height: 0.72rem;
+  border: 2px solid var(--pub-accent);
+  border-radius: 999px;
+  background: #fffefb;
+}
+
 .type-summary span {
   color: var(--muted);
+}
+
+.type-summary li > span:nth-child(2) {
+  flex: 1 1 auto;
 }
 
 .audit-panel {
@@ -725,7 +934,11 @@ h3 {
 }
 
 .type-shortcuts button {
+  --shortcut-accent: var(--teal);
   appearance: none;
+  display: grid;
+  align-content: space-between;
+  gap: 0.65rem;
   min-height: 4.35rem;
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -737,16 +950,68 @@ h3 {
   text-align: left;
 }
 
+.type-shortcuts button::before {
+  display: block;
+  width: 100%;
+  border-top: 3px solid var(--shortcut-accent);
+  content: "";
+  opacity: 0.78;
+}
+
+.type-shortcuts button[data-category="journal"] {
+  --shortcut-accent: var(--rust);
+}
+
+.type-shortcuts button[data-category="books"],
+.type-shortcuts button[data-category="chapters"] {
+  --shortcut-accent: var(--violet);
+}
+
+.type-shortcuts button[data-category="conferences"] {
+  --shortcut-accent: var(--teal-dark);
+}
+
+.type-shortcuts button[data-category="reports"] {
+  --shortcut-accent: var(--ochre);
+}
+
+.type-shortcuts button[data-category="issues-proceedings"] {
+  --shortcut-accent: #496a54;
+}
+
+.type-shortcuts button[data-category="theses"] {
+  --shortcut-accent: #52668c;
+}
+
+.type-shortcuts button[data-category="other-publications"] {
+  --shortcut-accent: #6e6158;
+}
+
 .type-shortcuts button:hover {
   border-color: var(--teal);
 }
 
 .type-shortcuts button[aria-pressed="true"] {
-  border-color: var(--teal);
-  background: var(--soft-green);
+  border-color: var(--shortcut-accent);
+  background: color-mix(in srgb, var(--shortcut-accent) 9%, #ffffff);
 }
 
-.type-shortcuts span {
+.shortcut-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.shortcut-mark {
+  flex: 0 0 auto;
+  width: 0.72rem;
+  height: 0.72rem;
+  border: 2px solid var(--shortcut-accent);
+  border-radius: 999px;
+  background: #fffefb;
+}
+
+.type-shortcuts .shortcut-label span:last-child {
   display: block;
   color: var(--muted);
   font-size: 0.82rem;
@@ -772,7 +1037,9 @@ h3 {
   align-items: end;
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: var(--panel);
+  background:
+    linear-gradient(to bottom, rgba(238, 244, 237, 0.48), transparent 72%),
+    var(--panel);
   padding: 1rem;
 }
 
@@ -888,6 +1155,11 @@ h3 {
   overflow: hidden;
 }
 
+.year-group[open] {
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 10px 28px rgba(24, 32, 27, 0.05);
+}
+
 .year-group summary {
   display: flex;
   align-items: center;
@@ -897,6 +1169,22 @@ h3 {
   color: var(--teal-dark);
   font-size: 1.25rem;
   font-weight: 800;
+}
+
+.year-group summary strong {
+  display: inline-grid;
+  place-items: center;
+  min-width: 2.25rem;
+  min-height: 2.25rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--soft-green);
+  color: var(--teal-dark);
+  font-size: 0.92rem;
+}
+
+.year-group summary:hover {
+  background: rgba(238, 244, 237, 0.48);
 }
 
 .year-group .publication-list {
@@ -1489,8 +1777,10 @@ h3 {
 @media (max-width: 920px) {
   .hero,
   .split-section,
+  .publication-metrics-section,
   .supervision-band,
   .supervision-hero,
+  .publications-hero,
   .bio-hero,
   .aikido-hero,
   .research-hero,
@@ -1522,6 +1812,10 @@ h3 {
 
   .site-footer {
     grid-template-columns: 1fr;
+  }
+
+  .publication-process-note {
+    max-width: none;
   }
 }
 
@@ -1570,6 +1864,10 @@ h3 {
     max-width: none;
   }
 
+  .publications-visual {
+    min-height: 215px;
+  }
+
   .quick-facts,
   .stats-grid,
   .supervision-stats,
@@ -1601,6 +1899,10 @@ h3 {
   .publication-links {
     justify-content: flex-start;
     max-width: none;
+  }
+
+  .year-group summary {
+    font-size: 1.05rem;
   }
 
   .supervision-stats.compact {

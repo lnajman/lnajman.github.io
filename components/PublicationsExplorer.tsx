@@ -160,13 +160,17 @@ export function PublicationsExplorer({
           <button
             key={publicationType.value}
             type="button"
+            data-category={publicationType.value}
             aria-pressed={category === publicationType.value}
             onClick={() => {
               setCategory(publicationType.value);
               setType("all");
             }}
           >
-            <span>{publicationType.label}</span>
+            <span className="shortcut-label">
+              <span className="shortcut-mark" aria-hidden="true" />
+              <span>{publicationType.label}</span>
+            </span>
             <strong>{categoryCounts[publicationType.value]}</strong>
           </button>
         ))}

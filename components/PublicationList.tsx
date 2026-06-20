@@ -13,7 +13,11 @@ export function PublicationList({
   return (
     <ol className={compact ? "publication-list compact" : "publication-list"}>
       {publications.map((publication) => (
-        <li className="publication-item" key={publication.id}>
+        <li
+          className="publication-item"
+          data-publication-type={publication.typeLabel}
+          key={publication.id}
+        >
           <div className="publication-main">
             <p className="publication-meta">
               <span>{publication.year || "Undated"}</span>

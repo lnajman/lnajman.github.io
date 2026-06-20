@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { PublicationsVisual } from "@/components/PublicationsVisual";
 import { PublicationsExplorer } from "@/components/PublicationsExplorer";
 import {
   formatGeneratedDate,
@@ -37,18 +38,42 @@ export default function PublicationsPage() {
         </nav>
       </header>
 
-      <section className="page-hero section-shell">
-        <p className="eyebrow">HAL-powered bibliography</p>
-        <h1>Publications</h1>
-        <p>
-          This page is generated from HAL using the author id{" "}
-          <code>laurent-najman</code> plus exact-name matching, then deduplicated
-          with a small manual override file.
-        </p>
+      <section className="page-hero section-shell publications-hero">
+        <div>
+          <p className="eyebrow">HAL-powered bibliography</p>
+          <h1>Publications</h1>
+          <p>
+            This page is generated from HAL using the author id{" "}
+            <code>laurent-najman</code> plus exact-name matching, then
+            deduplicated with a small manual override file.
+          </p>
+        </div>
+        <aside className="publication-source-panel" aria-label="HAL data status">
+          <PublicationsVisual />
+          <dl className="source-facts">
+            <div>
+              <dt>Source</dt>
+              <dd>{publicationsData.source.name}</dd>
+            </div>
+            <div>
+              <dt>Query</dt>
+              <dd>
+                <code>authIdHal_s:laurent-najman</code>
+              </dd>
+            </div>
+            <div>
+              <dt>Generated</dt>
+              <dd>{formatGeneratedDate(publicationsData.generatedAt)}</dd>
+            </div>
+          </dl>
+        </aside>
       </section>
 
-      <section className="section-shell split-section">
-        <div className="stats-grid wide-stats" aria-label="HAL data summary">
+      <section className="section-shell publication-metrics-section">
+        <div
+          className="stats-grid wide-stats publication-stats-grid"
+          aria-label="HAL data summary"
+        >
           <div>
             <strong>{publicationsData.counts.rawHalRecords}</strong>
             <span>raw HAL records</span>
@@ -62,7 +87,7 @@ export default function PublicationsPage() {
             <span>manual duplicate merge</span>
           </div>
         </div>
-        <p className="data-note large-note">
+        <p className="data-note large-note publication-process-note">
           Generated {formatGeneratedDate(publicationsData.generatedAt)}. The
           confirmed duplicate merge is the operating-system book indexed under
           both HAL and INRIA HAL identifiers.
@@ -70,10 +95,17 @@ export default function PublicationsPage() {
       </section>
 
       <section className="section-shell type-summary">
-        <h2>Publication Types</h2>
+        <div className="section-heading row-heading">
+          <div>
+            <p className="eyebrow">Catalogue</p>
+            <h2>Publication types</h2>
+          </div>
+          <span className="section-count">{typeEntries.length} categories</span>
+        </div>
         <ul>
           {typeEntries.map(([type, count]) => (
-            <li key={type}>
+            <li data-publication-type={type} key={type}>
+              <span className="type-marker" aria-hidden="true" />
               <span>{type}</span>
               <strong>{count}</strong>
             </li>
