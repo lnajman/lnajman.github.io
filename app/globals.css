@@ -1210,6 +1210,125 @@ h3 {
   align-items: center;
 }
 
+.teaching-overview-panel {
+  display: grid;
+  gap: 1rem;
+}
+
+.teaching-visual {
+  width: 100%;
+  min-height: 255px;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fffefb;
+  box-shadow: var(--shadow);
+  aspect-ratio: 32 / 21;
+}
+
+.teaching-visual svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: inherit;
+}
+
+.teaching-grid-lines,
+.teaching-board path,
+.teaching-curve {
+  fill: none;
+}
+
+.teaching-grid-lines {
+  stroke: rgba(92, 82, 127, 0.12);
+  stroke-width: 1;
+}
+
+.teaching-board rect {
+  fill: rgba(255, 254, 251, 0.86);
+  stroke: rgba(23, 100, 93, 0.34);
+  stroke-width: 2;
+}
+
+.teaching-board path {
+  stroke: rgba(15, 71, 66, 0.48);
+  stroke-linecap: round;
+  stroke-width: 4;
+}
+
+.teaching-curve {
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.teaching-curve.primary {
+  stroke: rgba(23, 100, 93, 0.68);
+  stroke-width: 4;
+}
+
+.teaching-curve.secondary {
+  stroke: rgba(139, 70, 56, 0.52);
+  stroke-width: 3;
+}
+
+.teaching-nodes circle {
+  fill: #fffefb;
+  stroke: var(--teal-dark);
+  stroke-width: 3;
+}
+
+.teaching-tiles rect {
+  fill: var(--soft-violet);
+  stroke: rgba(92, 82, 127, 0.36);
+  stroke-width: 2;
+}
+
+.teaching-tiles rect:last-child {
+  fill: var(--soft-rust);
+  stroke: rgba(139, 70, 56, 0.34);
+}
+
+.teaching-facts {
+  display: grid;
+  gap: 0.65rem;
+  margin: 0;
+}
+
+.teaching-facts div {
+  display: grid;
+  grid-template-columns: minmax(5.5rem, 0.45fr) minmax(0, 1fr);
+  gap: 0.75rem;
+  align-items: start;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.78);
+  padding: 0.85rem 0.9rem;
+}
+
+.teaching-facts dt {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 760;
+}
+
+.teaching-facts dd {
+  display: grid;
+  gap: 0.18rem;
+  margin: 0;
+}
+
+.teaching-facts strong {
+  color: var(--teal-dark);
+  line-height: 1.2;
+}
+
+.teaching-facts span {
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
 .teaching-note-panel {
   display: grid;
   gap: 0.75rem;
@@ -1228,6 +1347,54 @@ h3 {
 .teaching-note-panel p:first-child {
   background: var(--soft-green);
   color: var(--ink);
+}
+
+.teaching-theme-card {
+  --teaching-accent: var(--teal-dark);
+  position: relative;
+  min-height: 12.5rem;
+  overflow: hidden;
+}
+
+.teaching-theme-card::before {
+  position: absolute;
+  inset: 0 0 auto;
+  height: 4px;
+  background: var(--teaching-accent);
+  content: "";
+  opacity: 0.78;
+}
+
+.teaching-theme-card[data-teaching-area="computer-science"] {
+  --teaching-accent: var(--violet);
+}
+
+.teaching-theme-card[data-teaching-area="morphology"] {
+  --teaching-accent: var(--rust);
+}
+
+.teaching-theme-card[data-teaching-area="ai"] {
+  --teaching-accent: #496a54;
+}
+
+.teaching-theme-card[data-teaching-area="signal"] {
+  --teaching-accent: var(--ochre);
+}
+
+.teaching-theme-card[data-teaching-area="supervision"] {
+  --teaching-accent: #52668c;
+}
+
+.teaching-theme-mark {
+  display: block;
+  width: 2.2rem;
+  height: 2.2rem;
+  margin-bottom: 1rem;
+  border: 2px solid var(--teaching-accent);
+  border-radius: 999px;
+  background:
+    linear-gradient(35deg, transparent 48%, var(--teaching-accent) 49% 52%, transparent 53%),
+    #fffefb;
 }
 
 .research-map {
@@ -1436,8 +1603,12 @@ h3 {
 }
 
 .archive-grid a {
-  display: block;
+  position: relative;
+  display: grid;
+  gap: 0.6rem;
+  align-content: start;
   min-height: 8rem;
+  overflow: hidden;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--panel);
@@ -1445,8 +1616,26 @@ h3 {
   text-decoration: none;
 }
 
+.archive-grid a::before {
+  position: absolute;
+  inset: 0 0 auto;
+  height: 4px;
+  background: var(--teal);
+  content: "";
+  opacity: 0.72;
+}
+
+.archive-grid a:nth-child(3n + 2)::before {
+  background: var(--rust);
+}
+
+.archive-grid a:nth-child(3n + 3)::before {
+  background: var(--violet);
+}
+
 .archive-grid a:hover {
   border-color: var(--teal);
+  background: rgba(255, 255, 255, 0.82);
 }
 
 .archive-grid strong,
@@ -1454,13 +1643,29 @@ h3 {
   display: block;
 }
 
+.archive-label {
+  width: fit-content;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--soft-green);
+  color: var(--teal-dark);
+  padding: 0.16rem 0.48rem;
+  font-size: 0.72rem;
+  font-weight: 760;
+}
+
 .archive-grid strong {
-  margin-bottom: 0.55rem;
+  margin: 0;
 }
 
 .archive-grid span {
   color: var(--muted);
   line-height: 1.5;
+}
+
+.archive-grid .archive-label {
+  color: var(--teal-dark);
+  line-height: 1.2;
 }
 
 .bio-hero {

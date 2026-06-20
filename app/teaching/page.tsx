@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { TeachingVisual } from "@/components/TeachingVisual";
 
 export const metadata: Metadata = {
   title: "Teaching",
@@ -9,41 +10,59 @@ export const metadata: Metadata = {
 
 const teachingAreas = [
   {
+    accent: "mathematics",
     title: "Discrete mathematics",
     description:
       "Graphs, trees, hierarchies, topology of discrete structures, and algorithmic foundations used in image analysis and data science.",
   },
   {
+    accent: "computer-science",
     title: "Computer science",
     description:
       "Engineering and Master-level courses including operating systems, compilers, algorithms, and practical programming foundations.",
   },
   {
+    accent: "morphology",
     title: "Image processing and morphology",
     description:
       "Mathematical morphology, connected operators, segmentation, filtering, shape analysis, and graph-based models for visual data.",
   },
   {
+    accent: "ai",
     title: "Artificial intelligence",
     description:
       "AI and deep learning courses connected to computer vision, feature spaces, interpretability, and data-driven image analysis.",
   },
   {
+    accent: "signal",
     title: "Signal processing",
     description:
       "Signal and image processing courses for engineering students, with links to biomedical imaging and visual data analysis.",
   },
   {
+    accent: "supervision",
     title: "Research supervision",
     description:
       "Project, Master, PhD, and HDR supervision across mathematical morphology, graph methods, topology, and applied imaging.",
   },
 ];
 
-const currentNotes = [
-  "Teaching has covered about 300 hours per year at engineering and Master level.",
-  "Course material connects theory, algorithms, and practical sessions.",
-  "The operating-systems book includes theoretical exercises and practical-session material.",
+const teachingFacts = [
+  {
+    label: "Typical load",
+    value: "about 300 h/year",
+    detail: "Engineering and Master-level teaching.",
+  },
+  {
+    label: "Course shape",
+    value: "theory + labs",
+    detail: "Lectures, algorithmic foundations, exercises, and practical sessions.",
+  },
+  {
+    label: "Archive",
+    value: "legacy resources",
+    detail: "Selected course pages remain linked from the previous website.",
+  },
 ];
 
 const archivedResources = [
@@ -132,11 +151,20 @@ export default function TeachingPage() {
             useful archived resources from the previous website.
           </p>
         </div>
-        <div className="teaching-note-panel">
-          {currentNotes.map((note) => (
-            <p key={note}>{note}</p>
-          ))}
-        </div>
+        <aside className="teaching-overview-panel" aria-label="Teaching overview">
+          <TeachingVisual />
+          <dl className="teaching-facts">
+            {teachingFacts.map((fact) => (
+              <div key={fact.label}>
+                <dt>{fact.label}</dt>
+                <dd>
+                  <strong>{fact.value}</strong>
+                  <span>{fact.detail}</span>
+                </dd>
+              </div>
+            ))}
+          </dl>
+        </aside>
       </section>
 
       <section className="section-shell cv-section">
@@ -144,9 +172,14 @@ export default function TeachingPage() {
           <p className="eyebrow">Areas</p>
           <h2>Teaching themes</h2>
         </div>
-        <div className="theme-grid">
+        <div className="theme-grid teaching-theme-grid">
           {teachingAreas.map((area) => (
-            <article key={area.title}>
+            <article
+              className="teaching-theme-card"
+              data-teaching-area={area.accent}
+              key={area.title}
+            >
+              <span className="teaching-theme-mark" aria-hidden="true" />
               <h3>{area.title}</h3>
               <p>{area.description}</p>
             </article>
@@ -177,6 +210,7 @@ export default function TeachingPage() {
         <div className="archive-grid">
           {archivedResources.map((resource) => (
             <a href={resource.href} key={resource.title}>
+              <span className="archive-label">Previous site</span>
               <strong>{resource.title}</strong>
               <span>{resource.description}</span>
             </a>
