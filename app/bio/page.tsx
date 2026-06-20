@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ProfileLinks } from "@/components/ProfileLinks";
 
 export const metadata: Metadata = {
   title: "Bio and CV",
@@ -203,6 +204,14 @@ export default function BioPage() {
             </li>
           ))}
         </ul>
+      </section>
+
+      <section className="section-shell cv-section">
+        <div className="section-heading">
+          <p className="eyebrow">Profiles</p>
+          <h2>Research identifiers</h2>
+        </div>
+        <ProfileLinks />
       </section>
 
       <section className="section-shell cv-section">

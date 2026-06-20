@@ -6,6 +6,7 @@ import {
   publicationsData,
 } from "@/lib/publications";
 import { PublicationList } from "@/components/PublicationList";
+import { ProfileLinks } from "@/components/ProfileLinks";
 import { ResearchVisual } from "@/components/ResearchVisual";
 
 const researchAreas = [
@@ -69,12 +70,6 @@ export default function Home() {
             <Link className="secondary-link" href="/supervision">
               Supervision
             </Link>
-            <a
-              className="secondary-link"
-              href="https://hal.science/search/index/q/*/authIdHal_s/laurent-najman"
-            >
-              HAL profile
-            </a>
           </div>
           <dl className="quick-facts" aria-label="Current affiliations">
             <div>
@@ -90,6 +85,10 @@ export default function Home() {
               <dd>ESIEE Paris / UGE</dd>
             </div>
           </dl>
+          <div className="hero-profiles">
+            <p>Profiles</p>
+            <ProfileLinks compact />
+          </div>
         </div>
         <div className="hero-visual" aria-label="Portrait of Laurent Najman">
           <div className="portrait-card">
@@ -272,20 +271,22 @@ export default function Home() {
             leave from ESIEE Paris and Université Gustave Eiffel.
           </p>
         </div>
-        <nav aria-label="Contact links">
-          <a href="https://www.ku.ac.ae/">Khalifa University</a>
-          <a href="https://www.esiee.fr/">ESIEE Paris</a>
-          <a href="https://ligm.univ-eiffel.fr/">LIGM</a>
-          <Link href="/software">Software</Link>
-          <Link href="/supervision">Supervision</Link>
-          <Link href="/teaching">Teaching</Link>
-          <Link href="/bio">Bio / CV</Link>
-          <Link href="/aikido-story">Aikido story</Link>
-          <a href="https://www.linkedin.com/in/laurentnajman/">LinkedIn</a>
-          <a href="https://hal.science/search/index/q/*/authIdHal_s/laurent-najman">
-            HAL
-          </a>
-        </nav>
+        <div className="footer-link-column">
+          <nav aria-label="Contact links">
+            <a href="https://www.ku.ac.ae/">Khalifa University</a>
+            <a href="https://www.esiee.fr/">ESIEE Paris</a>
+            <a href="https://ligm.univ-eiffel.fr/">LIGM</a>
+            <Link href="/software">Software</Link>
+            <Link href="/supervision">Supervision</Link>
+            <Link href="/teaching">Teaching</Link>
+            <Link href="/bio">Bio / CV</Link>
+            <Link href="/aikido-story">Aikido story</Link>
+          </nav>
+          <div>
+            <p className="footer-profile-heading">Profiles</p>
+            <ProfileLinks className="footer-profile-links" compact />
+          </div>
+        </div>
       </footer>
     </main>
   );

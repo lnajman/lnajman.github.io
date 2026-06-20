@@ -215,6 +215,109 @@ h3 {
   font-weight: 760;
 }
 
+.hero-profiles {
+  margin-top: 1.2rem;
+}
+
+.hero-profiles p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 760;
+}
+
+.profile-links {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.65rem;
+  margin: 1.2rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.profile-links li {
+  min-width: 0;
+}
+
+.profile-links a {
+  --profile-accent: var(--teal);
+  position: relative;
+  display: grid;
+  gap: 0.35rem;
+  align-content: start;
+  min-height: 5rem;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+  padding: 0.85rem;
+  text-decoration: none;
+}
+
+.profile-links a::before {
+  position: absolute;
+  inset: 0 0 auto;
+  height: 4px;
+  background: var(--profile-accent);
+  content: "";
+  opacity: 0.78;
+}
+
+.profile-links li:nth-child(2) a {
+  --profile-accent: var(--rust);
+}
+
+.profile-links li:nth-child(3) a {
+  --profile-accent: var(--violet);
+}
+
+.profile-links li:nth-child(4) a {
+  --profile-accent: var(--ochre);
+}
+
+.profile-links li:nth-child(5) a {
+  --profile-accent: #496a54;
+}
+
+.profile-links a:hover {
+  border-color: var(--profile-accent);
+}
+
+.profile-links span {
+  color: var(--teal-dark);
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.profile-links small {
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.4;
+}
+
+.profile-links-compact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: 0.55rem;
+}
+
+.profile-links-compact a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.25rem;
+  border-radius: 6px;
+  padding: 0.48rem 0.66rem;
+}
+
+.profile-links-compact a::before {
+  height: 3px;
+}
+
+.profile-links-compact span {
+  font-size: 0.88rem;
+}
+
 .hero-visual {
   align-self: stretch;
   display: flex;
@@ -2472,6 +2575,39 @@ h3 {
   color: white;
 }
 
+.footer-link-column {
+  display: grid;
+  gap: 1.1rem;
+  align-content: start;
+}
+
+.footer-profile-heading {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.64);
+  font-size: 0.82rem;
+  font-weight: 760;
+}
+
+.footer-profile-links.profile-links-compact {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 0.6rem;
+}
+
+.footer-profile-links a {
+  border-color: rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.footer-profile-links a:hover {
+  border-color: rgba(255, 255, 255, 0.62);
+  background: rgba(255, 255, 255, 0.13);
+}
+
+.footer-profile-links span {
+  color: white;
+}
+
 @media (max-width: 920px) {
   .hero,
   .split-section,
@@ -2498,6 +2634,7 @@ h3 {
   }
 
   .publication-list.compact,
+  .profile-links,
   .topic-grid,
   .teaching-list,
   .theme-grid,
@@ -2576,6 +2713,7 @@ h3 {
   .stats-grid,
   .supervision-stats,
   .publication-list.compact,
+  .profile-links,
   .topic-grid,
   .teaching-list,
   .theme-grid,
