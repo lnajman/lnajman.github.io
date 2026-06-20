@@ -1,13 +1,30 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { PublicationList } from "@/components/PublicationList";
 import { ResearchVisual } from "@/components/ResearchVisual";
-import { publications } from "@/lib/publications";
+import { publications, type Publication } from "@/lib/publications";
 
 export const metadata: Metadata = {
   title: "Research",
   description:
     "Research themes of Laurent Najman: discrete mathematical morphology, graphs and simplicial complexes, hierarchies, discrete topology, optimization, deep learning, and interpretable computer vision.",
+};
+
+type SelectedResearchThread = {
+  title: string;
+  accent:
+    | "watersheds"
+    | "morphology"
+    | "topology"
+    | "optimization"
+    | "learning"
+    | "software";
+  summary: string;
+  publicationIds: string[];
+  links?: Array<{
+    label: string;
+    href: string;
+    internal?: boolean;
+  }>;
 };
 
 const themes = [
@@ -55,25 +72,76 @@ const themes = [
   },
 ];
 
-const publicationAnchors = [
-  "Explaning with trees",
-  "Computing gradient vector fields with Morse sequences",
-  "Playing with Kruskal",
-  "Assessing hierarchies by their consistent segmentations",
-  "Discrete Morse Functions and Watersheds",
-  "Higra: Hierarchical Graph Analysis",
+const selectedResearchThreads: SelectedResearchThread[] = [
+  {
+    title: "Watersheds and hierarchical segmentation",
+    accent: "watersheds",
+    summary:
+      "A long-running line connects watershed cuts, minimum spanning forests, saliency maps, and graph-based hierarchies. The point is not only to segment images, but to make the hierarchy itself a mathematically controlled object.",
+    publicationIds: ["hal-00622510", "hal-01344727", "hal-05299371"],
+  },
+  {
+    title: "Component trees, tree of shapes, and morphology",
+    accent: "morphology",
+    summary:
+      "Connected operators and tree-based representations give image analysis a structural language: component trees, tree of shapes, shape spaces, attributes, and efficient algorithms for multiscale reasoning.",
+    publicationIds: ["hal-00622110", "hal-00798620", "hal-01162437"],
+  },
+  {
+    title: "Discrete topology, Morse theory, and persistence",
+    accent: "topology",
+    summary:
+      "This thread studies how topological objects can be computed on discrete data: Morse functions, gradient vector fields, well-composedness, persistent homology, and their relation to morphological dynamics.",
+    publicationIds: ["hal-03928064", "hal-05027155", "hal-03676854"],
+  },
+  {
+    title: "Optimization and spectral graph methods",
+    accent: "optimization",
+    summary:
+      "Graph optimization appears throughout the work: power watersheds, gamma-convergence, spectral clustering, and hyperspectral classification all use discrete structures to connect models, algorithms, and guarantees.",
+    publicationIds: ["hal-01516649", "hal-01427957", "hal-03171597"],
+  },
+  {
+    title: "Deep learning, explainability, and biomedical AI",
+    accent: "learning",
+    summary:
+      "Recent work brings hierarchical and structural ideas into modern learning problems: interpretable concepts, tree-based explanations for CNNs, self-supervision, graph neural networks, and medical segmentation.",
+    publicationIds: ["hal-04614933", "hal-04190721", "hal-04740759"],
+  },
+  {
+    title: "Software and reproducible methods",
+    accent: "software",
+    summary:
+      "The software thread makes the mathematical objects usable by others, from hierarchical graph analysis to Morse-based constructions. Higra and MorseFrames are the current public entry points.",
+    publicationIds: ["hal-02309938", "hal-04217818"],
+    links: [
+      {
+        label: "Higra",
+        href: "https://higra.readthedocs.io/en/stable/index.html",
+      },
+      {
+        label: "MorseFrames",
+        href: "https://morseframes.readthedocs.io/en/latest/",
+      },
+      {
+        label: "Software page",
+        href: "/software",
+        internal: true,
+      },
+    ],
+  },
 ];
 
-function publicationByTitle(fragment: string) {
-  const normalizedFragment = fragment.toLowerCase();
-  return publications.find((publication) =>
-    publication.title.toLowerCase().includes(normalizedFragment),
-  );
+function publicationsByHalIds(ids: string[]) {
+  return ids
+    .map((id) =>
+      publications.find(
+        (publication) =>
+          publication.halId === id || publication.sourceHalIds.includes(id),
+      ),
+    )
+    .filter((publication): publication is Publication => Boolean(publication));
 }
-
-const selectedPublications = publicationAnchors
-  .map(publicationByTitle)
-  .filter((publication) => publication !== undefined);
 
 const books = [
   {
@@ -166,17 +234,72 @@ export default function ResearchPage() {
         </div>
       </section>
 
-      <section className="section-shell cv-section">
+      <section className="section-shell selected-research-section">
         <div className="section-heading row-heading">
           <div>
-            <p className="eyebrow">From HAL</p>
-            <h2>Selected anchors</h2>
+            <p className="eyebrow">Selected research</p>
+            <h2>Curated entry points</h2>
           </div>
           <Link className="text-link" href="/publications">
             Full publication list
           </Link>
         </div>
-        <PublicationList publications={selectedPublications} compact />
+        <p className="section-intro">
+          These threads are a selective map of the work, with representative
+          HAL records chosen for orientation rather than exhaustiveness.
+        </p>
+        <div className="selected-research-grid">
+          {selectedResearchThreads.map((thread) => {
+            const works = publicationsByHalIds(thread.publicationIds);
+
+            return (
+              <article
+                className={`selected-research-card ${thread.accent}`}
+                key={thread.title}
+              >
+                <h3>{thread.title}</h3>
+                <p>{thread.summary}</p>
+                <div>
+                  <strong>Representative works</strong>
+                  <ul className="selected-work-list">
+                    {works.map((work) => (
+                      <li key={work.id}>
+                        <span>{work.year || "Undated"}</span>
+                        <a href={work.halUrl}>{work.title}</a>
+                        <small>
+                          {[work.typeLabel, work.venue]
+                            .filter(Boolean)
+                            .join(" · ")}
+                        </small>
+                        <div className="selected-work-links">
+                          {work.pdfUrl ? <a href={work.pdfUrl}>PDF</a> : null}
+                          {work.doi ? (
+                            <a href={`https://doi.org/${work.doi}`}>DOI</a>
+                          ) : null}
+                        </div>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                {thread.links ? (
+                  <div className="selected-software-links">
+                    {thread.links.map((link) =>
+                      link.internal ? (
+                        <Link href={link.href} key={link.label}>
+                          {link.label}
+                        </Link>
+                      ) : (
+                        <a href={link.href} key={link.label}>
+                          {link.label}
+                        </a>
+                      ),
+                    )}
+                  </div>
+                ) : null}
+              </article>
+            );
+          })}
+        </div>
       </section>
 
       <section className="section-shell cv-section">
