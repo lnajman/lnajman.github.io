@@ -336,10 +336,6 @@ h3 {
   stroke-width: 3;
 }
 
-.hero-math-plate {
-  width: min(100%, 430px);
-}
-
 .section-math-plate {
   flex: 0 0 min(300px, 34vw);
   min-height: 150px;
@@ -1403,7 +1399,6 @@ h3 {
     min-height: 210px;
   }
 
-  .hero-math-plate,
   .research-hero-plate,
   .section-math-plate {
     width: 100%;

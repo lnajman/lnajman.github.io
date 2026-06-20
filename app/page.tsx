@@ -90,8 +90,7 @@ export default function Home() {
             </div>
           </dl>
         </div>
-        <div className="hero-visual" aria-label="Portrait and research motif">
-          <ResearchVisual className="hero-math-plate" />
+        <div className="hero-visual" aria-label="Portrait of Laurent Najman">
           <div className="portrait-card">
             <img
               src="/laurent-najman-portrait.jpeg"
