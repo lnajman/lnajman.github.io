@@ -2008,6 +2008,10 @@ h3 {
   --selected-accent: #496a54;
 }
 
+.selected-research-card.structural {
+  --selected-accent: #7a5f3b;
+}
+
 .selected-research-card.software {
   --selected-accent: #52668c;
 }

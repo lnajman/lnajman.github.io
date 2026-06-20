@@ -17,6 +17,7 @@ type SelectedResearchThread = {
     | "topology"
     | "optimization"
     | "learning"
+    | "structural"
     | "software";
   summary: string;
   publicationIds: string[];
@@ -78,7 +79,19 @@ const selectedResearchThreads: SelectedResearchThread[] = [
     accent: "watersheds",
     summary:
       "A long-running line connects watershed cuts, minimum spanning forests, saliency maps, and graph-based hierarchies. The point is not only to segment images, but to make the hierarchy itself a mathematically controlled object.",
-    publicationIds: ["hal-00622510", "hal-01344727", "hal-05299371"],
+    publicationIds: ["hal-00419373", "hal-01344727", "hal-05299371"],
+  },
+  {
+    title: "Power watersheds, optimization, and max-flow",
+    accent: "optimization",
+    summary:
+      "Power watersheds make explicit the bridge between watershed cuts and optimization. The line runs from maximal-flow formulations to the PAMI framework, then to the SIAM gamma-convergence proof and spectral clustering.",
+    publicationIds: [
+      "hal-00525822",
+      "hal-00622510",
+      "hal-01428875",
+      "hal-01516649",
+    ],
   },
   {
     title: "Component trees, tree of shapes, and morphology",
@@ -95,18 +108,29 @@ const selectedResearchThreads: SelectedResearchThread[] = [
     publicationIds: ["hal-03928064", "hal-05027155", "hal-03676854"],
   },
   {
-    title: "Optimization and spectral graph methods",
-    accent: "optimization",
-    summary:
-      "Graph optimization appears throughout the work: power watersheds, gamma-convergence, spectral clustering, and hyperspectral classification all use discrete structures to connect models, algorithms, and guarantees.",
-    publicationIds: ["hal-01516649", "hal-01427957", "hal-03171597"],
-  },
-  {
-    title: "Deep learning, explainability, and biomedical AI",
+    title: "From Deep Learning to Self-Supervised Representations",
     accent: "learning",
     summary:
-      "Recent work brings hierarchical and structural ideas into modern learning problems: interpretable concepts, tree-based explanations for CNNs, self-supervision, graph neural networks, and medical segmentation.",
-    publicationIds: ["hal-04614933", "hal-04190721", "hal-04740759"],
+      "This thread connects early deep-learning work on scene labeling with Clément Farabet, Camille Couprie, and Yann LeCun to recent self-supervised representation learning with Quentin Garrido and Yann LeCun.",
+    publicationIds: [
+      "hal-00742077",
+      "hal-01066586",
+      "hal-03685169",
+      "hal-03984775",
+      "hal-03793283",
+    ],
+  },
+  {
+    title: "Structural priors for deep learning",
+    accent: "structural",
+    summary:
+      "A complementary line brings the older mathematical objects back into learning: watersheds, component trees, and hierarchies become priors, filters, explanations, or constraints for modern models.",
+    publicationIds: [
+      "hal-03171597",
+      "hal-04740759",
+      "hal-04614933",
+      "hal-04190721",
+    ],
   },
   {
     title: "Software and reproducible methods",
