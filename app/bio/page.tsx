@@ -74,6 +74,21 @@ const editorialItems = [
   },
 ];
 
+const statusFacts = [
+  {
+    label: "Current",
+    value: "Khalifa University",
+  },
+  {
+    label: "On leave from",
+    value: "ESIEE Paris / Université Gustave Eiffel",
+  },
+  {
+    label: "Service",
+    value: "President of AFRIF since 2025",
+  },
+];
+
 const highlights = [
   "Discrete mathematics with applications to data science, biomedical imaging, computer vision, and image processing.",
   "Supervisor of 2 HDRs, 33 PhD students in France, 4 PhD students abroad, and 2 current PhD projects.",
@@ -133,12 +148,22 @@ export default function BioPage() {
             </Link>
           </div>
         </div>
-        <img
-          src="/laurent-najman-portrait.jpeg"
-          alt="Laurent Najman"
-          width="1423"
-          height="1600"
-        />
+        <aside className="bio-portrait-panel" aria-label="Current bio status">
+          <img
+            src="/laurent-najman-portrait.jpeg"
+            alt="Laurent Najman"
+            width="1423"
+            height="1600"
+          />
+          <dl className="bio-status-list">
+            {statusFacts.map((fact) => (
+              <div key={fact.label}>
+                <dt>{fact.label}</dt>
+                <dd>{fact.value}</dd>
+              </div>
+            ))}
+          </dl>
+        </aside>
       </section>
 
       <section className="section-shell bio-summary">
@@ -154,7 +179,10 @@ export default function BioPage() {
         </p>
         <ul className="highlight-grid">
           {highlights.map((highlight) => (
-            <li key={highlight}>{highlight}</li>
+            <li key={highlight}>
+              <span className="highlight-mark" aria-hidden="true" />
+              <span>{highlight}</span>
+            </li>
           ))}
         </ul>
       </section>
@@ -200,7 +228,7 @@ export default function BioPage() {
         </div>
         <ol className="timeline">
           {careerItems.map((item) => (
-            <li key={`${item.period}-${item.title}`}>
+            <li data-timeline="career" key={`${item.period}-${item.title}`}>
               <span>{item.period}</span>
               <p>{item.title}</p>
             </li>
@@ -215,7 +243,7 @@ export default function BioPage() {
         </div>
         <ol className="timeline">
           {educationItems.map((item) => (
-            <li key={`${item.period}-${item.title}`}>
+            <li data-timeline="education" key={`${item.period}-${item.title}`}>
               <span>{item.period}</span>
               <p>{item.title}</p>
             </li>
@@ -230,7 +258,7 @@ export default function BioPage() {
         </div>
         <ol className="timeline">
           {editorialItems.map((item) => (
-            <li key={`${item.period}-${item.title}`}>
+            <li data-timeline="service" key={`${item.period}-${item.title}`}>
               <span>{item.period}</span>
               <p>{item.title}</p>
             </li>
