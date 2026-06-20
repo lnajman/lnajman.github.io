@@ -59,6 +59,8 @@ GitHub Pages custom-domain, or email-forwarding discussion.
 
 ## Visual Design And Imagery
 
+- Agreed direction: mathematical and visual, with personal and archival touches
+  where they matter. The fuller brief is in `docs/visual-system-brief.md`.
 - The site still needs a more polished visual template. The current structure is
   clear and functional, but the next pass should make it feel more finished,
   personal, and visually distinctive.
