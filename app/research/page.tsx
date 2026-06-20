@@ -82,10 +82,10 @@ const selectedResearchThreads: SelectedResearchThread[] = [
     publicationIds: ["hal-00419373", "hal-01344727", "hal-05299371"],
   },
   {
-    title: "Power watersheds, optimization, and max-flow",
+    title: "Discrete calculus, power watersheds, and graph optimization",
     accent: "optimization",
     summary:
-      "Power watersheds make explicit the bridge between watershed cuts and optimization. The line runs from maximal-flow formulations to the PAMI framework, then to the SIAM gamma-convergence proof and spectral clustering.",
+      "Discrete calculus gives graph-based counterparts of continuous variational tools, including combinatorial continuous max-flow. Power watersheds then connect watershed cuts with graph optimization; the SIAM gamma-convergence paper gives the proof framework, and power spectral clustering extends the same ideas to spectral clustering.",
     publicationIds: [
       "hal-00525822",
       "hal-00622510",
