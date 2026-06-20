@@ -102,6 +102,7 @@ const formerPhdStudents: SupervisionEntry[] = [
     title:
       "Graph-based variational optimization and applications in computer vision",
     year: "2011",
+    profileUrl: "https://perso.esiee.fr/~coupriec/",
     link: "https://theses.hal.science/tel-00666878",
     with: "Hugues Talbot and Leo Grady",
     awards: [
