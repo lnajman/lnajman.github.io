@@ -75,6 +75,10 @@ function first(value) {
   return Array.isArray(value) ? value[0] : value;
 }
 
+function hasOverride(overrides, field) {
+  return Object.prototype.hasOwnProperty.call(overrides, field);
+}
+
 function normalizeText(value = "") {
   return value
     .normalize("NFD")
@@ -185,7 +189,7 @@ function toPublication(doc, overrides = {}, sourceDocs = [doc]) {
     series: overrides.series || first(primaryDoc.series_s) || "",
     pages: overrides.pages || primaryDoc.page_s || "",
     isbn: overrides.isbn || primaryDoc.isbn_s || "",
-    doi: overrides.doi || primaryDoc.doiId_s || "",
+    doi: hasOverride(overrides, "doi") ? overrides.doi : primaryDoc.doiId_s || "",
     pdfUrl: first(primaryDoc.files_s) || "",
     halUrl: uri,
     alternateHalUrls: sourceDocs
@@ -273,7 +277,7 @@ for (const doc of docs) {
     continue;
   }
   handledHalIds.add(doc.halId_s);
-  publications.push(toPublication(doc));
+  publications.push(toPublication(doc, overrides.recordOverrides?.[doc.halId_s]));
 }
 
 publications.sort((a, b) => {

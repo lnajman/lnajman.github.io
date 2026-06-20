@@ -1,4 +1,9 @@
 {
+  "recordOverrides": {
+    "hal-05607918": {
+      "doi": ""
+    }
+  },
   "duplicateGroups": [
     {
       "id": "systemes-exploitation-2006",

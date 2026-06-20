@@ -38,8 +38,8 @@ export default function Home() {
           <Link href="/research">Research</Link>
           <Link href="/supervision">Supervision</Link>
           <Link href="/publications">Publications</Link>
-          <Link href="/bio">Bio / CV</Link>
           <Link href="/teaching">Teaching</Link>
+          <Link href="/bio">Bio / CV</Link>
           <a href="#contact">Contact</a>
         </nav>
       </header>
@@ -132,7 +132,7 @@ export default function Home() {
             <span>HDRs supervised</span>
           </div>
           <div>
-            <strong>29</strong>
+            <strong>33</strong>
             <span>PhD students in France</span>
           </div>
           <div>
@@ -140,8 +140,8 @@ export default function Home() {
             <span>PhD students abroad</span>
           </div>
           <div>
-            <strong>5+</strong>
-            <span>Current or recent PhD projects</span>
+            <strong>2</strong>
+            <span>Current PhD projects</span>
           </div>
         </div>
       </section>
@@ -239,8 +239,9 @@ export default function Home() {
         <nav aria-label="Contact links">
           <a href="https://www.ku.ac.ae/">Khalifa University</a>
           <a href="https://www.esiee.fr/">ESIEE Paris</a>
-          <a href="https://siteigm.univ-mlv.fr/">LIGM</a>
+          <a href="https://ligm.univ-eiffel.fr/">LIGM</a>
           <Link href="/supervision">Supervision</Link>
+          <Link href="/teaching">Teaching</Link>
           <Link href="/bio">Bio / CV</Link>
           <Link href="/aikido-story">Aikido story</Link>
           <a href="https://www.linkedin.com/in/laurentnajman/">LinkedIn</a>

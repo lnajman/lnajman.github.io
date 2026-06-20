@@ -637,7 +637,8 @@ h3 {
 
 .status-toggle button {
   min-height: 2.65rem;
-  padding: 0 0.55rem;
+  padding: 0 0.35rem;
+  font-size: 0.8rem;
   text-transform: capitalize;
 }
 

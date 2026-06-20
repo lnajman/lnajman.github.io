@@ -76,7 +76,7 @@ const editorialItems = [
 
 const highlights = [
   "Discrete mathematics with applications to data science, biomedical imaging, computer vision, and image processing.",
-  "Supervisor of 2 HDRs and 29 PhD students in France, with 5 still in progress, plus 4 PhD students abroad.",
+  "Supervisor of 2 HDRs, 33 PhD students in France, 4 PhD students abroad, and 2 current PhD projects.",
   "President of AFRIF, the French branch of IAPR, since 2025.",
   "Editor for the Journal of Mathematical Imaging and Vision and the International Journal of Computer Vision.",
   "Organisation chair for ICCV 2023 in Paris and program chair for ISMM 2005 and ISMM 2015.",
