@@ -183,8 +183,8 @@ export default function Home() {
           </div>
           <p className="section-intro">
             Software makes part of the research reusable: public code for
-            hierarchical graph analysis today, and forthcoming libraries around
-            Morse-based topology and persistent methods.
+            hierarchical graph analysis, Morse-based topology, and persistent
+            methods.
           </p>
           <p className="section-action">
             <Link className="text-link" href="/software">
@@ -199,7 +199,7 @@ export default function Home() {
           </div>
           <div>
             <strong>MorseFrames</strong>
-            <span>In preparation</span>
+            <span>Morse-based topology</span>
           </div>
         </div>
       </section>

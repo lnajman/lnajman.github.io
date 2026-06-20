@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Software",
   description:
-    "Research software connected to Laurent Najman's work: Higra, hierarchical graph analysis, and forthcoming libraries for Morse-based topology.",
+    "Research software connected to Laurent Najman's work: Higra for hierarchical graph analysis and MorseFrames for Morse-based topology.",
 };
 
 const softwareProjects = [
@@ -35,13 +35,22 @@ const softwareProjects = [
   {
     title: "MorseFrames",
     subtitle: "Morse sequences and Morse-based persistent homology",
-    status: "In preparation",
+    status: "Public library",
     accent: "violet",
     description:
       "A C++/Python library for Morse sequences, reference and coreference maps, Morse complexes, and Morse-based persistent homology.",
     role:
-      "The repository is currently private. The public link will be added here when the library is ready for release.",
-    links: [],
+      "The documentation and source code are now public, as part of ongoing work on Morse-based topology and persistence.",
+    links: [
+      {
+        label: "Documentation",
+        href: "https://morseframes.readthedocs.io/en/latest/",
+      },
+      {
+        label: "Source code",
+        href: "https://github.com/lnajman/morseframes",
+      },
+    ],
   },
 ];
 
@@ -95,6 +104,12 @@ export default function SoftwarePage() {
             >
               Higra documentation
             </a>
+            <a
+              className="secondary-link"
+              href="https://morseframes.readthedocs.io/en/latest/"
+            >
+              MorseFrames docs
+            </a>
             <a className="secondary-link" href="https://github.com/lnajman">
               GitHub profile
             </a>
@@ -111,7 +126,7 @@ export default function SoftwarePage() {
               <dd>Higra</dd>
             </div>
             <div>
-              <dt>Coming soon</dt>
+              <dt>Public</dt>
               <dd>MorseFrames</dd>
             </div>
             <div>
@@ -150,7 +165,7 @@ export default function SoftwarePage() {
                 </div>
               ) : (
                 <p className="software-private-note">
-                  Public repository link pending release.
+                  Public links will be added when available.
                 </p>
               )}
             </article>
