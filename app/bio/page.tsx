@@ -103,6 +103,23 @@ const books = [
   "Systèmes d'exploitation - Synthèse de cours & exercices corrigés, with Bart Lamiroy and Hugues Talbot, Pearson Education France, 2006.",
 ];
 
+const genealogyNames = [
+  "Jean-Pierre Aubin",
+  "Jacques-Louis Lions",
+  "Laurent Schwartz",
+  "Georges Valiron",
+  "Émile Borel",
+  "Gaston Darboux",
+  "Michel Chasles",
+  "Siméon Denis Poisson",
+  "Joseph-Louis Lagrange",
+  "Leonhard Euler",
+  "Johann Bernoulli",
+  "Jacob Bernoulli",
+  "Gottfried Wilhelm Leibniz",
+  "Erhard Weigel",
+];
+
 export default function BioPage() {
   return (
     <main>
@@ -220,6 +237,28 @@ export default function BioPage() {
             Read the Aikido story note
           </Link>
         </p>
+      </section>
+
+      <section className="section-shell cv-section genealogy-section">
+        <div className="section-heading">
+          <p className="eyebrow">Mathematical genealogy</p>
+          <h2>Academic lineage</h2>
+        </div>
+        <div className="genealogy-card">
+          <p>
+            A small pleasure of the{" "}
+            <a href="https://www.mathgenealogy.org/">
+              Mathematics Genealogy Project
+            </a>{" "}
+            is the academic lineage it reveals. Following the supervision chain
+            backward, my genealogy passes through:
+          </p>
+          <ul className="genealogy-names">
+            {genealogyNames.map((name) => (
+              <li key={name}>{name}</li>
+            ))}
+          </ul>
+        </div>
       </section>
 
       <section className="section-shell cv-section">

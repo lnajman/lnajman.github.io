@@ -2181,6 +2181,55 @@ h3 {
   display: block;
 }
 
+.genealogy-card {
+  max-width: 920px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background:
+    linear-gradient(90deg, rgba(23, 100, 93, 0.07), transparent 42%),
+    var(--panel);
+  padding: 1rem;
+}
+
+.genealogy-card p {
+  max-width: 760px;
+  color: var(--muted);
+  font-size: clamp(1rem, 1.7vw, 1.14rem);
+  line-height: 1.7;
+}
+
+.genealogy-card a {
+  color: var(--teal-dark);
+  font-weight: 760;
+}
+
+.genealogy-names {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.48rem;
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.genealogy-names li {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fffefb;
+  color: var(--teal-dark);
+  padding: 0.32rem 0.62rem;
+  font-size: 0.88rem;
+  font-weight: 720;
+}
+
+.genealogy-names li:nth-child(3n + 2) {
+  color: var(--rust);
+}
+
+.genealogy-names li:nth-child(3n + 3) {
+  color: var(--violet);
+}
+
 .highlight-grid li:first-child {
   background: var(--soft-green);
   color: var(--ink);
