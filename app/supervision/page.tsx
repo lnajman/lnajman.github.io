@@ -493,6 +493,7 @@ export default function SupervisionPage() {
         <nav className="site-nav" aria-label="Primary navigation">
           <Link href="/">Home</Link>
           <Link href="/research">Research</Link>
+          <Link href="/software">Software</Link>
           <Link href="/supervision" aria-current="page">
             Supervision
           </Link>

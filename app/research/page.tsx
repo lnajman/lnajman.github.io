@@ -102,6 +102,7 @@ export default function ResearchPage() {
           <Link href="/research" aria-current="page">
             Research
           </Link>
+          <Link href="/software">Software</Link>
           <Link href="/supervision">Supervision</Link>
           <Link href="/publications">Publications</Link>
           <Link href="/teaching">Teaching</Link>

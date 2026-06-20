@@ -45,6 +45,7 @@ export default function NotFound() {
         </Link>
         <nav className="site-nav" aria-label="Primary navigation">
           <Link href="/research">Research</Link>
+          <Link href="/software">Software</Link>
           <Link href="/supervision">Supervision</Link>
           <Link href="/publications">Publications</Link>
           <Link href="/teaching">Teaching</Link>
@@ -57,7 +58,7 @@ export default function NotFound() {
         <h1>Page not found</h1>
         <p>
           This page is not available on the new site. The main sections are
-          research, supervision, publications, bio, and teaching.
+          research, software, supervision, publications, bio, and teaching.
         </p>
         <div className="hero-actions" aria-label="Main links">
           <Link className="primary-link" href="/">
@@ -68,6 +69,9 @@ export default function NotFound() {
           </Link>
           <Link className="secondary-link" href="/supervision">
             Supervision
+          </Link>
+          <Link className="secondary-link" href="/software">
+            Software
           </Link>
           <Link className="secondary-link" href="/teaching">
             Teaching

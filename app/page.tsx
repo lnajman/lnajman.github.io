@@ -37,6 +37,7 @@ export default function Home() {
         </Link>
         <nav className="site-nav" aria-label="Primary navigation">
           <Link href="/research">Research</Link>
+          <Link href="/software">Software</Link>
           <Link href="/supervision">Supervision</Link>
           <Link href="/publications">Publications</Link>
           <Link href="/teaching">Teaching</Link>
@@ -174,6 +175,35 @@ export default function Home() {
         </p>
       </section>
 
+      <section className="section-shell software-band" id="software">
+        <div>
+          <div className="section-heading">
+            <p className="eyebrow">Software</p>
+            <h2>Research software</h2>
+          </div>
+          <p className="section-intro">
+            Software makes part of the research reusable: public code for
+            hierarchical graph analysis today, and forthcoming libraries around
+            Morse-based topology and persistent methods.
+          </p>
+          <p className="section-action">
+            <Link className="text-link" href="/software">
+              Open the software page
+            </Link>
+          </p>
+        </div>
+        <div className="software-summary" aria-label="Software summary">
+          <div>
+            <strong>Higra</strong>
+            <span>Hierarchical Graph Analysis</span>
+          </div>
+          <div>
+            <strong>MorseFrames</strong>
+            <span>In preparation</span>
+          </div>
+        </div>
+      </section>
+
       <section className="section-shell split-section">
         <div>
           <div className="section-heading">
@@ -246,6 +276,7 @@ export default function Home() {
           <a href="https://www.ku.ac.ae/">Khalifa University</a>
           <a href="https://www.esiee.fr/">ESIEE Paris</a>
           <a href="https://ligm.univ-eiffel.fr/">LIGM</a>
+          <Link href="/software">Software</Link>
           <Link href="/supervision">Supervision</Link>
           <Link href="/teaching">Teaching</Link>
           <Link href="/bio">Bio / CV</Link>

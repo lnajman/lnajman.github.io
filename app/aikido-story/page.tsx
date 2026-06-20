@@ -38,6 +38,7 @@ export default function AikidoStoryPage() {
         <nav className="site-nav" aria-label="Primary navigation">
           <Link href="/">Home</Link>
           <Link href="/research">Research</Link>
+          <Link href="/software">Software</Link>
           <Link href="/supervision">Supervision</Link>
           <Link href="/publications">Publications</Link>
           <Link href="/teaching">Teaching</Link>
