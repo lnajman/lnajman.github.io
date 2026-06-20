@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { SupervisionVisual } from "@/components/SupervisionVisual";
 
 export const metadata: Metadata = {
   title: "Supervision",
@@ -393,6 +394,23 @@ const currentPhdStudents: SupervisionEntry[] = [
   },
 ];
 
+const supervisionStats = [
+  { value: 2, label: "HDRs supervised" },
+  { value: 33, label: "PhD students in France" },
+  { value: 4, label: "PhD students abroad" },
+  { value: 2, label: "current PhD projects" },
+];
+
+function shortYear(year?: string) {
+  return year?.replace(/^started in\s+/i, "");
+}
+
+function startedLabel(year?: string) {
+  return year?.toLowerCase().startsWith("started in")
+    ? year.replace(/^started/i, "Started")
+    : undefined;
+}
+
 function EntryList({
   documentLabel,
   entries,
@@ -411,41 +429,52 @@ function EntryList({
           entry.link ? { label: documentLabel, href: entry.link } : undefined,
           ...(entry.awardLinks || []),
         ].filter((link): link is SupervisionLink => link !== undefined);
+        const entryYear = shortYear(entry.year);
+        const entryStarted = startedLabel(entry.year);
 
         return (
           <li key={`${entry.name}-${entry.title}`} className="supervision-item">
-            <div>
-              <h3>
-                {entry.profileUrl ? (
-                  <a href={entry.profileUrl}>{entry.name}</a>
-                ) : (
-                  entry.name
-                )}
-              </h3>
-              <p>
-                {entry.link ? (
-                  <a href={entry.link}>{entry.title}</a>
-                ) : (
-                  entry.title
-                )}
-              </p>
-              {explicitLinks.length ? (
-                <div className="supervision-links">
-                  {explicitLinks.map((link) => (
-                    <a href={link.href} key={`${entry.name}-${link.label}`}>
-                      {link.label}
-                    </a>
-                  ))}
-                </div>
-              ) : null}
+            <div className="supervision-year-node">
+              {entryYear ? <span>{entryYear}</span> : null}
             </div>
-            <div className="supervision-detail">
-              {entry.year ? <span>{entry.year}</span> : null}
-              {entry.with ? <span>With {entry.with}</span> : null}
-              {entry.note ? <span>{entry.note}</span> : null}
-              {entry.awards?.map((award) => (
-                <span key={award}>{award}</span>
-              ))}
+            <div className="supervision-content">
+              <div className="supervision-main">
+                <h3>
+                  {entry.profileUrl ? (
+                    <a href={entry.profileUrl}>{entry.name}</a>
+                  ) : (
+                    entry.name
+                  )}
+                </h3>
+                <p>
+                  {entry.link ? (
+                    <a href={entry.link}>{entry.title}</a>
+                  ) : (
+                    entry.title
+                  )}
+                </p>
+                {explicitLinks.length ? (
+                  <div className="supervision-links">
+                    {explicitLinks.map((link) => (
+                      <a href={link.href} key={`${entry.name}-${link.label}`}>
+                        {link.label}
+                      </a>
+                    ))}
+                  </div>
+                ) : null}
+              </div>
+              <div className="supervision-detail">
+                {entryStarted ? (
+                  <span className="supervision-start">{entryStarted}</span>
+                ) : null}
+                {entry.with ? <span>With {entry.with}</span> : null}
+                {entry.note ? <span>{entry.note}</span> : null}
+                {entry.awards?.map((award) => (
+                  <span className="supervision-award" key={award}>
+                    {award}
+                  </span>
+                ))}
+              </div>
             </div>
           </li>
         );
@@ -474,60 +503,66 @@ export default function SupervisionPage() {
         </nav>
       </header>
 
-      <section className="page-hero section-shell">
-        <p className="eyebrow">Supervision</p>
-        <h1>HDR and PhD supervision</h1>
-        <p>
-          Supervision is a central part of research activity: HDRs, PhD theses,
-          collaborations with co-supervisors, and the trajectories of students
-          trained across mathematical morphology, imaging, topology, computer
-          vision, biomedical applications, and deep learning.
-        </p>
+      <section className="page-hero section-shell supervision-hero">
+        <div>
+          <p className="eyebrow">Supervision</p>
+          <h1>HDR and PhD supervision</h1>
+          <p>
+            Supervision is a central part of research activity: HDRs, PhD
+            theses, collaborations with co-supervisors, and the trajectories of
+            students trained across mathematical morphology, imaging, topology,
+            computer vision, biomedical applications, and deep learning.
+          </p>
+        </div>
+        <SupervisionVisual />
         <div className="supervision-stats" aria-label="Supervision summary">
-          <div>
-            <strong>2</strong>
-            <span>HDRs supervised</span>
-          </div>
-          <div>
-            <strong>33</strong>
-            <span>PhD students in France</span>
-          </div>
-          <div>
-            <strong>4</strong>
-            <span>PhD students abroad</span>
-          </div>
-          <div>
-            <strong>2</strong>
-            <span>Current PhD projects</span>
-          </div>
+          {supervisionStats.map((stat) => (
+            <div key={stat.label}>
+              <strong>{stat.value}</strong>
+              <span>{stat.label}</span>
+            </div>
+          ))}
         </div>
       </section>
 
-      <section className="section-shell cv-section">
+      <section className="section-shell supervision-section" id="hdr">
         <div className="section-heading row-heading">
           <div>
             <p className="eyebrow">HDR</p>
             <h2>Habilitation à diriger les recherches</h2>
           </div>
-          <Link className="text-link" href="/bio">
-            Bio and CV
-          </Link>
+          <div className="section-tools">
+            <span className="section-count">{hdrStudents.length} records</span>
+            <Link className="text-link" href="/bio">
+              Bio and CV
+            </Link>
+          </div>
         </div>
         <EntryList documentLabel="HDR manuscript" entries={hdrStudents} />
       </section>
 
-      <section className="section-shell cv-section">
-        <div className="section-heading">
-          <p className="eyebrow">Doctoral supervision</p>
-          <h2>Former PhD students</h2>
+      <section className="section-shell supervision-section" id="phd">
+        <div className="section-heading row-heading">
+          <div>
+            <p className="eyebrow">Doctoral supervision</p>
+            <h2>Former PhD students</h2>
+          </div>
+          <span className="section-count">
+            {formerPhdStudents.length} listed records
+          </span>
         </div>
         <EntryList documentLabel="PhD thesis" entries={formerPhdStudents} />
       </section>
 
-      <section className="section-shell cv-section">
-        <div className="section-heading">
-          <p className="eyebrow">In progress</p>
-          <h2>Current and recent PhD students</h2>
+      <section className="section-shell supervision-section" id="current">
+        <div className="section-heading row-heading">
+          <div>
+            <p className="eyebrow">In progress</p>
+            <h2>Current and recent PhD students</h2>
+          </div>
+          <span className="section-count">
+            {currentPhdStudents.length} current projects
+          </span>
         </div>
         <EntryList documentLabel="PhD thesis" entries={currentPhdStudents} />
       </section>

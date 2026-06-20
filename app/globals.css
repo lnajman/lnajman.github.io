@@ -553,6 +553,88 @@ h3 {
   margin-bottom: 1rem;
 }
 
+.supervision-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.62fr);
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: center;
+}
+
+.supervision-visual {
+  width: 100%;
+  min-height: 280px;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fffefb;
+  box-shadow: var(--shadow);
+  aspect-ratio: 32 / 21;
+}
+
+.supervision-visual svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: inherit;
+}
+
+.lineage-grid {
+  fill: none;
+  stroke: rgba(23, 100, 93, 0.1);
+  stroke-width: 1;
+}
+
+.lineage-link {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.lineage-link.main {
+  stroke: rgba(15, 71, 66, 0.72);
+  stroke-width: 4;
+}
+
+.lineage-link.secondary {
+  stroke: rgba(139, 70, 56, 0.62);
+  stroke-width: 3;
+}
+
+.lineage-link.tertiary {
+  stroke: rgba(92, 82, 127, 0.48);
+  stroke-width: 2.5;
+}
+
+.lineage-cluster circle {
+  fill: #fffefb;
+  stroke: currentColor;
+  stroke-width: 3;
+}
+
+.lineage-cluster.left {
+  color: var(--rust);
+}
+
+.lineage-cluster.right {
+  color: var(--teal-dark);
+}
+
+.lineage-cluster.center {
+  color: var(--violet);
+}
+
+.lineage-hub {
+  fill: var(--soft-green);
+  stroke: var(--teal-dark);
+  stroke-width: 4;
+}
+
+.supervision-hero > .supervision-stats {
+  grid-column: 1 / -1;
+  margin-top: 0;
+}
+
 .wide-stats {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
@@ -1228,22 +1310,87 @@ h3 {
   line-height: 1.5;
 }
 
-.supervision-list {
-  display: grid;
+.supervision-section {
+  border-top: 1px solid var(--line);
+  padding: clamp(3rem, 7vw, 5rem) 0;
+}
+
+.section-tools {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
   gap: 0.75rem;
+  align-items: center;
+}
+
+.section-count {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.2rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--panel);
+  color: var(--teal-dark);
+  padding: 0.34rem 0.7rem;
+  font-size: 0.82rem;
+  font-weight: 760;
+}
+
+.supervision-list {
+  position: relative;
+  display: grid;
+  gap: 0.95rem;
   margin: 2rem 0 0;
   padding: 0;
   list-style: none;
 }
 
+.supervision-list::before {
+  position: absolute;
+  top: 0.45rem;
+  bottom: 0.45rem;
+  left: 2.25rem;
+  border-left: 1px solid rgba(23, 100, 93, 0.22);
+  content: "";
+}
+
 .supervision-item {
+  position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(240px, 0.78fr);
+  grid-template-columns: 4.5rem minmax(0, 1fr);
   gap: 1rem;
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: var(--panel);
-  padding: 1rem;
+  background: rgba(255, 255, 255, 0.82);
+  padding: 1rem 1rem 1rem 0;
+}
+
+.supervision-year-node {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 0.1rem;
+}
+
+.supervision-year-node span {
+  display: inline-grid;
+  place-items: center;
+  width: 3.75rem;
+  min-height: 2.15rem;
+  border: 1px solid rgba(23, 100, 93, 0.32);
+  border-radius: 999px;
+  background: #fffefb;
+  color: var(--teal-dark);
+  font-size: 0.82rem;
+  font-weight: 820;
+}
+
+.supervision-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(220px, 0.58fr);
+  gap: 1rem;
 }
 
 .supervision-item h3 {
@@ -1290,8 +1437,10 @@ h3 {
 
 .supervision-detail {
   display: grid;
-  gap: 0.35rem;
+  gap: 0.42rem;
   align-content: start;
+  border-left: 1px solid var(--line);
+  padding-left: 1rem;
 }
 
 .supervision-detail span {
@@ -1301,7 +1450,8 @@ h3 {
   line-height: 1.45;
 }
 
-.supervision-detail span:first-child {
+.supervision-start,
+.supervision-award {
   color: var(--rust);
   font-weight: 800;
 }
@@ -1340,6 +1490,7 @@ h3 {
   .hero,
   .split-section,
   .supervision-band,
+  .supervision-hero,
   .bio-hero,
   .aikido-hero,
   .research-hero,
@@ -1454,5 +1605,40 @@ h3 {
 
   .supervision-stats.compact {
     grid-template-columns: 1fr;
+  }
+
+  .section-tools {
+    justify-content: flex-start;
+  }
+
+  .supervision-visual {
+    min-height: 220px;
+  }
+
+  .supervision-list::before {
+    left: 1.6rem;
+  }
+
+  .supervision-item {
+    grid-template-columns: 3.25rem minmax(0, 1fr);
+    gap: 0.75rem;
+    padding: 0.85rem 0.85rem 0.85rem 0;
+  }
+
+  .supervision-year-node span {
+    width: 3rem;
+    min-height: 2rem;
+    font-size: 0.74rem;
+  }
+
+  .supervision-content {
+    grid-template-columns: 1fr;
+  }
+
+  .supervision-detail {
+    border-top: 1px solid var(--line);
+    border-left: 0;
+    padding-top: 0.75rem;
+    padding-left: 0;
   }
 }
