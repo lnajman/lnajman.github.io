@@ -57,6 +57,26 @@ GitHub Pages custom-domain, or email-forwarding discussion.
   and simplicial complexes". A later pass could tune the selected anchor papers
   and theme wording.
 
+## Visual Design And Imagery
+
+- The site still needs a more polished visual template. The current structure is
+  clear and functional, but the next pass should make it feel more finished,
+  personal, and visually distinctive.
+- Prefer a custom academic/research visual system over a generic website
+  template: stronger typography, better page rhythm, more refined section
+  spacing, and a clearer visual identity across home, research, bio,
+  supervision, teaching, and publications.
+- Add illustrations or images where they support the content. Candidate places:
+  homepage hero, research themes, selected publications, supervision, teaching,
+  and the Aikido story page.
+- Avoid stock-looking decoration. Good image sources would be Laurent's own
+  photos, research figures, diagrams, book covers, course material, lab/archive
+  images, or carefully generated abstract images based on graphs, trees,
+  topology, morphology, and deep learning.
+- Decide whether the site should feel mostly like a refined academic CV, a
+  research-lab profile, or a more personal long-running web archive. A hybrid
+  of refined academic CV plus research-lab profile currently seems most natural.
+
 ## Teaching
 
 - Archived course links still point to the old `laurentnajman.org` pages. This
