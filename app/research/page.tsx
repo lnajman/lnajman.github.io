@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PublicationList } from "@/components/PublicationList";
+import { ResearchVisual } from "@/components/ResearchVisual";
 import { publications } from "@/lib/publications";
 
 export const metadata: Metadata = {
@@ -12,36 +13,42 @@ export const metadata: Metadata = {
 const themes = [
   {
     title: "Discrete mathematical morphology",
+    motif: "morphology",
     description:
       "Mathematical morphology provides the algebraic and algorithmic language for connected operators, shape analysis, filtering, and segmentation on discrete structures.",
     keywords: ["lattices", "connected filters", "shape spaces"],
   },
   {
     title: "Graphs and simplicial complexes",
+    motif: "graphs",
     description:
       "A central thread is the representation of images and data by graphs and simplicial complexes, including minimum spanning trees, saliency maps, component trees, the tree of shapes, and hierarchical segmentations.",
     keywords: ["watersheds", "saliency maps", "simplicial complexes"],
   },
   {
     title: "Discrete topology and Morse theory",
+    motif: "topology",
     description:
       "The work connects topological ideas with computable models on graphs, cubical grids, simplicial complexes, Morse functions, and gradient vector fields.",
     keywords: ["Morse theory", "simplicial complexes", "persistent homology"],
   },
   {
     title: "Optimization and segmentation",
+    motif: "cuts",
     description:
       "Graph cuts, power watersheds, hierarchical cuts, convex optimization, and related algorithms make segmentation models precise and computationally tractable.",
     keywords: ["power watershed", "graph cuts", "Kruskal algorithms"],
   },
   {
     title: "Biomedical and scientific imaging",
+    motif: "imaging",
     description:
       "Applications include PET/CT, MRI, cardiac imaging, vessel and catheter segmentation, and other visual data where topology and shape are strong priors.",
     keywords: ["PET/CT", "MRI", "medical segmentation"],
   },
   {
     title: "Deep learning and interpretable vision",
+    motif: "learning",
     description:
       "Recent work connects deep learning with graph neural networks, self-supervised learning, few-shot classification, and interpretable visual models built from hierarchies and trees.",
     keywords: ["deep learning", "graph neural networks", "explainable AI"],
@@ -130,14 +137,7 @@ export default function ResearchPage() {
             </a>
           </div>
         </div>
-        <div className="research-map" aria-label="Research keywords">
-          <span>graphs and simplicial complexes</span>
-          <span>hierarchies</span>
-          <span>topology</span>
-          <span>morphology</span>
-          <span>optimization</span>
-          <span>deep learning</span>
-        </div>
+        <ResearchVisual className="research-hero-plate" />
       </section>
 
       <section className="section-shell research-themes">
@@ -147,7 +147,12 @@ export default function ResearchPage() {
         </div>
         <div className="theme-grid">
           {themes.map((theme) => (
-            <article key={theme.title}>
+            <article key={theme.title} className={`theme-card ${theme.motif}`}>
+              <div className={`theme-symbol ${theme.motif}`} aria-hidden="true">
+                <span />
+                <span />
+                <span />
+              </div>
               <h3>{theme.title}</h3>
               <p>{theme.description}</p>
               <ul>

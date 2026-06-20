@@ -6,6 +6,7 @@ import {
   publicationsData,
 } from "@/lib/publications";
 import { PublicationList } from "@/components/PublicationList";
+import { ResearchVisual } from "@/components/ResearchVisual";
 
 const researchAreas = [
   "Discrete mathematical morphology",
@@ -89,19 +90,22 @@ export default function Home() {
             </div>
           </dl>
         </div>
-        <div className="hero-visual" aria-label="Portrait of Laurent Najman">
-          <img
-            src="/laurent-najman-portrait.jpeg"
-            alt="Laurent Najman"
-            width="1423"
-            height="1600"
-          />
-          {firstPublication ? (
-            <p>
-              Latest HAL record: <strong>{firstPublication.year}</strong>,{" "}
-              {formatAuthors(firstPublication.authors)}
-            </p>
-          ) : null}
+        <div className="hero-visual" aria-label="Portrait and research motif">
+          <ResearchVisual className="hero-math-plate" />
+          <div className="portrait-card">
+            <img
+              src="/laurent-najman-portrait.jpeg"
+              alt="Laurent Najman"
+              width="1423"
+              height="1600"
+            />
+            {firstPublication ? (
+              <p>
+                Latest HAL record: <strong>{firstPublication.year}</strong>,{" "}
+                {formatAuthors(firstPublication.authors)}
+              </p>
+            ) : null}
+          </div>
         </div>
       </section>
 
@@ -147,9 +151,12 @@ export default function Home() {
       </section>
 
       <section className="section-shell research-band" id="research">
-        <div className="section-heading">
-          <p className="eyebrow">Research</p>
-          <h2>Discrete structures for visual data</h2>
+        <div className="section-heading row-heading visual-heading">
+          <div>
+            <p className="eyebrow">Research</p>
+            <h2>Discrete structures for visual data</h2>
+          </div>
+          <ResearchVisual className="section-math-plate" variant="theme" />
         </div>
         <p className="section-intro">
           The site should make the research spine easier to scan: graph

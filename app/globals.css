@@ -10,8 +10,10 @@
   --teal-dark: #0f4742;
   --rust: #8b4638;
   --violet: #5c527f;
+  --ochre: #9a6b2e;
   --soft-green: #eef4ed;
   --soft-rust: #f7ece7;
+  --soft-violet: #f0eef8;
   --shadow: 0 18px 42px rgba(24, 32, 27, 0.08);
 }
 
@@ -219,7 +221,13 @@ h3 {
   gap: 1rem;
 }
 
-.hero-visual img {
+.portrait-card {
+  display: grid;
+  gap: 0.75rem;
+  justify-items: start;
+}
+
+.portrait-card img {
   display: block;
   width: min(100%, 380px);
   aspect-ratio: 0.89;
@@ -229,11 +237,113 @@ h3 {
   box-shadow: var(--shadow);
 }
 
-.hero-visual p {
+.portrait-card p {
   max-width: 380px;
+  margin: 0;
+  border-left: 3px solid var(--rust);
+  padding-left: 0.85rem;
   color: var(--muted);
   font-size: 0.92rem;
   line-height: 1.55;
+}
+
+.math-plate {
+  position: relative;
+  width: 100%;
+  min-height: 240px;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fffefb;
+  box-shadow: var(--shadow);
+  aspect-ratio: 32 / 21;
+}
+
+.math-plate svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: inherit;
+}
+
+.math-plate pattern path {
+  fill: none;
+  stroke: rgba(23, 100, 93, 0.12);
+  stroke-width: 1;
+}
+
+.plate-paper {
+  fill: #fffefb;
+}
+
+.plate-grid {
+  stroke: rgba(217, 223, 216, 0.92);
+  stroke-width: 1.2;
+}
+
+.plate-contour {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 3;
+}
+
+.contour-a {
+  stroke: rgba(139, 70, 56, 0.78);
+}
+
+.contour-b {
+  stroke: rgba(23, 100, 93, 0.72);
+}
+
+.contour-c {
+  stroke: rgba(92, 82, 127, 0.8);
+}
+
+.plate-tree {
+  fill: none;
+  stroke: var(--teal-dark);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 4;
+}
+
+.plate-complex path:first-child {
+  fill: rgba(92, 82, 127, 0.09);
+  stroke: rgba(92, 82, 127, 0.74);
+  stroke-width: 2.2;
+}
+
+.plate-complex path:last-child {
+  fill: none;
+  stroke: rgba(92, 82, 127, 0.52);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+.plate-watershed path {
+  fill: none;
+  stroke: rgba(154, 107, 46, 0.58);
+  stroke-linecap: round;
+  stroke-width: 3;
+}
+
+.plate-node {
+  fill: #fffefb;
+  stroke: var(--teal-dark);
+  stroke-width: 3;
+}
+
+.hero-math-plate {
+  width: min(100%, 430px);
+}
+
+.section-math-plate {
+  flex: 0 0 min(300px, 34vw);
+  min-height: 150px;
+  box-shadow: none;
 }
 
 .research-band,
@@ -263,6 +373,10 @@ h3 {
   justify-content: space-between;
   gap: 1rem;
   max-width: none;
+}
+
+.visual-heading {
+  align-items: center;
 }
 
 .topic-grid,
@@ -295,7 +409,7 @@ h3 {
 }
 
 .topic-grid li:nth-child(3n + 3) {
-  background: #f0eef8;
+  background: var(--soft-violet);
 }
 
 .split-section {
@@ -719,6 +833,10 @@ h3 {
   align-items: center;
 }
 
+.research-hero-plate {
+  min-height: 360px;
+}
+
 .teaching-hero {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(280px, 0.7fr);
@@ -775,7 +893,7 @@ h3 {
 }
 
 .research-map span:nth-child(3n + 3) {
-  background: #f0eef8;
+  background: var(--soft-violet);
   color: var(--violet);
 }
 
@@ -796,6 +914,123 @@ h3 {
   border-radius: 8px;
   background: var(--panel);
   padding: 1rem;
+}
+
+.theme-card {
+  position: relative;
+  display: grid;
+  align-content: start;
+  min-height: 18.5rem;
+  overflow: hidden;
+  --theme-accent: var(--teal-dark);
+}
+
+.theme-card::before {
+  position: absolute;
+  inset: 0 0 auto;
+  height: 4px;
+  background: var(--theme-accent);
+  content: "";
+  opacity: 0.8;
+}
+
+.theme-symbol {
+  position: relative;
+  height: 3.6rem;
+  margin-bottom: 1rem;
+  color: var(--theme-accent);
+}
+
+.theme-symbol::before,
+.theme-symbol::after {
+  position: absolute;
+  top: 1.28rem;
+  left: 10%;
+  width: 38%;
+  border-top: 2px solid currentColor;
+  content: "";
+  opacity: 0.42;
+  transform: rotate(13deg);
+  transform-origin: left center;
+}
+
+.theme-symbol::after {
+  top: 1.32rem;
+  left: 43%;
+  width: 40%;
+  transform: rotate(-7deg);
+}
+
+.theme-symbol span {
+  position: absolute;
+  width: 0.72rem;
+  height: 0.72rem;
+  border: 2px solid currentColor;
+  border-radius: 999px;
+  background: #fffefb;
+}
+
+.theme-symbol span:nth-child(1) {
+  top: 0.9rem;
+  left: 7%;
+}
+
+.theme-symbol span:nth-child(2) {
+  top: 1.18rem;
+  left: 42%;
+}
+
+.theme-symbol span:nth-child(3) {
+  top: 0.82rem;
+  right: 10%;
+}
+
+.theme-card.morphology {
+  --theme-accent: var(--rust);
+}
+
+.theme-card.graphs {
+  --theme-accent: var(--teal-dark);
+}
+
+.theme-card.topology {
+  --theme-accent: var(--violet);
+}
+
+.theme-card.cuts {
+  --theme-accent: var(--teal);
+}
+
+.theme-card.imaging {
+  --theme-accent: var(--ochre);
+}
+
+.theme-card.learning {
+  --theme-accent: #496a54;
+}
+
+.theme-symbol.morphology {
+  color: var(--rust);
+}
+
+.theme-symbol.graphs {
+  color: var(--teal-dark);
+}
+
+.theme-symbol.topology {
+  color: var(--violet);
+}
+
+.theme-symbol.cuts {
+  color: var(--teal);
+}
+
+.theme-symbol.imaging {
+  color: var(--ochre);
+}
+
+.theme-symbol.learning {
+  color: #496a54;
 }
 
 .theme-grid h3 {
@@ -1120,6 +1355,10 @@ h3 {
     min-height: auto;
   }
 
+  .section-math-plate {
+    flex-basis: min(260px, 42vw);
+  }
+
   .publication-list.compact,
   .topic-grid,
   .teaching-list,
@@ -1154,6 +1393,37 @@ h3 {
     font-size: 3.1rem;
   }
 
+  .row-heading,
+  .visual-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .math-plate {
+    min-height: 210px;
+  }
+
+  .hero-math-plate,
+  .research-hero-plate,
+  .section-math-plate {
+    width: 100%;
+  }
+
+  .research-hero-plate {
+    min-height: 250px;
+  }
+
+  .section-math-plate {
+    flex-basis: auto;
+  }
+
+  .portrait-card,
+  .portrait-card img,
+  .portrait-card p {
+    width: 100%;
+    max-width: none;
+  }
+
   .quick-facts,
   .stats-grid,
   .supervision-stats,
@@ -1176,6 +1446,10 @@ h3 {
   .timeline li,
   .supervision-item {
     grid-template-columns: 1fr;
+  }
+
+  .theme-card {
+    min-height: auto;
   }
 
   .publication-links {
