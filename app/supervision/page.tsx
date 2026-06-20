@@ -17,6 +17,7 @@ type SupervisionEntry = {
   title: string;
   year?: string;
   profileUrl?: string;
+  orcidUrl?: string;
   link?: string;
   with?: string;
   note?: string;
@@ -31,6 +32,7 @@ const hdrStudents: SupervisionEntry[] = [
       "Outil logiciel pour le traitement d'images: bibliothèque, paradigmes, types et algorithmes",
     year: "2012",
     profileUrl: "http://www.lrde.epita.fr/cgi-bin/twiki/view/Main/ThierryGeraud",
+    orcidUrl: "https://orcid.org/0000-0002-0380-7948",
     link: "http://www.lrde.epita.fr/cgi-bin/twiki/view/Main/ThierryGeraudPublications#AnchorReports",
     note: "Université Paris-Est, 248 pages, in French.",
   },
@@ -39,6 +41,7 @@ const hdrStudents: SupervisionEntry[] = [
     title: "Computational methods towards image-based biomarkers and beyond",
     year: "2017",
     profileUrl: "https://scholar.google.gr/citations?user=g8tXMigAAAAJ&hl=en",
+    orcidUrl: "https://orcid.org/0000-0001-8228-0437",
     note: "Université Paris-Est.",
   },
 ];
@@ -60,6 +63,7 @@ const formerPhdStudents: SupervisionEntry[] = [
       "Discrete watersheds: theory and applications to cardiac image segmentation",
     year: "2007",
     profileUrl: "http://www.esiee.fr/~coustyj/",
+    orcidUrl: "https://orcid.org/0000-0002-2163-9714",
     link: "http://tel.archives-ouvertes.fr/tel-00321885/fr/",
     with: "Gilles Bertrand and Michel Couprie",
     note: "In French.",
@@ -76,6 +80,7 @@ const formerPhdStudents: SupervisionEntry[] = [
     title: "Contrast Enhancement in Digital Imaging using Histogram Equalization",
     year: "2008",
     profileUrl: "http://www.decom.ufop.br/menotti",
+    orcidUrl: "https://orcid.org/0000-0003-2430-2030",
     link: "http://tel.archives-ouvertes.fr/tel-00470545",
     with: "Arnaldo de Albuquerque Araujo",
   },
@@ -94,6 +99,7 @@ const formerPhdStudents: SupervisionEntry[] = [
       "Multispectral imaging assessment of sources and materials for photosimulation",
     year: "2010",
     profileUrl: "http://igm.univ-mlv.fr/~boulengu/",
+    orcidUrl: "https://orcid.org/0000-0001-8713-8376",
     link: "http://tel.archives-ouvertes.fr/tel-00587367",
     note: "In French.",
   },
@@ -189,6 +195,8 @@ const formerPhdStudents: SupervisionEntry[] = [
     name: "Elodye Puybareau",
     title: "Movement analysis for biomedical purposes",
     year: "2016",
+    profileUrl: "https://www.lre.epita.fr/members/elodie-puybareau/",
+    orcidUrl: "https://orcid.org/0000-0002-2748-6624",
     link: "http://www.theses.fr/2016PESC1063",
     with: "André Costes and Hugues Talbot",
   },
@@ -197,6 +205,7 @@ const formerPhdStudents: SupervisionEntry[] = [
     title: "A study of well-composedness in dimension n",
     year: "2016",
     profileUrl: "https://www.lrde.epita.fr/wiki/User:Nboutry",
+    orcidUrl: "https://orcid.org/0000-0001-6278-4638",
     link: "http://www.theses.fr/2016PESC1025",
     with: "Thierry Géraud",
   },
@@ -205,6 +214,7 @@ const formerPhdStudents: SupervisionEntry[] = [
     title:
       "Approches hiérarchiques pour l'analyse d'images multivaluées. Application à la segmentation des images TEP/TDM pour la quantification du volume des lésions, particulièrement pour le lymphome",
     year: "2017",
+    orcidUrl: "https://orcid.org/0000-0003-2948-4021",
     link: "http://www.theses.fr/s92014",
     with: "Michel Meignan",
     note: "CIFRE funded by Keosys.",
@@ -214,6 +224,7 @@ const formerPhdStudents: SupervisionEntry[] = [
     title: "Stabilization and Image Labeling for NBI Endoscopic Image Recognition",
     year: "2017",
     profileUrl: "https://thirakawa.github.io/",
+    orcidUrl: "https://orcid.org/0000-0003-3851-5221",
     link: "https://raw.githubusercontent.com/thirakawa/thirakawa.github.io/fae492ac95d74392c37b0af9e22bc1daab261c7e/papers/phd_thesis_hirakawa.pdf",
     with: "Toru Tamaki, Takio Kurita, and Kazufumi Kaneda",
     note: "PhD registered at Hiroshima University, Japan.",
@@ -224,6 +235,7 @@ const formerPhdStudents: SupervisionEntry[] = [
       "Image processing for semantic analysis of the coronary interventions in cardiology",
     year: "2018",
     profileUrl: "http://scholar.google.co.in/citations?user=XXclzqsAAAAJ&hl=en",
+    orcidUrl: "https://orcid.org/0000-0003-2295-0368",
     link: "http://www.theses.fr/2018PESC1074",
     with: "Jean Cousty and Régis Vaillant",
   },
@@ -232,6 +244,7 @@ const formerPhdStudents: SupervisionEntry[] = [
     title:
       "Vers la simulation de perfusion du myocarde à partir d'image tomographique scanner",
     year: "2018",
+    orcidUrl: "https://orcid.org/0000-0002-2416-7302",
     link: "http://www.theses.fr/2018PESC1117",
     with: "Hugues Talbot and Leo Grady",
   },
@@ -240,6 +253,8 @@ const formerPhdStudents: SupervisionEntry[] = [
     title:
       "Some Applications of the Power Watershed Framework to Image Segmentation and Image Filtering",
     year: "2019",
+    profileUrl: "https://www.bits-pilani.ac.in/goa/sravan-danda/",
+    orcidUrl: "https://orcid.org/0000-0002-2253-4324",
     link: "https://drive.google.com/drive/folders/1BH3zkfLKJu7t2R5d7WHGesKjcSu5xWWp",
     with: "Daya Sagar",
     note: "PhD registered at the Indian Statistical Institute, Bangalore.",
@@ -249,6 +264,8 @@ const formerPhdStudents: SupervisionEntry[] = [
     title:
       "Some Studies on Mathematical Morphology for Unsupervised and Semi-Supervised Learning",
     year: "2019",
+    profileUrl: "https://www.bits-pilani.ac.in/goa/aditya-challa/",
+    orcidUrl: "https://orcid.org/0000-0002-0872-0534",
     link: "https://drive.google.com/file/d/1F29CvzV6X71Kx3uvW_cVZkq-wHrF0JsX/view?usp=sharing",
     with: "Daya Sagar",
     note: "PhD registered at the Indian Statistical Institute, Bangalore.",
@@ -259,6 +276,7 @@ const formerPhdStudents: SupervisionEntry[] = [
       "A study of hierarchical watersheds on graphs with applications to image segmentation",
     year: "2019",
     profileUrl: "https://scholar.google.fr/citations?user=vEFwxHUAAAAJ&hl=fr&oi=ao",
+    orcidUrl: "https://orcid.org/0000-0002-8886-0093",
     link: "http://www.theses.fr/2019PESC2069",
     with: "Jean Cousty and Benjamin Perret",
   },
@@ -276,6 +294,8 @@ const formerPhdStudents: SupervisionEntry[] = [
     title:
       "Developing and Implementing Watershed Classification Algorithms for Imbalanced Datasets: an Application to the Detection of Acute Chest Syndrome in patients with Sickle Cell Disease",
     year: "2023",
+    profileUrl: "https://profiles.lshtm.ac.uk/5654-yamna-ouchtar",
+    orcidUrl: "https://orcid.org/0009-0000-1250-3826",
     link: "https://theses.fr/2023UEFL2055",
     with: "Pablo Bartolucci and Benjamin Perret",
   },
@@ -284,6 +304,7 @@ const formerPhdStudents: SupervisionEntry[] = [
     title: "Advancing ethical AI: fairness, diversity, and privacy in generative modeling",
     year: "2024",
     profileUrl: "https://sites.google.com/view/mzameshina",
+    orcidUrl: "https://orcid.org/0009-0005-4599-2749",
     link: "https://theses.fr/2024UEFL2013",
     with: "Olivier Teytaud",
   },
@@ -292,6 +313,8 @@ const formerPhdStudents: SupervisionEntry[] = [
     title:
       "Prediction of mobility data with prior on the topography of an infrastructure of a road network",
     year: "2024",
+    profileUrl: "https://www.lix.polytechnique.fr/~almeidacarneiro/",
+    orcidUrl: "https://orcid.org/0000-0001-7653-8614",
     link: "https://theses.fr/2024UEFL2052",
     with: "Aurélie Chataignon and Giovanni Chierchia",
   },
@@ -299,6 +322,8 @@ const formerPhdStudents: SupervisionEntry[] = [
     name: "Caroline Mazini Rodrigues",
     title: "Enhancing interpretability in explanations of Convolutional Neural Networks",
     year: "2024",
+    profileUrl: "https://carolmazini.github.io/",
+    orcidUrl: "https://orcid.org/0000-0001-7838-3038",
     link: "https://theses.fr/2024UEFL2056",
     with: "Nicolas Boutry",
   },
@@ -307,6 +332,7 @@ const formerPhdStudents: SupervisionEntry[] = [
     title: "Self-supervised learning beyond invariant image representations",
     year: "2025",
     profileUrl: "https://garridoq.com/",
+    orcidUrl: "https://orcid.org/0009-0004-6202-3264",
     link: "https://theses.fr/2025UEFL2031",
     with: "Yann LeCun",
     awards: [
@@ -337,6 +363,9 @@ const formerPhdStudents: SupervisionEntry[] = [
     title:
       "A myocardial perfusion simulation pipeline based on machine-learning computational methods",
     year: "2025",
+    profileUrl:
+      "https://oden.utexas.edu/people/directory/raoul-salle-de-chou-2479/",
+    orcidUrl: "https://orcid.org/0000-0002-7247-8906",
     link: "https://theses.fr/2025UPASG040",
     with: "Hugues Talbot and Irène Vignon-Clementel",
   },
@@ -348,6 +377,8 @@ const currentPhdStudents: SupervisionEntry[] = [
     title:
       "Towards Spatial Hierarchical Learning for Semantic Segmentation in an Open World",
     year: "started in 2021",
+    profileUrl: "https://github.com/matheusbarrosp",
+    orcidUrl: "https://orcid.org/0000-0001-8314-9975",
     with: "Jefersson Alex dos Santos",
   },
   {
@@ -355,6 +386,7 @@ const currentPhdStudents: SupervisionEntry[] = [
     title:
       "Apprentissage profond sur graphes pour la prédiction des flux de mobilité et de la qualité de l'air en milieu urbain",
     year: "started in 2023",
+    orcidUrl: "https://orcid.org/0009-0001-9244-2265",
     with: "Giovanni Chierchia, Aurélie Chataignon, and Giovanni De Nunzio",
   },
 ];
@@ -373,6 +405,7 @@ function EntryList({
           entry.profileUrl
             ? { label: "Profile", href: entry.profileUrl }
             : undefined,
+          entry.orcidUrl ? { label: "ORCID", href: entry.orcidUrl } : undefined,
           entry.link ? { label: documentLabel, href: entry.link } : undefined,
           ...(entry.awardLinks || []),
         ].filter((link): link is SupervisionLink => link !== undefined);
