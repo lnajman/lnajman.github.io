@@ -1961,6 +1961,7 @@ h3 {
 .selected-research-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
   gap: 0.85rem;
   margin-top: 2rem;
 }
@@ -2010,6 +2011,10 @@ h3 {
 
 .selected-research-card.structural {
   --selected-accent: #7a5f3b;
+}
+
+.selected-research-card.applications {
+  --selected-accent: #8a4f52;
 }
 
 .selected-research-card.software {

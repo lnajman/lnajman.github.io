@@ -18,6 +18,7 @@ type SelectedResearchThread = {
     | "optimization"
     | "learning"
     | "structural"
+    | "applications"
     | "software";
   summary: string;
   publicationIds: string[];
@@ -130,6 +131,20 @@ const selectedResearchThreads: SelectedResearchThread[] = [
       "hal-04740759",
       "hal-04614933",
       "hal-04190721",
+    ],
+  },
+  {
+    title: "Applications: personalized medicine and scientific imaging",
+    accent: "applications",
+    summary:
+      "This thread shows how mathematical and algorithmic tools move into real scientific data: patient-specific cardiac perfusion, vascular networks, PET image analysis, astronomical source detection, and other imaging domains where structure matters.",
+    publicationIds: [
+      "hal-01869264",
+      "hal-03036457",
+      "hal-04359833",
+      "hal-04828473",
+      "hal-02155801",
+      "hal-03429058",
     ],
   },
   {
