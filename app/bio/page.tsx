@@ -1,11 +1,15 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ProfileLinks } from "@/components/ProfileLinks";
+import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Bio and CV",
   description:
     "Biography and CV highlights for Laurent Najman, professor at Khalifa University and on leave from ESIEE Paris / Université Gustave Eiffel.",
+  alternates: {
+    canonical: absoluteUrl("/bio/"),
+  },
 };
 
 const careerItems = [

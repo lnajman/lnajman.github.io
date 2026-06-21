@@ -1,8 +1,9 @@
 import type { Metadata, Viewport } from "next";
+import { absoluteUrl, siteUrl } from "@/lib/site";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://laurentnajman.org"),
+  metadataBase: new URL(siteUrl),
   title: {
     default: "Laurent Najman",
     template: "%s | Laurent Najman",
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
     title: "Laurent Najman",
     description:
       "Professor in the Mathematics Department at Khalifa University, on leave from ESIEE Paris and Université Gustave Eiffel. Research in discrete mathematical morphology, graph-based image analysis, topology, optimization, and deep learning.",
-    url: "https://laurentnajman.org",
+    url: absoluteUrl("/"),
     siteName: "Laurent Najman",
     images: [
       {

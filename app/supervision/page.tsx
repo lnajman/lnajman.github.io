@@ -1,11 +1,15 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { SupervisionVisual } from "@/components/SupervisionVisual";
+import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Supervision",
   description:
     "HDR and PhD supervision by Laurent Najman, including former and current doctoral students.",
+  alternates: {
+    canonical: absoluteUrl("/supervision/"),
+  },
 };
 
 type SupervisionLink = {

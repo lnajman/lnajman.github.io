@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import {
   formatAuthors,
@@ -8,6 +9,18 @@ import {
 import { PublicationList } from "@/components/PublicationList";
 import { ProfileLinks } from "@/components/ProfileLinks";
 import { ResearchVisual } from "@/components/ResearchVisual";
+import { absoluteUrl } from "@/lib/site";
+
+export const metadata: Metadata = {
+  title: {
+    absolute: "Laurent Najman",
+  },
+  description:
+    "Laurent Najman, professor in the Mathematics Department at Khalifa University, on leave from ESIEE Paris and Université Gustave Eiffel. Research in discrete mathematical morphology, graph-based image analysis, topology, optimization, and deep learning.",
+  alternates: {
+    canonical: absoluteUrl("/"),
+  },
+};
 
 const researchAreas = [
   "Discrete mathematical morphology",

@@ -2,11 +2,15 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ResearchVisual } from "@/components/ResearchVisual";
 import { publications, type Publication } from "@/lib/publications";
+import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Research",
   description:
     "Research themes of Laurent Najman: discrete mathematical morphology, graphs and simplicial complexes, hierarchies, discrete topology, optimization, deep learning, and interpretable computer vision.",
+  alternates: {
+    canonical: absoluteUrl("/research/"),
+  },
 };
 
 type SelectedResearchThread = {

@@ -7,11 +7,15 @@ import {
   publications,
   publicationsData,
 } from "@/lib/publications";
+import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Publications",
   description:
     "Publications by Laurent Najman, generated from HAL and grouped by year.",
+  alternates: {
+    canonical: absoluteUrl("/publications/"),
+  },
 };
 
 export default function PublicationsPage() {

@@ -1,10 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Aikido",
+  title: "Aikido Story",
   description:
-    "A personal note from Laurent Najman about Aikido practice, lineage, and Terry Dobson's story about conflict resolution.",
+    "A personal note from Laurent Najman about Aikido practice, lineage, and Terry Dobson's train story about conflict resolution.",
+  alternates: {
+    canonical: absoluteUrl("/aikido-story/"),
+  },
 };
 
 const aikidoLinks = [
@@ -261,8 +265,8 @@ export default function AikidoStoryPage() {
               gently, swaying with the motion of the train, the big man began
               to sob. &quot;I don’t got no <em>wife</em>, I don’t got no{" "}
               <em>home</em>, I don’t got no <em>job</em>. I am so{" "}
-              <em>ashamed</em> of myself.&quot; Tears rolled down his cheeks; a
-              spasm of despair rippled through his body.
+              <em>ashamed</em>{" "}of myself.&quot; Tears rolled down his
+              cheeks; a spasm of despair rippled through his body.
             </p>
             <p>
               Now it was my turn. Standing there in well-scrubbed youthful

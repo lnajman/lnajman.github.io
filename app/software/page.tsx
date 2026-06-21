@@ -1,10 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Software",
   description:
     "Research software connected to Laurent Najman's work: Higra for hierarchical graph analysis and MorseFrames for Morse-based topology.",
+  alternates: {
+    canonical: absoluteUrl("/software/"),
+  },
 };
 
 const softwareProjects = [

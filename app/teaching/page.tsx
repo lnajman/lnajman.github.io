@@ -1,11 +1,15 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { TeachingVisual } from "@/components/TeachingVisual";
+import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Teaching",
   description:
     "Teaching by Laurent Najman: discrete mathematics, computer science, mathematical morphology, AI, image processing, and archived course resources.",
+  alternates: {
+    canonical: absoluteUrl("/teaching/"),
+  },
 };
 
 const teachingAreas = [
