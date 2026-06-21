@@ -197,7 +197,10 @@ export default function Home() {
             <span>Hierarchical Graph Analysis</span>
           </div>
           <div>
-            <strong>MorseFrames</strong>
+            <strong>
+              Morse<wbr />
+              Frames
+            </strong>
             <span>Morse-based topology</span>
           </div>
         </div>
