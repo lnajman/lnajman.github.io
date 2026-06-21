@@ -180,7 +180,34 @@ export default function TeachingPage() {
               data-teaching-area={area.accent}
               key={area.title}
             >
-              <span className="teaching-theme-mark" aria-hidden="true" />
+              <span className="teaching-theme-mark" aria-hidden="true">
+                {area.accent === "ai" ? (
+                  <svg
+                    className="teaching-theme-network"
+                    viewBox="0 0 44 44"
+                    focusable="false"
+                  >
+                    <g className="network-lines">
+                      <path d="M10 12 L22 16 L34 10" />
+                      <path d="M10 12 L22 28 L34 22" />
+                      <path d="M10 22 L22 16 L34 22" />
+                      <path d="M10 22 L22 28 L34 34" />
+                      <path d="M10 32 L22 16 L34 10" />
+                      <path d="M10 32 L22 28 L34 34" />
+                    </g>
+                    <g className="network-nodes">
+                      <circle cx="10" cy="12" r="3" />
+                      <circle cx="10" cy="22" r="3" />
+                      <circle cx="10" cy="32" r="3" />
+                      <circle cx="22" cy="16" r="3.2" />
+                      <circle cx="22" cy="28" r="3.2" />
+                      <circle cx="34" cy="10" r="3" />
+                      <circle cx="34" cy="22" r="3" />
+                      <circle cx="34" cy="34" r="3" />
+                    </g>
+                  </svg>
+                ) : null}
+              </span>
               <h3>{area.title}</h3>
               <p>{area.description}</p>
             </article>

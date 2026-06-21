@@ -1824,32 +1824,32 @@ h3 {
 }
 
 .teaching-theme-card[data-teaching-area="ai"] .teaching-theme-mark {
-  background:
-    radial-gradient(circle at 24% 30%, var(--teaching-accent) 0 3px, transparent 4px),
-    radial-gradient(circle at 28% 72%, var(--teaching-accent) 0 3px, transparent 4px),
-    radial-gradient(circle at 72% 34%, var(--teaching-accent) 0 3px, transparent 4px),
-    radial-gradient(circle at 76% 72%, var(--teaching-accent) 0 3px, transparent 4px),
-    color-mix(in srgb, var(--teaching-accent) 8%, #fffefb);
+  display: grid;
+  place-items: center;
+  background: color-mix(in srgb, var(--teaching-accent) 8%, #fffefb);
 }
 
-.teaching-theme-card[data-teaching-area="ai"] .teaching-theme-mark::before {
-  top: 34%;
-  left: 28%;
-  width: 1.18rem;
-  height: 2px;
-  background: color-mix(in srgb, var(--teaching-accent) 70%, #fffefb);
-  transform: rotate(23deg);
-  transform-origin: left center;
-}
-
+.teaching-theme-card[data-teaching-area="ai"] .teaching-theme-mark::before,
 .teaching-theme-card[data-teaching-area="ai"] .teaching-theme-mark::after {
-  top: 68%;
-  left: 29%;
-  width: 1.16rem;
-  height: 2px;
-  background: var(--teaching-accent);
-  transform: rotate(-22deg);
-  transform-origin: left center;
+  display: none;
+}
+
+.teaching-theme-network {
+  width: 100%;
+  height: 100%;
+}
+
+.teaching-theme-network .network-lines {
+  fill: none;
+  stroke: color-mix(in srgb, var(--teaching-accent) 60%, #fffefb);
+  stroke-linecap: round;
+  stroke-width: 1.55;
+}
+
+.teaching-theme-network .network-nodes {
+  fill: var(--teaching-accent);
+  stroke: #fffefb;
+  stroke-width: 1.4;
 }
 
 .teaching-theme-card[data-teaching-area="signal"] .teaching-theme-mark::before {

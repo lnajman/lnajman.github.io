@@ -290,7 +290,7 @@ const archiveHighlights: ArchiveHighlight[] = [
 const portfolioHighlights: PortfolioHighlight[] = [
   {
     title: "Personalized medicine: myocardial perfusion simulation",
-    label: "LIGM portfolio",
+    label: "Application",
     image: "/research-highlights/myocardial-perfusion.png",
     imageShape: "tall",
     alt: "Patient-specific myocardial perfusion modeling pipeline from CT data to simulated perfusion maps",
@@ -315,12 +315,12 @@ const portfolioHighlights: PortfolioHighlight[] = [
   },
   {
     title: "Higra: hierarchical graph analysis",
-    label: "Software",
+    label: "Software contribution",
     image: "/research-highlights/higra-watershed-simplification.png",
     imageShape: "wide",
     alt: "Image simplification with Higra using a hierarchy of watershed cuts",
     summary:
-      "A C++/Python library for efficient sparse-graph analysis, focused on constructing, processing, filtering, clustering, and evaluating hierarchical representations. The project is maintained by Benjamin Perret, with contributions from the A3SI hierarchy and morphology line.",
+      "A C++/Python library for efficient sparse-graph analysis, focused on constructing, processing, filtering, clustering, and evaluating hierarchical representations. Benjamin Perret is the main maintainer; I contribute to the mathematical morphology and hierarchy line that feeds the library.",
     keywords: ["open source", "hierarchies", "graph analysis"],
     links: [
       {
@@ -339,13 +339,13 @@ const portfolioHighlights: PortfolioHighlight[] = [
     ],
   },
   {
-    title: "Theory of hierarchies at A3SI",
+    title: "Theory of hierarchies",
     label: "Theory",
     image: "/research-highlights/hierarchy-theory.png",
     imageShape: "standard",
     alt: "Hierarchy on a graph distributed over three subgraphs",
     summary:
-      "A theoretical and algorithmic line connecting dendrograms, saliency maps, minimum spanning trees, and hierarchical watersheds, with constructive results for characterization, enumeration, transformation, and out-of-core computation.",
+      "A theoretical and algorithmic line connecting dendrograms, saliency maps, minimum spanning trees, and hierarchical watersheds, with constructive results for characterization, enumeration, transformation, and out-of-core computation. This line started within the A3SI team at LIGM, and remains a current thread in my work.",
     keywords: ["hierarchical watersheds", "saliency maps", "distributed computation"],
     links: [
       {
@@ -512,18 +512,17 @@ export default function ResearchPage() {
       <section className="section-shell portfolio-highlight-section">
         <div className="section-heading row-heading">
           <div>
-            <p className="eyebrow">Portfolio highlights</p>
-            <h2>Three visible research threads</h2>
+            <p className="eyebrow">Research highlights</p>
+            <h2>Three visible contributions</h2>
           </div>
           <Link className="text-link" href="/publications">
             Related publications
           </Link>
         </div>
         <p className="section-intro">
-          Adapted from the 2024 LIGM HCERES portfolio, these highlights make
-          three lines of work visible through concrete images: personalized
-          cardiac modeling, Higra, and the theory of hierarchies developed
-          around A3SI.
+          These highlights make three contributions visible through concrete
+          images: personalized cardiac modeling, hierarchical graph-analysis
+          software, and the theory of hierarchies.
         </p>
         <div className="portfolio-highlight-grid">
           {portfolioHighlights.map((item) => (
