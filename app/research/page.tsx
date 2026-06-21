@@ -39,6 +39,20 @@ type ArchiveHighlight = {
   imageFit?: "cover" | "contain";
 };
 
+type PortfolioHighlight = {
+  title: string;
+  label: string;
+  image: string;
+  alt: string;
+  summary: string;
+  keywords: string[];
+  links: Array<{
+    label: string;
+    href: string;
+    internal?: boolean;
+  }>;
+};
+
 const themes = [
   {
     title: "Discrete mathematical morphology",
@@ -272,6 +286,81 @@ const archiveHighlights: ArchiveHighlight[] = [
   },
 ];
 
+const portfolioHighlights: PortfolioHighlight[] = [
+  {
+    title: "Personalized medicine: myocardial perfusion simulation",
+    label: "LIGM portfolio",
+    image: "/research-highlights/myocardial-perfusion.png",
+    alt: "Patient-specific myocardial perfusion modeling pipeline from CT data to simulated perfusion maps",
+    summary:
+      "A patient-specific multiscale model linking coronary FFRCT, segmented and synthetic vascular networks, and myocardial microcirculation to simulate blood flow from epicardial arteries to cardiac tissue.",
+    keywords: ["cardiac imaging", "multiscale model", "perfusion"],
+    links: [
+      {
+        label: "2021 model",
+        href: "https://hal.science/hal-03036457v2",
+      },
+      {
+        label: "Vascular networks",
+        href: "https://hal.science/hal-01869264v1",
+      },
+      {
+        label: "Related papers",
+        href: "/publications/?q=myocardial%20perfusion",
+        internal: true,
+      },
+    ],
+  },
+  {
+    title: "Higra: hierarchical graph analysis",
+    label: "Software",
+    image: "/research-highlights/higra-watershed-simplification.png",
+    alt: "Image simplification with Higra using a hierarchy of watershed cuts",
+    summary:
+      "A C++/Python library for efficient sparse-graph analysis, focused on constructing, processing, filtering, clustering, and evaluating hierarchical representations. The project is maintained by Benjamin Perret, with contributions from the A3SI hierarchy and morphology line.",
+    keywords: ["open source", "hierarchies", "graph analysis"],
+    links: [
+      {
+        label: "Documentation",
+        href: "https://higra.readthedocs.io/en/stable/index.html",
+      },
+      {
+        label: "SoftwareX paper",
+        href: "https://hal.science/hal-02309938v1",
+      },
+      {
+        label: "Software page",
+        href: "/software",
+        internal: true,
+      },
+    ],
+  },
+  {
+    title: "Theory of hierarchies at A3SI",
+    label: "Theory",
+    image: "/research-highlights/hierarchy-theory.png",
+    alt: "Hierarchy on a graph distributed over three subgraphs",
+    summary:
+      "A theoretical and algorithmic line connecting dendrograms, saliency maps, minimum spanning trees, and hierarchical watersheds, with constructive results for characterization, enumeration, transformation, and out-of-core computation.",
+    keywords: ["hierarchical watersheds", "saliency maps", "distributed computation"],
+    links: [
+      {
+        label: "Theory paper",
+        href: "https://hal.science/hal-02280023v2",
+      },
+      {
+        label: "Watersheding hierarchies",
+        href: "https://hal.science/hal-02180478v1",
+      },
+      {
+        label: "Related papers",
+        href: "/publications/?q=hierarchical%20watersheds",
+        internal: true,
+      },
+    ],
+  },
+];
+
 export default function ResearchPage() {
   return (
     <main>
@@ -413,6 +502,59 @@ export default function ResearchPage() {
               </article>
             );
           })}
+        </div>
+      </section>
+
+      <section className="section-shell portfolio-highlight-section">
+        <div className="section-heading row-heading">
+          <div>
+            <p className="eyebrow">Portfolio highlights</p>
+            <h2>Three visible research threads</h2>
+          </div>
+          <Link className="text-link" href="/publications">
+            Related publications
+          </Link>
+        </div>
+        <p className="section-intro">
+          Adapted from the 2024 LIGM HCERES portfolio, these highlights make
+          three lines of work visible through concrete images: personalized
+          cardiac modeling, Higra, and the theory of hierarchies developed
+          around A3SI.
+        </p>
+        <div className="portfolio-highlight-grid">
+          {portfolioHighlights.map((item) => (
+            <article className="portfolio-highlight-card" key={item.title}>
+              <a
+                className="portfolio-highlight-image"
+                href={item.links[0]?.href ?? "/publications"}
+              >
+                <img src={item.image} alt={item.alt} />
+              </a>
+              <div className="portfolio-highlight-body">
+                <span className="portfolio-highlight-label">{item.label}</span>
+                <h3>{item.title}</h3>
+                <p>{item.summary}</p>
+                <ul className="portfolio-highlight-tags">
+                  {item.keywords.map((keyword) => (
+                    <li key={keyword}>{keyword}</li>
+                  ))}
+                </ul>
+                <div className="portfolio-highlight-links">
+                  {item.links.map((link) =>
+                    link.internal ? (
+                      <Link href={link.href} key={link.label}>
+                        {link.label}
+                      </Link>
+                    ) : (
+                      <a href={link.href} key={link.label}>
+                        {link.label}
+                      </a>
+                    ),
+                  )}
+                </div>
+              </div>
+            </article>
+          ))}
         </div>
       </section>
 
