@@ -41,7 +41,8 @@ GitHub Pages custom-domain, or email-forwarding discussion.
 
 - Aikido story: Laurent prefers the older full-text version from the current
   website and takes responsibility for keeping it. We still need a final content
-  pass on the exact text, attribution, and presentation.
+  pass on the exact text and attribution. The page now has a calmer essay-like
+  visual treatment.
 - Technion: decide final visibility and wording. The current concern is not
   factual accuracy but how much prominence is appropriate given political
   implications.
@@ -55,9 +56,10 @@ GitHub Pages custom-domain, or email-forwarding discussion.
 
 - Agreed direction: mathematical and visual, with personal and archival touches
   where they matter. The fuller brief is in `docs/visual-system-brief.md`.
-- A first visual-system pass is in place: warmer editorial typography, a subtle
-  mathematical grid texture, more deliberate hero panels, and a stronger
-  research-atlas treatment. Later passes can tune details after visual review.
+- Visual-system passes are in place: warmer editorial typography, a subtle
+  mathematical grid texture, more deliberate hero panels, a stronger
+  research-atlas treatment, and page-specific personal/archive treatments for
+  Bio, Aikido, and Teaching. Later passes can tune details after visual review.
 - Prefer a custom academic/research visual system over a generic website
   template: stronger typography, better page rhythm, more refined section
   spacing, and a clearer visual identity across home, research, bio,

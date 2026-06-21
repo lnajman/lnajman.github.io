@@ -1741,15 +1741,43 @@ h3 {
 }
 
 .teaching-hero {
+  position: relative;
+  isolation: isolate;
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(280px, 0.7fr);
   gap: clamp(2rem, 5vw, 4rem);
   align-items: center;
 }
 
+.teaching-hero::before {
+  position: absolute;
+  inset: auto 22% 0 -1.5rem;
+  z-index: -1;
+  height: 11rem;
+  border-top: 1px solid rgba(92, 82, 127, 0.14);
+  border-bottom: 1px solid rgba(23, 100, 93, 0.12);
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      rgba(92, 82, 127, 0.08) 0,
+      rgba(92, 82, 127, 0.08) 1px,
+      transparent 1px,
+      transparent 1.75rem
+    ),
+    rgba(255, 254, 251, 0.52);
+  content: "";
+}
+
 .teaching-overview-panel {
   display: grid;
   gap: 1rem;
+  border: 1px solid rgba(199, 208, 197, 0.88);
+  border-radius: 8px;
+  background:
+    linear-gradient(180deg, rgba(255, 254, 251, 0.92), rgba(238, 244, 237, 0.44)),
+    var(--panel-warm);
+  box-shadow: var(--shadow-soft);
+  padding: 0.82rem;
 }
 
 .teaching-visual {
@@ -1757,10 +1785,10 @@ h3 {
   min-height: 255px;
   margin: 0;
   overflow: hidden;
-  border: 1px solid var(--line);
+  border: 1px solid rgba(199, 208, 197, 0.9);
   border-radius: 8px;
-  background: #fffefb;
-  box-shadow: var(--shadow);
+  background: var(--panel-warm);
+  box-shadow: none;
   aspect-ratio: 32 / 21;
 }
 
@@ -1839,7 +1867,7 @@ h3 {
   align-items: start;
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.78);
+  background: rgba(255, 254, 251, 0.82);
   padding: 0.85rem 0.9rem;
 }
 
@@ -1889,8 +1917,36 @@ h3 {
 .teaching-theme-card {
   --teaching-accent: var(--teal-dark);
   position: relative;
+  display: grid;
+  align-content: start;
   min-height: 12.5rem;
   overflow: hidden;
+  background:
+    linear-gradient(180deg, rgba(255, 254, 251, 0.94), rgba(255, 254, 251, 0.74)),
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0,
+      transparent 1.55rem,
+      color-mix(in srgb, var(--teaching-accent) 12%, transparent) 1.55rem,
+      color-mix(in srgb, var(--teaching-accent) 12%, transparent) calc(1.55rem + 1px)
+    ),
+    var(--panel);
+}
+
+.teaching-theme-card::after {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  width: 4.2rem;
+  height: 3rem;
+  border: 1px solid color-mix(in srgb, var(--teaching-accent) 20%, transparent);
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--teaching-accent) 12%, transparent) 1px, transparent 1px),
+    linear-gradient(0deg, color-mix(in srgb, var(--teaching-accent) 12%, transparent) 1px, transparent 1px);
+  background-size: 0.65rem 0.65rem;
+  content: "";
+  opacity: 0.62;
+  pointer-events: none;
 }
 
 .teaching-theme-card::before {
@@ -1923,6 +1979,7 @@ h3 {
 }
 
 .teaching-theme-mark {
+  z-index: 1;
   position: relative;
   display: block;
   width: 2.35rem;
@@ -1932,6 +1989,18 @@ h3 {
   border: 1px solid color-mix(in srgb, var(--teaching-accent) 45%, var(--line));
   border-radius: 8px;
   background: color-mix(in srgb, var(--teaching-accent) 9%, #fffefb);
+}
+
+.teaching-theme-card h3,
+.teaching-theme-card p {
+  position: relative;
+  z-index: 1;
+}
+
+.teaching-theme-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.22rem;
+  font-weight: 700;
 }
 
 .teaching-theme-mark::before,
@@ -2709,9 +2778,19 @@ h3 {
   align-content: start;
   min-height: 8rem;
   overflow: hidden;
-  border: 1px solid var(--line);
+  border: 1px solid rgba(199, 208, 197, 0.88);
   border-radius: 8px;
-  background: var(--panel);
+  background:
+    linear-gradient(180deg, rgba(255, 254, 251, 0.92), rgba(255, 254, 251, 0.74)),
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0,
+      transparent 1.7rem,
+      rgba(23, 100, 93, 0.08) 1.7rem,
+      rgba(23, 100, 93, 0.08) calc(1.7rem + 1px)
+    ),
+    var(--panel);
+  box-shadow: var(--shadow-soft);
   padding: 1rem;
   text-decoration: none;
   overflow-wrap: anywhere;
@@ -2757,6 +2836,10 @@ h3 {
 
 .archive-grid strong {
   margin: 0;
+  color: var(--teal-dark);
+  font-family: var(--font-display);
+  font-size: 1.12rem;
+  font-weight: 700;
 }
 
 .archive-grid span {
@@ -2770,16 +2853,41 @@ h3 {
 }
 
 .bio-hero {
+  position: relative;
+  isolation: isolate;
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(260px, 0.55fr);
   gap: clamp(2rem, 5vw, 4rem);
   align-items: center;
 }
 
+.bio-hero::before {
+  position: absolute;
+  inset: clamp(1rem, 3vw, 2rem) auto 1.5rem -1.5rem;
+  z-index: -1;
+  width: min(58vw, 720px);
+  border: 1px solid rgba(199, 208, 197, 0.66);
+  background:
+    linear-gradient(112deg, rgba(255, 254, 251, 0.82), rgba(240, 238, 248, 0.28)),
+    linear-gradient(90deg, rgba(23, 100, 93, 0.08) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(139, 70, 56, 0.06) 1px, transparent 1px);
+  background-size: auto, 28px 28px, 28px 28px;
+  box-shadow: var(--shadow-soft);
+  content: "";
+}
+
 .bio-portrait-panel {
+  position: relative;
   display: grid;
   gap: 0.9rem;
   align-content: start;
+  border: 1px solid rgba(199, 208, 197, 0.86);
+  border-radius: 8px;
+  background:
+    linear-gradient(180deg, rgba(255, 254, 251, 0.96), rgba(238, 244, 237, 0.48)),
+    var(--panel-warm);
+  box-shadow: var(--shadow);
+  padding: 0.82rem;
 }
 
 .bio-hero img {
@@ -2790,7 +2898,7 @@ h3 {
   object-position: center 42%;
   border: 1px solid var(--line);
   border-radius: 8px;
-  box-shadow: var(--shadow);
+  box-shadow: none;
 }
 
 .bio-status-list {
@@ -2800,7 +2908,7 @@ h3 {
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.78);
+  background: rgba(255, 254, 251, 0.82);
 }
 
 .bio-status-list div {
@@ -2828,16 +2936,35 @@ h3 {
 }
 
 .aikido-hero {
+  position: relative;
+  isolation: isolate;
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(280px, 0.62fr);
   gap: clamp(2rem, 5vw, 4rem);
   align-items: center;
 }
 
+.aikido-hero::before {
+  position: absolute;
+  inset: 1.5rem -1rem 1rem auto;
+  z-index: -1;
+  width: min(46vw, 520px);
+  border: 1px solid rgba(154, 107, 46, 0.22);
+  background:
+    linear-gradient(90deg, rgba(154, 107, 46, 0.11) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(23, 100, 93, 0.09) 1px, transparent 1px),
+    rgba(255, 254, 251, 0.68);
+  background-size: 4.2rem 4.2rem;
+  content: "";
+}
+
 .aikido-panel {
-  border: 1px solid var(--line);
+  border: 1px solid rgba(199, 208, 197, 0.88);
   border-radius: 8px;
-  background: var(--soft-green);
+  background:
+    linear-gradient(160deg, rgba(238, 244, 237, 0.88), rgba(255, 254, 251, 0.86)),
+    var(--soft-green);
+  box-shadow: var(--shadow-soft);
   padding: clamp(1rem, 3vw, 1.5rem);
 }
 
@@ -2851,8 +2978,9 @@ h3 {
   border-left: 4px solid var(--teal);
   padding-left: 1rem;
   color: var(--teal-dark);
+  font-family: var(--font-display);
   font-size: clamp(1.2rem, 2vw, 1.55rem);
-  font-weight: 760;
+  font-weight: 700;
   line-height: 1.35;
 }
 
@@ -2862,26 +2990,38 @@ h3 {
 }
 
 .aikido-story-card {
-  border: 1px solid var(--line);
+  border: 1px solid rgba(199, 208, 197, 0.88);
   border-radius: 8px;
-  background: var(--panel);
+  background:
+    linear-gradient(180deg, rgba(255, 254, 251, 0.96), rgba(255, 254, 251, 0.82)),
+    var(--panel);
+  box-shadow: var(--shadow-soft);
   margin-top: 2rem;
-  padding: clamp(1rem, 3vw, 1.5rem);
+  padding: clamp(1.1rem, 3vw, 1.8rem);
 }
 
 .aikido-practice-card {
-  border: 1px solid var(--line);
+  border: 1px solid rgba(199, 208, 197, 0.88);
   border-radius: 8px;
   background:
-    linear-gradient(to bottom, rgba(238, 244, 237, 0.52), transparent 70%),
-    var(--panel);
+    linear-gradient(to bottom, rgba(238, 244, 237, 0.62), transparent 78%),
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0,
+      transparent 2.25rem,
+      rgba(23, 100, 93, 0.07) 2.25rem,
+      rgba(23, 100, 93, 0.07) calc(2.25rem + 1px)
+    ),
+    var(--panel-warm);
+  box-shadow: var(--shadow-soft);
   margin-top: 2rem;
-  padding: clamp(1rem, 3vw, 1.5rem);
+  padding: clamp(1.15rem, 3vw, 1.85rem);
 }
 
 .aikido-story-card p {
-  max-width: 760px;
+  max-width: 780px;
   color: var(--muted);
+  font-size: clamp(1.02rem, 1.5vw, 1.18rem);
   line-height: 1.65;
 }
 
@@ -2910,9 +3050,10 @@ h3 {
   align-content: start;
   min-height: 8.5rem;
   overflow: hidden;
-  border: 1px solid var(--line);
+  border: 1px solid rgba(199, 208, 197, 0.88);
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.78);
+  background: rgba(255, 254, 251, 0.84);
+  box-shadow: var(--shadow-soft);
   padding: 1rem;
   text-decoration: none;
 }
@@ -2966,9 +3107,10 @@ h3 {
 
 .highlight-grid li,
 .book-list li {
-  border: 1px solid var(--line);
+  border: 1px solid rgba(199, 208, 197, 0.88);
   border-radius: 8px;
-  background: var(--panel);
+  background: rgba(255, 254, 251, 0.86);
+  box-shadow: var(--shadow-soft);
   padding: 1rem;
   color: var(--muted);
   line-height: 1.55;
@@ -3046,12 +3188,33 @@ h3 {
 
 .genealogy-card {
   max-width: 920px;
-  border: 1px solid var(--line);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(199, 208, 197, 0.88);
   border-radius: 8px;
   background:
-    linear-gradient(90deg, rgba(23, 100, 93, 0.07), transparent 42%),
-    var(--panel);
+    linear-gradient(90deg, rgba(23, 100, 93, 0.08), transparent 42%),
+    linear-gradient(0deg, rgba(92, 82, 127, 0.06) 1px, transparent 1px),
+    var(--panel-warm);
+  background-size: auto, 28px 28px;
+  box-shadow: var(--shadow-soft);
   padding: 1rem;
+}
+
+.genealogy-card::after {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 8rem;
+  height: 5rem;
+  border: 1px solid rgba(92, 82, 127, 0.18);
+  background:
+    linear-gradient(90deg, rgba(92, 82, 127, 0.1) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(23, 100, 93, 0.08) 1px, transparent 1px);
+  background-size: 0.72rem 0.72rem;
+  content: "";
+  opacity: 0.7;
+  pointer-events: none;
 }
 
 .genealogy-card p {
@@ -3122,9 +3285,12 @@ h3 {
   display: grid;
   grid-template-columns: 140px minmax(0, 1fr);
   gap: 1rem;
-  border: 1px solid var(--line);
+  border: 1px solid rgba(199, 208, 197, 0.88);
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.82);
+  background:
+    linear-gradient(180deg, rgba(255, 254, 251, 0.92), rgba(255, 254, 251, 0.78)),
+    var(--panel);
+  box-shadow: var(--shadow-soft);
   padding: 1rem;
 }
 

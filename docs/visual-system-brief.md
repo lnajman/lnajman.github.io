@@ -199,3 +199,14 @@ Implemented in the first pass:
 
 Further passes should tune images, page-specific rhythm, and the balance
 between refined academic CV, research atlas, and personal archive.
+
+## Second Implementation Pass
+
+The second pass extends the visual system to Bio, Aikido, and Teaching.
+
+- Bio now leans more toward an academic dossier: portrait/status panel,
+  refined highlights, timeline items, and a more archival genealogy block.
+- Aikido now has a calmer essay/practice treatment, while leaving the final
+  full-text Terry Dobson content pass open.
+- Teaching now reads more like course/archive material, with notebook textures,
+  clearer course-theme cards, and warmer archived-resource links.
