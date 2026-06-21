@@ -31,6 +31,7 @@
 }
 
 html {
+  overflow-x: clip;
   scroll-behavior: smooth;
 }
 
@@ -71,6 +72,7 @@ code {
   justify-content: space-between;
   gap: 1.2rem;
   width: 100%;
+  max-width: 100vw;
   border-bottom: 1px solid rgba(199, 208, 197, 0.82);
   background:
     linear-gradient(90deg, rgba(238, 244, 237, 0.52), rgba(255, 254, 251, 0.88)),
@@ -105,6 +107,7 @@ code {
 .site-nav a {
   line-height: 1.2;
   text-decoration: none;
+  overflow-wrap: anywhere;
 }
 
 .site-nav a:hover,
@@ -117,7 +120,8 @@ code {
 }
 
 .section-shell {
-  width: min(1120px, calc(100% - 2rem));
+  width: calc(100% - 2rem);
+  max-width: 1120px;
   margin: 0 auto;
 }
 
@@ -125,6 +129,7 @@ main,
 .section-shell,
 .hero-copy,
 .hero-visual,
+.publication-source-panel,
 .page-hero > *,
 .split-section > *,
 .research-hero > *,
@@ -135,6 +140,7 @@ main,
 .bio-hero > *,
 .aikido-hero > * {
   min-width: 0;
+  max-width: 100%;
 }
 
 .hero {
@@ -168,6 +174,7 @@ main,
   color: var(--rust);
   font-size: 0.88rem;
   font-weight: 760;
+  overflow-wrap: anywhere;
 }
 
 h1,
@@ -214,6 +221,7 @@ h3 {
   color: var(--muted);
   font-size: clamp(1.06rem, 1.8vw, 1.32rem);
   line-height: 1.65;
+  overflow-wrap: break-word;
 }
 
 .hero-actions {
@@ -385,10 +393,12 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   gap: 0.45rem;
+  max-width: 100%;
   margin-top: 0.55rem;
 }
 
 .profile-links-compact a {
+  flex: 0 1 auto;
   display: inline-flex;
   align-items: center;
   min-height: 2.25rem;
@@ -3830,7 +3840,7 @@ h3 {
 
 @media (max-width: 480px) {
   .section-shell {
-    width: min(1120px, calc(100% - 1.25rem));
+    width: calc(100% - 1.25rem);
   }
 
   .hero-actions {
