@@ -3025,6 +3025,31 @@ h3 {
   line-height: 1.65;
 }
 
+.aikido-story-text {
+  margin: 0;
+  border-left: 4px solid rgba(23, 100, 93, 0.42);
+  padding-left: clamp(1rem, 3vw, 1.5rem);
+}
+
+.aikido-story-text p {
+  max-width: 840px;
+  color: var(--ink);
+  font-size: clamp(1rem, 1.35vw, 1.12rem);
+  line-height: 1.72;
+}
+
+.aikido-story-text em {
+  color: var(--teal-dark);
+}
+
+.aikido-story-text footer {
+  margin-top: 1.4rem;
+  color: var(--teal-dark);
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
 .aikido-story-card .aikido-story-credit {
   margin-top: 1rem;
   border-top: 1px solid var(--line);
