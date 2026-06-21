@@ -1,6 +1,6 @@
 # Visual System Brief
 
-Last updated: 2026-06-20
+Last updated: 2026-06-21
 
 ## Chosen Direction
 
@@ -179,9 +179,9 @@ Questions to answer:
 4. Apply the chosen system across the remaining pages.
 5. Run link, build, and responsive QA after implementation.
 
-## First Implementation Candidate
+## First Implementation Pass
 
-Start with the homepage and research page.
+The first pass starts with the homepage and research page.
 
 Reason:
 
@@ -190,9 +190,12 @@ Reason:
 - Publications and supervision are already functionally strong and should be
   altered more cautiously.
 
-The first prototype should include:
+Implemented in the first pass:
 
 - one homepage research visual paired with the portrait;
 - a refined heading and text system;
 - a research page visual grid or atlas treatment;
 - at least one real or generated visual for graphs/trees/topology.
+
+Further passes should tune images, page-specific rhythm, and the balance
+between refined academic CV, research atlas, and personal archive.
