@@ -74,9 +74,8 @@ export default function AikidoStoryPage() {
         <aside className="aikido-panel" aria-label="Aikido practice note">
           <p>
             5th Dan and Shidoin (certified instructor) with ACNA, under Michel
-            Bécart Shihan, I
-            continue to understand Aikido as a dialogue between breath, balance,
-            and time.
+            Bécart Shihan, I continue to understand Aikido as a dialogue
+            between breath, balance, and time.
           </p>
           <blockquote>
             The practice continues.
@@ -130,6 +129,11 @@ export default function AikidoStoryPage() {
             The current website carries the complete train story attributed to
             Terry Dobson. That is the version to preserve: the long narrative,
             not a condensed lesson or a list of takeaways.
+          </p>
+          <p className="aikido-story-credit">
+            Our thanks for permission to reprint this excerpt. <cite>Aikido
+            and the New Warrior</cite>, published by North Atlantic Books, 2320
+            Blake Street, Berkeley, CA 94704.
           </p>
           <div className="hero-actions">
             <a

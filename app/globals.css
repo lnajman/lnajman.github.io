@@ -3025,6 +3025,14 @@ h3 {
   line-height: 1.65;
 }
 
+.aikido-story-card .aikido-story-credit {
+  margin-top: 1rem;
+  border-top: 1px solid var(--line);
+  padding-top: 1rem;
+  color: var(--ochre);
+  font-size: 0.95rem;
+}
+
 .aikido-practice-card p {
   max-width: 830px;
   color: var(--muted);
