@@ -181,7 +181,7 @@ const formerPhdStudents: SupervisionEntry[] = [
     name: "Clément Farabet",
     title: "Towards Real-Time Image Understanding with Convolutional Networks",
     year: "2013",
-    profileUrl: "http://www.clement.farabet.net/",
+    profileUrl: "https://clmt.ai/",
     link: "http://tel.archives-ouvertes.fr/tel-00965622",
     with: "Yann LeCun",
   },

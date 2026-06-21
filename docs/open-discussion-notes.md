@@ -1,6 +1,6 @@
 # Open Discussion Notes
 
-Last updated: 2026-06-20
+Last updated: 2026-06-21
 
 This note tracks remaining website topics that are not the domain, DNS, OVH,
 GitHub Pages custom-domain, or email-forwarding discussion.
@@ -8,12 +8,6 @@ GitHub Pages custom-domain, or email-forwarding discussion.
 ## Supervision
 
 - Current supervision page state is acceptable for now.
-- Clement Farabet profile link needs a decision. The current link,
-  `http://www.clement.farabet.net/`, redirects toward `http://clmt.ai/`.
-  The `https://clmt.ai/` target responded only when certificate validation was
-  ignored during checks. We should decide whether to keep the old redirecting
-  URL, switch to `http://clmt.ai/`, use another official profile, or remove the
-  profile link.
 - Some former students have personal webpages, while others currently use
   ORCID, Google Scholar, GitHub, institutional pages, or thesis pages. Decide
   whether this mixed link policy is fine or whether every entry should follow a
