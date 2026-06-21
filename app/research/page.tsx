@@ -54,7 +54,22 @@ type PortfolioHighlight = {
   }>;
 };
 
-const themes = [
+type ThemeMotif =
+  | "morphology"
+  | "graphs"
+  | "topology"
+  | "cuts"
+  | "imaging"
+  | "learning";
+
+type ResearchTheme = {
+  title: string;
+  motif: ThemeMotif;
+  description: string;
+  keywords: string[];
+};
+
+const themes: ResearchTheme[] = [
   {
     title: "Discrete mathematical morphology",
     motif: "morphology",
@@ -98,6 +113,126 @@ const themes = [
     keywords: ["deep learning", "graph neural networks", "explainable AI"],
   },
 ];
+
+function ResearchThemeIcon({ motif }: { motif: ThemeMotif }) {
+  if (motif === "morphology") {
+    return (
+      <svg
+        className={`theme-symbol ${motif}`}
+        viewBox="0 0 96 64"
+        aria-hidden="true"
+        focusable="false"
+      >
+        <rect className="theme-fill-soft" x="15" y="16" width="44" height="24" rx="6" />
+        <rect className="theme-stroke" x="27" y="24" width="44" height="24" rx="6" />
+        <path className="theme-stroke theme-stroke-strong" d="M15 47 C26 33 38 53 50 39 C58 30 68 33 77 23" />
+        <circle className="theme-dot" cx="19" cy="47" r="3" />
+        <circle className="theme-dot" cx="50" cy="39" r="3" />
+        <circle className="theme-dot" cx="77" cy="23" r="3" />
+      </svg>
+    );
+  }
+
+  if (motif === "graphs") {
+    return (
+      <svg
+        className={`theme-symbol ${motif}`}
+        viewBox="0 0 96 64"
+        aria-hidden="true"
+        focusable="false"
+      >
+        <path className="theme-fill-soft" d="M17 48 L38 15 L69 21 L81 48 Z" />
+        <path className="theme-stroke" d="M17 48 L38 15 L69 21 L81 48 L17 48 M17 48 L69 21 M38 15 L81 48 M38 15 L69 21" />
+        <circle className="theme-node" cx="17" cy="48" r="4" />
+        <circle className="theme-node" cx="38" cy="15" r="4" />
+        <circle className="theme-node" cx="69" cy="21" r="4" />
+        <circle className="theme-node" cx="81" cy="48" r="4" />
+      </svg>
+    );
+  }
+
+  if (motif === "topology") {
+    return (
+      <svg
+        className={`theme-symbol ${motif}`}
+        viewBox="0 0 96 64"
+        aria-hidden="true"
+        focusable="false"
+      >
+        <path className="theme-stroke theme-stroke-soft" d="M18 44 C27 22 45 20 55 32 C64 43 75 38 82 24" />
+        <path className="theme-stroke theme-stroke-strong" d="M23 33 C23 19 35 13 48 20 C59 26 66 15 76 26 C88 43 66 55 50 43 C39 34 29 49 23 39 C22 37 22 35 23 33Z" />
+        <path className="theme-stroke theme-dashed" d="M31 49 C39 39 51 39 61 48" />
+        <circle className="theme-dot" cx="48" cy="20" r="3" />
+        <circle className="theme-dot" cx="50" cy="43" r="3" />
+      </svg>
+    );
+  }
+
+  if (motif === "cuts") {
+    return (
+      <svg
+        className={`theme-symbol ${motif}`}
+        viewBox="0 0 96 64"
+        aria-hidden="true"
+        focusable="false"
+      >
+        <rect className="theme-fill-soft" x="15" y="13" width="66" height="40" rx="7" />
+        <path className="theme-stroke theme-stroke-soft" d="M24 44 L37 25 L50 40 L65 22 L74 42" />
+        <path className="theme-cut" d="M50 10 C43 22 56 31 49 43 C46 49 48 53 51 57" />
+        <circle className="theme-node" cx="24" cy="44" r="3.5" />
+        <circle className="theme-node" cx="37" cy="25" r="3.5" />
+        <circle className="theme-node" cx="50" cy="40" r="3.5" />
+        <circle className="theme-node" cx="65" cy="22" r="3.5" />
+        <circle className="theme-node" cx="74" cy="42" r="3.5" />
+      </svg>
+    );
+  }
+
+  if (motif === "imaging") {
+    return (
+      <svg
+        className={`theme-symbol ${motif}`}
+        viewBox="0 0 96 64"
+        aria-hidden="true"
+        focusable="false"
+      >
+        <rect className="theme-stroke" x="16" y="12" width="64" height="42" rx="6" />
+        <path className="theme-stroke theme-stroke-faint" d="M16 26 H80 M16 40 H80 M32 12 V54 M48 12 V54 M64 12 V54" />
+        <path className="theme-fill-soft" d="M25 43 C31 28 42 34 49 21 C57 35 69 27 74 42 C65 48 54 45 45 50 C36 55 31 47 25 43Z" />
+        <path className="theme-stroke theme-stroke-strong" d="M25 43 C31 28 42 34 49 21 C57 35 69 27 74 42" />
+        <circle className="theme-dot" cx="49" cy="21" r="3" />
+      </svg>
+    );
+  }
+
+  return (
+    <svg
+      className={`theme-symbol ${motif}`}
+      viewBox="0 0 96 64"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <g className="theme-network-lines">
+        <path d="M18 16 L47 21 L78 14" />
+        <path d="M18 16 L47 43 L78 31" />
+        <path d="M18 32 L47 21 L78 31" />
+        <path d="M18 32 L47 43 L78 50" />
+        <path d="M18 48 L47 21 L78 14" />
+        <path d="M18 48 L47 43 L78 50" />
+      </g>
+      <g className="theme-network-nodes">
+        <circle cx="18" cy="16" r="4" />
+        <circle cx="18" cy="32" r="4" />
+        <circle cx="18" cy="48" r="4" />
+        <circle cx="47" cy="21" r="4.5" />
+        <circle cx="47" cy="43" r="4.5" />
+        <circle cx="78" cy="14" r="4" />
+        <circle cx="78" cy="31" r="4" />
+        <circle cx="78" cy="50" r="4" />
+      </g>
+    </svg>
+  );
+}
 
 const selectedResearchThreads: SelectedResearchThread[] = [
   {
@@ -424,11 +559,7 @@ export default function ResearchPage() {
         <div className="theme-grid">
           {themes.map((theme) => (
             <article key={theme.title} className={`theme-card ${theme.motif}`}>
-              <div className={`theme-symbol ${theme.motif}`} aria-hidden="true">
-                <span />
-                <span />
-                <span />
-              </div>
+              <ResearchThemeIcon motif={theme.motif} />
               <h3>{theme.title}</h3>
               <p>{theme.description}</p>
               <ul>

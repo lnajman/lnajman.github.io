@@ -1967,54 +1967,69 @@ h3 {
 }
 
 .theme-symbol {
-  position: relative;
-  height: 3.6rem;
+  display: block;
+  width: 5.7rem;
+  height: 3.8rem;
   margin-bottom: 1rem;
   color: var(--theme-accent);
 }
 
-.theme-symbol::before,
-.theme-symbol::after {
-  position: absolute;
-  top: 1.28rem;
-  left: 10%;
-  width: 38%;
-  border-top: 2px solid currentColor;
-  content: "";
-  opacity: 0.42;
-  transform: rotate(13deg);
-  transform-origin: left center;
+.theme-symbol .theme-stroke,
+.theme-symbol .theme-network-lines {
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2.15;
 }
 
-.theme-symbol::after {
-  top: 1.32rem;
-  left: 43%;
-  width: 40%;
-  transform: rotate(-7deg);
+.theme-symbol .theme-stroke-strong {
+  stroke-width: 2.55;
 }
 
-.theme-symbol span {
-  position: absolute;
-  width: 0.72rem;
-  height: 0.72rem;
-  border: 2px solid currentColor;
-  border-radius: 999px;
-  background: #fffefb;
+.theme-symbol .theme-stroke-soft {
+  opacity: 0.72;
 }
 
-.theme-symbol span:nth-child(1) {
-  top: 0.9rem;
-  left: 7%;
+.theme-symbol .theme-stroke-faint {
+  opacity: 0.24;
 }
 
-.theme-symbol span:nth-child(2) {
-  top: 1.18rem;
-  left: 42%;
+.theme-symbol .theme-fill-soft {
+  fill: currentColor;
+  opacity: 0.11;
 }
 
-.theme-symbol span:nth-child(3) {
-  top: 0.82rem;
-  right: 10%;
+.theme-symbol .theme-dashed {
+  stroke-dasharray: 4 5;
+}
+
+.theme-symbol .theme-cut {
+  fill: none;
+  stroke: currentColor;
+  stroke-dasharray: 5 4;
+  stroke-linecap: round;
+  stroke-width: 2.5;
+}
+
+.theme-symbol .theme-node {
+  fill: #fffefb;
+  stroke: currentColor;
+  stroke-width: 2;
+}
+
+.theme-symbol .theme-dot,
+.theme-symbol .theme-network-nodes {
+  fill: currentColor;
+}
+
+.theme-symbol .theme-network-lines {
+  opacity: 0.56;
+}
+
+.theme-symbol .theme-network-nodes {
+  stroke: #fffefb;
+  stroke-width: 1.5;
 }
 
 .theme-card.morphology {
