@@ -29,6 +29,16 @@ type SelectedResearchThread = {
   }>;
 };
 
+type ArchiveHighlight = {
+  title: string;
+  label: string;
+  image: string;
+  alt: string;
+  description: string;
+  href: string;
+  imageFit?: "cover" | "contain";
+};
+
 const themes = [
   {
     title: "Discrete mathematical morphology",
@@ -186,14 +196,79 @@ const books = [
   {
     title: "Modern Approaches to Discrete Curvature",
     detail: "with Pascal Romon, Springer, 2017",
+    cover: "/archive/discrete-curvature-book.jpg",
+    alt: "Modern Approaches to Discrete Curvature book cover",
   },
   {
     title: "Mathematical Morphology: from theory to applications",
     detail: "with Hugues Talbot, ISTE-Wiley, 2010",
+    cover: "/archive/mathematical-morphology-book.jpg",
+    alt: "Mathematical Morphology from theory to applications book cover",
   },
   {
     title: "Systèmes d'exploitation - Synthèse de cours & exercices corrigés",
     detail: "with Bart Lamiroy and Hugues Talbot, Pearson Education France, 2006",
+    cover: "/archive/operating-systems-book.jpg",
+    alt: "Systèmes d'exploitation book cover",
+  },
+];
+
+const archiveHighlights: ArchiveHighlight[] = [
+  {
+    title: "Graph-based mathematical morphology",
+    label: "Survey / tutorial",
+    image: "/archive/survey-graph-morphology.png",
+    alt: "Graph-based morphology visual from the previous website",
+    description:
+      "A trace of the survey and tutorial material that connected morphology, graphs, watersheds, and hierarchies.",
+    href: "https://arxiv.org/pdf/1404.7748.pdf",
+    imageFit: "contain",
+  },
+  {
+    title: "Shape-space filtering",
+    label: "Research image",
+    image: "/archive/shape-filtering-schema.png",
+    alt: "Shape-space filtering schema from the previous website",
+    description:
+      "The old shape-filtering visual, built around tree representations and transformations of shapes rather than pixels alone.",
+    href: "/publications/?q=shape%20space",
+  },
+  {
+    title: "Cardiac and vascular imaging",
+    label: "Application",
+    image: "/archive/cardiac-stenoses.jpg",
+    alt: "Coronary stenosis visualization from the previous website",
+    description:
+      "Archive imagery for the medical-imaging line around coronary stenosis, vascular structures, and patient-specific modeling.",
+    href: "/publications/?q=cardiac",
+  },
+  {
+    title: "Scene parsing and deep learning",
+    label: "Research image",
+    image: "/archive/scene-parsing.jpg",
+    alt: "Scene parsing results from the previous website",
+    description:
+      "A visual marker of the early deep-learning work linking scene labeling, watershed cuts, and semantic segmentation.",
+    href: "/publications/?q=scene%20parsing",
+  },
+  {
+    title: "Dual-constrained total variation",
+    label: "Featured paper",
+    image: "/archive/dctv-crop.png",
+    alt: "Dual-constrained total variation crop from the previous website",
+    description:
+      "An old featured-paper image from the optimization and graph-based image-processing thread.",
+    href: "/publications/?q=dual-constrained",
+  },
+  {
+    title: "Books and long-form references",
+    label: "Book covers",
+    image: "/archive/mathematical-morphology-book.jpg",
+    alt: "Mathematical Morphology from theory to applications book cover",
+    description:
+      "The previous site used books as visual anchors for long-form references, teaching, and synthesis work.",
+    href: "#books",
+    imageFit: "contain",
   },
 ];
 
@@ -341,7 +416,43 @@ export default function ResearchPage() {
         </div>
       </section>
 
-      <section className="section-shell cv-section">
+      <section className="section-shell archive-highlight-section">
+        <div className="section-heading row-heading">
+          <div>
+            <p className="eyebrow">Archive highlights</p>
+            <h2>Visual material from the previous site</h2>
+          </div>
+          <Link className="text-link" href="/publications">
+            Publication archive
+          </Link>
+        </div>
+        <p className="section-intro">
+          The previous website carried a useful visual memory of papers,
+          tutorials, books, and applications. This selection keeps that material
+          available as a compact archive, while the full research map above
+          remains organized around themes.
+        </p>
+        <div className="archive-highlight-grid">
+          {archiveHighlights.map((item) => (
+            <article className="archive-highlight-card" key={item.title}>
+              <a className="archive-highlight-image" href={item.href}>
+                <img
+                  className={item.imageFit === "contain" ? "contain" : ""}
+                  src={item.image}
+                  alt={item.alt}
+                />
+              </a>
+              <div>
+                <span>{item.label}</span>
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="section-shell cv-section" id="books">
         <div className="section-heading">
           <p className="eyebrow">Books</p>
           <h2>Long-form references</h2>
@@ -349,8 +460,11 @@ export default function ResearchPage() {
         <ul className="book-list">
           {books.map((book) => (
             <li key={book.title}>
-              <strong>{book.title}</strong>
-              <span>{book.detail}</span>
+              <img src={book.cover} alt={book.alt} />
+              <div>
+                <strong>{book.title}</strong>
+                <span>{book.detail}</span>
+              </div>
             </li>
           ))}
         </ul>
