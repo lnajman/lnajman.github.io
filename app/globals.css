@@ -65,21 +65,26 @@ code {
 }
 
 .site-name {
+  flex: 0 0 auto;
   font-size: 1rem;
   font-weight: 760;
+  line-height: 1.2;
   text-decoration: none;
 }
 
 .site-nav {
   display: flex;
   flex-wrap: wrap;
+  flex: 1 1 auto;
   justify-content: flex-end;
   gap: 0.45rem 1rem;
+  min-width: 0;
   color: var(--muted);
   font-size: 0.94rem;
 }
 
 .site-nav a {
+  line-height: 1.2;
   text-decoration: none;
 }
 
@@ -156,16 +161,21 @@ h3 {
 .text-link {
   display: inline-flex;
   align-items: center;
+  max-width: 100%;
   min-height: 2.75rem;
   border-radius: 6px;
   font-weight: 720;
+  line-height: 1.25;
   text-decoration: none;
+  overflow-wrap: anywhere;
 }
 
 .primary-link {
+  justify-content: center;
   background: var(--teal);
   color: white;
   padding: 0.75rem 1rem;
+  text-align: center;
 }
 
 .primary-link:hover {
@@ -173,14 +183,18 @@ h3 {
 }
 
 .secondary-link {
+  justify-content: center;
   border: 1px solid var(--line);
   background: var(--panel);
   color: var(--teal-dark);
   padding: 0.7rem 1rem;
+  text-align: center;
 }
 
 .text-link {
+  justify-content: flex-start;
   color: var(--teal-dark);
+  text-align: left;
 }
 
 .quick-facts {
@@ -252,6 +266,7 @@ h3 {
   background: var(--panel);
   padding: 0.85rem;
   text-decoration: none;
+  overflow-wrap: anywhere;
 }
 
 .profile-links a::before {
@@ -712,10 +727,14 @@ h3 {
   flex-wrap: wrap;
   justify-content: flex-end;
   gap: 0.45rem;
-  max-width: 240px;
+  min-width: 0;
+  max-width: min(100%, 240px);
 }
 
 .publication-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   border: 1px solid var(--line);
   border-radius: 6px;
   padding: 0.42rem 0.58rem;
@@ -723,7 +742,9 @@ h3 {
   color: var(--teal-dark);
   font-size: 0.83rem;
   font-weight: 760;
+  line-height: 1.2;
   text-decoration: none;
+  overflow-wrap: anywhere;
 }
 
 .publication-links a:hover {
@@ -1048,6 +1069,7 @@ h3 {
 
 .candidate-links a {
   color: var(--teal-dark);
+  overflow-wrap: anywhere;
 }
 
 .publications-explorer {
@@ -1076,6 +1098,7 @@ h3 {
   font: inherit;
   padding: 0.8rem;
   text-align: left;
+  overflow-wrap: anywhere;
 }
 
 .type-shortcuts button::before {
@@ -1470,8 +1493,31 @@ h3 {
   content: "";
 }
 
+.software-card::after {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 2.85rem;
+  height: 2.85rem;
+  border: 1px solid color-mix(in srgb, var(--software-accent) 38%, var(--line));
+  border-radius: 8px;
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--software-accent) 18%, transparent) 1px, transparent 1px),
+    linear-gradient(0deg, color-mix(in srgb, var(--software-accent) 18%, transparent) 1px, transparent 1px),
+    color-mix(in srgb, var(--software-accent) 7%, #ffffff);
+  background-size: 0.7rem 0.7rem;
+  content: "";
+  opacity: 0.76;
+  pointer-events: none;
+}
+
 .software-card.violet {
   --software-accent: var(--violet);
+}
+
+.software-card > div:first-child {
+  min-width: 0;
+  padding-right: 3.45rem;
 }
 
 .software-status {
@@ -1516,6 +1562,9 @@ h3 {
 
 .software-links a,
 .software-private-note {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   border: 1px solid var(--line);
   border-radius: 999px;
   background: var(--soft-green);
@@ -1523,7 +1572,9 @@ h3 {
   padding: 0.42rem 0.72rem;
   font-size: 0.84rem;
   font-weight: 760;
+  line-height: 1.2;
   text-decoration: none;
+  overflow-wrap: anywhere;
 }
 
 .software-card.violet .software-private-note {
@@ -2261,7 +2312,9 @@ h3 {
   padding: 0.32rem 0.54rem;
   font-size: 0.78rem;
   font-weight: 780;
+  line-height: 1.2;
   text-decoration: none;
+  overflow-wrap: anywhere;
 }
 
 .selected-work-links a:hover,
@@ -2492,6 +2545,7 @@ h3 {
   background: var(--panel);
   padding: 1rem;
   text-decoration: none;
+  overflow-wrap: anywhere;
 }
 
 .archive-grid a::before {
@@ -3047,6 +3101,9 @@ h3 {
 }
 
 .supervision-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   border: 1px solid var(--line);
   border-radius: 6px;
   background: #ffffff;
@@ -3054,7 +3111,9 @@ h3 {
   padding: 0.38rem 0.58rem;
   font-size: 0.82rem;
   font-weight: 760;
+  line-height: 1.2;
   text-decoration: none;
+  overflow-wrap: anywhere;
 }
 
 .supervision-links a:hover {
@@ -3205,10 +3264,14 @@ h3 {
     position: static;
     align-items: flex-start;
     flex-direction: column;
+    gap: 0.75rem;
   }
 
   .site-nav {
     justify-content: flex-start;
+    width: 100%;
+    gap: 0.42rem 0.72rem;
+    font-size: 0.9rem;
   }
 
   h1 {
@@ -3329,6 +3392,23 @@ h3 {
     min-height: 220px;
   }
 
+  .software-glyph {
+    min-height: 11.5rem;
+  }
+
+  .source-facts dd,
+  .software-panel dd,
+  .teaching-facts dd {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .software-panel div,
+  .teaching-facts div {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+  }
+
   .supervision-list::before {
     left: 1.6rem;
   }
@@ -3354,5 +3434,41 @@ h3 {
     border-left: 0;
     padding-top: 0.75rem;
     padding-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-shell {
+    width: min(1120px, calc(100% - 1.25rem));
+  }
+
+  .hero-actions {
+    gap: 0.55rem;
+  }
+
+  .hero-actions .primary-link,
+  .hero-actions .secondary-link {
+    width: 100%;
+  }
+
+  .publication-links,
+  .software-links,
+  .supervision-links {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .publication-links a,
+  .software-links a,
+  .supervision-links a {
+    flex: 1 1 auto;
+  }
+
+  .software-card::after {
+    display: none;
+  }
+
+  .software-card > div:first-child {
+    padding-right: 0;
   }
 }
