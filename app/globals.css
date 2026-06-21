@@ -558,7 +558,7 @@ h3 {
 
 .software-summary {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: 1fr;
   gap: 0.75rem;
 }
 
@@ -569,8 +569,8 @@ h3 {
 .software-summary strong {
   display: block;
   color: var(--teal-dark);
-  font-size: clamp(1.25rem, 2.15vw, 1.72rem);
-  line-height: 1.12;
+  font-size: clamp(1.35rem, 2.4vw, 1.95rem);
+  line-height: 1.08;
   overflow-wrap: normal;
 }
 
@@ -3247,7 +3247,6 @@ h3 {
   .aikido-link-grid,
   .highlight-grid,
   .book-list,
-  .software-summary,
   .supervision-stats,
   .type-summary ul,
   .type-shortcuts,
