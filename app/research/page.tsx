@@ -43,6 +43,7 @@ type PortfolioHighlight = {
   title: string;
   label: string;
   image: string;
+  imageShape: "tall" | "wide" | "standard";
   alt: string;
   summary: string;
   keywords: string[];
@@ -291,6 +292,7 @@ const portfolioHighlights: PortfolioHighlight[] = [
     title: "Personalized medicine: myocardial perfusion simulation",
     label: "LIGM portfolio",
     image: "/research-highlights/myocardial-perfusion.png",
+    imageShape: "tall",
     alt: "Patient-specific myocardial perfusion modeling pipeline from CT data to simulated perfusion maps",
     summary:
       "A patient-specific multiscale model linking coronary FFRCT, segmented and synthetic vascular networks, and myocardial microcirculation to simulate blood flow from epicardial arteries to cardiac tissue.",
@@ -315,6 +317,7 @@ const portfolioHighlights: PortfolioHighlight[] = [
     title: "Higra: hierarchical graph analysis",
     label: "Software",
     image: "/research-highlights/higra-watershed-simplification.png",
+    imageShape: "wide",
     alt: "Image simplification with Higra using a hierarchy of watershed cuts",
     summary:
       "A C++/Python library for efficient sparse-graph analysis, focused on constructing, processing, filtering, clustering, and evaluating hierarchical representations. The project is maintained by Benjamin Perret, with contributions from the A3SI hierarchy and morphology line.",
@@ -339,6 +342,7 @@ const portfolioHighlights: PortfolioHighlight[] = [
     title: "Theory of hierarchies at A3SI",
     label: "Theory",
     image: "/research-highlights/hierarchy-theory.png",
+    imageShape: "standard",
     alt: "Hierarchy on a graph distributed over three subgraphs",
     summary:
       "A theoretical and algorithmic line connecting dendrograms, saliency maps, minimum spanning trees, and hierarchical watersheds, with constructive results for characterization, enumeration, transformation, and out-of-core computation.",
@@ -525,7 +529,7 @@ export default function ResearchPage() {
           {portfolioHighlights.map((item) => (
             <article className="portfolio-highlight-card" key={item.title}>
               <a
-                className="portfolio-highlight-image"
+                className={`portfolio-highlight-image ${item.imageShape}`}
                 href={item.links[0]?.href ?? "/publications"}
               >
                 <img src={item.image} alt={item.alt} />

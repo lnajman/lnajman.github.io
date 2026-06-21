@@ -1744,15 +1744,156 @@ h3 {
 }
 
 .teaching-theme-mark {
+  position: relative;
   display: block;
-  width: 2.2rem;
-  height: 2.2rem;
+  width: 2.35rem;
+  height: 2.35rem;
   margin-bottom: 1rem;
-  border: 2px solid var(--teaching-accent);
-  border-radius: 999px;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--teaching-accent) 45%, var(--line));
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--teaching-accent) 9%, #fffefb);
+}
+
+.teaching-theme-mark::before,
+.teaching-theme-mark::after {
+  position: absolute;
+  content: "";
+  pointer-events: none;
+}
+
+.teaching-theme-card[data-teaching-area="mathematics"] .teaching-theme-mark {
   background:
-    linear-gradient(35deg, transparent 48%, var(--teaching-accent) 49% 52%, transparent 53%),
-    #fffefb;
+    radial-gradient(circle at 28% 70%, var(--teaching-accent) 0 3px, transparent 4px),
+    radial-gradient(circle at 72% 30%, var(--teaching-accent) 0 3px, transparent 4px),
+    radial-gradient(circle at 72% 72%, var(--teaching-accent) 0 3px, transparent 4px),
+    color-mix(in srgb, var(--teaching-accent) 8%, #fffefb);
+}
+
+.teaching-theme-card[data-teaching-area="mathematics"] .teaching-theme-mark::before {
+  top: 52%;
+  left: 30%;
+  width: 1.28rem;
+  height: 2px;
+  background: var(--teaching-accent);
+  transform: rotate(-36deg);
+  transform-origin: left center;
+}
+
+.teaching-theme-card[data-teaching-area="mathematics"] .teaching-theme-mark::after {
+  top: 65%;
+  left: 31%;
+  width: 1.3rem;
+  height: 2px;
+  background: color-mix(in srgb, var(--teaching-accent) 70%, #fffefb);
+  transform: rotate(4deg);
+  transform-origin: left center;
+}
+
+.teaching-theme-card[data-teaching-area="computer-science"] .teaching-theme-mark::before {
+  inset: 0.48rem 0.42rem;
+  border: 2px solid var(--teaching-accent);
+  border-radius: 4px;
+}
+
+.teaching-theme-card[data-teaching-area="computer-science"] .teaching-theme-mark::after {
+  top: 0.94rem;
+  left: 0.72rem;
+  right: 0.66rem;
+  height: 2px;
+  background: var(--teaching-accent);
+  box-shadow: 0 0.42rem 0 color-mix(in srgb, var(--teaching-accent) 65%, #fffefb);
+}
+
+.teaching-theme-card[data-teaching-area="morphology"] .teaching-theme-mark {
+  border-radius: 999px;
+}
+
+.teaching-theme-card[data-teaching-area="morphology"] .teaching-theme-mark::before {
+  inset: 0.42rem;
+  border: 2px solid var(--teaching-accent);
+  border-radius: 47% 53% 42% 58%;
+  transform: rotate(-12deg);
+}
+
+.teaching-theme-card[data-teaching-area="morphology"] .teaching-theme-mark::after {
+  inset: 0.84rem;
+  border: 2px solid color-mix(in srgb, var(--teaching-accent) 72%, #fffefb);
+  border-radius: 52% 48% 58% 42%;
+  transform: rotate(18deg);
+}
+
+.teaching-theme-card[data-teaching-area="ai"] .teaching-theme-mark {
+  background:
+    radial-gradient(circle at 24% 30%, var(--teaching-accent) 0 3px, transparent 4px),
+    radial-gradient(circle at 28% 72%, var(--teaching-accent) 0 3px, transparent 4px),
+    radial-gradient(circle at 72% 34%, var(--teaching-accent) 0 3px, transparent 4px),
+    radial-gradient(circle at 76% 72%, var(--teaching-accent) 0 3px, transparent 4px),
+    color-mix(in srgb, var(--teaching-accent) 8%, #fffefb);
+}
+
+.teaching-theme-card[data-teaching-area="ai"] .teaching-theme-mark::before {
+  top: 34%;
+  left: 28%;
+  width: 1.18rem;
+  height: 2px;
+  background: color-mix(in srgb, var(--teaching-accent) 70%, #fffefb);
+  transform: rotate(23deg);
+  transform-origin: left center;
+}
+
+.teaching-theme-card[data-teaching-area="ai"] .teaching-theme-mark::after {
+  top: 68%;
+  left: 29%;
+  width: 1.16rem;
+  height: 2px;
+  background: var(--teaching-accent);
+  transform: rotate(-22deg);
+  transform-origin: left center;
+}
+
+.teaching-theme-card[data-teaching-area="signal"] .teaching-theme-mark::before {
+  inset: 0.58rem 0.38rem;
+  border-top: 2px solid var(--teaching-accent);
+  border-bottom: 2px solid color-mix(in srgb, var(--teaching-accent) 60%, #fffefb);
+  border-radius: 999px;
+  transform: skewX(-14deg);
+}
+
+.teaching-theme-card[data-teaching-area="signal"] .teaching-theme-mark::after {
+  top: 50%;
+  left: 0.42rem;
+  right: 0.42rem;
+  height: 2px;
+  background: color-mix(in srgb, var(--teaching-accent) 70%, #fffefb);
+}
+
+.teaching-theme-card[data-teaching-area="supervision"] .teaching-theme-mark {
+  background:
+    radial-gradient(circle at 50% 24%, var(--teaching-accent) 0 3px, transparent 4px),
+    radial-gradient(circle at 28% 70%, var(--teaching-accent) 0 3px, transparent 4px),
+    radial-gradient(circle at 72% 70%, var(--teaching-accent) 0 3px, transparent 4px),
+    color-mix(in srgb, var(--teaching-accent) 8%, #fffefb);
+}
+
+.teaching-theme-card[data-teaching-area="supervision"] .teaching-theme-mark::before {
+  top: 38%;
+  left: 50%;
+  width: 2px;
+  height: 1rem;
+  background: var(--teaching-accent);
+  transform: translateX(-50%);
+}
+
+.teaching-theme-card[data-teaching-area="supervision"] .teaching-theme-mark::after {
+  top: 48%;
+  left: 50%;
+  width: 1.16rem;
+  height: 0.8rem;
+  border-right: 2px solid color-mix(in srgb, var(--teaching-accent) 70%, #fffefb);
+  border-left: 2px solid color-mix(in srgb, var(--teaching-accent) 70%, #fffefb);
+  border-radius: 0 0 8px 8px;
+  transform: translateX(-50%);
 }
 
 .research-map {
@@ -2149,13 +2290,21 @@ h3 {
 .portfolio-highlight-image {
   display: grid;
   place-items: center;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 3 / 2;
   overflow: hidden;
   border-bottom: 1px solid var(--line);
   background:
     linear-gradient(135deg, rgba(33, 108, 104, 0.08), rgba(178, 74, 55, 0.06)),
     var(--soft-green);
-  padding: 0.75rem;
+  padding: 0.65rem;
+}
+
+.portfolio-highlight-image.tall {
+  aspect-ratio: 4 / 3;
+}
+
+.portfolio-highlight-image.wide {
+  aspect-ratio: 16 / 5;
 }
 
 .portfolio-highlight-image img {
@@ -2163,11 +2312,6 @@ h3 {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  transition: transform 180ms ease;
-}
-
-.portfolio-highlight-card:hover .portfolio-highlight-image img {
-  transform: scale(1.018);
 }
 
 .portfolio-highlight-body {
