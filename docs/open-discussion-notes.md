@@ -2,8 +2,8 @@
 
 Last updated: 2026-06-21
 
-This note tracks remaining website topics that are not the domain, DNS, OVH,
-GitHub Pages custom-domain, or email-forwarding discussion.
+This note tracks remaining website topics plus migration reminders that should
+not be lost when the production domain is switched.
 
 ## Supervision
 
@@ -39,10 +39,9 @@ GitHub Pages custom-domain, or email-forwarding discussion.
 
 ## Bio, Research, And Personal Pages
 
-- Aikido story: Laurent prefers the older full-text version from the current
-  website and takes responsibility for keeping it. We still need a final content
-  pass on the exact text and attribution. The page now has a calmer essay-like
-  visual treatment.
+- Aikido story: the older full-text version from the current website has been
+  migrated, with attribution. A later content pass can still tune presentation
+  or wording, but the page is no longer only a placeholder.
 - Technion: decide final visibility and wording. The current concern is not
   factual accuracy but how much prominence is appropriate given political
   implications.
@@ -83,9 +82,15 @@ GitHub Pages custom-domain, or email-forwarding discussion.
 
 ## Technical Follow-Ups
 
-- ESLint still warns about two plain `<img>` tags in `app/page.tsx` and
-  `app/bio/page.tsx`. They work correctly; converting them to `next/image` is a
-  performance polish item.
+- Production migration SEO: before switching `laurentnajman.org`, preserve the
+  old highly ranked Aikido URL with a permanent server-side redirect:
+  `https://laurentnajman.org/index.php?page=aikido-story` ->
+  `https://laurentnajman.org/aikido-story/`. Use a real `301` or `308` redirect
+  through OVH, Cloudflare, or another front layer; GitHub Pages alone is not
+  ideal for this query-string legacy URL. Also ensure the new page has the
+  canonical production URL and is included in the sitemap/Search Console flow.
+- ESLint still warns about several plain `<img>` tags. They work correctly;
+  converting them to `next/image` is a performance polish item.
 - GitHub Actions reports a Node 20 deprecation warning for some upstream
   actions being forced to Node 24. The deployment still succeeds.
 - Keep the HAL override mechanism small and explicit. It is now useful for
