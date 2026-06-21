@@ -73,8 +73,8 @@ export default function AikidoStoryPage() {
         </div>
         <aside className="aikido-panel" aria-label="Aikido practice note">
           <p>
-            5th Dan and Shidoin (certified instructor) with ACNA, under Michel
-            Bécart Shihan, I continue to understand Aikido as a dialogue
+            5th Dan Aikikai and Shidoin (certified instructor) with ACNA, under
+            Michel Bécart Shihan, I continue to understand Aikido as a dialogue
             between breath, balance, and time.
           </p>
           <blockquote>
