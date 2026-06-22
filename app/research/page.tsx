@@ -435,7 +435,7 @@ const archiveHighlights: ArchiveHighlight[] = [
     image: "/archive/scene-parsing.jpg",
     alt: "Scene parsing results from the previous website",
     description:
-      "A visual marker of the work with Clément Farabet, Camille Couprie, and Yann LeCun on multiscale convolutional features for scene labeling.",
+      "A visual marker of the work with Clément Farabet, Camille Couprie, and Yann LeCun on multiscale convolutional features, part of the early deep-learning wave that helped establish neural methods for scene labeling and scene understanding.",
     links: [
       {
         label: "Scene labeling paper",
