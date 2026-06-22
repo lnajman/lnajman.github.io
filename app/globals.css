@@ -2311,6 +2311,166 @@ h3 {
   color: color-mix(in srgb, var(--course-accent) 82%, var(--ink));
 }
 
+.course-page-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 0.34fr);
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: end;
+}
+
+.course-page-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.72rem;
+  margin-top: 1.5rem;
+}
+
+.course-page-panel {
+  display: grid;
+  align-content: start;
+  gap: 0.78rem;
+  border: 1px solid rgba(199, 208, 197, 0.86);
+  border-radius: 8px;
+  background:
+    linear-gradient(180deg, rgba(255, 254, 251, 0.92), rgba(244, 249, 243, 0.82)),
+    var(--panel);
+  box-shadow: var(--shadow-soft);
+  padding: 1rem;
+}
+
+.course-page-panel span {
+  color: var(--teal-dark);
+  font-size: 0.72rem;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.course-page-panel strong {
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 8vw, 4.8rem);
+  line-height: 0.9;
+}
+
+.course-page-panel p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.46;
+}
+
+.course-context-section {
+  display: grid;
+  gap: 0.75rem;
+  max-width: 880px;
+}
+
+.course-context-section p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.course-material-layout {
+  display: grid;
+  gap: 1.65rem;
+  margin-top: 2rem;
+}
+
+.course-material-section {
+  display: grid;
+  gap: 0.95rem;
+  border-top: 1px solid var(--line);
+  padding-top: 1.15rem;
+}
+
+.course-material-heading {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.course-material-heading h3 {
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: clamp(1.45rem, 2.5vw, 2rem);
+  line-height: 1.08;
+}
+
+.course-material-heading p {
+  margin: 0;
+  max-width: 760px;
+  color: var(--muted);
+  line-height: 1.58;
+}
+
+.course-material-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.72rem;
+}
+
+.course-material-card {
+  display: grid;
+  gap: 0.42rem;
+  align-content: start;
+  min-height: 8rem;
+  border: 1px solid color-mix(in srgb, var(--teal-dark) 20%, var(--line));
+  border-radius: 8px;
+  background: rgba(255, 254, 251, 0.9);
+  color: var(--ink);
+  padding: 0.88rem;
+  text-decoration: none;
+  transition:
+    border-color 160ms ease,
+    transform 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.course-material-card:hover {
+  border-color: var(--rust);
+  box-shadow: 0 12px 28px rgba(25, 54, 48, 0.1);
+  transform: translateY(-1px);
+}
+
+.course-material-card.is-note {
+  border-style: dashed;
+  background: color-mix(in srgb, var(--soft-green) 64%, #fffefb);
+}
+
+.course-material-card.is-note:hover {
+  border-color: color-mix(in srgb, var(--teal-dark) 20%, var(--line));
+  box-shadow: none;
+  transform: none;
+}
+
+.course-material-card strong {
+  color: var(--ink);
+  font-size: 1.02rem;
+  line-height: 1.22;
+  overflow-wrap: anywhere;
+}
+
+.course-material-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.material-kind {
+  width: fit-content;
+  border: 1px solid color-mix(in srgb, var(--teal-dark) 20%, var(--line));
+  border-radius: 999px;
+  background: var(--soft-green);
+  color: var(--teal-dark);
+  padding: 0.16rem 0.42rem;
+  font-size: 0.68rem;
+  font-weight: 850;
+  line-height: 1.2;
+}
+
 .research-map {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -3778,7 +3938,8 @@ h3 {
   .research-hero,
   .software-hero,
   .software-reference,
-  .teaching-hero {
+  .teaching-hero,
+  .course-page-hero {
     grid-template-columns: 1fr;
   }
 
@@ -3801,6 +3962,7 @@ h3 {
   .software-grid,
   .archive-grid,
   .course-archive-grid,
+  .course-material-list,
   .aikido-link-grid,
   .highlight-grid,
   .book-list,
@@ -3911,6 +4073,7 @@ h3 {
   .software-grid,
   .archive-grid,
   .course-archive-grid,
+  .course-material-list,
   .aikido-link-grid,
   .highlight-grid,
   .book-list,

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { TeachingVisual } from "@/components/TeachingVisual";
+import { courseArchiveCards } from "@/data/teaching-archive";
 import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -66,183 +67,6 @@ const teachingFacts = [
     label: "Archive",
     value: "course material",
     detail: "Slides, practical sessions, notebooks, and older project briefs.",
-  },
-];
-
-const courseArchives = [
-  {
-    slug: "teaching",
-    label: "Computer science",
-    title: "Operating systems and compilation",
-    description:
-      "Core ESIEE material around operating-system concepts, compilation, exercises, and practical foundations. The operating-systems book remains the main reference for this part of the teaching archive.",
-    topics: ["Operating systems", "Compilation", "Exercises"],
-    links: [
-      {
-        label: "Old teaching page",
-        href: "/teaching/#legacy-teaching",
-      },
-      {
-        label: "Book on HAL",
-        href: "https://hal.science/hal-00622092v1",
-      },
-    ],
-  },
-  {
-    slug: "ia-et-deep-learning",
-    label: "AI course",
-    title: "IA et Deep Learning",
-    description:
-      "A hands-on course built around Keras notebooks in Google Colab or Kaggle, with material on neural networks, convolutional networks, overfitting, project reports, and explainable AI.",
-    topics: ["Keras labs", "Colab / Kaggle", "Explainable AI"],
-    links: [
-      {
-        label: "Course page",
-        href: "/teaching/#legacy-ia-et-deep-learning",
-      },
-      {
-        label: "Presentation",
-        href: "/uploads/images/DeepLearning/FormationDeep.pdf",
-      },
-      {
-        label: "ConvNets",
-        href: "/uploads/images/DeepLearning/ConvNets.pdf",
-      },
-      {
-        label: "XAI slides",
-        href: "/uploads/images/DeepLearning/xAI_slides.pdf",
-      },
-    ],
-  },
-  {
-    slug: "im5-1ia",
-    label: "Image processing",
-    title: "Image analysis and processing",
-    description:
-      "Engineering course material on image formation, enhancement, transforms, filtering, segmentation, and connected-geodesic approaches, with practical material based on PinkDev.",
-    topics: ["Enhancement", "Filtering", "Segmentation"],
-    links: [
-      {
-        label: "Course page",
-        href: "/teaching/#legacy-im5-1ia",
-      },
-      {
-        label: "Introduction",
-        href: "/uploads/ImageCourse/intro_ln.pdf",
-      },
-      {
-        label: "Filtering",
-        href: "/uploads/ImageCourse/filtering_ln.pdf",
-      },
-      {
-        label: "Segmentation",
-        href: "/uploads/ImageCourse/segmentation1_ln.pdf",
-      },
-    ],
-  },
-  {
-    slug: "programming-tutorials",
-    label: "Programming sessions",
-    title: "Image-processing programming tutorials",
-    description:
-      "The first sessions introduce practical image operators with image differences and blob measurements. The second sessions implement a Canny edge detector, with emphasis on hysteresis thresholding.",
-    topics: ["PinkDev", "Blob analysis", "Canny detector"],
-    links: [
-      {
-        label: "Tutorial 1",
-        href: "/teaching/#legacy-programming-tutorials",
-      },
-      {
-        label: "Tutorial 2",
-        href: "/teaching/#legacy-programming-tutorials",
-      },
-      {
-        label: "Blob data",
-        href: "/uploads/ImageCourse/blobs.tar.gz",
-      },
-      {
-        label: "PinkDev",
-        href: "/uploads/ImageCourse/pinkdev.tgz",
-      },
-    ],
-  },
-  {
-    slug: "morphomathmaster",
-    label: "Master course",
-    title: "Mathematical morphology",
-    description:
-      "Master-level material from Université Gustave Eiffel on dilations and erosions, openings and closings, greyscale morphology, the shaping framework, practical sessions, and projects.",
-    topics: ["Morphological operators", "Greyscale morphology", "Shaping"],
-    links: [
-      {
-        label: "Course page",
-        href: "/teaching/#legacy-morphomathmaster",
-      },
-      {
-        label: "Dilations",
-        href: "/uploads/images/MorphoMathMaster/Dilatation.pdf",
-      },
-      {
-        label: "Openings",
-        href: "/uploads/images/MorphoMathMaster/Opening.pdf",
-      },
-      {
-        label: "Shaping",
-        href: "/uploads/images/MorphoMathMaster/ShapeMorphoMaster.pdf",
-      },
-    ],
-  },
-  {
-    slug: "isbs-projet",
-    label: "Biomedical imaging",
-    title: "ISBS imaging projects",
-    description:
-      "Third-year imaging projects for bio-engineering students, mixing applied image analysis, project briefs, validation material, and medical or industrial imaging case studies.",
-    topics: ["Project briefs", "Validation data", "Applied imaging"],
-    links: [
-      {
-        label: "Project page",
-        href: "/teaching/#legacy-isbs-projet",
-      },
-      {
-        label: "Clareal project",
-        href: "/uploads/ISBS/Projet_Clareal.pdf",
-      },
-      {
-        label: "Lung project",
-        href: "/uploads/ISBS/ProjetPoumon.pdf",
-      },
-      {
-        label: "Lung data",
-        href: "/uploads/ISBS/ProjetPoumon.zip",
-      },
-    ],
-  },
-  {
-    slug: "higra-tutorial",
-    label: "Software tutorial",
-    title: "Higra tutorial",
-    description:
-      "A practical tutorial on hierarchical graph analysis, usable online in Google Colab or locally with Python. The notebooks cover connected filters and hierarchical segmentation.",
-    topics: ["Hierarchical graphs", "Connected filters", "Segmentation"],
-    links: [
-      {
-        label: "Tutorial page",
-        href: "/teaching/#legacy-higra-tutorial",
-      },
-      {
-        label: "Requirements",
-        href: "/uploads/Higra/requirements.txt",
-      },
-      {
-        label: "Hands-on notebook",
-        href: "/uploads/Higra/Hands%20on%20Higra.ipynb",
-      },
-      {
-        label: "Hierarchical segmentation",
-        href: "/uploads/Higra/HierarchicalSegmentation.ipynb",
-      },
-    ],
   },
 ];
 
@@ -428,7 +252,7 @@ export default function TeachingPage() {
           <h2>Course resources from the previous site</h2>
         </div>
         <div className="course-archive-grid">
-          {courseArchives.map((course) => (
+          {courseArchiveCards.map((course) => (
             <article
               className="course-archive-card"
               id={`legacy-${course.slug}`}

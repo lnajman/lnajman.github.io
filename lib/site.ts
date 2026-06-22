@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { archiveCourses } from "@/data/teaching-archive";
 
 export const siteUrl = "https://laurentnajman.org";
 
@@ -15,6 +16,11 @@ export const siteRoutes: SiteRoute[] = [
   { path: "/supervision/", changeFrequency: "monthly", priority: 0.8 },
   { path: "/software/", changeFrequency: "monthly", priority: 0.8 },
   { path: "/teaching/", changeFrequency: "monthly", priority: 0.7 },
+  ...archiveCourses.map((course) => ({
+    path: `/teaching/${course.slug}/`,
+    changeFrequency: "yearly" as const,
+    priority: 0.45,
+  })),
   { path: "/bio/", changeFrequency: "monthly", priority: 0.8 },
   { path: "/aikido-story/", changeFrequency: "yearly", priority: 0.7 },
 ];
