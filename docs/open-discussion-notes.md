@@ -52,6 +52,9 @@ not be lost when the production domain is switched.
 - Research themes are in better shape now, including deep learning and "graphs
   and simplicial complexes". A later pass could tune the selected anchor papers
   and theme wording.
+- Visual archive: the previous-site cards now use explicit paper and
+  implementation links. A later pass could add a separate interventional X-ray
+  imaging card for the Vincent Bismuth guide-wire and stent-enhancement papers.
 
 ## Visual Design And Imagery
 

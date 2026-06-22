@@ -39,7 +39,11 @@ type ArchiveHighlight = {
   image: string;
   alt: string;
   description: string;
-  href: string;
+  links: Array<{
+    label: string;
+    href: string;
+    internal?: boolean;
+  }>;
   imageFit?: "cover" | "contain";
 };
 
@@ -375,35 +379,67 @@ const archiveHighlights: ArchiveHighlight[] = [
     alt: "Graph-based morphology visual from the previous website",
     description:
       "A trace of the survey and tutorial material that connected morphology, graphs, watersheds, and hierarchies.",
-    href: "https://arxiv.org/pdf/1404.7748.pdf",
+    links: [
+      {
+        label: "Survey paper",
+        href: "https://arxiv.org/pdf/1404.7748.pdf",
+      },
+    ],
     imageFit: "contain",
   },
   {
     title: "Shape-space filtering",
-    label: "Research image",
+    label: "PAMI papers / Colab",
     image: "/archive/shape-filtering-schema.png",
     alt: "Shape-space filtering schema from the previous website",
     description:
-      "The old shape-filtering visual, built around tree representations and transformations of shapes rather than pixels alone.",
-    href: "/publications/?q=shape%20space",
+      "The old shape-filtering visual now points to the two Xu PAMI papers and the Higra Colab scripts that make the shaping framework executable.",
+    links: [
+      {
+        label: "Connected filtering paper",
+        href: "https://hal.science/hal-01162437v1",
+      },
+      {
+        label: "Hierarchical segmentation paper",
+        href: "https://hal.science/hal-01301966v1",
+      },
+      {
+        label: "Colab: shaping filters",
+        href: "https://colab.research.google.com/github/higra/Higra-Notebooks/blob/master/Filtering%20with%20non%20increasing%20criterion%20-%20The%20shaping%20framework.ipynb",
+      },
+      {
+        label: "Colab: saliency map",
+        href: "https://colab.research.google.com/github/higra/Higra-Notebooks/blob/master/Computing%20a%20saliency%20map%20with%20the%20shaping%20framework.ipynb",
+      },
+    ],
   },
   {
     title: "Cardiac and vascular imaging",
-    label: "Application",
+    label: "Evaluation paper",
     image: "/archive/cardiac-stenoses.jpg",
     alt: "Coronary stenosis visualization from the previous website",
     description:
-      "Archive imagery for the medical-imaging line around coronary stenosis, vascular structures, and patient-specific modeling.",
-    href: "/publications/?q=cardiac",
+      "Archive imagery for the medical-imaging line around coronary artery stenosis detection, quantification, and lumen segmentation.",
+    links: [
+      {
+        label: "Coronary stenosis evaluation",
+        href: "https://hal.science/hal-00874107v1",
+      },
+    ],
   },
   {
-    title: "Scene parsing and deep learning",
-    label: "Research image",
+    title: "Scene labeling and hierarchical features",
+    label: "PAMI / deep learning",
     image: "/archive/scene-parsing.jpg",
     alt: "Scene parsing results from the previous website",
     description:
-      "A visual marker of the early deep-learning work linking scene labeling, watershed cuts, and semantic segmentation.",
-    href: "/publications/?q=scene%20parsing",
+      "A visual marker of the work with Clément Farabet, Camille Couprie, and Yann LeCun on multiscale convolutional features for scene labeling.",
+    links: [
+      {
+        label: "Scene labeling paper",
+        href: "https://hal.science/hal-00742077v1",
+      },
+    ],
   },
   {
     title: "Dual-constrained total variation",
@@ -412,16 +448,27 @@ const archiveHighlights: ArchiveHighlight[] = [
     alt: "Dual-constrained total variation crop from the previous website",
     description:
       "An old featured-paper image from the optimization and graph-based image-processing thread.",
-    href: "/publications/?q=dual-constrained",
+    links: [
+      {
+        label: "SIAM paper",
+        href: "https://hal.science/hal-00743968v2",
+      },
+    ],
   },
   {
     title: "Books and long-form references",
-    label: "Book covers",
+    label: "Book section",
     image: "/archive/mathematical-morphology-book.jpg",
     alt: "Mathematical Morphology from theory to applications book cover",
     description:
       "The previous site used books as visual anchors for long-form references, teaching, and synthesis work.",
-    href: "#books",
+    links: [
+      {
+        label: "Book section",
+        href: "#books",
+        internal: true,
+      },
+    ],
     imageFit: "contain",
   },
 ];
@@ -715,7 +762,13 @@ export default function ResearchPage() {
         <div className="archive-highlight-grid">
           {archiveHighlights.map((item) => (
             <article className="archive-highlight-card" key={item.title}>
-              <a className="archive-highlight-image" href={item.href}>
+              <a
+                aria-label={`Open ${item.links[0].label} for ${item.title}`}
+                className="archive-highlight-image"
+                href={item.links[0].href}
+                rel={item.links[0].internal ? undefined : "noreferrer"}
+                target={item.links[0].internal ? undefined : "_blank"}
+              >
                 <img
                   className={item.imageFit === "contain" ? "contain" : ""}
                   src={item.image}
@@ -726,6 +779,21 @@ export default function ResearchPage() {
                 <span>{item.label}</span>
                 <h3>{item.title}</h3>
                 <p>{item.description}</p>
+                <div
+                  className="archive-highlight-links"
+                  aria-label={`${item.title} links`}
+                >
+                  {item.links.map((link) => (
+                    <a
+                      href={link.href}
+                      key={link.href}
+                      rel={link.internal ? undefined : "noreferrer"}
+                      target={link.internal ? undefined : "_blank"}
+                    >
+                      {link.label}
+                    </a>
+                  ))}
+                </div>
               </div>
             </article>
           ))}
