@@ -53,8 +53,9 @@ not be lost when the production domain is switched.
   and simplicial complexes". A later pass could tune the selected anchor papers
   and theme wording.
 - Visual archive: the previous-site cards now use explicit paper and
-  implementation links. A later pass could add a separate interventional X-ray
-  imaging card for the Vincent Bismuth guide-wire and stent-enhancement papers.
+  implementation links. The redundant book-cover card was replaced with an
+  interventional X-ray imaging card for the Vincent Bismuth guide-wire and
+  stent-enhancement papers.
 
 ## Visual Design And Imagery
 

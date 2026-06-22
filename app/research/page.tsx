@@ -456,20 +456,22 @@ const archiveHighlights: ArchiveHighlight[] = [
     ],
   },
   {
-    title: "Books and long-form references",
-    label: "Book section",
-    image: "/archive/mathematical-morphology-book.jpg",
-    alt: "Mathematical Morphology from theory to applications book cover",
+    title: "Interventional X-ray imaging",
+    label: "Guide-wire / stent",
+    image: "/archive/interventional-xray-ppi.png",
+    alt: "Original X-ray image and segmented guide-wire result from the polygonal path image work",
     description:
-      "The previous site used books as visual anchors for long-form references, teaching, and synthesis work.",
+      "A visual trace of the interventional imaging work on curvilinear structures, guide-wire segmentation, and stent visualization enhancement.",
     links: [
       {
-        label: "Book section",
-        href: "#books",
-        internal: true,
+        label: "Guide-wire segmentation",
+        href: "https://hal.science/hal-00741956v1",
+      },
+      {
+        label: "Stent enhancement",
+        href: "https://hal.science/hal-00622290v1",
       },
     ],
-    imageFit: "contain",
   },
 ];
 
