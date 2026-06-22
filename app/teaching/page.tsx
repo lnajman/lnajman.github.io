@@ -6,7 +6,7 @@ import { absoluteUrl } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Teaching",
   description:
-    "Teaching by Laurent Najman: discrete mathematics, computer science, mathematical morphology, AI, image processing, and archived course resources.",
+    "Teaching by Laurent Najman: discrete mathematics, computer science, mathematical morphology, AI, image processing, books, and archived course resources.",
   alternates: {
     canonical: absoluteUrl("/teaching/"),
   },
@@ -64,46 +64,178 @@ const teachingFacts = [
   },
   {
     label: "Archive",
-    value: "legacy resources",
-    detail: "Selected course pages remain linked from the previous website.",
+    value: "course material",
+    detail: "Slides, practical sessions, notebooks, and older project briefs.",
   },
 ];
 
-const archivedResources = [
+const courseArchives = [
   {
+    label: "Computer science",
+    title: "Operating systems and compilation",
+    description:
+      "Core ESIEE material around operating-system concepts, compilation, exercises, and practical foundations. The operating-systems book remains the main reference for this part of the teaching archive.",
+    topics: ["Operating systems", "Compilation", "Exercises"],
+    links: [
+      {
+        label: "Old teaching page",
+        href: "https://laurentnajman.org/index.php?page=teaching",
+      },
+      {
+        label: "Book on HAL",
+        href: "https://hal.science/hal-00622092v1",
+      },
+    ],
+  },
+  {
+    label: "AI course",
     title: "IA et Deep Learning",
-    description: "Archived AI and deep learning teaching material from the previous website.",
-    href: "https://laurentnajman.org/index.php?page=ia-et-deep-learning",
+    description:
+      "A hands-on course built around Keras notebooks in Google Colab or Kaggle, with material on neural networks, convolutional networks, overfitting, project reports, and explainable AI.",
+    topics: ["Keras labs", "Colab / Kaggle", "Explainable AI"],
+    links: [
+      {
+        label: "Course page",
+        href: "https://laurentnajman.org/index.php?page=ia-et-deep-learning",
+      },
+      {
+        label: "Presentation",
+        href: "https://laurentnajman.org/uploads/images/DeepLearning/FormationDeep.pdf",
+      },
+      {
+        label: "ConvNets",
+        href: "https://laurentnajman.org/uploads/images/DeepLearning/ConvNets.pdf",
+      },
+      {
+        label: "XAI slides",
+        href: "https://laurentnajman.org/uploads/images/DeepLearning/xAI_slides.pdf",
+      },
+    ],
   },
   {
-    title: "IM5-1IA",
-    description: "Archived course page with tutorial material.",
-    href: "https://laurentnajman.org/index.php?page=im5-1ia",
+    label: "Image processing",
+    title: "Image analysis and processing",
+    description:
+      "Engineering course material on image formation, enhancement, transforms, filtering, segmentation, and connected-geodesic approaches, with practical material based on PinkDev.",
+    topics: ["Enhancement", "Filtering", "Segmentation"],
+    links: [
+      {
+        label: "Course page",
+        href: "https://laurentnajman.org/index.php?page=im5-1ia",
+      },
+      {
+        label: "Introduction",
+        href: "https://laurentnajman.org/uploads/ImageCourse/intro_ln.pdf",
+      },
+      {
+        label: "Filtering",
+        href: "https://laurentnajman.org/uploads/ImageCourse/filtering_ln.pdf",
+      },
+      {
+        label: "Segmentation",
+        href: "https://laurentnajman.org/uploads/ImageCourse/segmentation1_ln.pdf",
+      },
+    ],
   },
   {
-    title: "Tutorial 1",
-    description: "Archived tutorial resource.",
-    href: "https://laurentnajman.org/index.php?page=tutorial-1",
+    label: "Programming sessions",
+    title: "Image-processing programming tutorials",
+    description:
+      "The first sessions introduce practical image operators with image differences and blob measurements. The second sessions implement a Canny edge detector, with emphasis on hysteresis thresholding.",
+    topics: ["PinkDev", "Blob analysis", "Canny detector"],
+    links: [
+      {
+        label: "Tutorial 1",
+        href: "https://laurentnajman.org/index.php?page=tutorial-1",
+      },
+      {
+        label: "Tutorial 2",
+        href: "https://laurentnajman.org/index.php?page=tutorial-2",
+      },
+      {
+        label: "Blob data",
+        href: "https://laurentnajman.org/uploads/ImageCourse/blobs.tar.gz",
+      },
+      {
+        label: "PinkDev",
+        href: "https://laurentnajman.org/uploads/ImageCourse/pinkdev.tgz",
+      },
+    ],
   },
   {
-    title: "Tutorial 2",
-    description: "Archived tutorial resource.",
-    href: "https://laurentnajman.org/index.php?page=tutorial-2",
+    label: "Master course",
+    title: "Mathematical morphology",
+    description:
+      "Master-level material from Université Gustave Eiffel on dilations and erosions, openings and closings, greyscale morphology, the shaping framework, practical sessions, and projects.",
+    topics: ["Morphological operators", "Greyscale morphology", "Shaping"],
+    links: [
+      {
+        label: "Course page",
+        href: "https://laurentnajman.org/index.php?page=morphomathmaster",
+      },
+      {
+        label: "Dilations",
+        href: "https://laurentnajman.org/uploads/images/MorphoMathMaster/Dilatation.pdf",
+      },
+      {
+        label: "Openings",
+        href: "https://laurentnajman.org/uploads/images/MorphoMathMaster/Opening.pdf",
+      },
+      {
+        label: "Shaping",
+        href: "https://laurentnajman.org/uploads/images/MorphoMathMaster/ShapeMorphoMaster.pdf",
+      },
+    ],
   },
   {
-    title: "MorphoMathMaster",
-    description: "Archived mathematical morphology Master-level material.",
-    href: "https://laurentnajman.org/index.php?page=morphomathmaster",
+    label: "Biomedical imaging",
+    title: "ISBS imaging projects",
+    description:
+      "Third-year imaging projects for bio-engineering students, mixing applied image analysis, project briefs, validation material, and medical or industrial imaging case studies.",
+    topics: ["Project briefs", "Validation data", "Applied imaging"],
+    links: [
+      {
+        label: "Project page",
+        href: "https://laurentnajman.org/index.php?page=ISBS-projet",
+      },
+      {
+        label: "Clareal project",
+        href: "https://laurentnajman.org/uploads/ISBS/Projet_Clareal.pdf",
+      },
+      {
+        label: "Lung project",
+        href: "https://laurentnajman.org/uploads/ISBS/ProjetPoumon.pdf",
+      },
+      {
+        label: "Lung data",
+        href: "https://laurentnajman.org/uploads/ISBS/ProjetPoumon.zip",
+      },
+    ],
   },
   {
-    title: "ISBS projects",
-    description: "Archived project material for bio-engineering students.",
-    href: "https://laurentnajman.org/index.php?page=ISBS-projet",
-  },
-  {
+    label: "Software tutorial",
     title: "Higra tutorial",
-    description: "Archived tutorial on hierarchical graph analysis.",
-    href: "https://laurentnajman.org/index.php?page=higra-tutorial",
+    description:
+      "A practical tutorial on hierarchical graph analysis, usable online in Google Colab or locally with Python. The notebooks cover connected filters and hierarchical segmentation.",
+    topics: ["Hierarchical graphs", "Connected filters", "Segmentation"],
+    links: [
+      {
+        label: "Tutorial page",
+        href: "https://laurentnajman.org/index.php?page=higra-tutorial",
+      },
+      {
+        label: "Requirements",
+        href: "https://laurentnajman.org/uploads/Higra/requirements.txt",
+      },
+      {
+        label: "Hands-on notebook",
+        href: "https://laurentnajman.org/uploads/Higra/Hands%20on%20Higra.ipynb",
+      },
+      {
+        label: "Hierarchical segmentation",
+        href: "https://laurentnajman.org/uploads/Higra/HierarchicalSegmentation.ipynb",
+      },
+    ],
   },
 ];
 
@@ -112,14 +244,52 @@ const books = [
     title: "Systèmes d'exploitation - Synthèse de cours & exercices corrigés",
     detail:
       "with Bart Lamiroy and Hugues Talbot, Pearson Education France, 2006",
+    description:
+      "A compact course-and-exercises book for operating-system foundations, connected to the long-running computer-science teaching at ESIEE.",
+    cover: "/archive/operating-systems-book.jpg",
+    alt: "Systèmes d'exploitation book cover",
+    links: [
+      {
+        label: "HAL",
+        href: "https://hal.science/hal-00622092v1",
+      },
+    ],
   },
   {
     title: "Mathematical Morphology: from theory to applications",
     detail: "with Hugues Talbot, ISTE-Wiley, 2010",
+    description:
+      "A reference volume for morphology courses, from operators and connected filters to applications in image analysis.",
+    cover: "/archive/mathematical-morphology-book.jpg",
+    alt: "Mathematical Morphology from theory to applications book cover",
+    links: [
+      {
+        label: "HAL",
+        href: "https://hal.science/hal-00622479v1",
+      },
+      {
+        label: "DOI",
+        href: "https://doi.org/10.1002/9781118600788",
+      },
+    ],
   },
   {
     title: "Modern Approaches to Discrete Curvature",
     detail: "with Pascal Romon, Springer, 2017",
+    description:
+      "A modern reference for discrete geometric ideas that support teaching around graphs, meshes, surfaces, and geometric computing.",
+    cover: "/archive/discrete-curvature-book.jpg",
+    alt: "Modern Approaches to Discrete Curvature book cover",
+    links: [
+      {
+        label: "HAL",
+        href: "https://hal.science/hal-01597556v1",
+      },
+      {
+        label: "DOI",
+        href: "https://doi.org/10.1007/978-3-319-58002-9",
+      },
+    ],
   },
 ];
 
@@ -224,11 +394,22 @@ export default function TeachingPage() {
           <p className="eyebrow">Books</p>
           <h2>Teaching references</h2>
         </div>
-        <ul className="book-list">
+        <ul className="book-list teaching-book-list">
           {books.map((book) => (
             <li key={book.title}>
-              <strong>{book.title}</strong>
-              <span>{book.detail}</span>
+              <img src={book.cover} alt={book.alt} />
+              <div>
+                <strong>{book.title}</strong>
+                <span>{book.detail}</span>
+                <p>{book.description}</p>
+                <div className="teaching-book-links">
+                  {book.links.map((link) => (
+                    <a href={link.href} key={link.href}>
+                      {link.label}
+                    </a>
+                  ))}
+                </div>
+              </div>
             </li>
           ))}
         </ul>
@@ -239,13 +420,25 @@ export default function TeachingPage() {
           <p className="eyebrow">Archive</p>
           <h2>Course resources from the previous site</h2>
         </div>
-        <div className="archive-grid">
-          {archivedResources.map((resource) => (
-            <a href={resource.href} key={resource.title}>
-              <span className="archive-label">Previous site</span>
-              <strong>{resource.title}</strong>
-              <span>{resource.description}</span>
-            </a>
+        <div className="course-archive-grid">
+          {courseArchives.map((course) => (
+            <article className="course-archive-card" key={course.title}>
+              <span className="archive-label">{course.label}</span>
+              <h3>{course.title}</h3>
+              <p>{course.description}</p>
+              <ul className="course-topic-list">
+                {course.topics.map((topic) => (
+                  <li key={topic}>{topic}</li>
+                ))}
+              </ul>
+              <div className="course-link-list">
+                {course.links.map((link) => (
+                  <a href={link.href} key={link.href}>
+                    {link.label}
+                  </a>
+                ))}
+              </div>
+            </article>
           ))}
         </div>
       </section>
