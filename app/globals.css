@@ -2746,6 +2746,10 @@ h3 {
   transform: scale(1.025);
 }
 
+.archive-highlight-card:hover .archive-highlight-image img.contain {
+  transform: none;
+}
+
 .archive-highlight-card > div {
   display: grid;
   gap: 0.55rem;

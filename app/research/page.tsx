@@ -412,6 +412,7 @@ const archiveHighlights: ArchiveHighlight[] = [
         href: "https://colab.research.google.com/github/higra/Higra-Notebooks/blob/master/Computing%20a%20saliency%20map%20with%20the%20shaping%20framework.ipynb",
       },
     ],
+    imageFit: "contain",
   },
   {
     title: "Cardiac and vascular imaging",
@@ -426,6 +427,7 @@ const archiveHighlights: ArchiveHighlight[] = [
         href: "https://hal.science/hal-00874107v1",
       },
     ],
+    imageFit: "contain",
   },
   {
     title: "Scene labeling and hierarchical features",
