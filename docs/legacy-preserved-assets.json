@@ -315,10 +315,10 @@
     "page": "tbmr",
     "url": "https://laurentnajman.org/uploads/TBMR/supplementary_material.pdf",
     "local": "/uploads/TBMR/supplementary_material.pdf",
-    "bytes": 125456816,
+    "bytes": 3514480,
     "skipped": false,
-    "preserved": false,
-    "reason": "Skipped from GitHub Pages deployable assets because the file is about 120 MB, above GitHub normal per-file limit."
+    "preserved": true,
+    "note": "Replaced the original oversized old-site copy with the smaller uploaded PDF supplied on 2026-06-22."
   },
   {
     "page": "tbmr",

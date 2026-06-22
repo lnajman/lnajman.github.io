@@ -22,13 +22,14 @@ client-side redirect and provides fallback links. For SEO-sensitive pages, most
 importantly the old Aikido story URL, a real permanent redirect through OVH,
 Cloudflare, or another front layer is still preferable at migration time.
 
-## Oversized Asset
+## Former Oversized Asset
 
-The old file `/uploads/TBMR/supplementary_material.pdf` was found and recorded,
-but it is about 120 MB, above GitHub's normal per-file limit. It is not included
-in the deployable `public/uploads` tree. Options for this file are:
+The old file `/uploads/TBMR/supplementary_material.pdf` was initially about
+120 MB, above GitHub's normal per-file limit. It has been replaced in
+`public/uploads/TBMR/supplementary_material.pdf` by the smaller PDF supplied on
+2026-06-22, so the historical path can now be preserved in the GitHub Pages
+site.
 
-- host it elsewhere and link to that location;
-- put it in a GitHub Release;
-- use Git LFS if Pages behavior is acceptable after testing;
-- omit it if the old TBMR page is not worth fully preserving.
+The only remaining size note is that
+`/uploads/ICPR2016/GB-Morpho-ICPR.pdf` is about 53 MB. GitHub accepted it, but
+warned that it is above the recommended 50 MB per-file size.
