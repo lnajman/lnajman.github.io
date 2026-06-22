@@ -103,9 +103,50 @@ const highlights = [
 ];
 
 const books = [
-  "Modern Approaches to Discrete Curvature, with Pascal Romon, Springer, 2017.",
-  "Mathematical Morphology: from theory to applications, with Hugues Talbot, ISTE-Wiley, 2010.",
-  "Systèmes d'exploitation - Synthèse de cours & exercices corrigés, with Bart Lamiroy and Hugues Talbot, Pearson Education France, 2006.",
+  {
+    title: "Modern Approaches to Discrete Curvature",
+    detail: "with Pascal Romon, Springer, 2017",
+    cover: "/archive/discrete-curvature-book.jpg",
+    alt: "Modern Approaches to Discrete Curvature book cover",
+    links: [
+      {
+        label: "HAL",
+        href: "https://hal.science/hal-01597556v1",
+      },
+      {
+        label: "DOI",
+        href: "https://doi.org/10.1007/978-3-319-58002-9",
+      },
+    ],
+  },
+  {
+    title: "Mathematical Morphology: from theory to applications",
+    detail: "with Hugues Talbot, ISTE-Wiley, 2010",
+    cover: "/archive/mathematical-morphology-book.jpg",
+    alt: "Mathematical Morphology from theory to applications book cover",
+    links: [
+      {
+        label: "HAL",
+        href: "https://hal.science/hal-00622479v1",
+      },
+      {
+        label: "DOI",
+        href: "https://doi.org/10.1002/9781118600788",
+      },
+    ],
+  },
+  {
+    title: "Systèmes d'exploitation - Synthèse de cours & exercices corrigés",
+    detail: "with Bart Lamiroy and Hugues Talbot, Pearson Education France, 2006",
+    cover: "/archive/operating-systems-book.jpg",
+    alt: "Systèmes d'exploitation book cover",
+    links: [
+      {
+        label: "HAL",
+        href: "https://hal.science/hal-00622092v1",
+      },
+    ],
+  },
 ];
 
 const genealogyNames = [
@@ -326,7 +367,20 @@ export default function BioPage() {
         </div>
         <ul className="book-list">
           {books.map((book) => (
-            <li key={book}>{book}</li>
+            <li key={book.title}>
+              <img src={book.cover} alt={book.alt} />
+              <div>
+                <strong>{book.title}</strong>
+                <span>{book.detail}</span>
+                <div className="book-resource-links">
+                  {book.links.map((link) => (
+                    <a href={link.href} key={link.href}>
+                      {link.label}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </li>
           ))}
         </ul>
       </section>

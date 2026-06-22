@@ -82,9 +82,12 @@ not be lost when the production domain is switched.
 
 ## Teaching
 
-- Archived course links still point to the old `laurentnajman.org` pages. This
-  is acceptable for preview, but later we should decide whether to keep them as
-  external legacy links, migrate selected material, or archive static copies.
+- The main archived course links have been migrated to local files under
+  `public/uploads/...`, and old `index.php?page=...` URLs now have a static
+  compatibility page at `public/index.php`.
+- Remaining migration caveat: GitHub Pages alone does not provide true
+  server-side permanent redirects for query-string URLs, so SEO-sensitive old
+  URLs still deserve a final redirect decision at domain-transfer time.
 
 ## Migration Checklist
 
@@ -99,8 +102,8 @@ not be lost when the production domain is switched.
 - Add a permanent server-side redirect for the legacy Aikido story URL:
   `https://laurentnajman.org/index.php?page=aikido-story` ->
   `https://laurentnajman.org/aikido-story/`.
-- Consider permanent redirects for the old query-string pages currently handled
-  by the preview not-found page, including teaching, research, supervision,
+- Consider permanent redirects for old query-string pages now handled by the
+  static compatibility page, including teaching, research, supervision,
   software/tutorial, resume, and links pages.
 - After the switch, submit `https://laurentnajman.org/sitemap.xml` in Search
   Console and check canonical URLs, HTTPS, and redirects.

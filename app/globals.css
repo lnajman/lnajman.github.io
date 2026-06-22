@@ -2175,7 +2175,7 @@ h3 {
   line-height: 1.5;
 }
 
-.teaching-book-links,
+.book-resource-links,
 .course-link-list,
 .course-topic-list {
   display: flex;
@@ -2183,11 +2183,11 @@ h3 {
   gap: 0.42rem;
 }
 
-.teaching-book-links {
+.book-resource-links {
   margin-top: 0.72rem;
 }
 
-.teaching-book-links a,
+.book-resource-links a,
 .course-link-list a {
   display: inline-flex;
   align-items: center;
@@ -2203,7 +2203,7 @@ h3 {
   text-decoration: none;
 }
 
-.teaching-book-links a:hover,
+.book-resource-links a:hover,
 .course-link-list a:hover {
   border-color: var(--rust);
   color: var(--rust);

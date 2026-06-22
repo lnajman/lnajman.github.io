@@ -71,6 +71,7 @@ const teachingFacts = [
 
 const courseArchives = [
   {
+    slug: "teaching",
     label: "Computer science",
     title: "Operating systems and compilation",
     description:
@@ -79,7 +80,7 @@ const courseArchives = [
     links: [
       {
         label: "Old teaching page",
-        href: "https://laurentnajman.org/index.php?page=teaching",
+        href: "/teaching/#legacy-teaching",
       },
       {
         label: "Book on HAL",
@@ -88,6 +89,7 @@ const courseArchives = [
     ],
   },
   {
+    slug: "ia-et-deep-learning",
     label: "AI course",
     title: "IA et Deep Learning",
     description:
@@ -96,23 +98,24 @@ const courseArchives = [
     links: [
       {
         label: "Course page",
-        href: "https://laurentnajman.org/index.php?page=ia-et-deep-learning",
+        href: "/teaching/#legacy-ia-et-deep-learning",
       },
       {
         label: "Presentation",
-        href: "https://laurentnajman.org/uploads/images/DeepLearning/FormationDeep.pdf",
+        href: "/uploads/images/DeepLearning/FormationDeep.pdf",
       },
       {
         label: "ConvNets",
-        href: "https://laurentnajman.org/uploads/images/DeepLearning/ConvNets.pdf",
+        href: "/uploads/images/DeepLearning/ConvNets.pdf",
       },
       {
         label: "XAI slides",
-        href: "https://laurentnajman.org/uploads/images/DeepLearning/xAI_slides.pdf",
+        href: "/uploads/images/DeepLearning/xAI_slides.pdf",
       },
     ],
   },
   {
+    slug: "im5-1ia",
     label: "Image processing",
     title: "Image analysis and processing",
     description:
@@ -121,23 +124,24 @@ const courseArchives = [
     links: [
       {
         label: "Course page",
-        href: "https://laurentnajman.org/index.php?page=im5-1ia",
+        href: "/teaching/#legacy-im5-1ia",
       },
       {
         label: "Introduction",
-        href: "https://laurentnajman.org/uploads/ImageCourse/intro_ln.pdf",
+        href: "/uploads/ImageCourse/intro_ln.pdf",
       },
       {
         label: "Filtering",
-        href: "https://laurentnajman.org/uploads/ImageCourse/filtering_ln.pdf",
+        href: "/uploads/ImageCourse/filtering_ln.pdf",
       },
       {
         label: "Segmentation",
-        href: "https://laurentnajman.org/uploads/ImageCourse/segmentation1_ln.pdf",
+        href: "/uploads/ImageCourse/segmentation1_ln.pdf",
       },
     ],
   },
   {
+    slug: "programming-tutorials",
     label: "Programming sessions",
     title: "Image-processing programming tutorials",
     description:
@@ -146,23 +150,24 @@ const courseArchives = [
     links: [
       {
         label: "Tutorial 1",
-        href: "https://laurentnajman.org/index.php?page=tutorial-1",
+        href: "/teaching/#legacy-programming-tutorials",
       },
       {
         label: "Tutorial 2",
-        href: "https://laurentnajman.org/index.php?page=tutorial-2",
+        href: "/teaching/#legacy-programming-tutorials",
       },
       {
         label: "Blob data",
-        href: "https://laurentnajman.org/uploads/ImageCourse/blobs.tar.gz",
+        href: "/uploads/ImageCourse/blobs.tar.gz",
       },
       {
         label: "PinkDev",
-        href: "https://laurentnajman.org/uploads/ImageCourse/pinkdev.tgz",
+        href: "/uploads/ImageCourse/pinkdev.tgz",
       },
     ],
   },
   {
+    slug: "morphomathmaster",
     label: "Master course",
     title: "Mathematical morphology",
     description:
@@ -171,23 +176,24 @@ const courseArchives = [
     links: [
       {
         label: "Course page",
-        href: "https://laurentnajman.org/index.php?page=morphomathmaster",
+        href: "/teaching/#legacy-morphomathmaster",
       },
       {
         label: "Dilations",
-        href: "https://laurentnajman.org/uploads/images/MorphoMathMaster/Dilatation.pdf",
+        href: "/uploads/images/MorphoMathMaster/Dilatation.pdf",
       },
       {
         label: "Openings",
-        href: "https://laurentnajman.org/uploads/images/MorphoMathMaster/Opening.pdf",
+        href: "/uploads/images/MorphoMathMaster/Opening.pdf",
       },
       {
         label: "Shaping",
-        href: "https://laurentnajman.org/uploads/images/MorphoMathMaster/ShapeMorphoMaster.pdf",
+        href: "/uploads/images/MorphoMathMaster/ShapeMorphoMaster.pdf",
       },
     ],
   },
   {
+    slug: "isbs-projet",
     label: "Biomedical imaging",
     title: "ISBS imaging projects",
     description:
@@ -196,23 +202,24 @@ const courseArchives = [
     links: [
       {
         label: "Project page",
-        href: "https://laurentnajman.org/index.php?page=ISBS-projet",
+        href: "/teaching/#legacy-isbs-projet",
       },
       {
         label: "Clareal project",
-        href: "https://laurentnajman.org/uploads/ISBS/Projet_Clareal.pdf",
+        href: "/uploads/ISBS/Projet_Clareal.pdf",
       },
       {
         label: "Lung project",
-        href: "https://laurentnajman.org/uploads/ISBS/ProjetPoumon.pdf",
+        href: "/uploads/ISBS/ProjetPoumon.pdf",
       },
       {
         label: "Lung data",
-        href: "https://laurentnajman.org/uploads/ISBS/ProjetPoumon.zip",
+        href: "/uploads/ISBS/ProjetPoumon.zip",
       },
     ],
   },
   {
+    slug: "higra-tutorial",
     label: "Software tutorial",
     title: "Higra tutorial",
     description:
@@ -221,19 +228,19 @@ const courseArchives = [
     links: [
       {
         label: "Tutorial page",
-        href: "https://laurentnajman.org/index.php?page=higra-tutorial",
+        href: "/teaching/#legacy-higra-tutorial",
       },
       {
         label: "Requirements",
-        href: "https://laurentnajman.org/uploads/Higra/requirements.txt",
+        href: "/uploads/Higra/requirements.txt",
       },
       {
         label: "Hands-on notebook",
-        href: "https://laurentnajman.org/uploads/Higra/Hands%20on%20Higra.ipynb",
+        href: "/uploads/Higra/Hands%20on%20Higra.ipynb",
       },
       {
         label: "Hierarchical segmentation",
-        href: "https://laurentnajman.org/uploads/Higra/HierarchicalSegmentation.ipynb",
+        href: "/uploads/Higra/HierarchicalSegmentation.ipynb",
       },
     ],
   },
@@ -402,7 +409,7 @@ export default function TeachingPage() {
                 <strong>{book.title}</strong>
                 <span>{book.detail}</span>
                 <p>{book.description}</p>
-                <div className="teaching-book-links">
+                <div className="book-resource-links">
                   {book.links.map((link) => (
                     <a href={link.href} key={link.href}>
                       {link.label}
@@ -422,7 +429,11 @@ export default function TeachingPage() {
         </div>
         <div className="course-archive-grid">
           {courseArchives.map((course) => (
-            <article className="course-archive-card" key={course.title}>
+            <article
+              className="course-archive-card"
+              id={`legacy-${course.slug}`}
+              key={course.title}
+            >
               <span className="archive-label">{course.label}</span>
               <h3>{course.title}</h3>
               <p>{course.description}</p>
