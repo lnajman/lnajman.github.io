@@ -435,7 +435,7 @@ const archiveHighlights: ArchiveHighlight[] = [
     image: "/archive/scene-parsing.jpg",
     alt: "Scene parsing results from the previous website",
     description:
-      "A visual marker of the work with Clément Farabet, Camille Couprie, and Yann LeCun on multiscale convolutional features, part of the early deep-learning wave that helped establish neural methods for scene labeling and scene understanding.",
+      "A visual marker of the work with Clément Farabet, Camille Couprie, and Yann LeCun showing that deep, hierarchical, multiscale convolutional features could be learned directly from images for dense scene labeling, making it a key precursor to modern semantic segmentation systems.",
     links: [
       {
         label: "Scene labeling paper",
