@@ -442,6 +442,7 @@ const archiveHighlights: ArchiveHighlight[] = [
         href: "https://hal.science/hal-00742077v1",
       },
     ],
+    imageFit: "contain",
   },
   {
     title: "Dual-constrained total variation",
@@ -456,6 +457,7 @@ const archiveHighlights: ArchiveHighlight[] = [
         href: "https://hal.science/hal-00743968v2",
       },
     ],
+    imageFit: "contain",
   },
   {
     title: "Interventional X-ray imaging",
