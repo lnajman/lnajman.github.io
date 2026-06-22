@@ -44,7 +44,7 @@ const softwareProjects = [
     description:
       "A C++/Python library for Morse sequences, reference and coreference maps, Morse complexes, and Morse-based persistent homology.",
     role:
-      "The documentation and source code are now public, as part of ongoing work on Morse-based topology and persistence.",
+      "The documentation and source code are public, as part of ongoing work on Morse-based topology and persistence.",
     links: [
       {
         label: "Documentation",

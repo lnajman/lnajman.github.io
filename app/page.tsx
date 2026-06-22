@@ -171,7 +171,7 @@ export default function Home() {
           <ResearchVisual className="section-math-plate" variant="theme" />
         </div>
         <p className="section-intro">
-          The site should make the research spine easier to scan: graph
+          The research page gathers the main spine of the work: graph
           representations, hierarchies, simplicial complexes, segmentation,
           shape analysis, deep learning, and explainable AI.
         </p>
@@ -241,7 +241,11 @@ export default function Home() {
           </div>
           <div>
             <strong>{counts.manualDuplicateGroups}</strong>
-            <span>merged duplicate</span>
+            <span>
+              {counts.manualDuplicateGroups === 1
+                ? "merged duplicate"
+                : "merged duplicates"}
+            </span>
           </div>
         </div>
       </section>

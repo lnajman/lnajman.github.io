@@ -42,6 +42,9 @@ pnpm run dev
 pnpm run build:github
 ```
 
+The build uses an explicit Turbopack root so the nested preview checkout is not
+mistaken for a larger monorepo.
+
 The GitHub Actions workflow rebuilds the site from HAL on pushes, manual
 dispatches, and a weekly schedule.
 

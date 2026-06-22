@@ -30,7 +30,7 @@ const careerItems = [
   {
     period: "1995-1998",
     title:
-      "VP Research and Development, Animation Science, Paris - Boston - San Francisco",
+      "VP Research and Development, Animation Science, Paris, Boston, and San Francisco",
   },
   {
     period: "1991-1995",
@@ -52,7 +52,7 @@ const educationItems = [
   {
     period: "1991",
     title:
-      "Master degree in Artificial Intelligence and Shape Recognition, Université Paris-Dauphine, ranked first",
+      "Master's degree in Artificial Intelligence and Shape Recognition, Université Paris-Dauphine, ranked first",
   },
   {
     period: "1991",

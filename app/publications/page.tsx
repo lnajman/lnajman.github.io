@@ -89,13 +89,18 @@ export default function PublicationsPage() {
           </div>
           <div>
             <strong>{publicationsData.counts.manualDuplicateGroups}</strong>
-            <span>manual duplicate merge</span>
+            <span>
+              {publicationsData.counts.manualDuplicateGroups === 1
+                ? "manual duplicate merge"
+                : "manual duplicate merges"}
+            </span>
           </div>
         </div>
         <p className="data-note large-note publication-process-note">
-          Generated {formatGeneratedDate(publicationsData.generatedAt)}. The
-          confirmed duplicate merge is the operating-system book indexed under
-          both HAL and INRIA HAL identifiers.
+          Generated {formatGeneratedDate(publicationsData.generatedAt)}. Manual
+          duplicate merges are applied from the override file; the
+          operating-system book is one confirmed example, indexed under both HAL
+          and INRIA HAL identifiers.
         </p>
       </section>
 

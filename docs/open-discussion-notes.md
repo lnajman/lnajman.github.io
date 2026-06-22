@@ -1,6 +1,6 @@
 # Open Discussion Notes
 
-Last updated: 2026-06-21
+Last updated: 2026-06-22
 
 This note tracks remaining website topics plus migration reminders that should
 not be lost when the production domain is switched.
@@ -34,8 +34,10 @@ not be lost when the production domain is switched.
   papers, book chapters, reports, special issues and proceedings, theses and
   habilitation, and other publications. Decide later whether these labels need
   more academic wording.
-- Several DOI destinations and LinkedIn block automated link checks, but the
-  latest audit found no true broken links after the placeholder DOI was hidden.
+- The latest external link audit checked `719` URLs: `708` returned OK, `10`
+  DOI publisher destinations returned automated-access warnings, and LinkedIn
+  returned an anti-bot response for Laurent's profile. The internal route,
+  asset, fragment, and sitemap checks found no broken links.
 
 ## Bio, Research, And Personal Pages
 
@@ -80,6 +82,27 @@ not be lost when the production domain is switched.
   is acceptable for preview, but later we should decide whether to keep them as
   external legacy links, migrate selected material, or archive static copies.
 
+## Migration Checklist
+
+- Keep OVH DNS, hosting, and email forwarding in place until the final switch
+  has been tested. This is especially important for `najman.org`, which also
+  carries email redirection.
+- Keep `lnajman.github.io` as the preview URL until the site content is
+  considered finished.
+- When ready, configure GitHub Pages for the custom domain
+  `laurentnajman.org`, then update DNS and verify HTTPS.
+- Preserve the `najman.org` redirect to `laurentnajman.org`.
+- Add a permanent server-side redirect for the legacy Aikido story URL:
+  `https://laurentnajman.org/index.php?page=aikido-story` ->
+  `https://laurentnajman.org/aikido-story/`.
+- Consider permanent redirects for the old query-string pages currently handled
+  by the preview not-found page, including teaching, research, supervision,
+  software/tutorial, resume, and links pages.
+- After the switch, submit `https://laurentnajman.org/sitemap.xml` in Search
+  Console and check canonical URLs, HTTPS, and redirects.
+- Keep the old hosting active briefly after the switch, until redirects and
+  email forwarding have been verified in production.
+
 ## Technical Follow-Ups
 
 - Production migration SEO: before switching `laurentnajman.org`, preserve the
@@ -91,7 +114,7 @@ not be lost when the production domain is switched.
   canonical production URL and is included in the sitemap/Search Console flow.
 - ESLint still warns about several plain `<img>` tags. They work correctly;
   converting them to `next/image` is a performance polish item.
-- GitHub Actions reports a Node 20 deprecation warning for some upstream
-  actions being forced to Node 24. The deployment still succeeds.
+- The GitHub Pages workflow has been updated to current action versions and no
+  longer reports the earlier Node 20 deprecation annotation.
 - Keep the HAL override mechanism small and explicit. It is now useful for
   single-record metadata corrections as well as duplicate merges.

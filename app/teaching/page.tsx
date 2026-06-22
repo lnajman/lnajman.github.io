@@ -149,7 +149,7 @@ export default function TeachingPage() {
           <p className="eyebrow">Teaching</p>
           <h1>Courses and supervision</h1>
           <p>
-            I have taught at engineering and Master level across discrete
+            I have taught at engineering and Master&apos;s level across discrete
             mathematics, computer science, mathematical morphology, image
             processing, signal processing, and artificial intelligence. This
             page keeps the current teaching profile visible while preserving
