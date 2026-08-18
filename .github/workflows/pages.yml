@@ -9,7 +9,7 @@ on:
     - cron: "17 4 * * 1"
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -40,6 +40,19 @@ jobs:
 
       - name: Build static site
         run: pnpm run build:github
+
+      - name: Commit refreshed HAL data
+        if: github.event_name == 'schedule'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/generated/publications.json
+          if git diff --cached --quiet; then
+            echo "No HAL data changes to commit."
+          else
+            git commit -m "chore: refresh HAL publications [skip ci]"
+            git push
+          fi
 
       - name: Configure Pages
         uses: actions/configure-pages@v6
