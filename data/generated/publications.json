@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-24T05:02:21.051Z",
+  "generatedAt": "2026-09-07T09:21:52.837Z",
   "source": {
     "name": "HAL",
     "query": "authIdHal_s:laurent-najman OR authFullName_s:\"Laurent Najman\"",
@@ -417,31 +417,31 @@
       "cleanupNote": ""
     },
     {
-      "id": "hal-05299371",
-      "halId": "hal-05299371",
+      "id": "hal-05018614",
+      "halId": "hal-05018614",
       "sourceHalIds": [
-        "hal-05299371"
+        "hal-05018614"
       ],
-      "title": "Playing with Kruskal: algorithms for flat and hierarchical watershed cuts",
+      "title": "Quantile Activation: Correcting a failure mode of traditional ML models",
       "authors": [
-        "Jean Cousty",
+        "Aditya Challa",
+        "Sravan Danda",
         "Laurent Najman",
-        "Benjamin Perret",
-        "Deise Santana Maia"
+        "Snehanshu Saha"
       ],
       "year": 2025,
       "publicationDate": "2025",
       "status": "published",
-      "type": "UNDEFINED",
-      "typeLabel": "Other",
-      "venue": "",
+      "type": "ART",
+      "typeLabel": "Journal article",
+      "venue": "Transactions on Machine Learning Research Journal",
       "publisher": "",
       "series": "",
       "pages": "",
       "isbn": "",
       "doi": "",
-      "pdfUrl": "https://hal.science/hal-05299371/file/watershedPlayingKruskal-v0.pdf",
-      "halUrl": "https://hal.science/hal-05299371v1",
+      "pdfUrl": "https://hal.science/hal-05018614/file/main_tmlr2025.pdf",
+      "halUrl": "https://hal.science/hal-05018614v1",
       "alternateHalUrls": [],
       "cleanupNote": ""
     },
@@ -476,31 +476,31 @@
       "cleanupNote": ""
     },
     {
-      "id": "hal-05018614",
-      "halId": "hal-05018614",
+      "id": "hal-05299371",
+      "halId": "hal-05299371",
       "sourceHalIds": [
-        "hal-05018614"
+        "hal-05299371"
       ],
-      "title": "Quantile Activation: Correcting a failure mode of traditional ML models",
+      "title": "Playing with Kruskal: algorithms for flat and hierarchical watershed cuts",
       "authors": [
-        "Aditya Challa",
-        "Sravan Danda",
+        "Jean Cousty",
         "Laurent Najman",
-        "Snehanshu Saha"
+        "Benjamin Perret",
+        "Deise Santana Maia"
       ],
       "year": 2025,
       "publicationDate": "2025",
       "status": "published",
-      "type": "ART",
-      "typeLabel": "Journal article",
-      "venue": "Transactions on Machine Learning Research Journal",
+      "type": "UNDEFINED",
+      "typeLabel": "Other",
+      "venue": "",
       "publisher": "",
       "series": "",
       "pages": "",
       "isbn": "",
       "doi": "",
-      "pdfUrl": "https://hal.science/hal-05018614/file/main_tmlr2025.pdf",
-      "halUrl": "https://hal.science/hal-05018614v1",
+      "pdfUrl": "https://hal.science/hal-05299371/file/watershedPlayingKruskal-v0.pdf",
+      "halUrl": "https://hal.science/hal-05299371v1",
       "alternateHalUrls": [],
       "cleanupNote": ""
     },
@@ -709,6 +709,37 @@
       "cleanupNote": ""
     },
     {
+      "id": "hal-04739628",
+      "halId": "hal-04739628",
+      "sourceHalIds": [
+        "hal-04739628"
+      ],
+      "title": "Shape Transformation Driven by Active Contour for Class-Imbalanced Semi-Supervised Medical Image Segmentation",
+      "authors": [
+        "Yuliang Gu",
+        "Yepeng Liu",
+        "Zhichao Sun",
+        "Jinchi Zhu",
+        "Yongchao Xu",
+        "Laurent Najman"
+      ],
+      "year": 2024,
+      "publicationDate": "2024",
+      "status": "published",
+      "type": "COMM",
+      "typeLabel": "Conference paper",
+      "venue": "2024 IEEE International Conference on Bioinformatics and Biomedicine (BIBM)",
+      "publisher": "IEEE",
+      "series": "",
+      "pages": "pp. 1966-1973",
+      "isbn": "",
+      "doi": "10.1109/BIBM62325.2024.10822225",
+      "pdfUrl": "https://hal.science/hal-04739628/file/conference_101719.pdf",
+      "halUrl": "https://hal.science/hal-04739628v1",
+      "alternateHalUrls": [],
+      "cleanupNote": ""
+    },
+    {
       "id": "hal-04359833",
       "halId": "hal-04359833",
       "sourceHalIds": [
@@ -795,37 +826,6 @@
       "doi": "",
       "pdfUrl": "https://inria.hal.science/hal-04828473/file/325_Finite_Volume_Informed_Gra.pdf",
       "halUrl": "https://inria.hal.science/hal-04828473v1",
-      "alternateHalUrls": [],
-      "cleanupNote": ""
-    },
-    {
-      "id": "hal-04739628",
-      "halId": "hal-04739628",
-      "sourceHalIds": [
-        "hal-04739628"
-      ],
-      "title": "Shape Transformation Driven by Active Contour for Class-Imbalanced Semi-Supervised Medical Image Segmentation",
-      "authors": [
-        "Yuliang Gu",
-        "Yepeng Liu",
-        "Zhichao Sun",
-        "Jinchi Zhu",
-        "Yongchao Xu",
-        "Laurent Najman"
-      ],
-      "year": 2024,
-      "publicationDate": "2024",
-      "status": "published",
-      "type": "COMM",
-      "typeLabel": "Conference paper",
-      "venue": "2024 IEEE International Conference on Bioinformatics and Biomedicine (BIBM)",
-      "publisher": "IEEE",
-      "series": "",
-      "pages": "pp. 1966-1973",
-      "isbn": "",
-      "doi": "10.1109/BIBM62325.2024.10822225",
-      "pdfUrl": "https://hal.science/hal-04739628/file/conference_101719.pdf",
-      "halUrl": "https://hal.science/hal-04739628v1",
       "alternateHalUrls": [],
       "cleanupNote": ""
     },
@@ -1297,34 +1297,6 @@
       "cleanupNote": ""
     },
     {
-      "id": "hal-04579609",
-      "halId": "hal-04579609",
-      "sourceHalIds": [
-        "hal-04579609"
-      ],
-      "title": "Gradients Intégrés Renforcés",
-      "authors": [
-        "Caroline Mazini Rodrigues",
-        "Nicolas Boutry",
-        "Laurent Najman"
-      ],
-      "year": 2022,
-      "publicationDate": "2022",
-      "status": "published",
-      "type": "COMM",
-      "typeLabel": "Conference paper",
-      "venue": "Explain'AI - EGC Workshop",
-      "publisher": "",
-      "series": "",
-      "pages": "",
-      "isbn": "",
-      "doi": "",
-      "pdfUrl": "",
-      "halUrl": "https://hal.science/hal-04579609v1",
-      "alternateHalUrls": [],
-      "cleanupNote": ""
-    },
-    {
       "id": "hal-03171597",
       "halId": "hal-03171597",
       "sourceHalIds": [
@@ -1350,6 +1322,34 @@
       "doi": "10.1109/TGRS.2021.3113721",
       "pdfUrl": "https://hal.science/hal-03171597/file/WatershedHyperspectralClassificationV2_R2.pdf",
       "halUrl": "https://hal.science/hal-03171597v3",
+      "alternateHalUrls": [],
+      "cleanupNote": ""
+    },
+    {
+      "id": "hal-04579609",
+      "halId": "hal-04579609",
+      "sourceHalIds": [
+        "hal-04579609"
+      ],
+      "title": "Gradients Intégrés Renforcés",
+      "authors": [
+        "Caroline Mazini Rodrigues",
+        "Nicolas Boutry",
+        "Laurent Najman"
+      ],
+      "year": 2022,
+      "publicationDate": "2022",
+      "status": "published",
+      "type": "COMM",
+      "typeLabel": "Conference paper",
+      "venue": "Explain'AI - EGC Workshop",
+      "publisher": "",
+      "series": "",
+      "pages": "",
+      "isbn": "",
+      "doi": "",
+      "pdfUrl": "",
+      "halUrl": "https://hal.science/hal-04579609v1",
       "alternateHalUrls": [],
       "cleanupNote": ""
     },
@@ -2438,34 +2438,6 @@
       "cleanupNote": ""
     },
     {
-      "id": "hal-01744455",
-      "halId": "hal-01744455",
-      "sourceHalIds": [
-        "hal-01744455"
-      ],
-      "title": "Well-composedness in Alexandrov spaces implies digital well-composedness in Z^n",
-      "authors": [
-        "Nicolas Boutry",
-        "Laurent Najman",
-        "Thierry Géraud"
-      ],
-      "year": 2017,
-      "publicationDate": "2017-09-19",
-      "status": "published",
-      "type": "COMM",
-      "typeLabel": "Conference paper",
-      "venue": "20th IAPR International Conference on Discrete Geometry for Computer Imagery (DGCI)",
-      "publisher": "",
-      "series": "",
-      "pages": "",
-      "isbn": "",
-      "doi": "",
-      "pdfUrl": "https://univ-reims.hal.science/hal-01744455/file/article.final.pdf",
-      "halUrl": "https://univ-reims.hal.science/hal-01744455v1",
-      "alternateHalUrls": [],
-      "cleanupNote": ""
-    },
-    {
       "id": "hal-01427957",
       "halId": "hal-01427957",
       "sourceHalIds": [
@@ -2491,6 +2463,34 @@
       "doi": "10.1007/978-3-319-66272-5_16",
       "pdfUrl": "https://hal.science/hal-01427957/file/GammaLimitSpectralClustering.pdf",
       "halUrl": "https://hal.science/hal-01427957v2",
+      "alternateHalUrls": [],
+      "cleanupNote": ""
+    },
+    {
+      "id": "hal-01744455",
+      "halId": "hal-01744455",
+      "sourceHalIds": [
+        "hal-01744455"
+      ],
+      "title": "Well-composedness in Alexandrov spaces implies digital well-composedness in Z^n",
+      "authors": [
+        "Nicolas Boutry",
+        "Laurent Najman",
+        "Thierry Géraud"
+      ],
+      "year": 2017,
+      "publicationDate": "2017-09-19",
+      "status": "published",
+      "type": "COMM",
+      "typeLabel": "Conference paper",
+      "venue": "20th IAPR International Conference on Discrete Geometry for Computer Imagery (DGCI)",
+      "publisher": "",
+      "series": "",
+      "pages": "",
+      "isbn": "",
+      "doi": "",
+      "pdfUrl": "https://univ-reims.hal.science/hal-01744455/file/article.final.pdf",
+      "halUrl": "https://univ-reims.hal.science/hal-01744455v1",
       "alternateHalUrls": [],
       "cleanupNote": ""
     },
@@ -2616,6 +2616,36 @@
       "cleanupNote": ""
     },
     {
+      "id": "hal-01342967",
+      "halId": "hal-01342967",
+      "sourceHalIds": [
+        "hal-01342967"
+      ],
+      "title": "Hierarchizing graph-based image segmentation algorithms relying on region dissimilarity: the case of the Felzenszwalb-Huttenlocher method",
+      "authors": [
+        "Silvio J. Guimarães",
+        "Yukiko Kenmochi",
+        "Jean Cousty",
+        "Zenilton Patrocinio",
+        "Laurent Najman"
+      ],
+      "year": 2017,
+      "publicationDate": "2017",
+      "status": "published",
+      "type": "ART",
+      "typeLabel": "Journal article",
+      "venue": "Mathematical Morphology - Theory and Applications",
+      "publisher": "",
+      "series": "",
+      "pages": "",
+      "isbn": "",
+      "doi": "10.1515/mathm-2017-0004",
+      "pdfUrl": "https://hal.science/hal-01342967/file/Guimaraes17Hierarchizing.pdf",
+      "halUrl": "https://hal.science/hal-01342967v4",
+      "alternateHalUrls": [],
+      "cleanupNote": ""
+    },
+    {
       "id": "hal-01616459",
       "halId": "hal-01616459",
       "sourceHalIds": [
@@ -2642,6 +2672,35 @@
       "doi": "10.1109/ISBI.2017.7950495",
       "pdfUrl": "https://hal.science/hal-01616459/file/ISBI_2017_EGR.pdf",
       "halUrl": "https://hal.science/hal-01616459v1",
+      "alternateHalUrls": [],
+      "cleanupNote": ""
+    },
+    {
+      "id": "hal-01484896",
+      "halId": "hal-01484896",
+      "sourceHalIds": [
+        "hal-01484896"
+      ],
+      "title": "POWER SPECTRAL CLUSTERING ON HYPERSPECTRAL DATA",
+      "authors": [
+        "Aditya Challa",
+        "Sravan Danda",
+        "B S Daya Sagar",
+        "Laurent Najman"
+      ],
+      "year": 2017,
+      "publicationDate": "2017",
+      "status": "published",
+      "type": "COMM",
+      "typeLabel": "Conference paper",
+      "venue": "International Geoscience and Remote Sensing Symposium",
+      "publisher": "IEEE",
+      "series": "",
+      "pages": "",
+      "isbn": "",
+      "doi": "",
+      "pdfUrl": "https://hal.science/hal-01484896/file/PowerSpectral_IGARSS2017.pdf",
+      "halUrl": "https://hal.science/hal-01484896v1",
       "alternateHalUrls": [],
       "cleanupNote": ""
     },
@@ -2733,35 +2792,6 @@
       "cleanupNote": ""
     },
     {
-      "id": "hal-01484896",
-      "halId": "hal-01484896",
-      "sourceHalIds": [
-        "hal-01484896"
-      ],
-      "title": "POWER SPECTRAL CLUSTERING ON HYPERSPECTRAL DATA",
-      "authors": [
-        "Aditya Challa",
-        "Sravan Danda",
-        "B S Daya Sagar",
-        "Laurent Najman"
-      ],
-      "year": 2017,
-      "publicationDate": "2017",
-      "status": "published",
-      "type": "COMM",
-      "typeLabel": "Conference paper",
-      "venue": "International Geoscience and Remote Sensing Symposium",
-      "publisher": "IEEE",
-      "series": "",
-      "pages": "",
-      "isbn": "",
-      "doi": "",
-      "pdfUrl": "https://hal.science/hal-01484896/file/PowerSpectral_IGARSS2017.pdf",
-      "halUrl": "https://hal.science/hal-01484896v1",
-      "alternateHalUrls": [],
-      "cleanupNote": ""
-    },
-    {
       "id": "hal-01592155",
       "halId": "hal-01592155",
       "sourceHalIds": [
@@ -2846,36 +2876,6 @@
       "doi": "10.1007/978-3-319-66272-5_19",
       "pdfUrl": "https://hal.science/hal-01586418/file/article.pdf",
       "halUrl": "https://hal.science/hal-01586418v1",
-      "alternateHalUrls": [],
-      "cleanupNote": ""
-    },
-    {
-      "id": "hal-01342967",
-      "halId": "hal-01342967",
-      "sourceHalIds": [
-        "hal-01342967"
-      ],
-      "title": "Hierarchizing graph-based image segmentation algorithms relying on region dissimilarity: the case of the Felzenszwalb-Huttenlocher method",
-      "authors": [
-        "Silvio J. Guimarães",
-        "Yukiko Kenmochi",
-        "Jean Cousty",
-        "Zenilton Patrocinio",
-        "Laurent Najman"
-      ],
-      "year": 2017,
-      "publicationDate": "2017",
-      "status": "published",
-      "type": "ART",
-      "typeLabel": "Journal article",
-      "venue": "Mathematical Morphology - Theory and Applications",
-      "publisher": "",
-      "series": "",
-      "pages": "",
-      "isbn": "",
-      "doi": "10.1515/mathm-2017-0004",
-      "pdfUrl": "https://hal.science/hal-01342967/file/Guimaraes17Hierarchizing.pdf",
-      "halUrl": "https://hal.science/hal-01342967v4",
       "alternateHalUrls": [],
       "cleanupNote": ""
     },
@@ -3188,6 +3188,37 @@
       "cleanupNote": ""
     },
     {
+      "id": "hal-01694958",
+      "halId": "hal-01694958",
+      "sourceHalIds": [
+        "hal-01694958"
+      ],
+      "title": "Shape‐based analysis on component‐graphs for multivalued image processing",
+      "authors": [
+        "Eloïse Grossiord",
+        "Benoît Naegel",
+        "Hugues Talbot",
+        "Nicolas Passat",
+        "Michel Meignan",
+        "Laurent Najman"
+      ],
+      "year": 2016,
+      "publicationDate": "2016",
+      "status": "published",
+      "type": "POSTER",
+      "typeLabel": "Poster",
+      "venue": "Folle Journée de l’Imagerie Nantaise",
+      "publisher": "",
+      "series": "",
+      "pages": "",
+      "isbn": "",
+      "doi": "",
+      "pdfUrl": "https://univ-reims.hal.science/hal-01694958/file/Grossiord%20FJIN%202016.pdf",
+      "halUrl": "https://univ-reims.hal.science/hal-01694958v1",
+      "alternateHalUrls": [],
+      "cleanupNote": ""
+    },
+    {
       "id": "hal-01472890",
       "halId": "hal-01472890",
       "sourceHalIds": [
@@ -3237,37 +3268,6 @@
       "doi": "10.1007/978-3-319-46726-9_39",
       "pdfUrl": "https://hal.science/hal-01472890/file/Passat_MICCAI16.pdf",
       "halUrl": "https://hal.science/hal-01472890v1",
-      "alternateHalUrls": [],
-      "cleanupNote": ""
-    },
-    {
-      "id": "hal-01694958",
-      "halId": "hal-01694958",
-      "sourceHalIds": [
-        "hal-01694958"
-      ],
-      "title": "Shape‐based analysis on component‐graphs for multivalued image processing",
-      "authors": [
-        "Eloïse Grossiord",
-        "Benoît Naegel",
-        "Hugues Talbot",
-        "Nicolas Passat",
-        "Michel Meignan",
-        "Laurent Najman"
-      ],
-      "year": 2016,
-      "publicationDate": "2016",
-      "status": "published",
-      "type": "POSTER",
-      "typeLabel": "Poster",
-      "venue": "Folle Journée de l’Imagerie Nantaise",
-      "publisher": "",
-      "series": "",
-      "pages": "",
-      "isbn": "",
-      "doi": "",
-      "pdfUrl": "https://univ-reims.hal.science/hal-01694958/file/Grossiord%20FJIN%202016.pdf",
-      "halUrl": "https://univ-reims.hal.science/hal-01694958v1",
       "alternateHalUrls": [],
       "cleanupNote": ""
     },
@@ -3407,6 +3407,35 @@
       "cleanupNote": ""
     },
     {
+      "id": "hal-01148958",
+      "halId": "hal-01148958",
+      "sourceHalIds": [
+        "hal-01148958"
+      ],
+      "title": "New characterizations of minimum spanning trees and of saliency maps based on quasi-flat zones",
+      "authors": [
+        "Jean Cousty",
+        "Laurent Najman",
+        "Yukiko Kenmochi",
+        "Silvio Guimarães"
+      ],
+      "year": 2015,
+      "publicationDate": "2015-05-27",
+      "status": "published",
+      "type": "COMM",
+      "typeLabel": "Conference paper",
+      "venue": "12th International Symposium on Mathematical Morphology (ISMM)",
+      "publisher": "",
+      "series": "",
+      "pages": "205-216",
+      "isbn": "",
+      "doi": "10.1007/978-3-319-18720-4_18",
+      "pdfUrl": "https://hal.science/hal-01148958/file/JC.pdf",
+      "halUrl": "https://hal.science/hal-01148958v1",
+      "alternateHalUrls": [],
+      "cleanupNote": ""
+    },
+    {
       "id": "hal-01168781",
       "halId": "hal-01168781",
       "sourceHalIds": [
@@ -3521,35 +3550,6 @@
       "cleanupNote": ""
     },
     {
-      "id": "hal-01148958",
-      "halId": "hal-01148958",
-      "sourceHalIds": [
-        "hal-01148958"
-      ],
-      "title": "New characterizations of minimum spanning trees and of saliency maps based on quasi-flat zones",
-      "authors": [
-        "Jean Cousty",
-        "Laurent Najman",
-        "Yukiko Kenmochi",
-        "Silvio Guimarães"
-      ],
-      "year": 2015,
-      "publicationDate": "2015-05-27",
-      "status": "published",
-      "type": "COMM",
-      "typeLabel": "Conference paper",
-      "venue": "12th International Symposium on Mathematical Morphology (ISMM)",
-      "publisher": "",
-      "series": "",
-      "pages": "205-216",
-      "isbn": "",
-      "doi": "10.1007/978-3-319-18720-4_18",
-      "pdfUrl": "https://hal.science/hal-01148958/file/JC.pdf",
-      "halUrl": "https://hal.science/hal-01148958v1",
-      "alternateHalUrls": [],
-      "cleanupNote": ""
-    },
-    {
       "id": "hal-01154672",
       "halId": "hal-01154672",
       "sourceHalIds": [
@@ -3578,6 +3578,95 @@
       "doi": "10.1109/ISBI.2015.7163927",
       "pdfUrl": "https://hal.science/hal-01154672/file/article_cils.pdf",
       "halUrl": "https://hal.science/hal-01154672v1",
+      "alternateHalUrls": [],
+      "cleanupNote": ""
+    },
+    {
+      "id": "hal-01169944",
+      "halId": "hal-01169944",
+      "sourceHalIds": [
+        "hal-01169944"
+      ],
+      "title": "Hierarchies and shape-space for PET image segmentation",
+      "authors": [
+        "Eloïse Grossiord",
+        "Hugues Talbot",
+        "Nicolas Passat",
+        "Michel Meignan",
+        "Pierre Tervé",
+        "Laurent Najman"
+      ],
+      "year": 2015,
+      "publicationDate": "2015",
+      "status": "published",
+      "type": "COMM",
+      "typeLabel": "Conference paper",
+      "venue": "International Symposium on Biomedical Imaging (ISBI)",
+      "publisher": "IEEE",
+      "series": "",
+      "pages": "1118-1121",
+      "isbn": "",
+      "doi": "10.1109/ISBI.2015.7164068",
+      "pdfUrl": "https://hal.science/hal-01169944/file/ISBI2015_vf.pdf",
+      "halUrl": "https://hal.science/hal-01169944v1",
+      "alternateHalUrls": [],
+      "cleanupNote": ""
+    },
+    {
+      "id": "hal-05467745",
+      "halId": "hal-05467745",
+      "sourceHalIds": [
+        "hal-05467745"
+      ],
+      "title": "Shape-based analysis on component-graphs for multivalue image processing.",
+      "authors": [
+        "Éloïse Grossiord",
+        "Benoît Naegel",
+        "Hugues Talbot",
+        "Nicolas Passat",
+        "Laurent Najman"
+      ],
+      "year": 2015,
+      "publicationDate": "2015",
+      "status": "published",
+      "type": "COMM",
+      "typeLabel": "Conference paper",
+      "venue": "International Symposium on Mathematical Morphology (ISMM 2015)",
+      "publisher": "Springer",
+      "series": "",
+      "pages": "446-457",
+      "isbn": "",
+      "doi": "10.1007/978-3-319-18720-4_38",
+      "pdfUrl": "",
+      "halUrl": "https://hal.science/hal-05467745v1",
+      "alternateHalUrls": [],
+      "cleanupNote": ""
+    },
+    {
+      "id": "hal-01168641",
+      "halId": "hal-01168641",
+      "sourceHalIds": [
+        "hal-01168641"
+      ],
+      "title": "A Comparison of Some Morphological Filters for Improving OCR Performance",
+      "authors": [
+        "Laurent Mennillo",
+        "Jean Cousty",
+        "Laurent Najman"
+      ],
+      "year": 2015,
+      "publicationDate": "2015",
+      "status": "published",
+      "type": "COMM",
+      "typeLabel": "Conference paper",
+      "venue": "Mathematical Morphology and Its Applications to Signal and Image Processing",
+      "publisher": "",
+      "series": "",
+      "pages": "",
+      "isbn": "",
+      "doi": "10.1007/978-3-319-18720-4_12",
+      "pdfUrl": "https://hal.science/hal-01168641/file/Report.pdf",
+      "halUrl": "https://hal.science/hal-01168641v1",
       "alternateHalUrls": [],
       "cleanupNote": ""
     },
@@ -3672,95 +3761,6 @@
       "cleanupNote": ""
     },
     {
-      "id": "hal-01169944",
-      "halId": "hal-01169944",
-      "sourceHalIds": [
-        "hal-01169944"
-      ],
-      "title": "Hierarchies and shape-space for PET image segmentation",
-      "authors": [
-        "Eloïse Grossiord",
-        "Hugues Talbot",
-        "Nicolas Passat",
-        "Michel Meignan",
-        "Pierre Tervé",
-        "Laurent Najman"
-      ],
-      "year": 2015,
-      "publicationDate": "2015",
-      "status": "published",
-      "type": "COMM",
-      "typeLabel": "Conference paper",
-      "venue": "International Symposium on Biomedical Imaging (ISBI)",
-      "publisher": "IEEE",
-      "series": "",
-      "pages": "1118-1121",
-      "isbn": "",
-      "doi": "10.1109/ISBI.2015.7164068",
-      "pdfUrl": "https://hal.science/hal-01169944/file/ISBI2015_vf.pdf",
-      "halUrl": "https://hal.science/hal-01169944v1",
-      "alternateHalUrls": [],
-      "cleanupNote": ""
-    },
-    {
-      "id": "hal-05467745",
-      "halId": "hal-05467745",
-      "sourceHalIds": [
-        "hal-05467745"
-      ],
-      "title": "Shape-based analysis on component-graphs for multivalue image processing.",
-      "authors": [
-        "Éloïse Grossiord",
-        "Benoît Naegel",
-        "Hugues Talbot",
-        "Nicolas Passat",
-        "Laurent Najman"
-      ],
-      "year": 2015,
-      "publicationDate": "2015",
-      "status": "published",
-      "type": "COMM",
-      "typeLabel": "Conference paper",
-      "venue": "International Symposium on Mathematical Morphology (ISMM 2015)",
-      "publisher": "Springer",
-      "series": "",
-      "pages": "446-457",
-      "isbn": "",
-      "doi": "10.1007/978-3-319-18720-4_38",
-      "pdfUrl": "",
-      "halUrl": "https://hal.science/hal-05467745v1",
-      "alternateHalUrls": [],
-      "cleanupNote": ""
-    },
-    {
-      "id": "hal-01168641",
-      "halId": "hal-01168641",
-      "sourceHalIds": [
-        "hal-01168641"
-      ],
-      "title": "A Comparison of Some Morphological Filters for Improving OCR Performance",
-      "authors": [
-        "Laurent Mennillo",
-        "Jean Cousty",
-        "Laurent Najman"
-      ],
-      "year": 2015,
-      "publicationDate": "2015",
-      "status": "published",
-      "type": "COMM",
-      "typeLabel": "Conference paper",
-      "venue": "Mathematical Morphology and Its Applications to Signal and Image Processing",
-      "publisher": "",
-      "series": "",
-      "pages": "",
-      "isbn": "",
-      "doi": "10.1007/978-3-319-18720-4_12",
-      "pdfUrl": "https://hal.science/hal-01168641/file/Report.pdf",
-      "halUrl": "https://hal.science/hal-01168641v1",
-      "alternateHalUrls": [],
-      "cleanupNote": ""
-    },
-    {
       "id": "hal-01332964",
       "halId": "hal-01332964",
       "sourceHalIds": [
@@ -3848,6 +3848,45 @@
       "cleanupNote": ""
     },
     {
+      "id": "hal-01081376",
+      "halId": "hal-01081376",
+      "sourceHalIds": [
+        "hal-01081376"
+      ],
+      "title": "A mutual reference shape based on information theory",
+      "authors": [
+        "Stéphanie Jehan-Besson",
+        "C Tilmant",
+        "A de Cesare",
+        "A Lalande",
+        "A Cochet",
+        "Jean Cousty",
+        "J Lebenberg",
+        "M Lefort",
+        "P Clarysse",
+        "Régis Clouard",
+        "Laurent Najman",
+        "L Sarry",
+        "F Frouin",
+        "M Garreau"
+      ],
+      "year": 2014,
+      "publicationDate": "2014-10-27",
+      "status": "published",
+      "type": "COMM",
+      "typeLabel": "Conference paper",
+      "venue": "International Conference on Image Processing ICIP",
+      "publisher": "",
+      "series": "",
+      "pages": "887 - 891",
+      "isbn": "",
+      "doi": "10.1109/ICIP.2014.7025178",
+      "pdfUrl": "https://hal.science/hal-01081376/file/jehanbesson_icip2014%20%281%29.pdf",
+      "halUrl": "https://hal.science/hal-01081376v1",
+      "alternateHalUrls": [],
+      "cleanupNote": ""
+    },
+    {
       "id": "hal-01082353",
       "halId": "hal-01082353",
       "sourceHalIds": [
@@ -3900,45 +3939,6 @@
       "doi": "",
       "pdfUrl": "https://hal.science/hal-01082342/file/geraud.2014.icip.xu.pdf",
       "halUrl": "https://hal.science/hal-01082342v1",
-      "alternateHalUrls": [],
-      "cleanupNote": ""
-    },
-    {
-      "id": "hal-01081376",
-      "halId": "hal-01081376",
-      "sourceHalIds": [
-        "hal-01081376"
-      ],
-      "title": "A mutual reference shape based on information theory",
-      "authors": [
-        "Stéphanie Jehan-Besson",
-        "C Tilmant",
-        "A de Cesare",
-        "A Lalande",
-        "A Cochet",
-        "Jean Cousty",
-        "J Lebenberg",
-        "M Lefort",
-        "P Clarysse",
-        "Régis Clouard",
-        "Laurent Najman",
-        "L Sarry",
-        "F Frouin",
-        "M Garreau"
-      ],
-      "year": 2014,
-      "publicationDate": "2014-10-27",
-      "status": "published",
-      "type": "COMM",
-      "typeLabel": "Conference paper",
-      "venue": "International Conference on Image Processing ICIP",
-      "publisher": "",
-      "series": "",
-      "pages": "887 - 891",
-      "isbn": "",
-      "doi": "10.1109/ICIP.2014.7025178",
-      "pdfUrl": "https://hal.science/hal-01081376/file/jehanbesson_icip2014%20%281%29.pdf",
-      "halUrl": "https://hal.science/hal-01081376v1",
       "alternateHalUrls": [],
       "cleanupNote": ""
     },
@@ -5082,38 +5082,6 @@
       "cleanupNote": ""
     },
     {
-      "id": "hal-00730481",
-      "halId": "hal-00730481",
-      "sourceHalIds": [
-        "hal-00730481"
-      ],
-      "title": "A hybrid algorithm for automatic heart delineation in CT angiography",
-      "authors": [
-        "Imen Melki",
-        "Hugues Talbot",
-        "Jean Cousty",
-        "Laurent Najman",
-        "Céline Pruvot",
-        "Jérôme Knoplioch",
-        "Laurent Launay"
-      ],
-      "year": 2012,
-      "publicationDate": "2012",
-      "status": "published",
-      "type": "COMM",
-      "typeLabel": "Conference paper",
-      "venue": "Computer Assisted Radiology and Surgery - CARS'2012",
-      "publisher": "",
-      "series": "",
-      "pages": "S37-S38",
-      "isbn": "",
-      "doi": "",
-      "pdfUrl": "",
-      "halUrl": "https://hal.science/hal-00730481v1",
-      "alternateHalUrls": [],
-      "cleanupNote": ""
-    },
-    {
       "id": "hal-00787512",
       "halId": "hal-00787512",
       "sourceHalIds": [
@@ -5180,6 +5148,38 @@
       "doi": "",
       "pdfUrl": "",
       "halUrl": "https://hal.science/hal-00622513v1",
+      "alternateHalUrls": [],
+      "cleanupNote": ""
+    },
+    {
+      "id": "hal-00730481",
+      "halId": "hal-00730481",
+      "sourceHalIds": [
+        "hal-00730481"
+      ],
+      "title": "A hybrid algorithm for automatic heart delineation in CT angiography",
+      "authors": [
+        "Imen Melki",
+        "Hugues Talbot",
+        "Jean Cousty",
+        "Laurent Najman",
+        "Céline Pruvot",
+        "Jérôme Knoplioch",
+        "Laurent Launay"
+      ],
+      "year": 2012,
+      "publicationDate": "2012",
+      "status": "published",
+      "type": "COMM",
+      "typeLabel": "Conference paper",
+      "venue": "Computer Assisted Radiology and Surgery - CARS'2012",
+      "publisher": "",
+      "series": "",
+      "pages": "S37-S38",
+      "isbn": "",
+      "doi": "",
+      "pdfUrl": "",
+      "halUrl": "https://hal.science/hal-00730481v1",
       "alternateHalUrls": [],
       "cleanupNote": ""
     },
@@ -5357,6 +5357,48 @@
       "cleanupNote": ""
     },
     {
+      "id": "inserm-00773261",
+      "halId": "inserm-00773261",
+      "sourceHalIds": [
+        "inserm-00773261"
+      ],
+      "title": "Comparison of different segmentation approaches without using gold standard. Application to the estimation of the left ventricle ejection fraction from cardiac cine MRI sequences.",
+      "authors": [
+        "Jessica Lebenberg",
+        "Irène Buvat",
+        "Mireille Garreau",
+        "Christopher Casta",
+        "Constantin Constantinidès",
+        "Jean Cousty",
+        "Alexandre Cochet",
+        "Stéphanie Jehan-Besson",
+        "Christophe Tilmant",
+        "Muriel Lefort",
+        "Elodie Roullot",
+        "Laurent Najman",
+        "Laurent Sarry",
+        "Patrick Clarysse",
+        "Alain de Cesare",
+        "Alain Lalande",
+        "Frédérique Frouin"
+      ],
+      "year": 2011,
+      "publicationDate": "2011",
+      "status": "published",
+      "type": "COMM",
+      "typeLabel": "Conference paper",
+      "venue": "Annual International Conference of the IEEE Engineering in Medicine and Biology Society.",
+      "publisher": "IEEE",
+      "series": "",
+      "pages": "2663-6",
+      "isbn": "",
+      "doi": "10.1109/IEMBS.2011.6090732",
+      "pdfUrl": "https://inserm.hal.science/inserm-00773261/file/Comparison_of_different_segmentation.pdf",
+      "halUrl": "https://inserm.hal.science/inserm-00773261v1",
+      "alternateHalUrls": [],
+      "cleanupNote": ""
+    },
+    {
       "id": "hal-00908741",
       "halId": "hal-00908741",
       "sourceHalIds": [
@@ -5393,6 +5435,45 @@
       "doi": "",
       "pdfUrl": "https://hal.science/hal-00908741/file/RITS2011.pdf",
       "halUrl": "https://hal.science/hal-00908741v1",
+      "alternateHalUrls": [],
+      "cleanupNote": ""
+    },
+    {
+      "id": "hal-00622511",
+      "halId": "hal-00622511",
+      "sourceHalIds": [
+        "hal-00622511"
+      ],
+      "title": "Estimation d'une forme mutuelle pour l'évaluation de la segmentation en imagerie cardiaque",
+      "authors": [
+        "Stéphanie Jehan-Besson",
+        "Christophe Tilmant",
+        "Alain de Cesare",
+        "Frédérique Frouin",
+        "Laurent Najman",
+        "Alain Lalande",
+        "Laurent Sarry",
+        "Christopher Casta",
+        "Patrick Clarysse",
+        "Constantin Constantinidés",
+        "Jean Cousty",
+        "Muriel Lefort",
+        "Alexandre Cochet",
+        "Mireille Garreau"
+      ],
+      "year": 2011,
+      "publicationDate": "2011",
+      "status": "published",
+      "type": "COMM",
+      "typeLabel": "Conference paper",
+      "venue": "23ème Colloque GRETSI - Traitement du Signal et des Images (GRETSI '11)",
+      "publisher": "",
+      "series": "",
+      "pages": "10pp.",
+      "isbn": "",
+      "doi": "",
+      "pdfUrl": "",
+      "halUrl": "https://hal.science/hal-00622511v1",
       "alternateHalUrls": [],
       "cleanupNote": ""
     },
@@ -5512,34 +5593,6 @@
       "cleanupNote": ""
     },
     {
-      "id": "hal-00730470",
-      "halId": "hal-00730470",
-      "sourceHalIds": [
-        "hal-00730470"
-      ],
-      "title": "Some morphological operators on simplicial complex spaces",
-      "authors": [
-        "Fabio Dias",
-        "Jean Cousty",
-        "Laurent Najman"
-      ],
-      "year": 2011,
-      "publicationDate": "2011",
-      "status": "published",
-      "type": "COMM",
-      "typeLabel": "Conference paper",
-      "venue": "Discrete geometry for computer imagery (DGCI'11)",
-      "publisher": "Springer-Verlag",
-      "series": "",
-      "pages": "441--452",
-      "isbn": "",
-      "doi": "10.1007/978-3-642-19867-0_37",
-      "pdfUrl": "",
-      "halUrl": "https://hal.science/hal-00730470v1",
-      "alternateHalUrls": [],
-      "cleanupNote": ""
-    },
-    {
       "id": "hal-00715457",
       "halId": "hal-00715457",
       "sourceHalIds": [
@@ -5568,41 +5621,30 @@
       "cleanupNote": ""
     },
     {
-      "id": "hal-00622511",
-      "halId": "hal-00622511",
+      "id": "hal-00730470",
+      "halId": "hal-00730470",
       "sourceHalIds": [
-        "hal-00622511"
+        "hal-00730470"
       ],
-      "title": "Estimation d'une forme mutuelle pour l'évaluation de la segmentation en imagerie cardiaque",
+      "title": "Some morphological operators on simplicial complex spaces",
       "authors": [
-        "Stéphanie Jehan-Besson",
-        "Christophe Tilmant",
-        "Alain de Cesare",
-        "Frédérique Frouin",
-        "Laurent Najman",
-        "Alain Lalande",
-        "Laurent Sarry",
-        "Christopher Casta",
-        "Patrick Clarysse",
-        "Constantin Constantinidés",
+        "Fabio Dias",
         "Jean Cousty",
-        "Muriel Lefort",
-        "Alexandre Cochet",
-        "Mireille Garreau"
+        "Laurent Najman"
       ],
       "year": 2011,
       "publicationDate": "2011",
       "status": "published",
       "type": "COMM",
       "typeLabel": "Conference paper",
-      "venue": "23ème Colloque GRETSI - Traitement du Signal et des Images (GRETSI '11)",
-      "publisher": "",
+      "venue": "Discrete geometry for computer imagery (DGCI'11)",
+      "publisher": "Springer-Verlag",
       "series": "",
-      "pages": "10pp.",
+      "pages": "441--452",
       "isbn": "",
-      "doi": "",
+      "doi": "10.1007/978-3-642-19867-0_37",
       "pdfUrl": "",
-      "halUrl": "https://hal.science/hal-00622511v1",
+      "halUrl": "https://hal.science/hal-00730470v1",
       "alternateHalUrls": [],
       "cleanupNote": ""
     },
@@ -5631,48 +5673,6 @@
       "doi": "10.1007/978-3-642-21569-8_22",
       "pdfUrl": "https://hal.science/hal-00622506/file/partpwshedismm2011.pdf",
       "halUrl": "https://hal.science/hal-00622506v1",
-      "alternateHalUrls": [],
-      "cleanupNote": ""
-    },
-    {
-      "id": "inserm-00773261",
-      "halId": "inserm-00773261",
-      "sourceHalIds": [
-        "inserm-00773261"
-      ],
-      "title": "Comparison of different segmentation approaches without using gold standard. Application to the estimation of the left ventricle ejection fraction from cardiac cine MRI sequences.",
-      "authors": [
-        "Jessica Lebenberg",
-        "Irène Buvat",
-        "Mireille Garreau",
-        "Christopher Casta",
-        "Constantin Constantinidès",
-        "Jean Cousty",
-        "Alexandre Cochet",
-        "Stéphanie Jehan-Besson",
-        "Christophe Tilmant",
-        "Muriel Lefort",
-        "Elodie Roullot",
-        "Laurent Najman",
-        "Laurent Sarry",
-        "Patrick Clarysse",
-        "Alain de Cesare",
-        "Alain Lalande",
-        "Frédérique Frouin"
-      ],
-      "year": 2011,
-      "publicationDate": "2011",
-      "status": "published",
-      "type": "COMM",
-      "typeLabel": "Conference paper",
-      "venue": "Annual International Conference of the IEEE Engineering in Medicine and Biology Society.",
-      "publisher": "IEEE",
-      "series": "",
-      "pages": "2663-6",
-      "isbn": "",
-      "doi": "10.1109/IEMBS.2011.6090732",
-      "pdfUrl": "https://inserm.hal.science/inserm-00773261/file/Comparison_of_different_segmentation.pdf",
-      "halUrl": "https://inserm.hal.science/inserm-00773261v1",
       "alternateHalUrls": [],
       "cleanupNote": ""
     },
@@ -5877,6 +5877,34 @@
       "doi": "",
       "pdfUrl": "https://hal.science/hal-00729346/file/WatershedCutsPAMI-part2-full.pdf",
       "halUrl": "https://hal.science/hal-00729346v1",
+      "alternateHalUrls": [],
+      "cleanupNote": ""
+    },
+    {
+      "id": "hal-00622503",
+      "halId": "hal-00622503",
+      "sourceHalIds": [
+        "hal-00622503"
+      ],
+      "title": "3D+t cardiac segmentation",
+      "authors": [
+        "Jean Cousty",
+        "Laurent Najman",
+        "Michel Couprie"
+      ],
+      "year": 2010,
+      "publicationDate": "2010",
+      "status": "published",
+      "type": "COUV",
+      "typeLabel": "Book chapter",
+      "venue": "Mathematical morphology: from theory to applications",
+      "publisher": "ISTE-Wiley",
+      "series": "",
+      "pages": "389-394",
+      "isbn": "",
+      "doi": "",
+      "pdfUrl": "",
+      "halUrl": "https://hal.science/hal-00622503v1",
       "alternateHalUrls": [],
       "cleanupNote": ""
     },
@@ -6108,34 +6136,6 @@
       "cleanupNote": ""
     },
     {
-      "id": "hal-00622503",
-      "halId": "hal-00622503",
-      "sourceHalIds": [
-        "hal-00622503"
-      ],
-      "title": "3D+t cardiac segmentation",
-      "authors": [
-        "Jean Cousty",
-        "Laurent Najman",
-        "Michel Couprie"
-      ],
-      "year": 2010,
-      "publicationDate": "2010",
-      "status": "published",
-      "type": "COUV",
-      "typeLabel": "Book chapter",
-      "venue": "Mathematical morphology: from theory to applications",
-      "publisher": "ISTE-Wiley",
-      "series": "",
-      "pages": "389-394",
-      "isbn": "",
-      "doi": "",
-      "pdfUrl": "",
-      "halUrl": "https://hal.science/hal-00622503v1",
-      "alternateHalUrls": [],
-      "cleanupNote": ""
-    },
-    {
       "id": "hal-00622410",
       "halId": "hal-00622410",
       "sourceHalIds": [
@@ -6165,31 +6165,56 @@
       "cleanupNote": ""
     },
     {
-      "id": "hal-00622409",
-      "halId": "hal-00622409",
+      "id": "hal-00622405",
+      "halId": "hal-00622405",
       "sourceHalIds": [
-        "hal-00622409"
+        "hal-00622405"
       ],
-      "title": "Power watersheds: a new image segmentation framework extending graph cuts, random walker and optimal spanning forest",
+      "title": "Ultrametric watersheds",
       "authors": [
-        "Camille Couprie",
-        "Leo Grady",
-        "Laurent Najman",
-        "Hugues Talbot"
+        "Laurent Najman"
       ],
       "year": 2009,
       "publicationDate": "2009",
       "status": "published",
       "type": "COMM",
       "typeLabel": "Conference paper",
-      "venue": "12th International Conference on Computer Vision (ICCV'09)",
-      "publisher": "",
+      "venue": "9th International Symposium on Mathematical Morphology (ISMM'09)",
+      "publisher": "Springer-Verlag",
       "series": "",
-      "pages": "731-738",
+      "pages": "181-192",
+      "isbn": "",
+      "doi": "",
+      "pdfUrl": "https://hal.science/hal-00622405/file/hal.pdf",
+      "halUrl": "https://hal.science/hal-00622405v1",
+      "alternateHalUrls": [],
+      "cleanupNote": ""
+    },
+    {
+      "id": "hal-00622404",
+      "halId": "hal-00622404",
+      "sourceHalIds": [
+        "hal-00622404"
+      ],
+      "title": "Milena: Write Generic Morphological Algorithms Once, Run on Many Kinds of Images",
+      "authors": [
+        "Roland Levillain",
+        "Thierry Géraud",
+        "Laurent Najman"
+      ],
+      "year": 2009,
+      "publicationDate": "2009",
+      "status": "published",
+      "type": "COMM",
+      "typeLabel": "Conference paper",
+      "venue": "9th International Symposium on Mathematical Morphology (ISMM'09)",
+      "publisher": "Springer-Verlag",
+      "series": "",
+      "pages": "295-306",
       "isbn": "",
       "doi": "",
       "pdfUrl": "",
-      "halUrl": "https://hal.science/hal-00622409v1",
+      "halUrl": "https://hal.science/hal-00622404v1",
       "alternateHalUrls": [],
       "cleanupNote": ""
     },
@@ -6225,6 +6250,35 @@
       "doi": "",
       "pdfUrl": "",
       "halUrl": "https://hal.science/hal-00913828v1",
+      "alternateHalUrls": [],
+      "cleanupNote": ""
+    },
+    {
+      "id": "hal-00622409",
+      "halId": "hal-00622409",
+      "sourceHalIds": [
+        "hal-00622409"
+      ],
+      "title": "Power watersheds: a new image segmentation framework extending graph cuts, random walker and optimal spanning forest",
+      "authors": [
+        "Camille Couprie",
+        "Leo Grady",
+        "Laurent Najman",
+        "Hugues Talbot"
+      ],
+      "year": 2009,
+      "publicationDate": "2009",
+      "status": "published",
+      "type": "COMM",
+      "typeLabel": "Conference paper",
+      "venue": "12th International Conference on Computer Vision (ICCV'09)",
+      "publisher": "",
+      "series": "",
+      "pages": "731-738",
+      "isbn": "",
+      "doi": "",
+      "pdfUrl": "",
+      "halUrl": "https://hal.science/hal-00622409v1",
       "alternateHalUrls": [],
       "cleanupNote": ""
     },
@@ -6369,60 +6423,6 @@
       "doi": "",
       "pdfUrl": "https://hal.science/hal-00622419/file/Cousty_iwcia09.pdf",
       "halUrl": "https://hal.science/hal-00622419v1",
-      "alternateHalUrls": [],
-      "cleanupNote": ""
-    },
-    {
-      "id": "hal-00622405",
-      "halId": "hal-00622405",
-      "sourceHalIds": [
-        "hal-00622405"
-      ],
-      "title": "Ultrametric watersheds",
-      "authors": [
-        "Laurent Najman"
-      ],
-      "year": 2009,
-      "publicationDate": "2009",
-      "status": "published",
-      "type": "COMM",
-      "typeLabel": "Conference paper",
-      "venue": "9th International Symposium on Mathematical Morphology (ISMM'09)",
-      "publisher": "Springer-Verlag",
-      "series": "",
-      "pages": "181-192",
-      "isbn": "",
-      "doi": "",
-      "pdfUrl": "https://hal.science/hal-00622405/file/hal.pdf",
-      "halUrl": "https://hal.science/hal-00622405v1",
-      "alternateHalUrls": [],
-      "cleanupNote": ""
-    },
-    {
-      "id": "hal-00622404",
-      "halId": "hal-00622404",
-      "sourceHalIds": [
-        "hal-00622404"
-      ],
-      "title": "Milena: Write Generic Morphological Algorithms Once, Run on Many Kinds of Images",
-      "authors": [
-        "Roland Levillain",
-        "Thierry Géraud",
-        "Laurent Najman"
-      ],
-      "year": 2009,
-      "publicationDate": "2009",
-      "status": "published",
-      "type": "COMM",
-      "typeLabel": "Conference paper",
-      "venue": "9th International Symposium on Mathematical Morphology (ISMM'09)",
-      "publisher": "Springer-Verlag",
-      "series": "",
-      "pages": "295-306",
-      "isbn": "",
-      "doi": "",
-      "pdfUrl": "",
-      "halUrl": "https://hal.science/hal-00622404v1",
       "alternateHalUrls": [],
       "cleanupNote": ""
     },
@@ -6832,63 +6832,6 @@
       "cleanupNote": ""
     },
     {
-      "id": "hal-00622372",
-      "halId": "hal-00622372",
-      "sourceHalIds": [
-        "hal-00622372"
-      ],
-      "title": "Multi-histogram equalization methods for contrast enhancement and brightness preserving",
-      "authors": [
-        "David Menotti-Gomes",
-        "Laurent Najman",
-        "Jacques Facon",
-        "Arnaldo de Albuquerque Araújo"
-      ],
-      "year": 2007,
-      "publicationDate": "2007",
-      "status": "published",
-      "type": "ART",
-      "typeLabel": "Journal article",
-      "venue": "IEEE Transactions on Consumer Electronics",
-      "publisher": "",
-      "series": "",
-      "pages": "1186-1194",
-      "isbn": "",
-      "doi": "",
-      "pdfUrl": "",
-      "halUrl": "https://hal.science/hal-00622372v1",
-      "alternateHalUrls": [],
-      "cleanupNote": ""
-    },
-    {
-      "id": "hal-00622373",
-      "halId": "hal-00622373",
-      "sourceHalIds": [
-        "hal-00622373"
-      ],
-      "title": "1D Component tree in linear time and space and its application to gray-level image multithresholding",
-      "authors": [
-        "David Menotti-Gomes",
-        "Laurent Najman",
-        "Arnaldo de Albuquerque Araújo"
-      ],
-      "year": 2007,
-      "publicationDate": "2007",
-      "status": "published",
-      "type": "COMM",
-      "typeLabel": "Conference paper",
-      "venue": "International Symposium on Mathematical Morphology - International Symposium on Mathematical Morphology'07, 8th International Symposium, Proceedings",
-      "publisher": "INPE",
-      "series": "",
-      "pages": "437-448",
-      "isbn": "",
-      "doi": "",
-      "pdfUrl": "",
-      "halUrl": "https://hal.science/hal-00622373v1",
-      "alternateHalUrls": [],
-      "cleanupNote": ""
-    },
-    {
       "id": "hal-00622036",
       "halId": "hal-00622036",
       "sourceHalIds": [
@@ -6942,6 +6885,63 @@
       "doi": "",
       "pdfUrl": "",
       "halUrl": "https://hal.science/hal-00622320v1",
+      "alternateHalUrls": [],
+      "cleanupNote": ""
+    },
+    {
+      "id": "hal-00622372",
+      "halId": "hal-00622372",
+      "sourceHalIds": [
+        "hal-00622372"
+      ],
+      "title": "Multi-histogram equalization methods for contrast enhancement and brightness preserving",
+      "authors": [
+        "David Menotti-Gomes",
+        "Laurent Najman",
+        "Jacques Facon",
+        "Arnaldo de Albuquerque Araújo"
+      ],
+      "year": 2007,
+      "publicationDate": "2007",
+      "status": "published",
+      "type": "ART",
+      "typeLabel": "Journal article",
+      "venue": "IEEE Transactions on Consumer Electronics",
+      "publisher": "",
+      "series": "",
+      "pages": "1186-1194",
+      "isbn": "",
+      "doi": "",
+      "pdfUrl": "",
+      "halUrl": "https://hal.science/hal-00622372v1",
+      "alternateHalUrls": [],
+      "cleanupNote": ""
+    },
+    {
+      "id": "hal-00622373",
+      "halId": "hal-00622373",
+      "sourceHalIds": [
+        "hal-00622373"
+      ],
+      "title": "1D Component tree in linear time and space and its application to gray-level image multithresholding",
+      "authors": [
+        "David Menotti-Gomes",
+        "Laurent Najman",
+        "Arnaldo de Albuquerque Araújo"
+      ],
+      "year": 2007,
+      "publicationDate": "2007",
+      "status": "published",
+      "type": "COMM",
+      "typeLabel": "Conference paper",
+      "venue": "International Symposium on Mathematical Morphology - International Symposium on Mathematical Morphology'07, 8th International Symposium, Proceedings",
+      "publisher": "INPE",
+      "series": "",
+      "pages": "437-448",
+      "isbn": "",
+      "doi": "",
+      "pdfUrl": "",
+      "halUrl": "https://hal.science/hal-00622373v1",
       "alternateHalUrls": [],
       "cleanupNote": ""
     },
@@ -7068,6 +7068,39 @@
       "cleanupNote": ""
     },
     {
+      "id": "hal-00622535",
+      "halId": "hal-00622535",
+      "sourceHalIds": [
+        "hal-00622535"
+      ],
+      "title": "Fully automated segmentation of 4D cardiac cine-MRI dataset in humans",
+      "authors": [
+        "Stéphanie Clément-Guinaudeau",
+        "Thomas Goissen",
+        "Jean Cousty",
+        "Jean-Luc Dubois-Randé",
+        "Alain Rahmouni",
+        "Pascal Guéret",
+        "Jerôme Garot",
+        "Laurent Najman"
+      ],
+      "year": 2006,
+      "publicationDate": "2006",
+      "status": "published",
+      "type": "COMM",
+      "typeLabel": "Conference paper",
+      "venue": "Archives des Maladies du Cøeur et des Vaisseaux",
+      "publisher": "",
+      "series": "",
+      "pages": "26-27",
+      "isbn": "",
+      "doi": "",
+      "pdfUrl": "",
+      "halUrl": "https://hal.science/hal-00622535v1",
+      "alternateHalUrls": [],
+      "cleanupNote": ""
+    },
+    {
       "id": "hal-00622110",
       "halId": "hal-00622110",
       "sourceHalIds": [
@@ -7182,39 +7215,6 @@
       "doi": "",
       "pdfUrl": "",
       "halUrl": "https://hal.science/hal-00622342v1",
-      "alternateHalUrls": [],
-      "cleanupNote": ""
-    },
-    {
-      "id": "hal-00622535",
-      "halId": "hal-00622535",
-      "sourceHalIds": [
-        "hal-00622535"
-      ],
-      "title": "Fully automated segmentation of 4D cardiac cine-MRI dataset in humans",
-      "authors": [
-        "Stéphanie Clément-Guinaudeau",
-        "Thomas Goissen",
-        "Jean Cousty",
-        "Jean-Luc Dubois-Randé",
-        "Alain Rahmouni",
-        "Pascal Guéret",
-        "Jerôme Garot",
-        "Laurent Najman"
-      ],
-      "year": 2006,
-      "publicationDate": "2006",
-      "status": "published",
-      "type": "COMM",
-      "typeLabel": "Conference paper",
-      "venue": "Archives des Maladies du Cøeur et des Vaisseaux",
-      "publisher": "",
-      "series": "",
-      "pages": "26-27",
-      "isbn": "",
-      "doi": "",
-      "pdfUrl": "",
-      "halUrl": "https://hal.science/hal-00622535v1",
       "alternateHalUrls": [],
       "cleanupNote": ""
     },
@@ -7584,6 +7584,35 @@
       "cleanupNote": "Merged duplicate HAL records for the Scan-to-XML conference paper."
     },
     {
+      "id": "hal-00622093",
+      "halId": "hal-00622093",
+      "sourceHalIds": [
+        "hal-00622093"
+      ],
+      "title": "Benchmarking Commercial OCR engines",
+      "authors": [
+        "J.C. Lecoq",
+        "Laurent Najman",
+        "O. Gibot",
+        "E. Trupin"
+      ],
+      "year": 2001,
+      "publicationDate": "2001",
+      "status": "published",
+      "type": "COMM",
+      "typeLabel": "Conference paper",
+      "venue": "Sixth International Conference on Document Analysis and Recognition (ICDAR)",
+      "publisher": "",
+      "series": "",
+      "pages": "138-142",
+      "isbn": "",
+      "doi": "",
+      "pdfUrl": "",
+      "halUrl": "https://hal.science/hal-00622093v1",
+      "alternateHalUrls": [],
+      "cleanupNote": ""
+    },
+    {
       "id": "hal-00622116",
       "halId": "hal-00622116",
       "sourceHalIds": [
@@ -7636,35 +7665,6 @@
       "doi": "",
       "pdfUrl": "",
       "halUrl": "https://hal.science/hal-00622115v1",
-      "alternateHalUrls": [],
-      "cleanupNote": ""
-    },
-    {
-      "id": "hal-00622093",
-      "halId": "hal-00622093",
-      "sourceHalIds": [
-        "hal-00622093"
-      ],
-      "title": "Benchmarking Commercial OCR engines",
-      "authors": [
-        "J.C. Lecoq",
-        "Laurent Najman",
-        "O. Gibot",
-        "E. Trupin"
-      ],
-      "year": 2001,
-      "publicationDate": "2001",
-      "status": "published",
-      "type": "COMM",
-      "typeLabel": "Conference paper",
-      "venue": "Sixth International Conference on Document Analysis and Recognition (ICDAR)",
-      "publisher": "",
-      "series": "",
-      "pages": "138-142",
-      "isbn": "",
-      "doi": "",
-      "pdfUrl": "",
-      "halUrl": "https://hal.science/hal-00622093v1",
       "alternateHalUrls": [],
       "cleanupNote": ""
     },
@@ -7809,6 +7809,34 @@
       "cleanupNote": ""
     },
     {
+      "id": "hal-00622411",
+      "halId": "hal-00622411",
+      "sourceHalIds": [
+        "hal-00622411"
+      ],
+      "title": "Lattice Operators Underlying Dynamic Systems",
+      "authors": [
+        "Juliette Mattioli",
+        "Luc Doyen",
+        "Laurent Najman"
+      ],
+      "year": 1996,
+      "publicationDate": "1996",
+      "status": "published",
+      "type": "ART",
+      "typeLabel": "Journal article",
+      "venue": "Set Valued Analysis",
+      "publisher": "",
+      "series": "",
+      "pages": "119-134",
+      "isbn": "",
+      "doi": "",
+      "pdfUrl": "",
+      "halUrl": "https://hal.science/hal-00622411v1",
+      "alternateHalUrls": [],
+      "cleanupNote": ""
+    },
+    {
       "id": "hal-00622107",
       "halId": "hal-00622107",
       "sourceHalIds": [
@@ -7837,30 +7865,30 @@
       "cleanupNote": ""
     },
     {
-      "id": "hal-00622411",
-      "halId": "hal-00622411",
+      "id": "hal-00622457",
+      "halId": "hal-00622457",
       "sourceHalIds": [
-        "hal-00622411"
+        "hal-00622457"
       ],
-      "title": "Lattice Operators Underlying Dynamic Systems",
+      "title": "Mutational equations of the morphological dilation tubes",
       "authors": [
-        "Juliette Mattioli",
         "Luc Doyen",
-        "Laurent Najman"
+        "Laurent Najman",
+        "Juliette Mattioli"
       ],
-      "year": 1996,
-      "publicationDate": "1996",
+      "year": 1995,
+      "publicationDate": "1995",
       "status": "published",
       "type": "ART",
       "typeLabel": "Journal article",
-      "venue": "Set Valued Analysis",
+      "venue": "Journal of Mathematical Imaging and Vision",
       "publisher": "",
       "series": "",
-      "pages": "119-134",
+      "pages": "219 - 230",
       "isbn": "",
-      "doi": "",
-      "pdfUrl": "",
-      "halUrl": "https://hal.science/hal-00622411v1",
+      "doi": "10.1007/BF01248373",
+      "pdfUrl": "https://hal.science/hal-00622457/file/mut.pdf",
+      "halUrl": "https://hal.science/hal-00622457v1",
       "alternateHalUrls": [],
       "cleanupNote": ""
     },
@@ -7918,34 +7946,6 @@
       "cleanupNote": ""
     },
     {
-      "id": "hal-00622457",
-      "halId": "hal-00622457",
-      "sourceHalIds": [
-        "hal-00622457"
-      ],
-      "title": "Mutational equations of the morphological dilation tubes",
-      "authors": [
-        "Luc Doyen",
-        "Laurent Najman",
-        "Juliette Mattioli"
-      ],
-      "year": 1995,
-      "publicationDate": "1995",
-      "status": "published",
-      "type": "ART",
-      "typeLabel": "Journal article",
-      "venue": "Journal of Mathematical Imaging and Vision",
-      "publisher": "",
-      "series": "",
-      "pages": "219 - 230",
-      "isbn": "",
-      "doi": "10.1007/BF01248373",
-      "pdfUrl": "https://hal.science/hal-00622457/file/mut.pdf",
-      "halUrl": "https://hal.science/hal-00622457v1",
-      "alternateHalUrls": [],
-      "cleanupNote": ""
-    },
-    {
       "id": "tel-00742889",
       "halId": "tel-00742889",
       "sourceHalIds": [
@@ -7968,6 +7968,34 @@
       "doi": "",
       "pdfUrl": "https://theses.hal.science/tel-00742889/file/thesenajman-1.pdf",
       "halUrl": "https://theses.hal.science/tel-00742889v1",
+      "alternateHalUrls": [],
+      "cleanupNote": ""
+    },
+    {
+      "id": "hal-00622177",
+      "halId": "hal-00622177",
+      "sourceHalIds": [
+        "hal-00622177"
+      ],
+      "title": "From Face Sideviews to Identification",
+      "authors": [
+        "Laurent Najman",
+        "Régis Vaillant",
+        "E. Pernot"
+      ],
+      "year": 1994,
+      "publicationDate": "1994",
+      "status": "published",
+      "type": "COMM",
+      "typeLabel": "Conference paper",
+      "venue": "Image Processing: Theory and Applications",
+      "publisher": "Elsevier",
+      "series": "",
+      "pages": "151-153",
+      "isbn": "",
+      "doi": "",
+      "pdfUrl": "",
+      "halUrl": "https://hal.science/hal-00622177v1",
       "alternateHalUrls": [],
       "cleanupNote": ""
     },
@@ -8158,34 +8186,6 @@
       "doi": "",
       "pdfUrl": "",
       "halUrl": "https://hal.science/hal-00621987v1",
-      "alternateHalUrls": [],
-      "cleanupNote": ""
-    },
-    {
-      "id": "hal-00622177",
-      "halId": "hal-00622177",
-      "sourceHalIds": [
-        "hal-00622177"
-      ],
-      "title": "From Face Sideviews to Identification",
-      "authors": [
-        "Laurent Najman",
-        "Régis Vaillant",
-        "E. Pernot"
-      ],
-      "year": 1994,
-      "publicationDate": "1994",
-      "status": "published",
-      "type": "COMM",
-      "typeLabel": "Conference paper",
-      "venue": "Image Processing: Theory and Applications",
-      "publisher": "Elsevier",
-      "series": "",
-      "pages": "151-153",
-      "isbn": "",
-      "doi": "",
-      "pdfUrl": "",
-      "halUrl": "https://hal.science/hal-00622177v1",
       "alternateHalUrls": [],
       "cleanupNote": ""
     },
