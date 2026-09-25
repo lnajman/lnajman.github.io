@@ -5,13 +5,37 @@ import { absoluteUrl } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Software",
   description:
-    "Research software connected to Laurent Najman's work: Higra for hierarchical graph analysis and MorseFrames for Morse-based topology.",
+    "Research software connected to Laurent Najman's work: Higra, MorseFrames, and Polygonal Path Image for curvilinear structure enhancement.",
   alternates: {
     canonical: absoluteUrl("/software/"),
   },
 };
 
 const softwareProjects = [
+  {
+    title: "Polygonal Path Image",
+    subtitle: "Curvilinear structure enhancement",
+    status: "Public research code",
+    accent: "teal",
+    description:
+      "A Python/Cython package for minimum-cost polygonal paths and path voting in grayscale images. It implements the PPI method for enhancing curvilinear structures, developed for guide-wire segmentation in X-ray fluoroscopy (MICCAI 2012).",
+    role:
+      "Developed with Paula Agregán Reboredo and Vincent Bismuth. Paula carried out the work as a student with Vincent and me as advisors and code contributors; I maintain this modernized implementation.",
+    links: [
+      {
+        label: "Source code",
+        href: "https://github.com/lnajman/polygonal-path-image",
+      },
+      {
+        label: "Example",
+        href: "https://github.com/lnajman/polygonal-path-image#reproducible-example",
+      },
+      {
+        label: "MICCAI 2012 paper",
+        href: "https://hal.science/hal-00741956v1",
+      },
+    ],
+  },
   {
     title: "Higra",
     subtitle: "Hierarchical Graph Analysis",
@@ -99,7 +123,8 @@ export default function SoftwarePage() {
           <p>
             Software is one of the practical outputs of this work: reusable
             implementations for hierarchical graph analysis, mathematical
-            morphology, discrete topology, and Morse-based methods.
+            morphology, discrete topology, Morse-based methods, and curvilinear
+            structure enhancement.
           </p>
           <div className="hero-actions">
             <a
@@ -134,8 +159,12 @@ export default function SoftwarePage() {
               <dd>MorseFrames</dd>
             </div>
             <div>
+              <dt>Public</dt>
+              <dd>Polygonal Path Image</dd>
+            </div>
+            <div>
               <dt>Languages</dt>
-              <dd>C++ / Python</dd>
+              <dd>C++ / Python / Cython</dd>
             </div>
           </dl>
         </aside>

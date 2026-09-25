@@ -472,6 +472,10 @@ const archiveHighlights: ArchiveHighlight[] = [
         href: "https://hal.science/hal-00741956v1",
       },
       {
+        label: "PPI source code",
+        href: "https://github.com/lnajman/polygonal-path-image",
+      },
+      {
         label: "Stent enhancement",
         href: "https://hal.science/hal-00622290v1",
       },
