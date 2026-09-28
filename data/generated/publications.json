@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-09-21T09:57:40.224Z",
+  "generatedAt": "2026-09-28T10:56:40.311Z",
   "source": {
     "name": "HAL",
     "query": "authIdHal_s:laurent-najman OR authFullName_s:\"Laurent Najman\"",
     "url": "https://api.archives-ouvertes.fr/search/?q=authIdHal_s%3Alaurent-najman+OR+authFullName_s%3A%22Laurent+Najman%22&rows=1000&sort=producedDateY_i+desc%2CpublicationDate_s+desc&fl=docid%2ChalId_s%2Curi_s%2Ctitle_s%2CauthFullName_s%2CauthIdHal_s%2CproducedDateY_i%2CpublicationDate_s%2CdocType_s%2CjournalTitle_s%2CconferenceTitle_s%2CbookTitle_s%2Cpublisher_s%2Cseries_s%2Cpage_s%2Cisbn_s%2CdoiId_s%2Cfiles_s%2Clabel_s&wt=json"
   },
   "counts": {
-    "rawHalRecords": 281,
-    "fetchedHalRecords": 281,
-    "displayedPublications": 277,
+    "rawHalRecords": 283,
+    "fetchedHalRecords": 283,
+    "displayedPublications": 279,
     "manualDuplicateGroups": 4
   },
   "byType": {
-    "Journal article": 85,
+    "Journal article": 87,
     "Conference paper": 137,
     "Other": 16,
     "Report": 3,
@@ -82,6 +82,81 @@
       "doi": "",
       "pdfUrl": "https://hal.science/hal-05620088/file/IEEE_ITSC_2026_PAPER_FINAL.pdf",
       "halUrl": "https://hal.science/hal-05620088v1",
+      "alternateHalUrls": [],
+      "cleanupNote": ""
+    },
+    {
+      "id": "hal-05758626",
+      "halId": "hal-05758626",
+      "sourceHalIds": [
+        "hal-05758626"
+      ],
+      "title": "Patients with hypertension consistently showed earlier onset of diabetes: A UK Biobank survival analysis",
+      "authors": [
+        "Cynthia Al Hageh",
+        "Haralampous Hatzikirou",
+        "Lithe Basbous",
+        "Siobhán O’sullivan",
+        "Nantia Iakovidou",
+        "Andreas Henschel",
+        "Jorge Zubelli",
+        "Hao Zhou",
+        "Basem Al Omari",
+        "Laurent Najman",
+        "Antoine Abchee",
+        "Pierre Zalloua"
+      ],
+      "year": 2026,
+      "publicationDate": "2026-08-05",
+      "status": "published",
+      "type": "ART",
+      "typeLabel": "Journal article",
+      "venue": "Molecular Medicine",
+      "publisher": "",
+      "series": "",
+      "pages": "",
+      "isbn": "",
+      "doi": "10.1186/s10020-026-01552-y",
+      "pdfUrl": "",
+      "halUrl": "https://hal.science/hal-05758626v1",
+      "alternateHalUrls": [],
+      "cleanupNote": ""
+    },
+    {
+      "id": "hal-05758630",
+      "halId": "hal-05758630",
+      "sourceHalIds": [
+        "hal-05758630"
+      ],
+      "title": "Individualized statin associated type 2 diabetes risk estimation with a deep causal model",
+      "authors": [
+        "Hao Zhou",
+        "Jorge Passamani Zubelli",
+        "Haralampos Hatzikirou",
+        "Andreas Henschel",
+        "Laurent Najman",
+        "Daniel Platt",
+        "Antonello Maruotti",
+        "Siobhan O’sullivan",
+        "Lithe Basbous",
+        "Cynthia Al Hageh",
+        "Mariam Al Harbi",
+        "Antoine Abchee",
+        "Pierre Zalloua"
+      ],
+      "year": 2026,
+      "publicationDate": "2026-08-03",
+      "status": "published",
+      "type": "ART",
+      "typeLabel": "Journal article",
+      "venue": "Molecular Medicine",
+      "publisher": "",
+      "series": "",
+      "pages": "",
+      "isbn": "",
+      "doi": "10.1186/s10020-026-01589-z",
+      "pdfUrl": "",
+      "halUrl": "https://hal.science/hal-05758630v1",
       "alternateHalUrls": [],
       "cleanupNote": ""
     },
@@ -2676,6 +2751,35 @@
       "cleanupNote": ""
     },
     {
+      "id": "hal-01484896",
+      "halId": "hal-01484896",
+      "sourceHalIds": [
+        "hal-01484896"
+      ],
+      "title": "POWER SPECTRAL CLUSTERING ON HYPERSPECTRAL DATA",
+      "authors": [
+        "Aditya Challa",
+        "Sravan Danda",
+        "B S Daya Sagar",
+        "Laurent Najman"
+      ],
+      "year": 2017,
+      "publicationDate": "2017",
+      "status": "published",
+      "type": "COMM",
+      "typeLabel": "Conference paper",
+      "venue": "International Geoscience and Remote Sensing Symposium",
+      "publisher": "IEEE",
+      "series": "",
+      "pages": "",
+      "isbn": "",
+      "doi": "",
+      "pdfUrl": "https://hal.science/hal-01484896/file/PowerSpectral_IGARSS2017.pdf",
+      "halUrl": "https://hal.science/hal-01484896v1",
+      "alternateHalUrls": [],
+      "cleanupNote": ""
+    },
+    {
       "id": "hal-01597556",
       "halId": "hal-01597556",
       "sourceHalIds": [
@@ -2759,35 +2863,6 @@
       "doi": "10.1007/s11548-017-1612-7",
       "pdfUrl": "https://hal.science/hal-01445849/file/EmptyCatheterSegmentation_2017_HAL_2.0.pdf",
       "halUrl": "https://hal.science/hal-01445849v3",
-      "alternateHalUrls": [],
-      "cleanupNote": ""
-    },
-    {
-      "id": "hal-01484896",
-      "halId": "hal-01484896",
-      "sourceHalIds": [
-        "hal-01484896"
-      ],
-      "title": "POWER SPECTRAL CLUSTERING ON HYPERSPECTRAL DATA",
-      "authors": [
-        "Aditya Challa",
-        "Sravan Danda",
-        "B S Daya Sagar",
-        "Laurent Najman"
-      ],
-      "year": 2017,
-      "publicationDate": "2017",
-      "status": "published",
-      "type": "COMM",
-      "typeLabel": "Conference paper",
-      "venue": "International Geoscience and Remote Sensing Symposium",
-      "publisher": "IEEE",
-      "series": "",
-      "pages": "",
-      "isbn": "",
-      "doi": "",
-      "pdfUrl": "https://hal.science/hal-01484896/file/PowerSpectral_IGARSS2017.pdf",
-      "halUrl": "https://hal.science/hal-01484896v1",
       "alternateHalUrls": [],
       "cleanupNote": ""
     },
@@ -5082,38 +5157,6 @@
       "cleanupNote": ""
     },
     {
-      "id": "hal-00730481",
-      "halId": "hal-00730481",
-      "sourceHalIds": [
-        "hal-00730481"
-      ],
-      "title": "A hybrid algorithm for automatic heart delineation in CT angiography",
-      "authors": [
-        "Imen Melki",
-        "Hugues Talbot",
-        "Jean Cousty",
-        "Laurent Najman",
-        "Céline Pruvot",
-        "Jérôme Knoplioch",
-        "Laurent Launay"
-      ],
-      "year": 2012,
-      "publicationDate": "2012",
-      "status": "published",
-      "type": "COMM",
-      "typeLabel": "Conference paper",
-      "venue": "Computer Assisted Radiology and Surgery - CARS'2012",
-      "publisher": "",
-      "series": "",
-      "pages": "S37-S38",
-      "isbn": "",
-      "doi": "",
-      "pdfUrl": "",
-      "halUrl": "https://hal.science/hal-00730481v1",
-      "alternateHalUrls": [],
-      "cleanupNote": ""
-    },
-    {
       "id": "hal-00787512",
       "halId": "hal-00787512",
       "sourceHalIds": [
@@ -5180,6 +5223,38 @@
       "doi": "",
       "pdfUrl": "",
       "halUrl": "https://hal.science/hal-00622513v1",
+      "alternateHalUrls": [],
+      "cleanupNote": ""
+    },
+    {
+      "id": "hal-00730481",
+      "halId": "hal-00730481",
+      "sourceHalIds": [
+        "hal-00730481"
+      ],
+      "title": "A hybrid algorithm for automatic heart delineation in CT angiography",
+      "authors": [
+        "Imen Melki",
+        "Hugues Talbot",
+        "Jean Cousty",
+        "Laurent Najman",
+        "Céline Pruvot",
+        "Jérôme Knoplioch",
+        "Laurent Launay"
+      ],
+      "year": 2012,
+      "publicationDate": "2012",
+      "status": "published",
+      "type": "COMM",
+      "typeLabel": "Conference paper",
+      "venue": "Computer Assisted Radiology and Surgery - CARS'2012",
+      "publisher": "",
+      "series": "",
+      "pages": "S37-S38",
+      "isbn": "",
+      "doi": "",
+      "pdfUrl": "",
+      "halUrl": "https://hal.science/hal-00730481v1",
       "alternateHalUrls": [],
       "cleanupNote": ""
     },
@@ -5439,6 +5514,45 @@
       "cleanupNote": ""
     },
     {
+      "id": "hal-00622511",
+      "halId": "hal-00622511",
+      "sourceHalIds": [
+        "hal-00622511"
+      ],
+      "title": "Estimation d'une forme mutuelle pour l'évaluation de la segmentation en imagerie cardiaque",
+      "authors": [
+        "Stéphanie Jehan-Besson",
+        "Christophe Tilmant",
+        "Alain de Cesare",
+        "Frédérique Frouin",
+        "Laurent Najman",
+        "Alain Lalande",
+        "Laurent Sarry",
+        "Christopher Casta",
+        "Patrick Clarysse",
+        "Constantin Constantinidés",
+        "Jean Cousty",
+        "Muriel Lefort",
+        "Alexandre Cochet",
+        "Mireille Garreau"
+      ],
+      "year": 2011,
+      "publicationDate": "2011",
+      "status": "published",
+      "type": "COMM",
+      "typeLabel": "Conference paper",
+      "venue": "23ème Colloque GRETSI - Traitement du Signal et des Images (GRETSI '11)",
+      "publisher": "",
+      "series": "",
+      "pages": "10pp.",
+      "isbn": "",
+      "doi": "",
+      "pdfUrl": "",
+      "halUrl": "https://hal.science/hal-00622511v1",
+      "alternateHalUrls": [],
+      "cleanupNote": ""
+    },
+    {
       "id": "hal-00622504",
       "halId": "hal-00622504",
       "sourceHalIds": [
@@ -5554,34 +5668,6 @@
       "cleanupNote": ""
     },
     {
-      "id": "hal-00715457",
-      "halId": "hal-00715457",
-      "sourceHalIds": [
-        "hal-00715457"
-      ],
-      "title": "Seeded Segmentation Methods for Medical Image Analysis",
-      "authors": [
-        "Camille Couprie",
-        "Laurent Najman",
-        "Hugues Talbot"
-      ],
-      "year": 2011,
-      "publicationDate": "2011",
-      "status": "published",
-      "type": "COUV",
-      "typeLabel": "Book chapter",
-      "venue": "Medical Image Processing",
-      "publisher": "Springer New York",
-      "series": "",
-      "pages": "27-57",
-      "isbn": "978-1-4419-9779-1",
-      "doi": "10.1007/978-1-4419-9779-1_3",
-      "pdfUrl": "https://hal.science/hal-00715457/file/outfile_p44-p75.pdf",
-      "halUrl": "https://hal.science/hal-00715457v1",
-      "alternateHalUrls": [],
-      "cleanupNote": ""
-    },
-    {
       "id": "hal-00730470",
       "halId": "hal-00730470",
       "sourceHalIds": [
@@ -5610,41 +5696,30 @@
       "cleanupNote": ""
     },
     {
-      "id": "hal-00622511",
-      "halId": "hal-00622511",
+      "id": "hal-00715457",
+      "halId": "hal-00715457",
       "sourceHalIds": [
-        "hal-00622511"
+        "hal-00715457"
       ],
-      "title": "Estimation d'une forme mutuelle pour l'évaluation de la segmentation en imagerie cardiaque",
+      "title": "Seeded Segmentation Methods for Medical Image Analysis",
       "authors": [
-        "Stéphanie Jehan-Besson",
-        "Christophe Tilmant",
-        "Alain de Cesare",
-        "Frédérique Frouin",
+        "Camille Couprie",
         "Laurent Najman",
-        "Alain Lalande",
-        "Laurent Sarry",
-        "Christopher Casta",
-        "Patrick Clarysse",
-        "Constantin Constantinidés",
-        "Jean Cousty",
-        "Muriel Lefort",
-        "Alexandre Cochet",
-        "Mireille Garreau"
+        "Hugues Talbot"
       ],
       "year": 2011,
       "publicationDate": "2011",
       "status": "published",
-      "type": "COMM",
-      "typeLabel": "Conference paper",
-      "venue": "23ème Colloque GRETSI - Traitement du Signal et des Images (GRETSI '11)",
-      "publisher": "",
+      "type": "COUV",
+      "typeLabel": "Book chapter",
+      "venue": "Medical Image Processing",
+      "publisher": "Springer New York",
       "series": "",
-      "pages": "10pp.",
-      "isbn": "",
-      "doi": "",
-      "pdfUrl": "",
-      "halUrl": "https://hal.science/hal-00622511v1",
+      "pages": "27-57",
+      "isbn": "978-1-4419-9779-1",
+      "doi": "10.1007/978-1-4419-9779-1_3",
+      "pdfUrl": "https://hal.science/hal-00715457/file/outfile_p44-p75.pdf",
+      "halUrl": "https://hal.science/hal-00715457v1",
       "alternateHalUrls": [],
       "cleanupNote": ""
     },
@@ -6277,35 +6352,6 @@
       "cleanupNote": ""
     },
     {
-      "id": "hal-00622409",
-      "halId": "hal-00622409",
-      "sourceHalIds": [
-        "hal-00622409"
-      ],
-      "title": "Power watersheds: a new image segmentation framework extending graph cuts, random walker and optimal spanning forest",
-      "authors": [
-        "Camille Couprie",
-        "Leo Grady",
-        "Laurent Najman",
-        "Hugues Talbot"
-      ],
-      "year": 2009,
-      "publicationDate": "2009",
-      "status": "published",
-      "type": "COMM",
-      "typeLabel": "Conference paper",
-      "venue": "12th International Conference on Computer Vision (ICCV'09)",
-      "publisher": "",
-      "series": "",
-      "pages": "731-738",
-      "isbn": "",
-      "doi": "",
-      "pdfUrl": "",
-      "halUrl": "https://hal.science/hal-00622409v1",
-      "alternateHalUrls": [],
-      "cleanupNote": ""
-    },
-    {
       "id": "hal-00913828",
       "halId": "hal-00913828",
       "sourceHalIds": [
@@ -6337,6 +6383,35 @@
       "doi": "",
       "pdfUrl": "",
       "halUrl": "https://hal.science/hal-00913828v1",
+      "alternateHalUrls": [],
+      "cleanupNote": ""
+    },
+    {
+      "id": "hal-00622409",
+      "halId": "hal-00622409",
+      "sourceHalIds": [
+        "hal-00622409"
+      ],
+      "title": "Power watersheds: a new image segmentation framework extending graph cuts, random walker and optimal spanning forest",
+      "authors": [
+        "Camille Couprie",
+        "Leo Grady",
+        "Laurent Najman",
+        "Hugues Talbot"
+      ],
+      "year": 2009,
+      "publicationDate": "2009",
+      "status": "published",
+      "type": "COMM",
+      "typeLabel": "Conference paper",
+      "venue": "12th International Conference on Computer Vision (ICCV'09)",
+      "publisher": "",
+      "series": "",
+      "pages": "731-738",
+      "isbn": "",
+      "doi": "",
+      "pdfUrl": "",
+      "halUrl": "https://hal.science/hal-00622409v1",
       "alternateHalUrls": [],
       "cleanupNote": ""
     },
@@ -6832,63 +6907,6 @@
       "cleanupNote": ""
     },
     {
-      "id": "hal-00622372",
-      "halId": "hal-00622372",
-      "sourceHalIds": [
-        "hal-00622372"
-      ],
-      "title": "Multi-histogram equalization methods for contrast enhancement and brightness preserving",
-      "authors": [
-        "David Menotti-Gomes",
-        "Laurent Najman",
-        "Jacques Facon",
-        "Arnaldo de Albuquerque Araújo"
-      ],
-      "year": 2007,
-      "publicationDate": "2007",
-      "status": "published",
-      "type": "ART",
-      "typeLabel": "Journal article",
-      "venue": "IEEE Transactions on Consumer Electronics",
-      "publisher": "",
-      "series": "",
-      "pages": "1186-1194",
-      "isbn": "",
-      "doi": "",
-      "pdfUrl": "",
-      "halUrl": "https://hal.science/hal-00622372v1",
-      "alternateHalUrls": [],
-      "cleanupNote": ""
-    },
-    {
-      "id": "hal-00622373",
-      "halId": "hal-00622373",
-      "sourceHalIds": [
-        "hal-00622373"
-      ],
-      "title": "1D Component tree in linear time and space and its application to gray-level image multithresholding",
-      "authors": [
-        "David Menotti-Gomes",
-        "Laurent Najman",
-        "Arnaldo de Albuquerque Araújo"
-      ],
-      "year": 2007,
-      "publicationDate": "2007",
-      "status": "published",
-      "type": "COMM",
-      "typeLabel": "Conference paper",
-      "venue": "International Symposium on Mathematical Morphology - International Symposium on Mathematical Morphology'07, 8th International Symposium, Proceedings",
-      "publisher": "INPE",
-      "series": "",
-      "pages": "437-448",
-      "isbn": "",
-      "doi": "",
-      "pdfUrl": "",
-      "halUrl": "https://hal.science/hal-00622373v1",
-      "alternateHalUrls": [],
-      "cleanupNote": ""
-    },
-    {
       "id": "hal-00622036",
       "halId": "hal-00622036",
       "sourceHalIds": [
@@ -6942,6 +6960,63 @@
       "doi": "",
       "pdfUrl": "",
       "halUrl": "https://hal.science/hal-00622320v1",
+      "alternateHalUrls": [],
+      "cleanupNote": ""
+    },
+    {
+      "id": "hal-00622372",
+      "halId": "hal-00622372",
+      "sourceHalIds": [
+        "hal-00622372"
+      ],
+      "title": "Multi-histogram equalization methods for contrast enhancement and brightness preserving",
+      "authors": [
+        "David Menotti-Gomes",
+        "Laurent Najman",
+        "Jacques Facon",
+        "Arnaldo de Albuquerque Araújo"
+      ],
+      "year": 2007,
+      "publicationDate": "2007",
+      "status": "published",
+      "type": "ART",
+      "typeLabel": "Journal article",
+      "venue": "IEEE Transactions on Consumer Electronics",
+      "publisher": "",
+      "series": "",
+      "pages": "1186-1194",
+      "isbn": "",
+      "doi": "",
+      "pdfUrl": "",
+      "halUrl": "https://hal.science/hal-00622372v1",
+      "alternateHalUrls": [],
+      "cleanupNote": ""
+    },
+    {
+      "id": "hal-00622373",
+      "halId": "hal-00622373",
+      "sourceHalIds": [
+        "hal-00622373"
+      ],
+      "title": "1D Component tree in linear time and space and its application to gray-level image multithresholding",
+      "authors": [
+        "David Menotti-Gomes",
+        "Laurent Najman",
+        "Arnaldo de Albuquerque Araújo"
+      ],
+      "year": 2007,
+      "publicationDate": "2007",
+      "status": "published",
+      "type": "COMM",
+      "typeLabel": "Conference paper",
+      "venue": "International Symposium on Mathematical Morphology - International Symposium on Mathematical Morphology'07, 8th International Symposium, Proceedings",
+      "publisher": "INPE",
+      "series": "",
+      "pages": "437-448",
+      "isbn": "",
+      "doi": "",
+      "pdfUrl": "",
+      "halUrl": "https://hal.science/hal-00622373v1",
       "alternateHalUrls": [],
       "cleanupNote": ""
     },
@@ -8000,33 +8075,6 @@
       "cleanupNote": ""
     },
     {
-      "id": "hal-00622118",
-      "halId": "hal-00622118",
-      "sourceHalIds": [
-        "hal-00622118"
-      ],
-      "title": "Definitions and some properties of the watershed of a continuous function",
-      "authors": [
-        "Laurent Najman",
-        "Michel Schmitt"
-      ],
-      "year": 1994,
-      "publicationDate": "1994",
-      "status": "published",
-      "type": "COMM",
-      "typeLabel": "Conference paper",
-      "venue": "Image Processing: Theory and Applications",
-      "publisher": "Elsevier",
-      "series": "",
-      "pages": "151-153",
-      "isbn": "",
-      "doi": "",
-      "pdfUrl": "",
-      "halUrl": "https://hal.science/hal-00622118v1",
-      "alternateHalUrls": [],
-      "cleanupNote": ""
-    },
-    {
       "id": "hal-00621986",
       "halId": "hal-00621986",
       "sourceHalIds": [
@@ -8050,6 +8098,33 @@
       "doi": "",
       "pdfUrl": "",
       "halUrl": "https://hal.science/hal-00621986v1",
+      "alternateHalUrls": [],
+      "cleanupNote": ""
+    },
+    {
+      "id": "hal-00622118",
+      "halId": "hal-00622118",
+      "sourceHalIds": [
+        "hal-00622118"
+      ],
+      "title": "Definitions and some properties of the watershed of a continuous function",
+      "authors": [
+        "Laurent Najman",
+        "Michel Schmitt"
+      ],
+      "year": 1994,
+      "publicationDate": "1994",
+      "status": "published",
+      "type": "COMM",
+      "typeLabel": "Conference paper",
+      "venue": "Image Processing: Theory and Applications",
+      "publisher": "Elsevier",
+      "series": "",
+      "pages": "151-153",
+      "isbn": "",
+      "doi": "",
+      "pdfUrl": "",
+      "halUrl": "https://hal.science/hal-00622118v1",
       "alternateHalUrls": [],
       "cleanupNote": ""
     },
