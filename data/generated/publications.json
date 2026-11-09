@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-10-26T10:08:57.475Z",
+  "generatedAt": "2026-11-09T12:53:57.236Z",
   "source": {
     "name": "HAL",
     "query": "authIdHal_s:laurent-najman OR authFullName_s:\"Laurent Najman\"",
     "url": "https://api.archives-ouvertes.fr/search/?q=authIdHal_s%3Alaurent-najman+OR+authFullName_s%3A%22Laurent+Najman%22&rows=1000&sort=producedDateY_i+desc%2CpublicationDate_s+desc&fl=docid%2ChalId_s%2Curi_s%2Ctitle_s%2CauthFullName_s%2CauthIdHal_s%2CproducedDateY_i%2CpublicationDate_s%2CdocType_s%2CjournalTitle_s%2CconferenceTitle_s%2CbookTitle_s%2Cpublisher_s%2Cseries_s%2Cpage_s%2Cisbn_s%2CdoiId_s%2Cfiles_s%2Clabel_s&wt=json"
   },
   "counts": {
-    "rawHalRecords": 284,
-    "fetchedHalRecords": 284,
-    "displayedPublications": 280,
+    "rawHalRecords": 285,
+    "fetchedHalRecords": 285,
+    "displayedPublications": 281,
     "manualDuplicateGroups": 4
   },
   "byType": {
     "Journal article": 90,
+    "Other": 15,
     "Conference paper": 137,
-    "Other": 14,
     "Report": 3,
     "Book": 6,
     "Poster": 1,
@@ -53,6 +53,34 @@
       "doi": "10.1016/j.dam.2026.06.028",
       "pdfUrl": "https://hal.science/hal-04234364/file/Synchronization_of_Christoffel_words.pdf",
       "halUrl": "https://hal.science/hal-04234364v1",
+      "alternateHalUrls": [],
+      "cleanupNote": ""
+    },
+    {
+      "id": "hal-05840011",
+      "halId": "hal-05840011",
+      "sourceHalIds": [
+        "hal-05840011"
+      ],
+      "title": "The Power Watershed as a Differentiable Segmentation Layer",
+      "authors": [
+        "Galia Akl",
+        "Laurent Najman",
+        "Hugues Talbot"
+      ],
+      "year": 2026,
+      "publicationDate": "2026-10-26",
+      "status": "published",
+      "type": "UNDEFINED",
+      "typeLabel": "Other",
+      "venue": "",
+      "publisher": "",
+      "series": "",
+      "pages": "",
+      "isbn": "",
+      "doi": "",
+      "pdfUrl": "https://hal.science/hal-05840011/file/main.pdf",
+      "halUrl": "https://hal.science/hal-05840011v1",
       "alternateHalUrls": [],
       "cleanupNote": ""
     },
@@ -269,7 +297,7 @@
         "Olivier Teytaud"
       ],
       "year": 2026,
-      "publicationDate": "2026-02-02",
+      "publicationDate": "2026-02-03",
       "status": "published",
       "type": "ART",
       "typeLabel": "Journal article",
@@ -304,7 +332,7 @@
       "venue": "IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing",
       "publisher": "",
       "series": "",
-      "pages": "1-25",
+      "pages": "30813-30836",
       "isbn": "",
       "doi": "10.1109/JSTARS.2026.3732597",
       "pdfUrl": "",
@@ -2749,35 +2777,6 @@
       "cleanupNote": ""
     },
     {
-      "id": "hal-01484896",
-      "halId": "hal-01484896",
-      "sourceHalIds": [
-        "hal-01484896"
-      ],
-      "title": "POWER SPECTRAL CLUSTERING ON HYPERSPECTRAL DATA",
-      "authors": [
-        "Aditya Challa",
-        "Sravan Danda",
-        "B S Daya Sagar",
-        "Laurent Najman"
-      ],
-      "year": 2017,
-      "publicationDate": "2017",
-      "status": "published",
-      "type": "COMM",
-      "typeLabel": "Conference paper",
-      "venue": "International Geoscience and Remote Sensing Symposium",
-      "publisher": "IEEE",
-      "series": "",
-      "pages": "",
-      "isbn": "",
-      "doi": "",
-      "pdfUrl": "https://hal.science/hal-01484896/file/PowerSpectral_IGARSS2017.pdf",
-      "halUrl": "https://hal.science/hal-01484896v1",
-      "alternateHalUrls": [],
-      "cleanupNote": ""
-    },
-    {
       "id": "hal-01597556",
       "halId": "hal-01597556",
       "sourceHalIds": [
@@ -2861,6 +2860,35 @@
       "doi": "10.1007/s11548-017-1612-7",
       "pdfUrl": "https://hal.science/hal-01445849/file/EmptyCatheterSegmentation_2017_HAL_2.0.pdf",
       "halUrl": "https://hal.science/hal-01445849v3",
+      "alternateHalUrls": [],
+      "cleanupNote": ""
+    },
+    {
+      "id": "hal-01484896",
+      "halId": "hal-01484896",
+      "sourceHalIds": [
+        "hal-01484896"
+      ],
+      "title": "POWER SPECTRAL CLUSTERING ON HYPERSPECTRAL DATA",
+      "authors": [
+        "Aditya Challa",
+        "Sravan Danda",
+        "B S Daya Sagar",
+        "Laurent Najman"
+      ],
+      "year": 2017,
+      "publicationDate": "2017",
+      "status": "published",
+      "type": "COMM",
+      "typeLabel": "Conference paper",
+      "venue": "International Geoscience and Remote Sensing Symposium",
+      "publisher": "IEEE",
+      "series": "",
+      "pages": "",
+      "isbn": "",
+      "doi": "",
+      "pdfUrl": "https://hal.science/hal-01484896/file/PowerSpectral_IGARSS2017.pdf",
+      "halUrl": "https://hal.science/hal-01484896v1",
       "alternateHalUrls": [],
       "cleanupNote": ""
     },
@@ -5156,7 +5184,7 @@
         "Patrick Clarysse",
         "Christopher Casta",
         "Alexandre Cochet",
-        "Constantin Constantinidés",
+        "Constantin Constantinides",
         "Jean Cousty",
         "Alain de Cesare",
         "Stéphanie Jehan-Besson",
@@ -5181,6 +5209,38 @@
       "doi": "10.1109/TMI.2012.2201737",
       "pdfUrl": "https://hal.science/hal-00726197/file/Lebenberg_TMI_2012.pdf",
       "halUrl": "https://hal.science/hal-00726197v1",
+      "alternateHalUrls": [],
+      "cleanupNote": ""
+    },
+    {
+      "id": "hal-00730481",
+      "halId": "hal-00730481",
+      "sourceHalIds": [
+        "hal-00730481"
+      ],
+      "title": "A hybrid algorithm for automatic heart delineation in CT angiography",
+      "authors": [
+        "Imen Melki",
+        "Hugues Talbot",
+        "Jean Cousty",
+        "Laurent Najman",
+        "Céline Pruvot",
+        "Jérôme Knoplioch",
+        "Laurent Launay"
+      ],
+      "year": 2012,
+      "publicationDate": "2012",
+      "status": "published",
+      "type": "COMM",
+      "typeLabel": "Conference paper",
+      "venue": "Computer Assisted Radiology and Surgery - CARS'2012",
+      "publisher": "",
+      "series": "",
+      "pages": "S37-S38",
+      "isbn": "",
+      "doi": "",
+      "pdfUrl": "",
+      "halUrl": "https://hal.science/hal-00730481v1",
       "alternateHalUrls": [],
       "cleanupNote": ""
     },
@@ -5251,38 +5311,6 @@
       "doi": "",
       "pdfUrl": "",
       "halUrl": "https://hal.science/hal-00622513v1",
-      "alternateHalUrls": [],
-      "cleanupNote": ""
-    },
-    {
-      "id": "hal-00730481",
-      "halId": "hal-00730481",
-      "sourceHalIds": [
-        "hal-00730481"
-      ],
-      "title": "A hybrid algorithm for automatic heart delineation in CT angiography",
-      "authors": [
-        "Imen Melki",
-        "Hugues Talbot",
-        "Jean Cousty",
-        "Laurent Najman",
-        "Céline Pruvot",
-        "Jérôme Knoplioch",
-        "Laurent Launay"
-      ],
-      "year": 2012,
-      "publicationDate": "2012",
-      "status": "published",
-      "type": "COMM",
-      "typeLabel": "Conference paper",
-      "venue": "Computer Assisted Radiology and Surgery - CARS'2012",
-      "publisher": "",
-      "series": "",
-      "pages": "S37-S38",
-      "isbn": "",
-      "doi": "",
-      "pdfUrl": "",
-      "halUrl": "https://hal.science/hal-00730481v1",
       "alternateHalUrls": [],
       "cleanupNote": ""
     },
@@ -5500,45 +5528,6 @@
       "cleanupNote": ""
     },
     {
-      "id": "hal-00622511",
-      "halId": "hal-00622511",
-      "sourceHalIds": [
-        "hal-00622511"
-      ],
-      "title": "Estimation d'une forme mutuelle pour l'évaluation de la segmentation en imagerie cardiaque",
-      "authors": [
-        "Stéphanie Jehan-Besson",
-        "Christophe Tilmant",
-        "Alain de Cesare",
-        "Frédérique Frouin",
-        "Laurent Najman",
-        "Alain Lalande",
-        "Laurent Sarry",
-        "Christopher Casta",
-        "Patrick Clarysse",
-        "Constantin Constantinidés",
-        "Jean Cousty",
-        "Muriel Lefort",
-        "Alexandre Cochet",
-        "Mireille Garreau"
-      ],
-      "year": 2011,
-      "publicationDate": "2011",
-      "status": "published",
-      "type": "COMM",
-      "typeLabel": "Conference paper",
-      "venue": "23ème Colloque GRETSI - Traitement du Signal et des Images (GRETSI '11)",
-      "publisher": "",
-      "series": "",
-      "pages": "10pp.",
-      "isbn": "",
-      "doi": "",
-      "pdfUrl": "",
-      "halUrl": "https://hal.science/hal-00622511v1",
-      "alternateHalUrls": [],
-      "cleanupNote": ""
-    },
-    {
       "id": "hal-00622504",
       "halId": "hal-00622504",
       "sourceHalIds": [
@@ -5706,6 +5695,45 @@
       "doi": "10.1007/978-3-642-19867-0_37",
       "pdfUrl": "",
       "halUrl": "https://hal.science/hal-00730470v1",
+      "alternateHalUrls": [],
+      "cleanupNote": ""
+    },
+    {
+      "id": "hal-00622511",
+      "halId": "hal-00622511",
+      "sourceHalIds": [
+        "hal-00622511"
+      ],
+      "title": "Estimation d'une forme mutuelle pour l'évaluation de la segmentation en imagerie cardiaque",
+      "authors": [
+        "Stéphanie Jehan-Besson",
+        "Christophe Tilmant",
+        "Alain de Cesare",
+        "Frédérique Frouin",
+        "Laurent Najman",
+        "Alain Lalande",
+        "Laurent Sarry",
+        "Christopher Casta",
+        "Patrick Clarysse",
+        "Constantin Constantinidés",
+        "Jean Cousty",
+        "Muriel Lefort",
+        "Alexandre Cochet",
+        "Mireille Garreau"
+      ],
+      "year": 2011,
+      "publicationDate": "2011",
+      "status": "published",
+      "type": "COMM",
+      "typeLabel": "Conference paper",
+      "venue": "23ème Colloque GRETSI - Traitement du Signal et des Images (GRETSI '11)",
+      "publisher": "",
+      "series": "",
+      "pages": "10pp.",
+      "isbn": "",
+      "doi": "",
+      "pdfUrl": "",
+      "halUrl": "https://hal.science/hal-00622511v1",
       "alternateHalUrls": [],
       "cleanupNote": ""
     },
@@ -6268,41 +6296,6 @@
       "cleanupNote": ""
     },
     {
-      "id": "hal-00913828",
-      "halId": "hal-00913828",
-      "sourceHalIds": [
-        "hal-00913828"
-      ],
-      "title": "Initiative multicentrique pour une plateforme d'évaluation en imagerie cardiaque.",
-      "authors": [
-        "A. Kissi",
-        "C. Tilmant",
-        "A. de Cesare",
-        "A. Comte",
-        "Laurent Najman",
-        "A. Lalande",
-        "P. Clarysse",
-        "Mireille Garreau",
-        "L. Sarry",
-        "F. Frouin"
-      ],
-      "year": 2009,
-      "publicationDate": "2009",
-      "status": "published",
-      "type": "COMM",
-      "typeLabel": "Conference paper",
-      "venue": "Congrès Recherche en Imagerie et Technologies de la Santé (RITS).",
-      "publisher": "",
-      "series": "",
-      "pages": "109-10",
-      "isbn": "",
-      "doi": "",
-      "pdfUrl": "",
-      "halUrl": "https://hal.science/hal-00913828v1",
-      "alternateHalUrls": [],
-      "cleanupNote": ""
-    },
-    {
       "id": "hal-00622409",
       "halId": "hal-00622409",
       "sourceHalIds": [
@@ -6386,6 +6379,41 @@
       "doi": "",
       "pdfUrl": "https://hal.science/hal-00622458/file/discreteMorphologicalMerging.pdf",
       "halUrl": "https://hal.science/hal-00622458v1",
+      "alternateHalUrls": [],
+      "cleanupNote": ""
+    },
+    {
+      "id": "hal-00913828",
+      "halId": "hal-00913828",
+      "sourceHalIds": [
+        "hal-00913828"
+      ],
+      "title": "Initiative multicentrique pour une plateforme d'évaluation en imagerie cardiaque.",
+      "authors": [
+        "A. Kissi",
+        "C. Tilmant",
+        "A. de Cesare",
+        "A. Comte",
+        "Laurent Najman",
+        "A. Lalande",
+        "P. Clarysse",
+        "Mireille Garreau",
+        "L. Sarry",
+        "F. Frouin"
+      ],
+      "year": 2009,
+      "publicationDate": "2009",
+      "status": "published",
+      "type": "COMM",
+      "typeLabel": "Conference paper",
+      "venue": "Congrès Recherche en Imagerie et Technologies de la Santé (RITS).",
+      "publisher": "",
+      "series": "",
+      "pages": "109-10",
+      "isbn": "",
+      "doi": "",
+      "pdfUrl": "",
+      "halUrl": "https://hal.science/hal-00913828v1",
       "alternateHalUrls": [],
       "cleanupNote": ""
     },
@@ -6935,63 +6963,6 @@
       "cleanupNote": ""
     },
     {
-      "id": "hal-00622036",
-      "halId": "hal-00622036",
-      "sourceHalIds": [
-        "hal-00622036"
-      ],
-      "title": "Watershed cuts",
-      "authors": [
-        "Jean Cousty",
-        "Gilles Bertrand",
-        "Laurent Najman",
-        "Michel Couprie"
-      ],
-      "year": 2007,
-      "publicationDate": "2007",
-      "status": "published",
-      "type": "COMM",
-      "typeLabel": "Conference paper",
-      "venue": "International Symposium on Mathematical Morphology - International Symposium on Mathematical Morphology'07, 8th International Symposium, Proceedings",
-      "publisher": "INPE",
-      "series": "",
-      "pages": "301-312",
-      "isbn": "",
-      "doi": "",
-      "pdfUrl": "",
-      "halUrl": "https://hal.science/hal-00622036v1",
-      "alternateHalUrls": [],
-      "cleanupNote": ""
-    },
-    {
-      "id": "hal-00622320",
-      "halId": "hal-00622320",
-      "sourceHalIds": [
-        "hal-00622320"
-      ],
-      "title": "Special issue on ISMM05",
-      "authors": [
-        "Christian Ronse",
-        "Laurent Najman",
-        "Etienne Decencière"
-      ],
-      "year": 2007,
-      "publicationDate": "2007",
-      "status": "published",
-      "type": "ISSUE",
-      "typeLabel": "Special issue",
-      "venue": "",
-      "publisher": "",
-      "series": "",
-      "pages": "10pp.",
-      "isbn": "",
-      "doi": "",
-      "pdfUrl": "",
-      "halUrl": "https://hal.science/hal-00622320v1",
-      "alternateHalUrls": [],
-      "cleanupNote": ""
-    },
-    {
       "id": "hal-00622372",
       "halId": "hal-00622372",
       "sourceHalIds": [
@@ -7045,6 +7016,63 @@
       "doi": "",
       "pdfUrl": "",
       "halUrl": "https://hal.science/hal-00622373v1",
+      "alternateHalUrls": [],
+      "cleanupNote": ""
+    },
+    {
+      "id": "hal-00622036",
+      "halId": "hal-00622036",
+      "sourceHalIds": [
+        "hal-00622036"
+      ],
+      "title": "Watershed cuts",
+      "authors": [
+        "Jean Cousty",
+        "Gilles Bertrand",
+        "Laurent Najman",
+        "Michel Couprie"
+      ],
+      "year": 2007,
+      "publicationDate": "2007",
+      "status": "published",
+      "type": "COMM",
+      "typeLabel": "Conference paper",
+      "venue": "International Symposium on Mathematical Morphology - International Symposium on Mathematical Morphology'07, 8th International Symposium, Proceedings",
+      "publisher": "INPE",
+      "series": "",
+      "pages": "301-312",
+      "isbn": "",
+      "doi": "",
+      "pdfUrl": "",
+      "halUrl": "https://hal.science/hal-00622036v1",
+      "alternateHalUrls": [],
+      "cleanupNote": ""
+    },
+    {
+      "id": "hal-00622320",
+      "halId": "hal-00622320",
+      "sourceHalIds": [
+        "hal-00622320"
+      ],
+      "title": "Special issue on ISMM05",
+      "authors": [
+        "Christian Ronse",
+        "Laurent Najman",
+        "Etienne Decencière"
+      ],
+      "year": 2007,
+      "publicationDate": "2007",
+      "status": "published",
+      "type": "ISSUE",
+      "typeLabel": "Special issue",
+      "venue": "",
+      "publisher": "",
+      "series": "",
+      "pages": "10pp.",
+      "isbn": "",
+      "doi": "",
+      "pdfUrl": "",
+      "halUrl": "https://hal.science/hal-00622320v1",
       "alternateHalUrls": [],
       "cleanupNote": ""
     },
